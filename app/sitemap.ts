@@ -1,1 +1,18 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YVJvdXRlIH0gZnJvbSAibmV4dCI7CmltcG9ydCB7IGdldEFsbFBvc3RzIH0gZnJvbSAiQC9saWIvcG9zdHMiOwppbXBvcnQgeyBzaXRlIH0gZnJvbSAiQC9saWIvc2l0ZSI7CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBzaXRlbWFwKCk6IE1ldGFkYXRhUm91dGUuU2l0ZW1hcCB7CiAgY29uc3QgcG9zdHMgPSBnZXRBbGxQb3N0cygpOwogIHJldHVybiBbCiAgICB7IHVybDogc2l0ZS51cmwsIGxhc3RNb2RpZmllZDogbmV3IERhdGUoKSwgY2hhbmdlRnJlcXVlbmN5OiAiZGFpbHkiLCBwcmlvcml0eTogMSB9LAogICAgeyB1cmw6IGAke3NpdGUudXJsfS9hcmNoaXZlYCwgY2hhbmdlRnJlcXVlbmN5OiAid2Vla2x5IiwgcHJpb3JpdHk6IDAuNyB9LAogICAgeyB1cmw6IGAke3NpdGUudXJsfS9hYm91dGAsIGNoYW5nZUZyZXF1ZW5jeTogIm1vbnRobHkiLCBwcmlvcml0eTogMC41IH0sCiAgICAuLi5wb3N0cy5tYXAoKHApID0+ICh7CiAgICAgIHVybDogYCR7c2l0ZS51cmx9L3Bvc3RzLyR7cC5zbHVnfWAsCiAgICAgIGxhc3RNb2RpZmllZDogbmV3IERhdGUocC51cGRhdGVkIHx8IHAuZGF0ZSksCiAgICAgIGNoYW5nZUZyZXF1ZW5jeTogIm1vbnRobHkiIGFzIGNvbnN0LAogICAgICBwcmlvcml0eTogMC44LAogICAgfSkpLAogIF07Cn0K
+import type { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/posts";
+import { site } from "@/lib/site";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts();
+  return [
+    { url: site.url, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
+    { url: `${site.url}/archive`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${site.url}/about`, changeFrequency: "monthly", priority: 0.5 },
+    ...posts.map((p) => ({
+      url: `${site.url}/posts/${p.slug}`,
+      lastModified: new Date(p.updated || p.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+  ];
+}

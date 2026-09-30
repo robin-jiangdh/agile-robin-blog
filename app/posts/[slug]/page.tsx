@@ -1,1 +1,144 @@
-aW1wb3J0IHsgbm90Rm91bmQgfSBmcm9tICJuZXh0L25hdmlnYXRpb24iOwppbXBvcnQgdHlwZSB7IE1ldGFkYXRhIH0gZnJvbSAibmV4dCI7CmltcG9ydCBSZWFjdE1hcmtkb3duIGZyb20gInJlYWN0LW1hcmtkb3duIjsKaW1wb3J0IHJlbWFya0dmbSBmcm9tICJyZW1hcmstZ2ZtIjsKaW1wb3J0IHJlaHlwZVNsdWcgZnJvbSAicmVoeXBlLXNsdWciOwppbXBvcnQgcmVoeXBlQXV0b2xpbmtIZWFkaW5ncyBmcm9tICJyZWh5cGUtYXV0b2xpbmstaGVhZGluZ3MiOwppbXBvcnQgcmVoeXBlSGlnaGxpZ2h0IGZyb20gInJlaHlwZS1oaWdobGlnaHQiOwppbXBvcnQgeyBnZXRBbGxTbHVncywgZ2V0UG9zdCwgZ2V0QWRqYWNlbnQsIGdldEFsbFBvc3RzIH0gZnJvbSAiQC9saWIvcG9zdHMiOwppbXBvcnQgeyBzaXRlIH0gZnJvbSAiQC9saWIvc2l0ZSI7CmltcG9ydCB7IFRhYmxlT2ZDb250ZW50cyB9IGZyb20gIkAvY29tcG9uZW50cy90b2MiOwppbXBvcnQgeyBDb21tZW50cyB9IGZyb20gIkAvY29tcG9uZW50cy9jb21tZW50cyI7CgpleHBvcnQgZnVuY3Rpb24gZ2VuZXJhdGVTdGF0aWNQYXJhbXMoKSB7CiAgcmV0dXJuIGdldEFsbFNsdWdzKCkubWFwKChzbHVnKSA9PiAoeyBzbHVnIH0pKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdlbmVyYXRlTWV0YWRhdGEoeyBwYXJhbXMgfTogeyBwYXJhbXM6IHsgc2x1Zzogc3RyaW5nIH0gfSk6IE1ldGFkYXRhIHsKICB0cnkgewogICAgY29uc3QgeyBtZXRhIH0gPSBnZXRQb3N0KHBhcmFtcy5zbHVnKTsKICAgIHJldHVybiB7CiAgICAgIHRpdGxlOiBtZXRhLnRpdGxlLAogICAgICBkZXNjcmlwdGlvbjogbWV0YS5kZXNjcmlwdGlvbiwKICAgICAgb3BlbkdyYXBoOiB7CiAgICAgICAgdGl0bGU6IG1ldGEudGl0bGUsCiAgICAgICAgZGVzY3JpcHRpb246IG1ldGEuZGVzY3JpcHRpb24sCiAgICAgICAgdHlwZTogImFydGljbGUiLAogICAgICAgIHB1Ymxpc2hlZFRpbWU6IG1ldGEuZGF0ZSwKICAgICAgICBpbWFnZXM6IG1ldGEuY292ZXIgPyBbbWV0YS5jb3Zlcl0gOiB1bmRlZmluZWQsCiAgICAgIH0sCiAgICB9OwogIH0gY2F0Y2ggewogICAgcmV0dXJuIHt9OwogIH0KfQoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUG9zdFBhZ2UoeyBwYXJhbXMgfTogeyBwYXJhbXM6IHsgc2x1Zzogc3RyaW5nIH0gfSkgewogIGxldCBwb3N0OwogIHRyeSB7CiAgICBwb3N0ID0gZ2V0UG9zdChwYXJhbXMuc2x1Zyk7CiAgfSBjYXRjaCB7CiAgICBub3RGb3VuZCgpOwogIH0KICBjb25zdCB7IG1ldGEsIGNvbnRlbnQgfSA9IHBvc3Q7CiAgY29uc3QgeyBwcmV2LCBuZXh0IH0gPSBnZXRBZGphY2VudChwYXJhbXMuc2x1Zyk7CiAgY29uc3Qgc2VyaWVzUG9zdHMgPSBtZXRhLnNlcmllc1NsdWcKICAgID8gZ2V0QWxsUG9zdHMoKS5maWx0ZXIoKHApID0+IHAuc2VyaWVzU2x1ZyA9PT0gbWV0YS5zZXJpZXNTbHVnKQogICAgOiBbXTsKCiAgcmV0dXJuICgKICAgIDxkaXYgY2xhc3NOYW1lPSJjb250YWluZXItbmFycm93Ij4KICAgICAgPGFydGljbGU+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFydGljbGUtaGVhZCI+CiAgICAgICAgICB7bWV0YS5jYXRlZ29yeSAmJiA8ZGl2IGNsYXNzTmFtZT0iY2F0Ij57bWV0YS5jYXRlZ29yeX08L2Rpdj59CiAgICAgICAgICA8aDE+e21ldGEudGl0bGV9PC9oMT4KICAgICAgICAgIHttZXRhLmRlc2NyaXB0aW9uICYmIDxwIGNsYXNzTmFtZT0iZGVzYyI+e21ldGEuZGVzY3JpcHRpb259PC9wPn0KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhcnRpY2xlLW1ldGEiPgogICAgICAgICAgICA8c3Bhbj57bWV0YS5kYXRlfTwvc3Bhbj4KICAgICAgICAgICAge21ldGEudXBkYXRlZCAmJiA8c3Bhbj7mm7TmlrDkuo4ge21ldGEudXBkYXRlZH08L3NwYW4+fQogICAgICAgICAgICB7bWV0YS5yZWFkaW5nVGltZSA/IDxzcGFuPnttZXRhLnJlYWRpbmdUaW1lfSBtaW4gcmVhZDwvc3Bhbj4gOiBudWxsfQogICAgICAgICAgICB7KG1ldGEudGFncyB8fCBbXSkubWFwKCh0KSA9PiAoCiAgICAgICAgICAgICAgPHNwYW4ga2V5PXt0fSBjbGFzc05hbWU9InQiPgogICAgICAgICAgICAgICAgI3t0fQogICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgKSl9CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAge21ldGEuY292ZXIgJiYgKAogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFydGljbGUtY292ZXIiPgogICAgICAgICAgICB7LyogZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIEBuZXh0L25leHQvbm8taW1nLWVsZW1lbnQgKi99CiAgICAgICAgICAgIDxpbWcgc3JjPXttZXRhLmNvdmVyfSBhbHQ9e21ldGEudGl0bGV9IC8+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICApfQoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYXJ0aWNsZS1sYXlvdXQiPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1kLWJvZHkiPgogICAgICAgICAgICA8UmVhY3RNYXJrZG93bgogICAgICAgICAgICAgIHJlbWFya1BsdWdpbnM9e1tyZW1hcmtHZm1dfQogICAgICAgICAgICAgIHJlaHlwZVBsdWdpbnM9e1sKICAgICAgICAgICAgICAgIHJlaHlwZVNsdWcsCiAgICAgICAgICAgICAgICBbcmVoeXBlQXV0b2xpbmtIZWFkaW5ncywgeyBiZWhhdmlvcjogIndyYXAiIH1dLAogICAgICAgICAgICAgICAgcmVoeXBlSGlnaGxpZ2h0LAogICAgICAgICAgICAgIF19CiAgICAgICAgICAgICAgY29tcG9uZW50cz17ewogICAgICAgICAgICAgICAgLy8gZXNsaW50LWRpc2FibGUtbmV4dC1saW5lIEBuZXh0L25leHQvbm8taW1nLWVsZW1lbnQKICAgICAgICAgICAgICAgIGltZzogKHByb3BzKSA9PiA8aW1nIHsuLi5wcm9wc30gbG9hZGluZz0ibGF6eSIgYWx0PXtwcm9wcy5hbHQgfHwgIiJ9IC8+LAogICAgICAgICAgICAgICAgYTogKHByb3BzKSA9PiB7CiAgICAgICAgICAgICAgICAgIGNvbnN0IGhyZWYgPSBwcm9wcy5ocmVmIHx8ICIiOwogICAgICAgICAgICAgICAgICBjb25zdCBleHRlcm5hbCA9IC9eaHR0cHM/OlwvXC8vLnRlc3QoaHJlZik7CiAgICAgICAgICAgICAgICAgIHJldHVybiAoCiAgICAgICAgICAgICAgICAgICAgPGEgey4uLnByb3BzfSB0YXJnZXQ9e2V4dGVybmFsID8gIl9ibGFuayIgOiB1bmRlZmluZWR9IHJlbD17ZXh0ZXJuYWwgPyAibm9vcGVuZXIiIDogdW5kZWZpbmVkfSAvPgogICAgICAgICAgICAgICAgICApOwogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB9fQogICAgICAgICAgICA+CiAgICAgICAgICAgICAge2NvbnRlbnR9CiAgICAgICAgICAgIDwvUmVhY3RNYXJrZG93bj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPFRhYmxlT2ZDb250ZW50cyAvPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYXJ0aWNsZS1mb290Ij4KICAgICAgICAgIHtzZXJpZXNQb3N0cy5sZW5ndGggPiAxICYmICgKICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9InNlcmllcy1ib3giPgogICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJsYmwiPuezu+WIlyDCtyB7bWV0YS5zZXJpZXN9PC9kaXY+CiAgICAgICAgICAgICAgPG9sIHN0eWxlPXt7IG1hcmdpbjogIjEwcHggMCAwIiwgcGFkZGluZ0xlZnQ6IDIwIH19PgogICAgICAgICAgICAgICAge3Nlcmllc1Bvc3RzLm1hcCgocCkgPT4gKAogICAgICAgICAgICAgICAgICA8bGkga2V5PXtwLnNsdWd9IHN0eWxlPXt7IG1hcmdpbjogIjZweCAwIiB9fT4KICAgICAgICAgICAgICAgICAgICB7cC5zbHVnID09PSBtZXRhLnNsdWcgPyAoCiAgICAgICAgICAgICAgICAgICAgICA8c3Ryb25nPntwLnRpdGxlfTwvc3Ryb25nPgogICAgICAgICAgICAgICAgICAgICkgOiAoCiAgICAgICAgICAgICAgICAgICAgICA8YSBocmVmPXtgL3Bvc3RzLyR7cC5zbHVnfWB9PntwLnRpdGxlfTwvYT4KICAgICAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgICAgICA8L2xpPgogICAgICAgICAgICAgICAgKSl9CiAgICAgICAgICAgICAgPC9vbD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApfQoKICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJwbi1uYXYiPgogICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgIHtwcmV2ICYmICgKICAgICAgICAgICAgICAgIDxhIGhyZWY9e2AvcG9zdHMvJHtwcmV2LnNsdWd9YH0+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZGlyIj7ihpAg5pu05pawPC9zcGFuPgogICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InQiPntwcmV2LnRpdGxlfTwvc3Bhbj4KICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICApfQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im5leHQiPgogICAgICAgICAgICAgIHtuZXh0ICYmICgKICAgICAgICAgICAgICAgIDxhIGhyZWY9e2AvcG9zdHMvJHtuZXh0LnNsdWd9YH0+CiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0iZGlyIj7mm7Tml6kg4oaSPC9zcGFuPgogICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InQiPntuZXh0LnRpdGxlfTwvc3Bhbj4KICAgICAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgICApfQogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgIDxDb21tZW50cyAvPgogICAgICAgIDwvZGl2PgogICAgICA8L2FydGljbGU+CiAgICA8L2Rpdj4KICApOwp9Cg==
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeHighlight from "rehype-highlight";
+import { getAllSlugs, getPost, getAdjacent, getAllPosts } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { TableOfContents } from "@/components/toc";
+import { Comments } from "@/components/comments";
+
+export function generateStaticParams() {
+  return getAllSlugs().map((slug) => ({ slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  try {
+    const { meta } = getPost(params.slug);
+    return {
+      title: meta.title,
+      description: meta.description,
+      openGraph: {
+        title: meta.title,
+        description: meta.description,
+        type: "article",
+        publishedTime: meta.date,
+        images: meta.cover ? [meta.cover] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
+}
+
+export default function PostPage({ params }: { params: { slug: string } }) {
+  let post;
+  try {
+    post = getPost(params.slug);
+  } catch {
+    notFound();
+  }
+  const { meta, content } = post;
+  const { prev, next } = getAdjacent(params.slug);
+  const seriesPosts = meta.seriesSlug
+    ? getAllPosts().filter((p) => p.seriesSlug === meta.seriesSlug)
+    : [];
+
+  return (
+    <div className="container-narrow">
+      <article>
+        <div className="article-head">
+          {meta.category && <div className="cat">{meta.category}</div>}
+          <h1>{meta.title}</h1>
+          {meta.description && <p className="desc">{meta.description}</p>}
+          <div className="article-meta">
+            <span>{meta.date}</span>
+            {meta.updated && <span>更新于 {meta.updated}</span>}
+            {meta.readingTime ? <span>{meta.readingTime} min read</span> : null}
+            {(meta.tags || []).map((t) => (
+              <span key={t} className="t">
+                #{t}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {meta.cover && (
+          <div className="article-cover">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={meta.cover} alt={meta.title} />
+          </div>
+        )}
+
+        <div className="article-layout">
+          <div className="md-body">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[
+                rehypeSlug,
+                [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                rehypeHighlight,
+              ]}
+              components={{
+                // eslint-disable-next-line @next/next/no-img-element
+                img: (props) => <img {...props} loading="lazy" alt={props.alt || ""} />,
+                a: (props) => {
+                  const href = props.href || "";
+                  const external = /^https?:\/\//.test(href);
+                  return (
+                    <a {...props} target={external ? "_blank" : undefined} rel={external ? "noopener" : undefined} />
+                  );
+                },
+              }}
+            >
+              {content}
+            </ReactMarkdown>
+          </div>
+          <TableOfContents />
+        </div>
+
+        <div className="article-foot">
+          {seriesPosts.length > 1 && (
+            <div className="series-box">
+              <div className="lbl">系列 · {meta.series}</div>
+              <ol style={{ margin: "10px 0 0", paddingLeft: 20 }}>
+                {seriesPosts.map((p) => (
+                  <li key={p.slug} style={{ margin: "6px 0" }}>
+                    {p.slug === meta.slug ? (
+                      <strong>{p.title}</strong>
+                    ) : (
+                      <a href={`/posts/${p.slug}`}>{p.title}</a>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          <div className="pn-nav">
+            <div>
+              {prev && (
+                <a href={`/posts/${prev.slug}`}>
+                  <span className="dir">← 更新</span>
+                  <span className="t">{prev.title}</span>
+                </a>
+              )}
+            </div>
+            <div className="next">
+              {next && (
+                <a href={`/posts/${next.slug}`}>
+                  <span className="dir">更早 →</span>
+                  <span className="t">{next.title}</span>
+                </a>
+              )}
+            </div>
+          </div>
+
+          <Comments />
+        </div>
+      </article>
+    </div>
+  );
+}

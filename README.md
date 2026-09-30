@@ -1,1 +1,40 @@
-IyBBZ2lsZSBSb2JpbiDljZrlrqIKCuiHquW7uuaKgOacr+WNmuWuou+8mk5leHQuanMgMTQgKyBNYXJrZG93bu+8jOmDqOe9suWcqCBWZXJjZWzvvIgyMDI2LTA5IOS7jiBIYXNobm9kZSDov4Hnp7vvvInjgIIKCiMjIOWGmeaWh+eroAoK5ZyoIGBjb250ZW50L3Bvc3RzL2Ag5LiL5paw5bu6IGA8c2x1Zz4ubWRg77yMZnJvbnRtYXR0ZXIg5qC85byP77yaCgpgYGB5YW1sCi0tLQp0aXRsZTogIuaWh+eroOagh+mimCIKZGVzY3JpcHRpb246ICLkuIDlj6Xor53mkZjopoEiCmRhdGU6ICIyMDI2LTEwLTA3IgpjYXRlZ29yeTogIuehrOaguOa3seaMliIgICAjIOW8gOa6kOWRqOaKpSAvIOehrOaguOa3seaMliAvIOW3peWFt+ebmOeCue+8iOWPr+epuu+8iQpzZXJpZXM6ICJEYXRhT3BzIiAgICAgICMg57O75YiX5ZCN77yI5Y+v56m677yJCnNlcmllc1NsdWc6ICJkYXRhb3BzIgp0YWdzOiBbIkRhdGFPcHMiLCAiZGJ0Il0KY292ZXI6ICJodHRwczovLy4uLiIgICMg5bCB6Z2i5Zu+77yI5Y+v56m677yJCnJlYWRpbmdUaW1lOiA4CnNsdWc6ICJteS1wb3N0LXNsdWciCi0tLQpgYGAKCuato+aWh+eUqOagh+WHhiBNYXJrZG93bu+8iOaUr+aMgSBHRk0g6KGo5qC844CB5Luj56CB6auY5Lqu44CB55uu5b2V6Ieq5Yqo55Sf5oiQ77yJ44CCCgojIyDmnKzlnLDlvIDlj5EKCmBgYGJhc2gKbnBtIGluc3RhbGwKbnBtIHJ1biBkZXYgICAgIyBodHRwOi8vbG9jYWxob3N0OjMwMDAKbnBtIHJ1biBidWlsZCAgIyDmnoTlu7rpqozor4EKYGBgCgojIyDlj5HluIMKCuaOqOWIsCBHaXRIdWIgYG1haW5gIOWIhuaUryDihpIgVmVyY2VsIOiHquWKqOmDqOe9suOAggoKLSBSU1M6IGAvcnNzLnhtbGDvvIxTaXRlbWFwOiBgL3NpdGVtYXAueG1sYAotIOiAgSBIYXNobm9kZSDpk77mjqUgYC97c2x1Z31gIOW3suWBmiAzMDEg6Lez6L2s5YiwIGAvcG9zdHMve3NsdWd9YAotIOivhOiuuu+8mkdpc2N1c++8iOmcgOmFjee9riBgTkVYVF9QVUJMSUNfR0lTQ1VTXypgIOeOr+Wig+WPmOmHj+W5tuWcqOS7k+W6k+W8gOWQryBEaXNjdXNzaW9uc++8iQo=
+# Agile Robin 博客
+
+自建技术博客：Next.js 14 + Markdown，部署在 Vercel（2026-09 从 Hashnode 迁移）。
+
+## 写文章
+
+在 `content/posts/` 下新建 `<slug>.md`，frontmatter 格式：
+
+```yaml
+---
+title: "文章标题"
+description: "一句话摘要"
+date: "2026-10-07"
+category: "硬核深挖"   # 开源周报 / 硬核深挖 / 工具盘点（可空）
+series: "DataOps"      # 系列名（可空）
+seriesSlug: "dataops"
+tags: ["DataOps", "dbt"]
+cover: "https://..."  # 封面图（可空）
+readingTime: 8
+slug: "my-post-slug"
+---
+```
+
+正文用标准 Markdown（支持 GFM 表格、代码高亮、目录自动生成）。
+
+## 本地开发
+
+```bash
+npm install
+npm run dev    # http://localhost:3000
+npm run build  # 构建验证
+```
+
+## 发布
+
+推到 GitHub `main` 分支 → Vercel 自动部署。
+
+- RSS: `/rss.xml`，Sitemap: `/sitemap.xml`
+- 老 Hashnode 链接 `/{slug}` 已做 301 跳转到 `/posts/{slug}`
+- 评论：Giscus（需配置 `NEXT_PUBLIC_GISCUS_*` 环境变量并在仓库开启 Discussions）

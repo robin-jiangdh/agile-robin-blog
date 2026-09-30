@@ -1,1 +1,37 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgeyBnZXRBbGxQb3N0cyB9IGZyb20gIkAvbGliL3Bvc3RzIjsKCmV4cG9ydCBjb25zdCBtZXRhZGF0YTogTWV0YWRhdGEgPSB7IHRpdGxlOiAi5b2S5qGjIiB9OwoKZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXJjaGl2ZSgpIHsKICBjb25zdCBwb3N0cyA9IGdldEFsbFBvc3RzKCk7CiAgY29uc3QgYnlZZWFyID0gbmV3IE1hcDxzdHJpbmcsIHR5cGVvZiBwb3N0cz4oKTsKICBmb3IgKGNvbnN0IHAgb2YgcG9zdHMpIHsKICAgIGNvbnN0IHkgPSBwLmRhdGUuc2xpY2UoMCwgNCk7CiAgICBpZiAoIWJ5WWVhci5oYXMoeSkpIGJ5WWVhci5zZXQoeSwgW10pOwogICAgYnlZZWFyLmdldCh5KSEucHVzaChwKTsKICB9CgogIHJldHVybiAoCiAgICA8ZGl2IGNsYXNzTmFtZT0iY29udGFpbmVyLW5hcnJvdyI+CiAgICAgIDxkaXYgY2xhc3NOYW1lPSJwYWdlLWhlYWQiPgogICAgICAgIDxoMT4KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0icHJvbXB0Ij4kPC9zcGFuPiDlvZLmoaMKICAgICAgICA8L2gxPgogICAgICAgIDxwPuWFsSB7cG9zdHMubGVuZ3RofSDnr4fvvIzmjInlubTku73mjpLliJfjgII8L3A+CiAgICAgIDwvZGl2PgogICAgICB7Wy4uLmJ5WWVhci5lbnRyaWVzKCldLm1hcCgoW3llYXIsIGl0ZW1zXSkgPT4gKAogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJ5ZWFyLWJsb2NrIiBrZXk9e3llYXJ9PgogICAgICAgICAgPGgyPnt5ZWFyfTwvaDI+CiAgICAgICAgICB7aXRlbXMubWFwKChwKSA9PiAoCiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJhcmNoaXZlLWl0ZW0iIGtleT17cC5zbHVnfT4KICAgICAgICAgICAgICA8dGltZT57cC5kYXRlLnNsaWNlKDUpfTwvdGltZT4KICAgICAgICAgICAgICA8YSBocmVmPXtgL3Bvc3RzLyR7cC5zbHVnfWB9PntwLnRpdGxlfTwvYT4KICAgICAgICAgICAgICB7cC5jYXRlZ29yeSAmJiA8c3BhbiBjbGFzc05hbWU9ImNhdCI+e3AuY2F0ZWdvcnl9PC9zcGFuPn0KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgKSl9CiAgICA8L2Rpdj4KICApOwp9Cg==
+import type { Metadata } from "next";
+import { getAllPosts } from "@/lib/posts";
+
+export const metadata: Metadata = { title: "归档" };
+
+export default function Archive() {
+  const posts = getAllPosts();
+  const byYear = new Map<string, typeof posts>();
+  for (const p of posts) {
+    const y = p.date.slice(0, 4);
+    if (!byYear.has(y)) byYear.set(y, []);
+    byYear.get(y)!.push(p);
+  }
+
+  return (
+    <div className="container-narrow">
+      <div className="page-head">
+        <h1>
+          <span className="prompt">$</span> 归档
+        </h1>
+        <p>共 {posts.length} 篇，按年份排列。</p>
+      </div>
+      {[...byYear.entries()].map(([year, items]) => (
+        <div className="year-block" key={year}>
+          <h2>{year}</h2>
+          {items.map((p) => (
+            <div className="archive-item" key={p.slug}>
+              <time>{p.date.slice(5)}</time>
+              <a href={`/posts/${p.slug}`}>{p.title}</a>
+              {p.category && <span className="cat">{p.category}</span>}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}

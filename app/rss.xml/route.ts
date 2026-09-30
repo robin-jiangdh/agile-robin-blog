@@ -1,1 +1,32 @@
-aW1wb3J0IHsgZ2V0QWxsUG9zdHMgfSBmcm9tICJAL2xpYi9wb3N0cyI7CmltcG9ydCB7IHNpdGUgfSBmcm9tICJAL2xpYi9zaXRlIjsKCmZ1bmN0aW9uIGVzYyhzOiBzdHJpbmcpIHsKICByZXR1cm4gcy5yZXBsYWNlKC8mL2csICImYW1wOyIpLnJlcGxhY2UoLzwvZywgIiZsdDsiKS5yZXBsYWNlKC8+L2csICImZ3Q7Iik7Cn0KCmV4cG9ydCBmdW5jdGlvbiBHRVQoKSB7CiAgY29uc3QgcG9zdHMgPSBnZXRBbGxQb3N0cygpOwogIGNvbnN0IGl0ZW1zID0gcG9zdHMKICAgIC5tYXAoCiAgICAgIChwKSA9PiBgICAgIDxpdGVtPgogICAgICA8dGl0bGU+JHtlc2MocC50aXRsZSl9PC90aXRsZT4KICAgICAgPGxpbms+JHtzaXRlLnVybH0vcG9zdHMvJHtwLnNsdWd9PC9saW5rPgogICAgICA8Z3VpZD4ke3NpdGUudXJsfS9wb3N0cy8ke3Auc2x1Z308L2d1aWQ+CiAgICAgIDxwdWJEYXRlPiR7bmV3IERhdGUocC5kYXRlKS50b1VUQ1N0cmluZygpfTwvcHViRGF0ZT4KICAgICAgJHtwLmRlc2NyaXB0aW9uID8gYDxkZXNjcmlwdGlvbj4ke2VzYyhwLmRlc2NyaXB0aW9uKX08L2Rlc2NyaXB0aW9uPmAgOiAiIn0KICAgIDwvaXRlbT5gCiAgICApCiAgICAuam9pbigiXG4iKTsKICBjb25zdCB4bWwgPSBgPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiPgogIDxjaGFubmVsPgogICAgPHRpdGxlPiR7ZXNjKHNpdGUudGl0bGUpfTwvdGl0bGU+CiAgICA8bGluaz4ke3NpdGUudXJsfTwvbGluaz4KICAgIDxkZXNjcmlwdGlvbj4ke2VzYyhzaXRlLmRlc2NyaXB0aW9uKX08L2Rlc2NyaXB0aW9uPgogICAgPGxhbmd1YWdlPnpoLUNOPC9sYW5ndWFnZT4KJHtpdGVtc30KICA8L2NoYW5uZWw+CjwvcnNzPmA7CiAgcmV0dXJuIG5ldyBSZXNwb25zZSh4bWwsIHsgaGVhZGVyczogeyAiQ29udGVudC1UeXBlIjogImFwcGxpY2F0aW9uL3Jzcyt4bWw7IGNoYXJzZXQ9dXRmLTgiIH0gfSk7Cn0K
+import { getAllPosts } from "@/lib/posts";
+import { site } from "@/lib/site";
+
+function esc(s: string) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+export function GET() {
+  const posts = getAllPosts();
+  const items = posts
+    .map(
+      (p) => `    <item>
+      <title>${esc(p.title)}</title>
+      <link>${site.url}/posts/${p.slug}</link>
+      <guid>${site.url}/posts/${p.slug}</guid>
+      <pubDate>${new Date(p.date).toUTCString()}</pubDate>
+      ${p.description ? `<description>${esc(p.description)}</description>` : ""}
+    </item>`
+    )
+    .join("\n");
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>${esc(site.title)}</title>
+    <link>${site.url}</link>
+    <description>${esc(site.description)}</description>
+    <language>zh-CN</language>
+${items}
+  </channel>
+</rss>`;
+  return new Response(xml, { headers: { "Content-Type": "application/rss+xml; charset=utf-8" } });
+}

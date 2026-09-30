@@ -1,1 +1,6 @@
-bm9kZV9tb2R1bGVzLwoubmV4dC8Kb3V0LwpkaXN0LwouZW52Ki5sb2NhbAouRFNfU3RvcmUK
+node_modules/
+.next/
+out/
+dist/
+.env*.local
+.DS_Store

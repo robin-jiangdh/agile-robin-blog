@@ -1,1 +1,31 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwppbXBvcnQgeyBIZWFkZXIsIEZvb3RlciB9IGZyb20gIkAvY29tcG9uZW50cy9jaHJvbWUiOwppbXBvcnQgeyBzaXRlIH0gZnJvbSAiQC9saWIvc2l0ZSI7CmltcG9ydCAiLi9nbG9iYWxzLmNzcyI7CgpleHBvcnQgY29uc3QgbWV0YWRhdGE6IE1ldGFkYXRhID0gewogIHRpdGxlOiB7CiAgICBkZWZhdWx0OiBgJHtzaXRlLnRpdGxlfSDCtyAke3NpdGUudGFnbGluZX1gLAogICAgdGVtcGxhdGU6IGAlcyDCtyAke3NpdGUudGl0bGV9YCwKICB9LAogIGRlc2NyaXB0aW9uOiBzaXRlLmRlc2NyaXB0aW9uLAogIG1ldGFkYXRhQmFzZTogbmV3IFVSTChzaXRlLnVybCksCiAgb3BlbkdyYXBoOiB7CiAgICB0aXRsZTogc2l0ZS50aXRsZSwKICAgIGRlc2NyaXB0aW9uOiBzaXRlLmRlc2NyaXB0aW9uLAogICAgdHlwZTogIndlYnNpdGUiLAogICAgbG9jYWxlOiAiemhfQ04iLAogIH0sCn07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBSb290TGF5b3V0KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gKAogICAgPGh0bWwgbGFuZz0iemgtQ04iPgogICAgICA8Ym9keT4KICAgICAgICA8SGVhZGVyIC8+CiAgICAgICAgPG1haW4+e2NoaWxkcmVufTwvbWFpbj4KICAgICAgICA8Rm9vdGVyIC8+CiAgICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICApOwp9Cg==
+import type { Metadata } from "next";
+import { Header, Footer } from "@/components/chrome";
+import { site } from "@/lib/site";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: {
+    default: `${site.title} · ${site.tagline}`,
+    template: `%s · ${site.title}`,
+  },
+  description: site.description,
+  metadataBase: new URL(site.url),
+  openGraph: {
+    title: site.title,
+    description: site.description,
+    type: "website",
+    locale: "zh_CN",
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="zh-CN">
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

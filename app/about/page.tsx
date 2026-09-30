@@ -1,1 +1,52 @@
-aW1wb3J0IHR5cGUgeyBNZXRhZGF0YSB9IGZyb20gIm5leHQiOwoKZXhwb3J0IGNvbnN0IG1ldGFkYXRhOiBNZXRhZGF0YSA9IHsgdGl0bGU6ICLlhbPkuo4iIH07CgpleHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBYm91dCgpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9ImNvbnRhaW5lci1uYXJyb3ciPgogICAgICA8ZGl2IGNsYXNzTmFtZT0icGFnZS1oZWFkIj4KICAgICAgICA8aDE+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InByb21wdCI+JDwvc3Bhbj4g5YWz5LqOCiAgICAgICAgPC9oMT4KICAgICAgICA8cD53aG9hbWkg55qE5a6M5pW06L6T5Ye644CCPC9wPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzc05hbWU9Im1kLWJvZHkiPgogICAgICAgIDxoMj7nm67liY3kuJPms6jnmoQ8L2gyPgogICAgICAgIDx1bD4KICAgICAgICAgIDxsaT5BSSDkuI7ova/ku7blt6XnqIvnmoTkuqTlj4nlnLDluKbvvJpBSSBDb2RpbmfjgIFBZ2VudCDlt6XkvZzmtYHjgIFNTE9wczwvbGk+CiAgICAgICAgICA8bGk+RGV2T3BzIOS4juWPr+ingua1i+aAp++8muS7juaMh+agh+OAgeaXpeW/l+OAgei/vei4quWIsOaVsOaNruWPr+ingua1i+aApzwvbGk+CiAgICAgICAgICA8bGk+SG9tZSBMYWIg5oqY6IW+77ya6Ieq5bu65pyN5Yqh44CB55uR5o6n44CB6Ieq5Yqo5YyWPC9saT4KICAgICAgICA8L3VsPgogICAgICAgIDxoMj7ov5nkuKrljZrlrqI8L2gyPgogICAgICAgIDxwPgogICAgICAgICAg44CMQWdpbGUgUm9iaW7jgI3kuYvliY3ot5HlnKggSGFzaG5vZGUg5LiK77yMMjAyNiDlubQgOSDmnIjov4Hnp7vliLDoh6rlu7rnq5nvvIhOZXh0LmpzICsKICAgICAgICAgIFZlcmNlbO+8ie+8jOWGheWuueWFqOmDqOeUqCBNYXJrZG93biDnrqHnkIbvvIzmjqjku6PnoIHljbPlj5HluIPjgIIKICAgICAgICA8L3A+CiAgICAgICAgPHA+5Zu65a6a5qCP55uu77yaPC9wPgogICAgICAgIDx1bD4KICAgICAgICAgIDxsaT4KICAgICAgICAgICAgPHN0cm9uZz7lkajlha3jgIrlvIDmupDlkajmiqXjgIs8L3N0cm9uZz7igJTigJQgR2l0SHViIOW8gOa6kOmhueebruWKqOaAgeWkjeWIigogICAgICAgICAgPC9saT4KICAgICAgICAgIDxsaT4KICAgICAgICAgICAgPHN0cm9uZz7lkajkuInjgIrnoazmoLjmt7HmjJbjgIs8L3N0cm9uZz7igJTigJQg56ys5LiA5a2jIERhdGFPcHPvvJrmiormlbDmja7nrqHpgZPlvZPova/ku7bkuIDmoLfkuqTku5gKICAgICAgICAgIDwvbGk+CiAgICAgICAgICA8bGk+CiAgICAgICAgICAgIDxzdHJvbmc+5pyI5pyr44CK5bel5YW355Sf5oCB55uY54K544CLPC9zdHJvbmc+4oCU4oCUIOaoquivhOWvueavlO+8jOe7meS6uue+pOeUu+WDj+S4jee7meWUr+S4gOetlOahiAogICAgICAgICAgPC9saT4KICAgICAgICA8L3VsPgogICAgICAgIDxoMj7miJHorqTkuLo8L2gyPgogICAgICAgIDx1bD4KICAgICAgICAgIDxsaT7mraPluLjmg4XlhrXkuIvvvIzmupDnoIHog73lpJ/mmrTpnLIgY29kZXIg55qE5oCd57u057y66Zm377yM5L2G57y66Zm35LiN5LiA5a6a5piv5Z2P5LqL5YS/PC9saT4KICAgICAgICAgIDxsaT7mnInmlYjnmoTmtYvor5Xog73kuIDlrprnqIvluqbkuIrlj5HnjrDnvLrpmbc8L2xpPgogICAgICAgIDwvdWw+CiAgICAgICAgPGgyPuaIkeWPjeWvueeahDwvaDI+CiAgICAgICAgPHVsPgogICAgICAgICAgPGxpPgogICAgICAgICAgICA8c3Ryb25nPuWPjeWvueS4gOWIh+acque7j+aAneiAg+eahOe8lueoi+Wunui3tTwvc3Ryb25nPgogICAgICAgICAgPC9saT4KICAgICAgICA8L3VsPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICk7Cn0K
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "关于" };
+
+export default function About() {
+  return (
+    <div className="container-narrow">
+      <div className="page-head">
+        <h1>
+          <span className="prompt">$</span> 关于
+        </h1>
+        <p>whoami 的完整输出。</p>
+      </div>
+      <div className="md-body">
+        <h2>目前专注的</h2>
+        <ul>
+          <li>AI 与软件工程的交叉地带：AI Coding、Agent 工作流、MLOps</li>
+          <li>DevOps 与可观测性：从指标、日志、追踪到数据可观测性</li>
+          <li>Home Lab 折腾：自建服务、监控、自动化</li>
+        </ul>
+        <h2>这个博客</h2>
+        <p>
+          「Agile Robin」之前跑在 Hashnode 上，2026 年 9 月迁移到自建站（Next.js +
+          Vercel），内容全部用 Markdown 管理，推代码即发布。
+        </p>
+        <p>固定栏目：</p>
+        <ul>
+          <li>
+            <strong>周六《开源周报》</strong>—— GitHub 开源项目动态复刊
+          </li>
+          <li>
+            <strong>周三《硬核深挖》</strong>—— 第一季 DataOps：把数据管道当软件一样交付
+          </li>
+          <li>
+            <strong>月末《工具生态盘点》</strong>—— 横评对比，给人群画像不给唯一答案
+          </li>
+        </ul>
+        <h2>我认为</h2>
+        <ul>
+          <li>正常情况下，源码能够暴露 coder 的思维缺陷，但缺陷不一定是坏事儿</li>
+          <li>有效的测试能一定程度上发现缺陷</li>
+        </ul>
+        <h2>我反对的</h2>
+        <ul>
+          <li>
+            <strong>反对一切未经思考的编程实践</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
