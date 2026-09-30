@@ -1,1 +1,259 @@
-LS0tCnRpdGxlOiAiQ3JlYXRlIE1vbmdvREIgU3RhbmRhbG9uZSBhbmQgUmVwbGljYSBTZXQgY29udGFpbmVycyB1c2luZyBEb2NrZXIiCmRlc2NyaXB0aW9uOiAiRG9ja2VyIENvbnRhaW5lcnMgb2ZmZXIgZWFzeSBzZXR1cCwgY3VzdG9taXphdGlvbiBhbmQgc2NhbGFiaWxpdHkuIEluIHRoaXMgYXJ0aWNsZSwgaSB3aWxsIHdhbGsgeW91IHRocm91Z2ggaG93IHRvIHVzZSBEb2NrZXIgdG8gc2V0dXAgTW9uZ29EQiBzdGFuZGFsb25lIGFuZCByZXBsaWNhIHNldCBjb250YWluZXJzIHdpdGhpbiBtaW51dGVzLiBUaGUgYXJ0aWNsZSBpcyBkaXZpZGVkIGluIHR3byBwYXJ0cywgdGhlIGZpcnN0IHBhcnQgaS4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwMDE1MzYvOWVkNmU1OGMtNzg1ZS00YzkxLThjZDgtOTY3ZDc2MTRjNTIyLmpwZWciCnJlYWRpbmdUaW1lOiA1CnNsdWc6ICJjcmVhdGUtbW9uZ29kYi1kb2NrZXIiCi0tLQpEb2NrZXIgQ29udGFpbmVycyBvZmZlciBlYXN5IHNldHVwLCBjdXN0b21pemF0aW9uIGFuZCBzY2FsYWJpbGl0eS4gSW4gdGhpcyBhcnRpY2xlLCBpIHdpbGwgd2FsayB5b3UgdGhyb3VnaCBob3cgdG8gdXNlIERvY2tlciB0byBzZXR1cCBNb25nb0RCIHN0YW5kYWxvbmUgYW5kIHJlcGxpY2Egc2V0IGNvbnRhaW5lcnMgd2l0aGluIG1pbnV0ZXMuCgpUaGUgYXJ0aWNsZSBpcyBkaXZpZGVkIGluIHR3byBwYXJ0cywgdGhlIGZpcnN0IHBhcnQgaXMgc2V0dGluZyB1cCB0aGUgc3RhbmRhbG9uZSBNb25nb0RCIGNvbnRhaW5lciBhbmQgc2Vjb25kIHBhcnQgaXMgc2V0dGluZyB1cCBhbmQgZ3JvdXBpbmcgTW9uZ29EQiBjb250YWluZXJzIGFzIG1lbWJlciBvZiByZXBsaWNhIHNldCB3aXRoIERvY2tlci4KCkxldOKAmXMgZ2V0IHN0YXJ0ZWQuCgo8IS0tdHJ1bmNhdGUtLT4KCiMjIFN5c3RlbSBDb25maWd1cmF0aW9uCgpUbyBydW4gdGhpcyBzZXR1cCwgRG9ja2VyIEVuZ2luZSBpcyByZXF1aXJlZCB0byBiZSBpbnN0YWxsZWQgb24gdGhlIHN5c3RlbS4gRm9sbG93IHRoZSBvZmZpY2lhbCBkb2N1bWVudGF0aW9uIHRvIHNldHVwIERvY2tlciBFbmdpbmUgb24geW91ciBzeXN0ZW0uCgo6OjpjYXV0aW9uCgpUaGUgc3RlcHMgYW5kIGNvbmZpZ3VyYXRpb24gZm9yIGJvdGggc3RhbmRhbG9uZSBhbmQgcmVwbGljYSBzZXQgaXMgbm90IHRvIGJlIHVzZWQgZm9yIHByb2R1Y3Rpb24gZGVwbG95bWVudC4gVGhlIGludGVuZGVkIHVzZSBpcyBvbmx5IGZvciBzZXR0aW5nIHVwIGEgZW52aXJvbm1lbnQgdG8gc3VwcG9ydCBsZWFybmluZyBvZiBNb25nb0RCLgoKOjo6CgojIyBTdGFuZGFsb25lIE1vbmdvREIgU2V0dXAKCiogUHVsbCB0aGUgRG9ja2VyIE1vbmdvREIgb2ZmaWNpYWwgaW1hZ2UgZnJvbSBEb2NrZXIgSHViLiBUaGUgZm9sbG93aW5nIGNvZGUgc25pcHBldCBkZW1vbnN0cmF0ZXMgcHVsbGluZyB0aGUgZG9ja2VyIE1vbmdvREIgNC40LjkgcmVsZWFzZS4gVG8gcHVsbCB0aGUgTW9uZ29EQiA1LjAgbGF0ZXN0IHJlbGVhc2UgcmVwbGFjZSA6NC40LjktcmMwIHdpdGggOmxhdGVzdCB0YWcKCmBgYHNoZWxsIAoKJCBkb2NrZXIgcHVsbCBtb25nbzo0LjQuOS1yYzAgCgpgYGAKCiogVG8gY2hlY2sgaWYgdGhlIHRoZSBpbWFnZSBwdWxsIGZyb20gRG9ja2VyIEh1YiB3YXMgc3VjY2Vzc2Z1bAoKCmBgYAoKJCBkb2NrZXIgaW1hZ2VzICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgClJFUE9TSVRPUlkgICBUQUcgICAgICAgICBJTUFHRSBJRCAgICAgICBDUkVBVEVEICAgICAgIFNJWkUKbW9uZ28gICAgICAgIDQuNC45LXJjMCAgIDI0NTk5ZDZjZGUzMCAgIDkgZGF5cyBhZ28gICAgNDEzTUIKbW9uZ28gICAgICAgIGxhdGVzdCAgICAgIDMxMjk5Yjk1NmM3OSAgIDEwIGRheXMgYWdvICAgNjQyTUIKCmBgYAoKKiBMZXRzIHN0YXJ0IGZpcnN0IHN0YW5kYWxvbmUgY29udGFpbmVyIOKAkyB0aGUgYmVsb3cgY29tbWFuZCBzdGFydHMgTW9uZ29EQiBkb2NrZXIgY29udGFpbmVyIHdpdGggbmFtZSBtb25nb180NDkgaW4gZGV0YWNoZWQgbW9kZSB1c2luZyB0aGUgNC40LjktcmMwIGltYWdlCgpgYGBzaGVsbAoKJCBkb2NrZXIgcnVuIC0tbmFtZSBtb25nb180NDkgLWQgbW9uZ286NC40LjktcmMwCgpgYGAKCiogTGlzdCB0aGUgY29udGFpbmVyIHN0YXR1cyBhbmQgaGVhbHRoIGJ5IGV4ZWN1dGluZwoKYGBgc2hlbGwKCiQgZG9ja2VyIGNvbnRhaW5lciBscyAtYQoKQ09OVEFJTkVSIElEICAgSU1BR0UgICAgICAgICAgQ09NTUFORCAgICAgICAgICAgICAgICAgIENSRUFURUQgICAgICAgU1RBVFVTICAgICAgICAgICAgICAgICAgICAgIFBPUlRTICAgICAgIE5BTUVTCjk2ZTY0ZWM1MjVhMiAgIDI0NTk5ZDZjZGUzMCAgICJkb2NrZXItZW50cnlwb2ludC5z4oCmIiAgIDIgaG91cnMgYWdvICAgVXAgMzMgbWludXRlcyAgICAgICAgICAgICAgIDI3MDE3L3RjcCAgIG1vbmdvXzQ0OQoKYGBgCgoqIFRvIHJ1biBhIGNvbW1hbmQgaW5zaWRlIHRoZSBjb250YWluZXIKICAqIGRvY2tlciBleGVjOiBpbnRlcmFjdCB3aXRoIGNvbnRhaW5lcnMgKHJ1bm5pbmcvdXAgbW9kZSkKICAqIC1pIDogaW50ZXJhY3RpdmUgU1RESU4gb3BlbiBldmVuIGlmIG5vdCBhdHRhY2hlZCB0byB0aGUgY29udGFpbmVyCiAgKiAtdDogcHNldWRvIFRUWQoKCiogQ29ubmVjdCB0byBNb25nb0RCIGRhZW1vbgoKYGBgc2hlbGwKcm9vdEA5NmU2NGVjNTI1YTI6LyMgbW9uZ28KCk1vbmdvREIgc2hlbGwgdmVyc2lvbiB2NC40LjktcmMwCmNvbm5lY3RpbmcgdG86IG1vbmdvZGI6Ly8xMjcuMC4wLjE6MjcwMTcvP2NvbXByZXNzb3JzPWRpc2FibGVkJmdzc2FwaVNlcnZpY2VOYW1lPW1vbmdvZGIKSW1wbGljaXQgc2Vzc2lvbjogc2Vzc2lvbiB7ICJpZCIgOiBVVUlEKCJhYzYyNGE3OS05MDhiLTQ1ODAtOTBhZS0yMmQwYTdhZWUwN2EiKSB9Ck1vbmdvREIgc2VydmVyIHZlcnNpb246IDQuNC45LXJjMAoKYGBgCgoqIEluc3RhbGwgdXRpbGl0aWVzLiBUaGUgdXRpbGl0aWVzIHBpbmcsIHN5c3RlbWN0bCwgc3VkbyBpbnN0YWxsZWQgaW4gdGhlIGNvbnRhaW5lcnMgY2FuIGJlIHVzZWQgZm9yIHRyb3VibGVzaG9vdGluZyBkdXJpbmcgdGhlIHNldHVwIG9mIERvY2tlciBjb250YWluZXJzLgoKYGBgc2hlbGwKCnJvb3RAOTZlNjRlYzUyNWEyOi8jIGFwdC1nZXQgaW5zdGFsbCBpcHV0aWxzLXBpbmfMtQpyb290QDk2ZTY0ZWM1MjVhMjovIyBhcHQtZ2V0IGluc3RhbGwgc3VkbyAKcm9vdEA5NmU2NGVjNTI1YTI6LyMgYXB0LWdldCBpbnN0YWxsIHN5c3RlbWN0bAoKYGBgCgpUaGlzIGZpbmlzaGVzIHRoZSBzZXR1cCBvZiBzdGFuZGFsb25lIE1vbmdvREIgQ29udGFpbmVyLiBOb3cgbGV04oCZcyBsb29rIGF0IFJlcGxpY2FTZXQgc2V0dXAuCgojIyBDcmVhdGluZyBNb25nb0RCIFJlcGxpY2FTZXQgdXNpbmcgRG9ja2VyCgpBIHJlcGxpY2Egc2V0IGNvbnNpc3RzIG9mIGEgcHJpbWFyeSBub2RlIHRvZ2V0aGVyIHdpdGggdHdvIG9yIG1vcmUgc2Vjb25kYXJ5IG5vZGVzLiBJdCBpcyByZWNvbW1lbmRlZCB0byBncm91cCB0aHJlZSBvciBtb3JlIG5vZGVzLCB3aXRoIGFuIG9kZCBudW1iZXIgb2YgdG90YWwgbm9kZXMuIFRoZSBwcmltYXJ5IG5vZGUgYWNjZXB0cyBhbGwgdGhlIHdyaXRlIHJlcXVlc3RzIHdoaWNoIGFyZSBwcm9wYWdhdGVkIHN5bmNocm9ub3VzbHkgb3IgYXN5bmNocm9ub3VzbHkgdG8gdGhlIHNlY29uZGFyeSBub2Rlcy4gQmVsb3cgYXJlIHRoZSBzdGVwcyByZXF1aXJlZCB0byBjb21wbGV0ZSB0aGUgcmVwbGljYSBzZXQgc2V0dXAgdXNpbmcgRG9ja2VyLgoKQ3JlYXRlIGEgbmV3IG5ldHdvcmsoYnJpZGdlKSB3aXRoaW4gRG9ja2VyLiBUaGUgcmVwbGljYSBzZXQgY29udGFpbmVycyB3aWxsIGJlIG1hcHBlZCB0byB0aGUgbmV3IG5ldHdvcmsuCgpgYGBzaGVsbCAKJCBkb2NrZXIgbmV0d29yayBjcmVhdGUgbW9uZ29fbmV0CiQgZG9ja2VyIG5ldHdvcmsgaW5zcGVjdCBtb25nb19uZXQgICAgICAgICAgICAgICAgICAgICAgIApbCiAgICB7CiAgICAgICAgIk5hbWUiOiAibW9uZ29fbmV0IiwKICAgICAgICAiSWQiOiAiZTI1Njc4MDY2NDJhOTI0NTQzNjM3MWE5Yjk5MDRjNzFmYWRhZTk2OWZiZDExYTdiYjgyMDNlMDc5NzZiMWIyYSIsCiAgICAgICAgIkNyZWF0ZWQiOiAiMjAyMS0wOS0xMVQwMDozNjozMy45ODk2ODg3MDhaIiwKICAgICAgICAiU2NvcGUiOiAibG9jYWwiLAogICAgICAgICJEcml2ZXIiOiAiYnJpZGdlIiwKICAgICAgICAiRW5hYmxlSVB2NiI6IGZhbHNlLAogICAgICAgICJJUEFNIjogewogICAgICAgICAgICAiRHJpdmVyIjogImRlZmF1bHQiLAogICAgICAgICAgICAiT3B0aW9ucyI6IHt9LAogICAgICAgICAgICAiQ29uZmlnIjogWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJTdWJuZXQiOiAiMTcyLjE4LjAuMC8xNiIsCiAgICAgICAgICAgICAgICAgICAgIkdhdGV3YXkiOiAiMTcyLjE4LjAuMSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgXQogICAgICAgIH0sCi4uLgpdCmBgYAoKKiBTdGFydCAzIGNvbnRhaW5lcnMg4oCTIFByaW1hcnkgU2Vjb25kYXJ5IFNlY29uZGFyeQogICogQnJlYWsgZG93biBvZiBwYXJhbWV0ZXJzIGRvY2tlciBydW4gOiBzdGFydCBhIG5ldyBjb250YWluZXIKICAgICogYC1kYCA6ICBydW4gdGhlIGNvbnRhaW5lciBpbiBkZXRhY2hlZCBtb2RlCiAgICAqIGAtcCAyMDAwMToyNzAxN2AgcHVibGlzaCBjb250YWluZXIgcG9ydCB0byB0aGUgaG9zdCBhbmQgYmluZCAyNzAxNyB0byAyMDAwMSBvbiB0aGUgaG9zdC4gVGhpcyBpcyB1c2VmdWwgaWYgY29ubmVjdGluZyBtb25nbyBjbGllbnQgbGlrZSBtb25nb3NoIHRvIGNvbnRhaW5lcgogICAgKiBgLS1uYW1lYCA6IG5hbWUgb2YgdGhlIG1vbmdvIGNvbnRhaW5lcgogICAgKiBgLS0gbmV0d29ya2AgOiBjb25uZWN0IHRvIHVzZXIgY3JlYXRlZCBuZXR3b3JrIG1vbmdvX25ldAogICAgKiBgbW9uZ286NC40LjktcmMwYCA6IERvY2tlciBNb25nb0RCIGltYWdlCiAgICAqIGBtb25nb2QgLS1yZXBsU2V0IHJzX21vbmdvYCA6IHJ1biB0aGUgbW9uZ29kIGRhZW1vbiBhbmQgYWRkIHRoZSBjb250YWluZXIgdG8gcmVwbGljYSBzZXQgbmFtZSByc19tb25nbwoKYGBgc2hlbGwgCiQgZG9ja2VyIHJ1biAtZCAtcCAyMDAwMToyNzAxNyAtLW5hbWUgbW9uZ28xIC0tbmV0d29yayBtb25nb19uZXQgbW9uZ286NC40LjktcmMwIG1vbmdvZCAtLXJlcGxTZXQgcnNfbW9uZ28KJCBkb2NrZXIgcnVuIC1kIC1wIDIwMDAyOjI3MDE3IC0tbmFtZSBtb25nbzIgLS1uZXR3b3JrIG1vbmdvX25ldCBtb25nbzo0LjQuOS1yYzAgbW9uZ29kIC0tcmVwbFNldCByc19tb25nbwokIGRvY2tlciBydW4gLWQgLXAgMjAwMDM6MjcwMTcgLS1uYW1lIG1vbmdvMyAtLW5ldHdvcmsgbW9uZ29fbmV0IG1vbmdvOjQuNC45LXJjMCBtb25nb2QgLS1yZXBsU2V0IHJzX21vbmdvCmBgYAoKKiBTZXQgdXAgUmVwbGljYSBzZXQuIENvbm5lY3QgdG8gb25lIG9mIHRoZSBjb250YWluZXJzIGFuZCBydW4gdGhlIGJlbG93IGNvbW1hbmRzLiBUaGUgY29udGFpbmVyIHRoYXQgcmVjZWl2ZXMgdGhlIGluaXRpYXRlIHdpbGwgcGFzcyBvbiB0aGUgY29uZmlndXJhdGlvbiB0byBvdGhlciBjb250YWluZXJzIGFzc2lnbmVkIGFzIG1lbWJlcnMuCgpgYGBqcwpyc19tb25nbyBbZGlyZWN0OiBwcmltYXJ5XSB0ZXN0XzI+IGNvbmZpZyA9IHsKICAgICAgIl9pZCIgOiAicnNfbW9uZ28iLAogICAgICAibWVtYmVycyIgOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICAgIl9pZCIgOiAwLAogICAgICAgICAgICAgICJob3N0IiA6ICJtb25nbzE6MjcwMTciCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAgICJfaWQiIDogMSwKICAgICAgICAgICAgICAiaG9zdCIgOiAibW9uZ28yOjI3MDE3IgogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgICAiX2lkIiA6IDIsCiAgICAgICAgICAgICAgImhvc3QiIDogIm1vbmdvMzoyNzAxNyIKICAgICAgICAgIH0KICAgICAgXQogIH0KCnJzX21vbmdvIFtkaXJlY3Q6IHByaW1hcnldIGFkbWluPiBycy5pbml0aWF0ZShjb25maWcpCgovL0luc2VydCB0ZXN0IGRhdGEKCnJzX21vbmdvIFtkaXJlY3Q6IHByaW1hcnldIGFkbWluPiB1c2UgdGVzdF8yCnJzX21vbmdvIFtkaXJlY3Q6IHByaW1hcnldIHRlc3RfMj4gZGIuZW1wbG95ZWVzLmluc2VydCh7bmFtZTogInJvYmluIikKCi8vVG8gcmVhZCBxdWVyaWVzIG9uIHNlY29uZGFyeSBydW4gc2V0UmVhZFByZWYuIApyc19tb25nbyBbZGlyZWN0OiBzZWNvbmRhcnldIHRlc3RfMj5kYi5nZXRNb25nbygpLnNldFJlYWRQcmVmKCdzZWNvbmRhcnknKQoKcnNfbW9uZ28gW2RpcmVjdDogc2Vjb25kYXJ5XSB0ZXN0XzI+IGRiLmVtcGxveWVlcy5maW5kKCkKWwogIHsgX2lkOiBPYmplY3RJZCgiNjEzYzk5ODAxZWE3OTY1MDhlM2M3M2Y1IiksIG5hbWU6ICdyb2JpbicgfQpdCgpgYGAKCiogVmFsaWRhdGUgUmVwbGljYSBTZXQgQ29uZmlndXJhdGlvbgoKYGBganMKcnNfbW9uZ28gW2RpcmVjdDogcHJpbWFyeV0gdGVzdF8yPiBkYi5wcmludFJlcGxpY2F0aW9uSW5mbygpCgpjb25maWd1cmVkIG9wbG9nIHNpemUKJzU1NzE3NCBNQicKLS0tCmxvZyBsZW5ndGggc3RhcnQgdG8gZW5kCic3MTM3MiBzZWNzICgxOS44MyBocnMpJwotLS0Kb3Bsb2cgZmlyc3QgZXZlbnQgdGltZQonU2F0IFNlcCAxMSAyMDIxIDE1OjQ3OjIxIEdNVCswNTMwIChJbmRpYSBTdGFuZGFyZCBUaW1lKScKLS0tCm9wbG9nIGxhc3QgZXZlbnQgdGltZQonU3VuIFNlcCAxMiAyMDIxIDExOjM2OjUzIEdNVCswNTMwIChJbmRpYSBTdGFuZGFyZCBUaW1lKScKLS0tCm5vdwonU3VuIFNlcCAxMiAyMDIxIDExOjM2OjU0IEdNVCswNTMwIChJbmRpYSBTdGFuZGFyZCBUaW1lKScKCgpyc19tb25nbyBbZGlyZWN0OiBwcmltYXJ5XSB0ZXN0XzI+IHJzLmNvbmYoKQp7CiAgX2lkOiAncnNfbW9uZ28nLAogIHZlcnNpb246IDEsCiAgdGVybTogMSwKICBwcm90b2NvbFZlcnNpb246IExvbmcoIjEiKSwKICB3cml0ZUNvbmNlcm5NYWpvcml0eUpvdXJuYWxEZWZhdWx0OiB0cnVlLAogIG1lbWJlcnM6IFsKICAgIHsKICAgICAgX2lkOiAwLAogICAgICBob3N0OiAnbW9uZ28xOjI3MDE3JywKICAgICAgYXJiaXRlck9ubHk6IGZhbHNlLAogICAgICBidWlsZEluZGV4ZXM6IHRydWUsCiAgICAgIGhpZGRlbjogZmFsc2UsCiAgICAgIHByaW9yaXR5OiAxLAogICAgICB0YWdzOiB7fSwKICAgICAgc2xhdmVEZWxheTogTG9uZygiMCIpLAogICAgICB2b3RlczogMQogICAgfSwKICAgIHsKICAgICAgX2lkOiAxLAogICAgICBob3N0OiAnbW9uZ28yOjI3MDE3JywKICAgICAgYXJiaXRlck9ubHk6IGZhbHNlLAogICAgICBidWlsZEluZGV4ZXM6IHRydWUsCiAgICAgIGhpZGRlbjogZmFsc2UsCiAgICAgIHByaW9yaXR5OiAxLAogICAgICB0YWdzOiB7fSwKICAgICAgc2xhdmVEZWxheTogTG9uZygiMCIpLAogICAgICB2b3RlczogMQogICAgfSwKICAgIHsKICAgICAgX2lkOiAyLAogICAgICBob3N0OiAnbW9uZ28zOjI3MDE3JywKICAgICAgYXJiaXRlck9ubHk6IGZhbHNlLAogICAgICBidWlsZEluZGV4ZXM6IHRydWUsCiAgICAgIGhpZGRlbjogZmFsc2UsCiAgICAgIHByaW9yaXR5OiAxLAogICAgICB0YWdzOiB7fSwKICAgICAgc2xhdmVEZWxheTogTG9uZygiMCIpLAogICAgICB2b3RlczogMQogICAgfQoKYGBgClRoYXQgY29uY2x1ZGVzIHRoaXMgYXJ0aWNsZS4KCgoKCgoKCgoKCgoKCg==
+---
+title: "Create MongoDB Standalone and Replica Set containers using Docker"
+description: "Docker Containers offer easy setup, customization and scalability. In this article, i will walk you through how to use Docker to setup MongoDB standalone and replica set containers within minutes. The article is divided in two parts, the first part i..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835001536/9ed6e58c-785e-4c91-8cd8-967d7614c522.jpeg"
+readingTime: 5
+slug: "create-mongodb-docker"
+---
+Docker Containers offer easy setup, customization and scalability. In this article, i will walk you through how to use Docker to setup MongoDB standalone and replica set containers within minutes.
+
+The article is divided in two parts, the first part is setting up the standalone MongoDB container and second part is setting up and grouping MongoDB containers as member of replica set with Docker.
+
+Let’s get started.
+
+<!--truncate-->
+
+## System Configuration
+
+To run this setup, Docker Engine is required to be installed on the system. Follow the official documentation to setup Docker Engine on your system.
+
+:::caution
+
+The steps and configuration for both standalone and replica set is not to be used for production deployment. The intended use is only for setting up a environment to support learning of MongoDB.
+
+:::
+
+## Standalone MongoDB Setup
+
+* Pull the Docker MongoDB official image from Docker Hub. The following code snippet demonstrates pulling the docker MongoDB 4.4.9 release. To pull the MongoDB 5.0 latest release replace :4.4.9-rc0 with :latest tag
+
+```shell 
+
+$ docker pull mongo:4.4.9-rc0 
+
+```
+
+* To check if the the image pull from Docker Hub was successful
+
+
+```
+
+$ docker images                                                   
+REPOSITORY   TAG         IMAGE ID       CREATED       SIZE
+mongo        4.4.9-rc0   24599d6cde30   9 days ago    413MB
+mongo        latest      31299b956c79   10 days ago   642MB
+
+```
+
+* Lets start first standalone container – the below command starts MongoDB docker container with name mongo_449 in detached mode using the 4.4.9-rc0 image
+
+```shell
+
+$ docker run --name mongo_449 -d mongo:4.4.9-rc0
+
+```
+
+* List the container status and health by executing
+
+```shell
+
+$ docker container ls -a
+
+CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS                      PORTS       NAMES
+96e64ec525a2   24599d6cde30   "docker-entrypoint.s…"   2 hours ago   Up 33 minutes               27017/tcp   mongo_449
+
+```
+
+* To run a command inside the container
+  * docker exec: interact with containers (running/up mode)
+  * -i : interactive STDIN open even if not attached to the container
+  * -t: pseudo TTY
+
+
+* Connect to MongoDB daemon
+
+```shell
+root@96e64ec525a2:/# mongo
+
+MongoDB shell version v4.4.9-rc0
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("ac624a79-908b-4580-90ae-22d0a7aee07a") }
+MongoDB server version: 4.4.9-rc0
+
+```
+
+* Install utilities. The utilities ping, systemctl, sudo installed in the containers can be used for troubleshooting during the setup of Docker containers.
+
+```shell
+
+root@96e64ec525a2:/# apt-get install iputils-ping̵
+root@96e64ec525a2:/# apt-get install sudo 
+root@96e64ec525a2:/# apt-get install systemctl
+
+```
+
+This finishes the setup of standalone MongoDB Container. Now let’s look at ReplicaSet setup.
+
+## Creating MongoDB ReplicaSet using Docker
+
+A replica set consists of a primary node together with two or more secondary nodes. It is recommended to group three or more nodes, with an odd number of total nodes. The primary node accepts all the write requests which are propagated synchronously or asynchronously to the secondary nodes. Below are the steps required to complete the replica set setup using Docker.
+
+Create a new network(bridge) within Docker. The replica set containers will be mapped to the new network.
+
+```shell 
+$ docker network create mongo_net
+$ docker network inspect mongo_net                       
+[
+    {
+        "Name": "mongo_net",
+        "Id": "e2567806642a9245436371a9b9904c71fadae969fbd11a7bb8203e07976b1b2a",
+        "Created": "2021-09-11T00:36:33.989688708Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+...
+]
+```
+
+* Start 3 containers – Primary Secondary Secondary
+  * Break down of parameters docker run : start a new container
+    * `-d` :  run the container in detached mode
+    * `-p 20001:27017` publish container port to the host and bind 27017 to 20001 on the host. This is useful if connecting mongo client like mongosh to container
+    * `--name` : name of the mongo container
+    * `-- network` : connect to user created network mongo_net
+    * `mongo:4.4.9-rc0` : Docker MongoDB image
+    * `mongod --replSet rs_mongo` : run the mongod daemon and add the container to replica set name rs_mongo
+
+```shell 
+$ docker run -d -p 20001:27017 --name mongo1 --network mongo_net mongo:4.4.9-rc0 mongod --replSet rs_mongo
+$ docker run -d -p 20002:27017 --name mongo2 --network mongo_net mongo:4.4.9-rc0 mongod --replSet rs_mongo
+$ docker run -d -p 20003:27017 --name mongo3 --network mongo_net mongo:4.4.9-rc0 mongod --replSet rs_mongo
+```
+
+* Set up Replica set. Connect to one of the containers and run the below commands. The container that receives the initiate will pass on the configuration to other containers assigned as members.
+
+```js
+rs_mongo [direct: primary] test_2> config = {
+      "_id" : "rs_mongo",
+      "members" : [
+          {
+              "_id" : 0,
+              "host" : "mongo1:27017"
+          },
+          {
+              "_id" : 1,
+              "host" : "mongo2:27017"
+          },
+          {
+              "_id" : 2,
+              "host" : "mongo3:27017"
+          }
+      ]
+  }
+
+rs_mongo [direct: primary] admin> rs.initiate(config)
+
+//Insert test data
+
+rs_mongo [direct: primary] admin> use test_2
+rs_mongo [direct: primary] test_2> db.employees.insert({name: "robin")
+
+//To read queries on secondary run setReadPref. 
+rs_mongo [direct: secondary] test_2>db.getMongo().setReadPref('secondary')
+
+rs_mongo [direct: secondary] test_2> db.employees.find()
+[
+  { _id: ObjectId("613c99801ea796508e3c73f5"), name: 'robin' }
+]
+
+```
+
+* Validate Replica Set Configuration
+
+```js
+rs_mongo [direct: primary] test_2> db.printReplicationInfo()
+
+configured oplog size
+'557174 MB'
+---
+log length start to end
+'71372 secs (19.83 hrs)'
+---
+oplog first event time
+'Sat Sep 11 2021 15:47:21 GMT+0530 (India Standard Time)'
+---
+oplog last event time
+'Sun Sep 12 2021 11:36:53 GMT+0530 (India Standard Time)'
+---
+now
+'Sun Sep 12 2021 11:36:54 GMT+0530 (India Standard Time)'
+
+
+rs_mongo [direct: primary] test_2> rs.conf()
+{
+  _id: 'rs_mongo',
+  version: 1,
+  term: 1,
+  protocolVersion: Long("1"),
+  writeConcernMajorityJournalDefault: true,
+  members: [
+    {
+      _id: 0,
+      host: 'mongo1:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      slaveDelay: Long("0"),
+      votes: 1
+    },
+    {
+      _id: 1,
+      host: 'mongo2:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      slaveDelay: Long("0"),
+      votes: 1
+    },
+    {
+      _id: 2,
+      host: 'mongo3:27017',
+      arbiterOnly: false,
+      buildIndexes: true,
+      hidden: false,
+      priority: 1,
+      tags: {},
+      slaveDelay: Long("0"),
+      votes: 1
+    }
+
+```
+That concludes this article.
+
+
+
+
+
+
+
+
+
+
+
+
+

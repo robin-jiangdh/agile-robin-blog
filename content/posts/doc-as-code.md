@@ -1,1 +1,136 @@
-LS0tCnRpdGxlOiAiRG9jdW1lbnRhdGlvbiBhcyBhIGNvZGUiCmRlc2NyaXB0aW9uOiAiRG9jdW1lbnRhdGlvbiBpcyB0aGUgbW9zdCBjcml0aWNhbCBhY3Rpdml0eSBvZiBhbnkgcHJvZHVjdCBkZXZlbG9wbWVudC4gVGhlIGVuZ2luZWVyIGFuZCB1c2VyIGV4cGVyaWVuY2UgaW1wcm92ZSB3aGVuIHRoZXJlIGlzIHVwLXRvLWRhdGUgRG9jdW1lbnRhdGlvbi4gTW9zdCBvZnRlbiwgaW4gb3JnYW5pemF0aW9ucyBhbmQgcHJvZHVjdHMsIERvY3VtZW50YXRpb24gaXMgYW4gYWZ0ZXJ0aG91Z2h0LCBhbmQgdGhpcyBpcyBub3QgYSBnby4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwNTMxMTkvN2YwNGY0MTktZTFhYi00MTkzLWE2OTMtZWNkZTU2ZWMxN2Q0LmpwZWciCnJlYWRpbmdUaW1lOiA0CnNsdWc6ICJkb2MtYXMtY29kZSIKY2F0ZWdvcnk6ICLnoazmoLjmt7HmjJYiCi0tLQpEb2N1bWVudGF0aW9uIGlzIHRoZSBtb3N0IGNyaXRpY2FsIGFjdGl2aXR5IG9mIGFueSBwcm9kdWN0IGRldmVsb3BtZW50LiBUaGUgZW5naW5lZXIgYW5kIHVzZXIgZXhwZXJpZW5jZSBpbXByb3ZlIHdoZW4gdGhlcmUgaXMgdXAtdG8tZGF0ZSBEb2N1bWVudGF0aW9uLiBNb3N0IG9mdGVuLCBpbiBvcmdhbml6YXRpb25zIGFuZCBwcm9kdWN0cywgRG9jdW1lbnRhdGlvbiBpcyBhbiBhZnRlcnRob3VnaHQsIGFuZCB0aGlzIGlzIG5vdCBhIGdvb2QgcHJhY3RpY2UuIElmIHdlIHdhbnQgbW9yZSBlbmdpbmVlcnMgdG8gY29udHJpYnV0ZSB0byB0aGUgcHJvZHVjdCwgRG9jdW1lbnRhdGlvbiBzaG91bGQgYmUgY29uc2lkZXJlZCBhcyBjb2RlIGFuZCBwYXJ0IG9mIHRoZSBwcm9kdWN0IGRldmVsb3BtZW50LiBFbmdpbmVlcnMgc2hvdWxkIGJlIGVuY291cmFnZWQgdG8gd3JpdGUgRG9jdW1lbnRhdGlvbiBiZWZvcmUgd3JpdGluZyB0aGUgc291cmNlIGNvZGUuCgpJbiBtYW55IG9yZ2FuaXphdGlvbnMsIERvY3VtZW50YXRpb24gaXMgZXZlcnl3aGVyZSwgYnV0IGl0IGNhbiBiZSBjaGFsbGVuZ2luZyB0byBmaW5kLiBJdCBpcyBvZnRlbiB3cml0dGVuIGluIHZhcmlvdXMgZm9ybWF0cywgYW5kIGl0IGlzIHNvbWV0aW1lcyB1bmNsZWFyIHdobyBpcyByZXNwb25zaWJsZSBmb3IgaXQuIEl0IGFsc28gbmVlZHMgdG8gYmUgY2xhcmlmaWVkIGhvdyB0byBjb250cmlidXRlIHRvIGl0LiBDb25maWRlbmNlIGluIERvY3VtZW50YXRpb24gY291bGQgYmUgaGlnaGVyIGlmIGVuZ2luZWVycyBzcGVudCBtb3JlIHRpbWUgd3JpdGluZzsgdGhlcmUgaXMgbW9yZSBpbmNlbnRpdmUgdG8gd3JpdGUsIGFuZCBzZXR0aW5nIHVwIGEgY3VsdHVyZSB0byB3cml0ZSBkb2NzIGFzIHBhcnQgb2YgZW5naW5lZXJpbmcgd29ya2Zsb3cgY29udHJpYnV0ZXMgdG8gRW5naW5lZXIgUHJvZHVjdGl2aXR5IHdoaWNoIGlzIGEgY3J1Y2lhbCBtZXRyaWMgZm9yIGFueSBvcmdhbml6YXRpb24uCgpUaGUgcHJvZHVjdCBlbmdpbmVlcmluZyB0ZWFtcyBtdXN0IGlkZW50aWZ5IHdvcmtmbG93cyB0byBpbnRlZ3JhdGUgRG9jdW1lbnRhdGlvbiBpbnRvIHRoZSBleGlzdGluZyBwcm9jZXNzIHRvIHNvbHZlIHRoZSBjaGFsbGVuZ2VzIGxpc3RlZCBiZWxvdy4KCiogVGhlIERvY3VtZW50YXRpb24gaXMgbm90IHBhcnQgb2YgdGhlIGNvZGViYXNlCiAgICAKKiBUaGUgRG9jdW1lbnRhdGlvbiBpcyBub3QgcGFydCBvZiB0aGUgQ0kvQ0QgcGlwZWxpbmUKICAgIAoqIFRoZSBtZXRob2Qgb2Ygd3JpdGluZyBEb2N1bWVudGF0aW9uIGlzIG5vdCBpbnRlZ3JhdGVkIGludG8gdGhlIGVuZ2luZWVyaW5nIHdvcmtmbG93CiAgICAKKiBUaGUgRG9jdW1lbnRhdGlvbiBpcyBub3QgcmV2aWV3ZWQgYW5kIHRlc3RlZAogICAgCiogVGhlIERvY3VtZW50YXRpb24gaXMgd3JpdHRlbiBpbiBhIHNlcGFyYXRlIHRvb2wgYW5kIGlzIG5vdCB2ZXJzaW9uIGNvbnRyb2xsZWQKICAgIAoKRG9jdW1lbnRhdGlvbiB3aWxsIG5ldmVyIGJlIHBhcnQgb2YgZW5naW5lZXJpbmcgY3VsdHVyZSB1bmxlc3MgaW50ZWdyYXRlZCBpbnRvIHRoZSBjb2RlYmFzZSBhbmQgd29ya2Zsb3cuCgojIyBXaGF0IGlzIERvY3MgYXMgQ29kZT8KCiogU3RvcmUgdGhlIHNvdXJjZSBmaWxlIHZlcnNpb24gb2YgRG9jdW1lbnRhdGlvbiBpbiBhIHZlcnNpb24gY29udHJvbCBzeXN0ZW0gbGlrZSBHaXQKICAgIAoqIEF1dG9tYXRpY2FsbHkgYnVpbGQgZG9jIGFydGlmYWN0cwogICAgCiogUHVibGlzaCBhcnRpZmFjdHMgd2l0aG91dCBodW1hbiBpbnRlcnZlbnRpb24KICAgIAoKIyMgV2h5IERvY3MgYXMgQ29kZT8KCiogVGhlIERvY3VtZW50YXRpb24gZXZvbHZlcyB3aXRoIHRoZSBjb2RlLiBUaGUgZmxvd2NoYXJ0LCBTeXN0ZW0gQXJjaGl0ZWN0dXJlIGFuZCBvdGhlciBkaWFncmFtcyB3aWxsIGJlIHVwLXRvLWRhdGUgYXMgdGhlIGNvZGUgY2hhbmdlcwogICAgCiogTG9uZyByZWxlYXNlIGN5Y2xlcyBtYXkgcmVzdWx0IGluIGxvZ2ljIG9yIGZsb3djaGFydCBiZWluZyBmb3Jnb3R0ZW4gb3Igb3V0ZGF0ZWQKICAgIAoqIENvbnNpc3RlbmN5IGlzIGNyaXRpY2FsIGZvciB0aGUgYWRvcHRpb24gb2YgRG9jcyBhcyBhIGNvZGUuIFRlYW1zIGNhbiBjb2xsYWJvcmF0ZSBvbiB0aGUgRG9jdW1lbnRhdGlvbiBhbmQgY2FuIGVuc3VyZSB0aGF0IHRoZSBEb2N1bWVudGF0aW9uIGlzIGNvbnNpc3RlbnQgYWNyb3NzIHRoZSBwcm9kdWN0CiAgICAKKiBDb2xsYWJvcmF0aW9uIGFjcm9zcyBwcm9kdWN0IHRlYW1zIGlzIHRoZSBjcml0aWNhbCBwaWVjZSBvZiB3aHkgRG9jdW1lbnRhdGlvbiBzaG91bGQgYmUgY29uc2lkZXJlZCBhIGNvZGUKICAgIAoqIERvY3VtZW50YXRpb24gY2FuIGJlIHJldmlld2VkIGFuZCBhcHByb3ZlZCBieSB0aGUgdGVhbSBtZW1iZXJzCiAgICAKKiBDZW50cmFsaXplZCBJbnRlcm5hbCBEb2N1bWVudGF0aW9uIGZyYW1ld29yayBhbmQgZmFtaWxpYXIgc3RydWN0dXJlZCBEb2N1bWVudGF0aW9uIGZvciBhbGwgdGhlIHByb2R1Y3RzCiAgICAKKiBUcmFjayBEb2N1bWVudGF0aW9uIG1pc3Rha2VzIGFzIGJ1Z3MKICAgIAoqIERvY3VtZW50YXRpb24gY2FuIGJlIHZlcnNpb25lZCwgdGVzdGVkLCBhbmQgdHJhY2tlZAogICAgCiogTWFuYWdlIHRoZSBjb21wbGV4aXR5IGFyb3VuZCB0aGUgZG9jdW1lbnRhdGlvbiBwcm9jZXNzCiAgICAKKiBWaXN1YWxpemUgdGhlIERvY3VtZW50YXRpb24gaW4gdGhlIGZvcm0gb2YgZGlhZ3JhbXMsIGZsb3djaGFydHMsIGFuZCBpbWFnZXMKICAgIAoqIEVuZ2luZWVyIGNhbiB1c2Ugb3RoZXIgdG9vbHMgdG8gbW9kZWwgZGVwZW5kZW5jaWVzLiBGb3IgZXhhbXBsZSwgdGhlIFByb2R1Y3QgdGVhbSBjYW4gdXNlIE1lcm1haWQgdG8gbW9kZWwgdGhlIGZsb3djaGFydCwgc3lzdGVtIGFyY2hpdGVjdHVyZSwgY2xhc3MgZGlhZ3JhbSwgYW5kIHNlcXVlbmNlIGRpYWdyYW1zCiAgICAKKiBBdm9pZCBlZmZvcnQgdG8gcmVkbyB0aGUgRG9jdW1lbnRhdGlvbiB3aGVuIGEgdGVhbSBtZW1iZXIgbGVhdmVzIHRoZSBvcmdhbml6YXRpb24uCiAgICAKKiBUaGUgcHJvZHVjdCB0ZWFtIGNhbiBhdXRvbWF0ZSBXb3JrZmxvd3MgY2FuIGJlIGF1dG9tYXRlZCB0byBnZW5lcmF0ZSB0aGUgRG9jdW1lbnRhdGlvbgogICAgCiogTWFrZXMgRG9jdW1lbnRhdGlvbiBzdGFuZG91dCB3aXRoIFtNYXJrZG93bl0oaHR0cHM6Ly93d3cubWFya2Rvd25ndWlkZS5vcmcvKQogICAgCiAgICA6OjppbmZvIE1hcmtkb3duIGlzIGEgc2ltcGxlLCBsaWdodHdlaWdodCBtYXJrdXAgbGFuZ3VhZ2UgdGhhdCBpcyBlYXN5IHRvIGxlYXJuIGFuZCB1c2UgZm9yIHBsYWluIHRleHQgZm9ybWF0dGluZyBhbmQgY29udmVyc2lvbiB0byBIVE1MIGFuZCBtYW55IG90aGVyIGZvcm1hdHMgdXNpbmcgYSB0b29sLiBNYXJrZG93biBpcyBvZnRlbiB1c2VkIHRvIGZvcm1hdCByZWFkbWUgZmlsZXMsIHdyaXRlIG1lc3NhZ2VzIGluIG9ubGluZSBkaXNjdXNzaW9uIGZvcnVtcywgYW5kIGNyZWF0ZSByaWNoIHRleHQgdXNpbmcgYSBwbGFpbiB0ZXh0IGVkaXRvci4gOjo6CiAgICAKCmBgYHBsYWludGV4dAoKZmxvd2NoYXJ0CgpBW1N0YXJ0XSAtLT4gQltFbmdpbmVlciB3cml0ZXMgRG9jdW1lbnRhdGlvbiBhbmQgQ29kZV0KICAgIEIgLS0+Q1tFbmdpbmVlciBDb21taXRzIERvY3VtZW50YXRpb24gYW5kIENvZGVdCiAgICBDIC0tPkRbQ29kZSBSZXZpZXcgYW5kIFRlc3RpbmddCiAgICBEIC0tPkVbRG9jdW1lbnRhdGlvbiBSZXZpZXcgYW5kIFRlc3RpbmddCiAgICBFIC0tPkZ7UmVsZWFzZX0KICAgIEYgLS0+fFllc3xHW0RvY3VtZW50YXRpb24gaXMgcHVibGlzaGVkXQogICAgRiAtLT58Tm98QgogICAgRyAtLT5IW0VuZF0KYGBgCgojIyBUeXBlcyBvZiBEb2N1bWVudGF0aW9uCgpUaGUgbW9zdCBjb21tb24gdHlwZXMgb2YgRG9jdW1lbnRhdGlvbiBmb3IgZXZlcnkgcHJvZHVjdCBhcmU6CgoqIExvbmctZm9ybQogICAgCiAgICAqIEZBUXMsIFVzZXIgR3VpZGVzLCBUdXRvcmlhbHMsIEhvdy10byBHdWlkZXMsIGV0Yy4KICAgICAgICAKKiBGdW5jdGlvbmFsCiAgICAKICAgICogUkVTVCBBUEkgRG9jdW1lbnRhdGlvbiwgU0RLIERvY3VtZW50YXRpb24sIGV0Yy4KICAgICAgICAKCiMjIEhvdyB0byBkbyBEb2NzIGFzIGEgQ29kZT8KCiogVmVyc2lvbiB5b3VyIERvY3VtZW50YXRpb24uIEp1c3QgYXMgeW91IHZlcnNpb24geW91ciBjb2RlLCB5b3Ugc2hvdWxkIHZlcnNpb24geW91ciBEb2N1bWVudGF0aW9uLiBWZXJzaW9uaW5nIGFsbG93cyB0cmFja2luZyBjaGFuZ2VzIGFuZCByb2xsYmFja3MgdG8gcHJldmlvdXMgdmVyc2lvbnMgaWYgbmVjZXNzYXJ5LgogICAgCiogSW50ZWdyYXRlIERvY3VtZW50YXRpb24gd2l0aCBDSS9DRCBwaXBlbGluZS4gQ0kvQ0QgSW50ZWdyYXRpb24gd2lsbCBhbGxvdyB5b3UgdG8gYXV0b21hdGUgdGhlIHByb2Nlc3Mgb2YgZ2VuZXJhdGluZyBEb2N1bWVudGF0aW9uIGFuZCBwdWJsaXNoaW5nIGl0IHRvIGEgY2VudHJhbCBsb2NhdGlvbgogICAgCiogU3RhcnQgd2l0aCBQcm9vZiBvZiBDb25jZXB0IGFuZCBleHRlbmQgdG8gYWxsIHRoZSBwcm9kdWN0cyBncmFkdWFsbHkKICAgIAoqIENob29zZSBhIHN0YXRpYyBzaXRlIGdlbmVyYXRvciAoRG9jdW1lbnRhdGlvbiBUb29sKSB0aGF0IGNhbiBiZSBpbnRlZ3JhdGVkIHdpdGggdGhlIENJL0NEIHBpcGVsaW5lCiAgICAKCiMjIERvY3MgQXMgQ29kZSBUb29scwoKKiBTdGF0aWMgU2l0ZSBHZW5lcmF0b3JzIFRoZXkgYXJlIHVzZWQgZm9yIExvbmcgZm9ybSBkb2N1bWVudGF0aW9uLiBBbGxvd3MgaW50ZWdyYXRpb24gb2YgZGlhZ3JhbXMsIGZsb3djaGFydHMsIGltYWdlcywgZXRjLgogICAgCiAgICAqIFtEb2N1c2F1cnVzXShodHRwOi8vZG9jdXNhdXJ1cy5pbyksIFtIdWdvXShodHRwczovL2dvaHVnby5pbyksIFtHYXRzYnldKGh0dHBzOi8vd3d3LmdhdHNieWpzLmNvbSksIFtKZWt5bGxdKGh0dHBzOi8vamVreWxscmIuY29tKSwgW01rRG9jc10oaHR0cHM6Ly93d3cubWtkb2NzLm9yZykgZXRjLgogICAgICAgIAoqIERpYWdyYW0gYXMgYSBjb2RlCiAgICAKICAgIEFsbG93cyBjcmVhdGluZyBkaWFncmFtcywgZmxvd2NoYXJ0cywgZXRjLiwgaW4gYSBjb2RlIGZvcm1hdC4gVGhpbmsgb2YgZG9jdW1lbnRpbmcgYW5kIHZpc3VhbGl6aW5nIGEgY29tcGxleCBzeXN0ZW0gYXJjaGl0ZWN0dXJlIGluIGEgY29kZSBmb3JtYXQuCiAgICAKICAgICogW01lcm1haWRdKGh0dHBzOi8vbWVybWFpZC1qcy5naXRodWIuaW8vbWVybWFpZC8jLyksIFtQbGFudFVNTF0oaHR0cHM6Ly9wbGFudHVtbC5jb20vKSwgW0dyYXBodml6XShodHRwczovL2dyYXBodml6Lm9yZy8pLCBbRHJhdy5pb10oaHR0cHM6Ly93d3cuZHJhdy5pby8pLCBbbWluZ3JhbW1lci9EaWFncmFtc10oaHR0cHM6Ly9kaWFncmFtcy5taW5ncmFtbWVyLmNvbSkKICAgICAgICAKKiBTb3VyY2UgY29kZS1iYXNlZCBkb2N1bWVudCBnZW5lcmF0b3JzCiAgICAKICAgICogW1NwaGlueF0oaHR0cHM6Ly93d3cuc3BoaW54LWRvYy5vcmcvZW4vbWFzdGVyLykKICAgICAgICAKKiBTeXN0ZW0gZG9jdW1lbnRhdGlvbiBnZW5lcmF0b3JzCiAgICAKICAgICogW3Jvbm5dKGh0dHBzOi8vZ2l0aHViLmNvbS9ydG9tYXlrby9yb25uKQogICAgICAgIAoKIyMgRmluYWwgVGhvdWdodHMKCkV2ZXJ5dGhpbmcoSW5mcmFzdHJ1Y3R1cmUsIE1vbml0b3JpbmcsIENvZGUsIENvbnRhaW5lcnMsIERvY3VtZW50YXRpb24pIGFzIGEgY29kZSBpcyBhbHJlYWR5IGEgcmVhbGl0eS4gRm9yIHNvbWUgb3JnYW5pemF0aW9ucywgdGhlIHNoaWZ0IHRvIHRyZWF0aW5nIERvY3VtZW50YXRpb24gYXMgYSBjb2RlIGlzIGEgY29tcGxleCBvdmVyaGF1bCBvZiBleHBlY3RhdGlvbnMsIGF0dGl0dWRlcywgcHJvY2Vzc2VzLCBhbmQgdG9vbHNldHMuIE9uY2UgaW1wbGVtZW50ZWQsIGl0IHdpbGwgdmFzdGx5IGltcHJvdmUgdGhlIGVuZ2luZWVyIGFuZCB1c2VyIGV4cGVyaWVuY2UuIEZvciBvcGVuLXNvdXJjZSBwcm9qZWN0cywgaXQgaXMgZXZlbiBtb3JlIGVzc2VudGlhbCB0byBoYXZlIGdvb2QgRG9jdW1lbnRhdGlvbi4gSXQgaXMgYSBncmVhdCB3YXkgdG8gYXR0cmFjdCBuZXcgY29udHJpYnV0b3JzIGFuZCB1c2Vycy4KCiMjIFJlZmVyZW5jZXMKCiogW0RvY09wc10oaHR0cHM6Ly93d3cud3JpdGV0aGVkb2NzLm9yZy9ndWlkZS9kb2Mtb3BzLyN3aGF0LWlzLWRvY29wcy1hbnl3YXkpCg==
+---
+title: "Documentation as a code"
+description: "Documentation is the most critical activity of any product development. The engineer and user experience improve when there is up-to-date Documentation. Most often, in organizations and products, Documentation is an afterthought, and this is not a go..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835053119/7f04f419-e1ab-4193-a693-ecde56ec17d4.jpeg"
+readingTime: 4
+slug: "doc-as-code"
+category: "硬核深挖"
+---
+Documentation is the most critical activity of any product development. The engineer and user experience improve when there is up-to-date Documentation. Most often, in organizations and products, Documentation is an afterthought, and this is not a good practice. If we want more engineers to contribute to the product, Documentation should be considered as code and part of the product development. Engineers should be encouraged to write Documentation before writing the source code.
+
+In many organizations, Documentation is everywhere, but it can be challenging to find. It is often written in various formats, and it is sometimes unclear who is responsible for it. It also needs to be clarified how to contribute to it. Confidence in Documentation could be higher if engineers spent more time writing; there is more incentive to write, and setting up a culture to write docs as part of engineering workflow contributes to Engineer Productivity which is a crucial metric for any organization.
+
+The product engineering teams must identify workflows to integrate Documentation into the existing process to solve the challenges listed below.
+
+* The Documentation is not part of the codebase
+    
+* The Documentation is not part of the CI/CD pipeline
+    
+* The method of writing Documentation is not integrated into the engineering workflow
+    
+* The Documentation is not reviewed and tested
+    
+* The Documentation is written in a separate tool and is not version controlled
+    
+
+Documentation will never be part of engineering culture unless integrated into the codebase and workflow.
+
+## What is Docs as Code?
+
+* Store the source file version of Documentation in a version control system like Git
+    
+* Automatically build doc artifacts
+    
+* Publish artifacts without human intervention
+    
+
+## Why Docs as Code?
+
+* The Documentation evolves with the code. The flowchart, System Architecture and other diagrams will be up-to-date as the code changes
+    
+* Long release cycles may result in logic or flowchart being forgotten or outdated
+    
+* Consistency is critical for the adoption of Docs as a code. Teams can collaborate on the Documentation and can ensure that the Documentation is consistent across the product
+    
+* Collaboration across product teams is the critical piece of why Documentation should be considered a code
+    
+* Documentation can be reviewed and approved by the team members
+    
+* Centralized Internal Documentation framework and familiar structured Documentation for all the products
+    
+* Track Documentation mistakes as bugs
+    
+* Documentation can be versioned, tested, and tracked
+    
+* Manage the complexity around the documentation process
+    
+* Visualize the Documentation in the form of diagrams, flowcharts, and images
+    
+* Engineer can use other tools to model dependencies. For example, the Product team can use Mermaid to model the flowchart, system architecture, class diagram, and sequence diagrams
+    
+* Avoid effort to redo the Documentation when a team member leaves the organization.
+    
+* The product team can automate Workflows can be automated to generate the Documentation
+    
+* Makes Documentation standout with [Markdown](https://www.markdownguide.org/)
+    
+    :::info Markdown is a simple, lightweight markup language that is easy to learn and use for plain text formatting and conversion to HTML and many other formats using a tool. Markdown is often used to format readme files, write messages in online discussion forums, and create rich text using a plain text editor. :::
+    
+
+```plaintext
+
+flowchart
+
+A[Start] --> B[Engineer writes Documentation and Code]
+    B -->C[Engineer Commits Documentation and Code]
+    C -->D[Code Review and Testing]
+    D -->E[Documentation Review and Testing]
+    E -->F{Release}
+    F -->|Yes|G[Documentation is published]
+    F -->|No|B
+    G -->H[End]
+```
+
+## Types of Documentation
+
+The most common types of Documentation for every product are:
+
+* Long-form
+    
+    * FAQs, User Guides, Tutorials, How-to Guides, etc.
+        
+* Functional
+    
+    * REST API Documentation, SDK Documentation, etc.
+        
+
+## How to do Docs as a Code?
+
+* Version your Documentation. Just as you version your code, you should version your Documentation. Versioning allows tracking changes and rollbacks to previous versions if necessary.
+    
+* Integrate Documentation with CI/CD pipeline. CI/CD Integration will allow you to automate the process of generating Documentation and publishing it to a central location
+    
+* Start with Proof of Concept and extend to all the products gradually
+    
+* Choose a static site generator (Documentation Tool) that can be integrated with the CI/CD pipeline
+    
+
+## Docs As Code Tools
+
+* Static Site Generators They are used for Long form documentation. Allows integration of diagrams, flowcharts, images, etc.
+    
+    * [Docusaurus](http://docusaurus.io), [Hugo](https://gohugo.io), [Gatsby](https://www.gatsbyjs.com), [Jekyll](https://jekyllrb.com), [MkDocs](https://www.mkdocs.org) etc.
+        
+* Diagram as a code
+    
+    Allows creating diagrams, flowcharts, etc., in a code format. Think of documenting and visualizing a complex system architecture in a code format.
+    
+    * [Mermaid](https://mermaid-js.github.io/mermaid/#/), [PlantUML](https://plantuml.com/), [Graphviz](https://graphviz.org/), [Draw.io](https://www.draw.io/), [mingrammer/Diagrams](https://diagrams.mingrammer.com)
+        
+* Source code-based document generators
+    
+    * [Sphinx](https://www.sphinx-doc.org/en/master/)
+        
+* System documentation generators
+    
+    * [ronn](https://github.com/rtomayko/ronn)
+        
+
+## Final Thoughts
+
+Everything(Infrastructure, Monitoring, Code, Containers, Documentation) as a code is already a reality. For some organizations, the shift to treating Documentation as a code is a complex overhaul of expectations, attitudes, processes, and toolsets. Once implemented, it will vastly improve the engineer and user experience. For open-source projects, it is even more essential to have good Documentation. It is a great way to attract new contributors and users.
+
+## References
+
+* [DocOps](https://www.writethedocs.org/guide/doc-ops/#what-is-docops-anyway)

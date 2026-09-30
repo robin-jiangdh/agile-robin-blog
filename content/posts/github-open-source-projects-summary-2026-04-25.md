@@ -1,1 +1,177 @@
-LS0tCnRpdGxlOiAiR2l0SHViIOW8gOa6kOmhueebruS7k+W6k+axh+aAu++8iDIwMjYtMDQtMjUg5pu05paw77yJIgpkZXNjcmlwdGlvbjogIkdpdEh1YiDlvIDmupDpobnnm67ku5PlupPmsYfmgLvvvIgyMDI2LTA0LTI1IOabtOaWsO+8iSAg5pWw5o2u5p2l5rqQ77yaSU1BIOefpeivhuW6kyBHaXRIdWIg55u45YWz5YaF5a655pW055CGIHwg5q+P5ZGo6Ieq5Yqo5pu05pawIOacrOacn+aWsOWiniAxNSDkuKrpobnnm67vvIzmgLvorqHmlLblvZUgNDQg5Liq5LyY6LSo5byA5rqQ6aG555uuICDwn5OKIOacrOWRqOabtOaWsOS6rueCuSDmnKzlkajmlrDlop4gMTUg5Liq6aG555uu77yM6YeN54K56IGa54SmIEFJIENvZGluZyDkuI4gTUxPcHMg5Z+656GA6K6+5pa977yaICDwn6SWIEFJIENvZGluZyDlhajmma/lm77vvJpPcGVuQ2xhd++8iDM1Nksg4q2Q77yJ44CBQ2xhdWRlIENvZGXvvIgxMTNLIOKtkO+8ieOAgW9wZW5jb2Rl77yIMTQ1SyDirZDvvInnrYnpoobot5HotZvpgZMg8J+noCDorrDlv4bkuI7mjIHkuYXljJbvvJpjbGF1ZGUtbWVt77yINTlLIC4uLiIKZGF0ZTogIjIwMjYtMDQtMjUiCnRhZ3M6IFsiQUkiLCAiRGV2ZWxvcGVyIFRvb2xzIiwgIkdpdEh1YiIsICJvcGVuIHNvdXJjZSJdCnJlYWRpbmdUaW1lOiA1CnNsdWc6ICJnaXRodWItb3Blbi1zb3VyY2UtcHJvamVjdHMtc3VtbWFyeS0yMDI2LTA0LTI1IgpjYXRlZ29yeTogIuW8gOa6kOWRqOaKpSIKLS0tCiMgR2l0SHViIOW8gOa6kOmhueebruS7k+W6k+axh+aAu++8iDIwMjYtMDQtMjUg5pu05paw77yJCgo+IOaVsOaNruadpea6kO+8mklNQSDnn6Xor4blupMgR2l0SHViIOebuOWFs+WGheWuueaVtOeQhiB8IOavj+WRqOiHquWKqOabtOaWsAo+IOacrOacn+aWsOWiniAxNSDkuKrpobnnm67vvIzmgLvorqHmlLblvZUgNDQg5Liq5LyY6LSo5byA5rqQ6aG555uuCgojIyDwn5OKIOacrOWRqOabtOaWsOS6rueCuQoK5pys5ZGo5paw5aKeICoqMTUg5Liq6aG555uuKirvvIzph43ngrnogZrnhKYgQUkgQ29kaW5nIOS4jiBNTE9wcyDln7rnoYDorr7mlr3vvJoKCi0g8J+kliAqKkFJIENvZGluZyDlhajmma/lm74qKu+8mk9wZW5DbGF377yIMzU2SyDirZDvvInjgIFDbGF1ZGUgQ29kZe+8iDExM0sg4q2Q77yJ44CBb3BlbmNvZGXvvIgxNDVLIOKtkO+8ieetiemihui3kei1m+mBkwotIPCfp6AgKirorrDlv4bkuI7mjIHkuYXljJYqKu+8mmNsYXVkZS1tZW3vvIg1OUsg4q2Q77yJ44CBTWVtUGFsYWNl77yINDMuNEsg4q2Q77yJ6Kej5YazIEFJIOi3qOS8muivneiusOW/humavumimCAgCi0g4pqhICoq5o6o55CG5byV5pOO5Yqg6YCfKirvvJp2TExNIHYwLjE5LjHvvIg3Nksg4q2Q77yJ44CBT2xsYW1h77yIMTY5SyDirZDvvInjgIFVbnNsb3Ro77yINjFLIOKtkO+8ieimhuebluS7juacrOWcsOWIsOeUn+S6p+eahOWFqOagiOaOqOeQhumcgOaxggotIPCfm6HvuI8gKipBSSBTUkUg5YWD5bm0KirvvJpPcGVuU1JFIOW8gOWQryBBSSDpqbHliqjov5Dnu7TmlrDml7bku6PvvIzkuI4gT3BlblRlbGVtZXRyeSDmt7Hluqbpm4bmiJAKLSDwn4yQICoq5aSaIEFnZW50IOahhuaetioq77yaR29vZ2xlIEFES++8iDguMksg4q2Q77yJ44CBTWV0YSBMbGFtYSBTdGFja++8iDYuNEsg4q2Q77yJ44CBT3BlbkFJIEFnZW50c++8iDIySyDirZDvvInkuInlpKfljoLllYblkIzlj7Dnq57mioAKCi0tLQoKIyMg5paw5aKe6aG555uu6YCf6KeICgojIyMg8J+kliBBSSBDb2RpbmcgJiBBZ2VudCDlt6XlhbfvvIjmlrDlop4gNyDpobnvvIkKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IFN0YXJzIHwg566A5LuLIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS18LS0tLS0tfAp8ICoqT3BlbkNsYXcqKiB8IFtnaXRodWIuY29tL29wZW5jbGF3L29wZW5jbGF3XShodHRwczovL2dpdGh1Yi5jb20vb3BlbmNsYXcvb3BlbmNsYXcpIHwgMzU2SyDirZAgfCDkuKrkurpBSeWKqeaJi+ahhuaetu+8jOWumuS9jeS4uiLmmbrog73kuK3mnqIi44CC6KGN55Sf5Ye6TmFub0NsYXfovbvph4/niYjlj4pBQ1DljY/orq7nlJ/mgIHvvIzmjIHnu63poobot5FBSSBBZ2VudOmihuWfn+OAgiB8CnwgKipvcGVuY29kZSoqIHwgW2dpdGh1Yi5jb20vYW5vbWFseWNvL29wZW5jb2RlXShodHRwczovL2dpdGh1Yi5jb20vYW5vbWFseWNvL29wZW5jb2RlKSB8IDE0NUsg4q2QIHwg5byA5rqQQUnnvJbnoIHliqnmiYvvvIzlip/og73lvLrlpKfvvIznpL7ljLrlhbPms6jluqbov4XpgJ/mlIDljYfjgIIgfAp8ICoqY2xhdWRlLW1lbSoqIHwgW2dpdGh1Yi5jb20vdGhlZG90bWFjay9jbGF1ZGUtbWVtXShodHRwczovL2dpdGh1Yi5jb20vdGhlZG90bWFjay9jbGF1ZGUtbWVtKSB8IDU5SyDirZAgfCBDbGF1ZGXmjIHkuYXorrDlv4blsYLlt6XlhbfvvIzlvbvlupXop6PlhrNDbGF1ZGXml6Dms5Xot6jkvJror53orrDlv4bnmoTpl67popjjgIIgfAp8ICoqYW5kcmVqLWthcnBhdGh5LXNraWxscyoqIHwgW2dpdGh1Yi5jb20vZm9ycmVzdGNoYW5nL2FuZHJlai1rYXJwYXRoeS1za2lsbHNdKGh0dHBzOi8vZ2l0aHViLmNvbS9mb3JyZXN0Y2hhbmcvYW5kcmVqLWthcnBhdGh5LXNraWxscykgfCA0Ny45SyDirZAgfCDln7rkuo5BbmRyZWogS2FycGF0aHkgQUnnkIblv7XmlbTnkIbnmoTnsr7pgInmioDog73lupPjgIIgfAp8ICoqb3BlbmFpLWFnZW50cy1weXRob24qKiB8IFtnaXRodWIuY29tL29wZW5haS9vcGVuYWktYWdlbnRzLXB5dGhvbl0oaHR0cHM6Ly9naXRodWIuY29tL29wZW5haS9vcGVuYWktYWdlbnRzLXB5dGhvbikgfCAyMksg4q2QIHwgT3BlbkFJ5a6Y5pa5UHl0aG9u54mI5Luj55CG5qGG5p6277yM5pys5ZGo5paw5aKeMzUyNiBzdGFyc++8jOeDreW6puaMgee7reaUgOWNh+OAgiB8CnwgKipHZW5lcmljQWdlbnQqKiB8IFtnaXRodWIuY29tL2xzZGVmaW5lL0dlbmVyaWNBZ2VudF0oaHR0cHM6Ly9naXRodWIuY29tL2xzZGVmaW5lL0dlbmVyaWNBZ2VudCkgfCAtIHwg6YCa55SoQUnku6PnkIbmoYbmnrbvvIxUb2tlbua2iOiAl+aYr+WQjOexu+W3peWFt+eahDEvNu+8jOmrmOaViOS9juiAl+aYr+aguOW/g+ernuS6ieWKm+OAgiB8CnwgKipIZXJtZXMgQWdlbnQqKiB8IFtnaXRodWIuY29tL05vdXNSZXNlYXJjaC9oZXJtZXMtYWdlbnRdKGh0dHBzOi8vZ2l0aHViLmNvbS9Ob3VzUmVzZWFyY2gvaGVybWVzLWFnZW50KSB8IDgwSysg4q2QIHwgTm91c1Jlc2VhcmNo5Y+R5biD55qE5byA5rqQQUnku6PnkIbmoYbmnrZ2MC4xMC4w77yM56S+5Yy65rS76LeD5bqm6auY44CCIHwKCiMjIyDimqEg5py65Zmo5a2m5Lmg5qGG5p625LiO5o6o55CG5byV5pOO77yI5paw5aKeIDUg6aG577yJCgp8IOmhueebruWQjeensCB8IEdpdEh1YiDlnLDlnYAgfCBTdGFycyB8IOeugOS7iyB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLXwtLS0tLS0tfC0tLS0tLXwKfCAqKnZMTE0qKiB8IFtnaXRodWIuY29tL3ZsbG0tcHJvamVjdC92bGxtXShodHRwczovL2dpdGh1Yi5jb20vdmxsbS1wcm9qZWN0L3ZsbG0pIHwgNzZLIOKtkCB8IOmrmOWQnuWQkOmHj0xMTeaOqOeQhuW8leaTju+8jOacrOWRqOWPkeW4g3YwLjE5LjFyYzDvvIxQeVRvcmNoIDIuMTDljYfnuqfjgILnlJ/kuqfnuqdMTE3mjqjnkIbnmoTkuovlrp7moIflh4bjgIIgfAp8ICoqT2xsYW1hKiogfCBbZ2l0aHViLmNvbS9vbGxhbWEvb2xsYW1hXShodHRwczovL2dpdGh1Yi5jb20vb2xsYW1hL29sbGFtYSkgfCAxNjlLIOKtkCB8IOS4gOmUrui/kOihjExMTeeahOacrOWcsOaOqOeQhuW5s+WPsO+8jOaUr+aMgea1t+mHj+W8gOa6kOaooeWei++8jOS4jkxhbmdDaGFpbuOAgURpZnnnrYnmoYbmnrbmt7Hluqbpm4bmiJDjgIIgfAp8ICoqVW5zbG90aCoqIHwgW2dpdGh1Yi5jb20vdW5zbG90aGFpL3Vuc2xvdGhdKGh0dHBzOi8vZ2l0aHViLmNvbS91bnNsb3RoYWkvdW5zbG90aCkgfCA2MUsg4q2QIHwg5b6u6LCD6YCf5bqm5o+Q5Y2HMuWAjeOAgeWGheWtmOWHj+WwkTcwJeeahOi9u+mHj+W+ruiwg+ahhuaetu+8jOW3suaUr+aMgUxsYW1hIDTlhajns7vliJfjgIIgfAp8ICoqR29vZ2xlIEFESyBQeXRob24qKiB8IFtnaXRodWIuY29tL2dvb2dsZS9hZGstcHl0aG9uXShodHRwczovL2dpdGh1Yi5jb20vZ29vZ2xlL2Fkay1weXRob24pIHwgOC4ySysg4q2QIHwgR29vZ2xlIEFnZW50IERldmVsb3BtZW50IEtpdO+8jOaehOW7uuWkmuaZuuiDveS9k+ezu+e7n+eahOWumOaWueahhuaetu+8jOS4pOWRqOWGheaatOWinjgyMDAgc3RhcnPjgIIgfAp8ICoqTWV0YSBMbGFtYSBTdGFjayoqIHwgW2dpdGh1Yi5jb20vbWV0YS1sbGFtYS9sbGFtYS1zdGFja10oaHR0cHM6Ly9naXRodWIuY29tL21ldGEtbGxhbWEvbGxhbWEtc3RhY2spIHwgNi40Sysg4q2QIHwgTGxhbWEgNOezu+WIl+eahOe7n+S4gOmDqOe9suagiO+8jOaPkOS+m+aOqOeQhuOAgeW+ruiwg+OAgVNGVOOAgVJMSEblhajpk77ot6/lt6Xlhbfpk77jgIIgfAoKIyMjIPCfm6DvuI8g5Z+656GA6K6+5pa95LiO6L+Q57u077yI5paw5aKeIDMg6aG577yJCgp8IOmhueebruWQjeensCB8IEdpdEh1YiDlnLDlnYAgfCBTdGFycyB8IOeugOS7iyB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLXwtLS0tLS0tfC0tLS0tLXwKfCAqKk9wZW5TUkUqKiB8IFtnaXRodWIuY29tL1RyYWNlci1DbG91ZC9vcGVuc3JlXShodHRwczovL2dpdGh1Yi5jb20vVHJhY2VyLUNsb3VkL29wZW5zcmUpIHwgfjEuNUsg4q2QIHwg6Z2i5ZCRQUnml7bku6PnmoTlvIDmupBTUkXlt6XlhbfljIXvvIzlhYHorrjlvIDlj5HogIXmnoTlu7roh6rlt7HnmoRBSSBTUkXku6PnkIbvvIzkuI5PcGVuVGVsZW1ldHJ555Sf5oCB5rex5bqm6ZuG5oiQ44CCIHwKfCAqKkxhbmdDaGFpbioqIHwgW2dpdGh1Yi5jb20vbGFuZ2NoYWluLWFpL2xhbmdjaGFpbl0oaHR0cHM6Ly9naXRodWIuY29tL2xhbmdjaGFpbi1haS9sYW5nY2hhaW4pIHwgMTMzSyDirZAgfCBBZ2VudOW3peeoi+W5s+WPsO+8jOS4jkxhbmdHcmFwaO+8iDI5SyDirZDvvInphY3lkIjvvIzmj5Dkvpvlm77lvaLljJZBZ2VudOaehOW7uuiDveWKm++8jOimhuebllJBR+OAgeW3peWFt+iwg+eUqOWFqOmTvui3r+OAgiB8CnwgKipNQ1AgU2VydmVycyoqIHwgW2dpdGh1Yi5jb20vbW9kZWxjb250ZXh0cHJvdG9jb2wvc2VydmVyc10oaHR0cHM6Ly9naXRodWIuY29tL21vZGVsY29udGV4dHByb3RvY29sL3NlcnZlcnMpIHwgODRLIOKtkCB8IE1DUOWNj+iuruacjeWKoeWZqOmbhuWQiO+8jOS4ukxMTeaPkOS+m+agh+WHhuWMluW3peWFt+iwg+eUqOiDveWKm++8jOato+aIkOS4ukFnZW505bel5YW35LqS5pON5L2c55qE6KGM5Lia5qCH5YeG44CCIHwKCi0tLQoKIyMg5a6M5pW06aG555uu5riF5Y2V77yINDQg6aG577yJCgojIyMg5LiA44CB5pWw5o2u5bmz5Y+w5LiO5Y+v6KeG5YyW77yINCDpobnvvIkKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IOeugOS7iyB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLXwtLS0tLS18CnwgKipEYXRhQ2FwKiogfCBbZ2l0aHViLmNvbS9kZXZsaXZlLWNvbW11bml0eS9kYXRhY2FwXShodHRwczovL2dpdGh1Yi5jb20vZGV2bGl2ZS1jb21tdW5pdHkvZGF0YWNhcCkgfCDlvIDmupDmlbDmja7kuK3lj7Dova/ku7bvvIzmlK/mjIHlpJrmlbDmja7mupDnrqHnkIbkuI7nm5HmjqfvvIzlrp7njrDmlbDmja7ovazmjaLjgIHpm4bmiJDjgIHlj6/op4bljJbnrYnlip/og73jgIJKYXZhL0phdmFTY3JpcHTlvIDlj5HvvIzpgbXlvqpBcGFjaGUgMi4w5Y2P6K6u44CCIHwKfCAqKkNoYXJ0YnJldyoqIHwgW2dpdGh1Yi5jb20vY2hhcnRicmV3L2NoYXJ0YnJld10oaHR0cHM6Ly9naXRodWIuY29tL2NoYXJ0YnJldy9jaGFydGJyZXcpIHwg5byA5rqQ5oql6KGo5bmz5Y+w77yM55So5LqO5LuOQVBJ44CBTXlTUUzjgIFQb3N0Z3JlU1FM44CBTW9uZ29EQuetieaVsOaNrua6kOWIm+W7uuWunuaXtuaKpeihqOeci+adv+OAgiB8CnwgKipTaGFwZXIqKiB8IFtnaXRodWIuY29tL3RhbGVzaGFwZS1jb20vc2hhcGVyXShodHRwczovL2dpdGh1Yi5jb20vdGFsZXNoYXBlLWNvbS9zaGFwZXIpIHwg5YWN6LS55byA5rqQ44CB5Z+65LqOU1FM77yIRHVja0RC77yJ55qE5pWw5o2u5Y+v6KeG5YyW5bel5YW377yM55So5LqO5Yib5bu65Lqk5LqS5byP5pWw5o2u5Luq6KGo55uY44CC5ZCO56uvR2/vvIzliY3nq69SZWFjdO+8jOmBteW+qk1QTC0yLjDljY/orq7jgIIgfAp8ICoqRGF0YSBGb3JtdWxhdG9yKiogfCBbZ2l0aHViLmNvbS9taWNyb3NvZnQvZGF0YS1mb3JtdWxhdG9yXShodHRwczovL2dpdGh1Yi5jb20vbWljcm9zb2Z0L2RhdGEtZm9ybXVsYXRvcikgfCDlvq7ova/noJTnqbbpmaLlvIDlj5HnmoRBSempseWKqOaVsOaNruWPr+inhuWMluW3peWFt++8jOiejeWQiOaLluaLvVVJ5LiO6Ieq54S26K+t6KiA6L6T5YWl77yM5peg6ZyA5aSN5p2C57yW56CB5Y2z5Y+v5a6M5oiQ5pWw5o2u6L2s5o2i5ZKM5Y+v6KeG5YyW44CCIHwKCiMjIyDkuozjgIFBSSDnvJbnqIvkuI7ku6PnkIbvvIgxNiDpobnvvIkKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IFN0YXJzIHwg566A5LuLIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS18LS0tLS0tfAp8ICoqQk1BRC1NRVRIT0QqKiB8IFtnaXRodWIuY29tL2JtYWQtY29kZS1vcmcvQk1BRC1NRVRIT0RdKGh0dHBzOi8vZ2l0aHViLmNvbS9ibWFkLWNvZGUtb3JnL0JNQUQtTUVUSE9EKSB8IDM3aysgfCDnjrDosaHnuqflvIDmupDpobnnm67vvIzlsIblpKfljoLmlY/mjbflvIDlj5HmtYHnqIvlvJXlhaVBSeS4lueVjO+8jOaehOW7uuWQq+WkmuinkuiJsu+8iFBN44CB5p625p6E5biI44CB5byA5Y+R6ICF77yJ6Jma5ouf5byA5Y+R5Zui6Zif44CCIHwKfCAqKkdpdE5leHVzKiogfCBbZ2l0aHViLmNvbS9hYmhpZ3lhbnBhdHdhcmkvR2l0TmV4dXNdKGh0dHBzOi8vZ2l0aHViLmNvbS9hYmhpZ3lhbnBhdHdhcmkvR2l0TmV4dXMpIHwgLSB8IOWwhuS7o+eggee7k+aehOi9rOWMluS4uuWPr+afpeivouefpeivhuWbvuiwse+8jOino+WGs+Wkp+Wei+mhueebruWboOe7k+aehOefpeivhuS7heWtmOS6juWwkeaVsOS6uuiEkeiAjOWvvOiHtOeahOWNj+S9nOeTtumiiOOAgiB8CnwgKipjb2RlLXJldmlldy1ncmFwaCoqIHwgW2dpdGh1Yi5jb20vdGlydGg4MjA1L2NvZGUtcmV2aWV3LWdyYXBoXShodHRwczovL2dpdGh1Yi5jb20vdGlydGg4MjA1L2NvZGUtcmV2aWV3LWdyYXBoKSB8IC0gfCDkuJPkuLpDbGF1ZGUgQ29kZeetiUFJ57yW56CB5Yqp5omL6K6+6K6h55qE5pys5Zyw55+l6K+G5Zu+6LCx5bel5YW377yM5Yip55SoVHJlZS1zaXR0ZXLmnoTlu7rku6PnoIHnu5PmnoTlnLDlm77vvIzlh4/lsJE2LjjlgI3lrqHmn6VUb2tlbuOAgiB8CnwgKipNYWVzdHJvKiogfCBbZ2l0aHViLmNvbS9wZWRyYW1hbWluaS9NYWVzdHJvXShodHRwczovL2dpdGh1Yi5jb20vcGVkcmFtYW1pbmkvTWFlc3RybykgfCAtIHwg6Leo5bmz5Y+w5qGM6Z2i5bqU55So77yM57yW5o6S566h55CG5aSa5LiqQUnku6PnkIbkuI7pobnnm67vvIzmlK/mjIFHaXQgV29ya3RyZWVz5bm26KGM5byA5Y+R44CBQXV0byBSdW7oh6rliqjljJbjgIIgfAp8ICoqQWNvbnRleHQqKiB8IFtnaXRodWIuY29tL21lbW9kYi1pby9BY29udGV4dF0oaHR0cHM6Ly9naXRodWIuY29tL21lbW9kYi1pby9BY29udGV4dCkgfCAtIHwg6Z2i5ZCR6Ieq5a2m5pm66IO95L2T55qE5LiK5LiL5paH5pWw5o2u5bmz5Y+w77yM57uf5LiA5a2Y5YKo5Lya6K+d5LiK5LiL5paH44CB5Lu75Yqh6K6w5b2V5LiO5Lqn5Ye677yM5bCG57uP6aqM5rKJ5reA5Li66ZW/5pyf6K6w5b+G44CCIHwKfCAqKlNjcmFwbGluZyoqIHwgW2dpdGh1Yi5jb20vY2NoZXNoaXJlY2F0L3NjcmFwbGluZ10oaHR0cHM6Ly9naXRodWIuY29tL2NjaGVzaGlyZWNhdC9zY3JhcGxpbmcpIHwgLSB8IOmdouWQkeacrOWcsEFJIEFnZW5055Sf5oCB55qE6auY5oCn6IO9UHl0aG9u54is6Jmr5bqT77yM5YW35aSH57uV6L+HQ2xvdWRmbGFyZSBUdXJuc3RpbGXnrYnlj43niKzjgIHnvZHpobXnu5PmnoToh6rpgILlupTog73lipvjgIIgfAp8ICoqbXVsdGljYSoqIHwgW2dpdGh1Yi5jb20vbXVsdGljYS1haS9tdWx0aWNhXShodHRwczovL2dpdGh1Yi5jb20vbXVsdGljYS1haS9tdWx0aWNhKSB8IDkuM2srIHwg5aSaQ29kaW5nIEFnZW505Y2P6LCD5bmz5Y+w77yM5bCGQ2xhdWRlIENvZGXjgIFDb2RleOetieaxh+aIkOOAjOiIsOmYn+OAje+8jOWPr+iupOmihuS7u+WKoeOAgeaKpeWRiui/m+W6puOAgeiiq+mYu+WhnuaXtuiHquWKqOW7uklzc3Vl44CCIHwKfCAqKk1lbVBhbGFjZSoqIHwgW2dpdGh1Yi5jb20vTWVtUGFsYWNlL21lbXBhbGFjZV0oaHR0cHM6Ly9naXRodWIuY29tL01lbVBhbGFjZS9tZW1wYWxhY2UpIHwgNDMuNGsrIHwgQUnorrDlv4bns7vnu5/moYbmnrbvvIwi6YCQ5a2X5a2Y5YKoK+WQkemHj+aQnOe0oiLmnrbmnoTvvIxDaHJvbWFEQitTUUxpdGXmnKzlnLDmo4DntKLvvIzpm7ZBUEnotLnnlKjjgIJMb25nTWVtRXZhbOivhOWIhuacgOmrmOOAgiB8CnwgKipBcmNob24qKiB8IFtnaXRodWIuY29tL2NvbGVhbTAwL0FyY2hvbl0oaHR0cHM6Ly9naXRodWIuY29tL2NvbGVhbTAwL0FyY2hvbikgfCAxN2srIHwgQUnnvJbnoIFIYXJuZXNz5p6E5bu65Zmo77yM6YCa6L+HWUFNTOWjsOaYjuW8j+WumuS5iUFJ57yW56CB5bel5L2c5rWB77yI6K6h5YiS4oaS5a6e546w4oaS6aqM6K+B4oaS5a6h5p+l4oaSUFLvvInvvIznoa7kv51BZ2VudOehruWumuaAp+WSjOWPr+mHjeWkjeOAgiB8CnwgKipPcGVuQ2xhdyoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL29wZW5jbGF3L29wZW5jbGF3XShodHRwczovL2dpdGh1Yi5jb20vb3BlbmNsYXcvb3BlbmNsYXcpIHwgMzU2ayB8IOS4quS6ukFJ5Yqp5omL5qGG5p6277yM5a6a5L2N5Li6IuaZuuiDveS4reaeoiLvvIxTdGFy56qB56C0MzU2S++8jOaMgee7remihui3kUFJIEFnZW506aKG5Z+f44CCIHwKfCAqKm9wZW5jb2RlKiog4q2Q5paw5aKeIHwgW2dpdGh1Yi5jb20vYW5vbWFseWNvL29wZW5jb2RlXShodHRwczovL2dpdGh1Yi5jb20vYW5vbWFseWNvL29wZW5jb2RlKSB8IDE0NWsgfCDlvIDmupBBSee8lueggeWKqeaJi++8jOWKn+iDveW8uuWkp++8jOekvuWMuuWFs+azqOW6pui/hemAn+aUgOWNh+OAgiB8CnwgKipjbGF1ZGUtbWVtKiog4q2Q5paw5aKeIHwgW2dpdGh1Yi5jb20vdGhlZG90bWFjay9jbGF1ZGUtbWVtXShodHRwczovL2dpdGh1Yi5jb20vdGhlZG90bWFjay9jbGF1ZGUtbWVtKSB8IDU5ayB8IENsYXVkZeaMgeS5heiusOW/huWxguW3peWFt++8jOino+WGs0NsYXVkZeaXoOazlei3qOS8muivneiusOW/hueahOmXrumimOOAgiB8CnwgKiphbmRyZWota2FycGF0aHktc2tpbGxzKiog4q2Q5paw5aKeIHwgW2dpdGh1Yi5jb20vZm9ycmVzdGNoYW5nL2FuZHJlai1rYXJwYXRoeS1za2lsbHNdKGh0dHBzOi8vZ2l0aHViLmNvbS9mb3JyZXN0Y2hhbmcvYW5kcmVqLWthcnBhdGh5LXNraWxscykgfCA0Ny45ayB8IOWfuuS6jkFuZHJlaiBLYXJwYXRoeSBBSeeQhuW/teaVtOeQhueahOeyvumAieaKgOiDveW6k+OAgiB8CnwgKipvcGVuYWktYWdlbnRzLXB5dGhvbioqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL29wZW5haS9vcGVuYWktYWdlbnRzLXB5dGhvbl0oaHR0cHM6Ly9naXRodWIuY29tL29wZW5haS9vcGVuYWktYWdlbnRzLXB5dGhvbikgfCAyMmsgfCBPcGVuQUnlrpjmlrlQeXRob27niYjku6PnkIbmoYbmnrbvvIzmjIHnu63pq5jng63luqblop7plb/jgIIgfAp8ICoqR2VuZXJpY0FnZW50Kiog4q2Q5paw5aKeIHwgW2dpdGh1Yi5jb20vbHNkZWZpbmUvR2VuZXJpY0FnZW50XShodHRwczovL2dpdGh1Yi5jb20vbHNkZWZpbmUvR2VuZXJpY0FnZW50KSB8IC0gfCDpgJrnlKhBSeS7o+eQhuahhuaetu+8jFRva2Vu5raI6ICX5piv5ZCM57G75bel5YW355qEMS8244CCIHwKfCAqKkhlcm1lcyBBZ2VudCoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL05vdXNSZXNlYXJjaC9oZXJtZXMtYWdlbnRdKGh0dHBzOi8vZ2l0aHViLmNvbS9Ob3VzUmVzZWFyY2gvaGVybWVzLWFnZW50KSB8IDgwaysgfCBOb3VzUmVzZWFyY2jlj5HluIPnmoTlvIDmupBBSeS7o+eQhuahhuaetnYwLjEwLjDjgIIgfAoKIyMjIOS4ieOAgeaWh+aho+S4juefpeivhuWkhOeQhu+8iDMg6aG577yJCgp8IOmhueebruWQjeensCB8IEdpdEh1YiDlnLDlnYAgfCDnroDku4sgfAp8LS0tLS0tLS0tfC0tLS0tLS0tLS0tLS18LS0tLS0tfAp8ICoqRG9jczJLRyoqIHwgW2dpdGh1Yi5jb20vYWJoaWd5YW5wYXR3YXJpL0RvY3MyS0ddKGh0dHBzOi8vZ2l0aHViLmNvbS9hYmhpZ3lhbnBhdHdhcmkvRG9jczJLRykgfCDlsIZQREbjgIHpgq7ku7bjgIFFeGNlbOetieWkmuenjeW8guaehOmdnue7k+aehOWMluaWh+aho+e7n+S4gOi9rOaNouS4uuWPr+afpeOAgeWPr+aOqOeQhuOAgeWPr+i/vea6r+eahOWkmuaooeaAgeefpeivhuWbvuiwseOAgiB8CnwgKipNYXJrd2hlbioqIHwgW2dpdGh1Yi5jb20vbWFyay13aGVuL21hcmt3aGVuXShodHRwczovL2dpdGh1Yi5jb20vbWFyay13aGVuL21hcmt3aGVuKSB8IOWwhuexu01hcmtkb3du5paH5pys5b+r6YCf6L2s5YyW5Li65Lqk5LqS5byP44CB5Y+v57yp5pS+5ZKM562b6YCJ55qE5bGC5Y+g5pe26Ze057q/44CCIHwKfCAqKlNjcmliYW4qKiB8IFtnaXRodWIuY29tL3NjcmliYW4vc2NyaWJhbl0oaHR0cHM6Ly9naXRodWIuY29tL3NjcmliYW4vc2NyaWJhbikgfCDpgILnlKjkuo4uTkVU55qE5b+r6YCf44CB5a6J5YWo5LiU6L276YeP57qn6ISa5pys6K+t6KiA5LiO5paH5pys5qih5p2/5byV5pOO77yM6K+t5rOV566A5rSB77yM5oCn6IO96auY77yM5peg56ys5LiJ5pa55L6d6LWW44CCIHwKCiMjIyDlm5vjgIHlvIDlj5Hlt6XlhbfkuI7lupPvvIg1IOmhue+8iQoKfCDpobnnm67lkI3np7AgfCBHaXRIdWIg5Zyw5Z2AIHwg566A5LuLIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLXwKfCAqKmNoYXNlci1veGlkZSoqIHwgW2dpdGh1Yi5jb20vY2NoZXNoaXJlY2F0L2NoYXNlci1veGlkZV0oaHR0cHM6Ly9naXRodWIuY29tL2NjaGVzaGlyZWNhdC9jaGFzZXItb3hpZGUpIHwg5Z+65LqOUnVzdOeahOW6k++8jOmAmui/h+S/ruaUuUNocm9taXVtIENEUOmAmuS/oeWNj+iuruWunueOsOWPjeeIrOmakOiXj++8jOS7juWNj+iuruWxgua2iOmZpOiHquWKqOWMlueXlei/ueOAgiB8CnwgKipQaW5jaHRhYioqIHwgW2dpdGh1Yi5jb20vcGluY2h0YWIvcGluY2h0YWJdKGh0dHBzOi8vZ2l0aHViLmNvbS9waW5jaHRhYi9waW5jaHRhYikgfCAxMk1C55qER2/kuozov5vliLblt6XlhbfvvIzlsIZDaHJvbWXmtY/op4jlmajovazkuLpMTE3lj6/nm7TmjqXmjqfliLbnmoTmjqXlj6PvvIzovbvph4/jgIHnqLPlrprjgIHpmLLmo4DmtYvjgIIgfAp8ICoqQW1waGktRVRMKiogfCBbZ2l0aHViLmNvbS9hbXBoaS1haS9hbXBoaS1ldGxdKGh0dHBzOi8vZ2l0aHViLmNvbS9hbXBoaS1haS9hbXBoaS1ldGwpIHwg5byA5rqQ5L2O5Luj56CB5pWw5o2u566h6YGT55Sf5oiQ5Zmo77yM5a6e5pe255Sf5oiQ5Z+65LqOcGFuZGFzL0R1Y2tEQueahOagh+WHhlB5dGhvbuS7o+egge+8jOaUr+aMgeS4jkFJ5qih5Z6L5Y2P5ZCM44CCIHwKfCAqKmNoYXJ0LXZpc3VhbGl6YXRpb24tc2tpbGxzKiogfCBbZ2l0aHViLmNvbS9hbnR2aXMvY2hhcnQtdmlzdWFsaXphdGlvbi1za2lsbHNdKGh0dHBzOi8vZ2l0aHViLmNvbS9hbnR2aXMvY2hhcnQtdmlzdWFsaXphdGlvbi1za2lsbHMpIHwg6JqC6JqBQW50VuWboumYn+aJk+mAoOmAgumFjUNsYXVkZSBDb2Rl55qEQUnljp/nlJ/lj6/op4bljJZTa2lsbO+8jOimhuebluWbvuihqOOAgeS/oeaBr+WbvuOAgeWcsOWbvuetieWFreWkp+aooeWdl+OAgiB8CnwgKipleGNhbGlkcmF3LWRpYWdyYW0tZ2VuZXJhdG9yKiogfCBbZ2l0aHViLmNvbS9tYXJrLXdoZW4vZXhjYWxpZHJhdy1kaWFncmFtLWdlbmVyYXRvcl0oaHR0cHM6Ly9naXRodWIuY29tL21hcmstd2hlbi9leGNhbGlkcmF3LWRpYWdyYW0tZ2VuZXJhdG9yKSB8IOiuqUFJ55u05o6l55Sf5oiQRXhjYWxpZHJhdyBKU09O5paH5Lu257uY5Yi25rWB56iL5Zu+44CB5p625p6E5Zu+562JOeexu+WbvuW9ouOAgiB8CgojIyMg5LqU44CB5a2m5Lmg6LWE5rqQ5LiO6K++56iL77yIMyDpobnvvIkKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IOeugOS7iyB8CnwtLS0tLS0tLS18LS0tLS0tLS0tLS0tLXwtLS0tLS18CnwgKipjczI0OXJfYm9vayoqIHwgW2dpdGh1Yi5jb20vaGFydmFyZC1lZGdlL2NzMjQ5cl9ib29rXShodHRwczovL2dpdGh1Yi5jb20vaGFydmFyZC1lZGdlL2NzMjQ5cl9ib29rKSB8IOWTiOS9m+WboumYn+aJk+mAoOeahOW8gOa6kOaVmeadkOOAik1hY2hpbmUgTGVhcm5pbmcgU3lzdGVtc+OAi++8jOaVmeaOiOWmguS9leWcqOeOsOWunueOr+Wig+S4reiuqUFJ5qih5Z6L56iz5a6a44CB5Y+v6Z2g6L+Q6KGM44CCIHwKfCAqKkdlbmVyYXRpdmUgQUkgZm9yIEJlZ2lubmVycyoqIHwgW2dpdGh1Yi5jb20vTWljcm9zb2Z0L2dlbmVyYXRpdmUtYWktZm9yLWJlZ2lubmVyc10oaHR0cHM6Ly9naXRodWIuY29tL01pY3Jvc29mdC9nZW5lcmF0aXZlLWFpLWZvci1iZWdpbm5lcnMpIHwg5b6u6L2v5byA5rqQQUnor77nqIvvvIzpkojlr7nmlofnp5HnlJ/jgIHkuqflk4Hnu4/nkIblj4rpm7bln7rnoYDot6jooYzogIXvvIzkvqfph43lupTnlKjmioDog73jgIIgfAp8ICoqQUktRm9yLUJlZ2lubmVycyoqIHwgW2dpdGh1Yi5jb20vTWljcm9zb2Z0L0FJLUZvci1CZWdpbm5lcnNdKGh0dHBzOi8vZ2l0aHViLmNvbS9NaWNyb3NvZnQvQUktRm9yLUJlZ2lubmVycykgfCDlvq7ova/lvIDmupBBSeivvueoi++8jOmSiOWvueacieiuoeeul+acuuiDjOaZr+eahOWtpuS5oOiAhe+8jOS+p+mHjeW6leWxguWOn+eQhuS4juahhuaetuiuree7g+OAgiB8CgojIyMg5YWt44CB5Z+656GA6K6+5pa95LiO6L+Q57u077yINiDpobnvvIkKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IFN0YXJzIHwg566A5LuLIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS18LS0tLS0tfAp8ICoqT3Blbk9ic2VydmUqKiB8IFtnaXRodWIuY29tL29wZW5vYnNlcnZlL29wZW5vYnNlcnZlXShodHRwczovL2dpdGh1Yi5jb20vb3Blbm9ic2VydmUvb3Blbm9ic2VydmUpIHwgLSB8IOW8gOa6kOS6keWOn+eUn+WPr+ingua1i+aAp+W5s+WPsO+8jOWtmOWCqOaIkOacrOi+g0VsYXN0aWNzZWFyY2jkvY7nuqYxNDDlgI3vvIzmlK/mjIFQQue6p+aVsOaNruWkhOeQhuOAgiB8CnwgKipDb25zdWwqKiB8IEhhc2hpQ29ycOWumOaWueS7k+W6kyB8IC0gfCBIYXNoaUNvcnDnmoTmnI3liqHlj5HnjrDjgIHlgaXlurfmo4Dmn6XjgIHmnI3liqHnvZHmoLzkuI7phY3nva7nrqHnkIblt6XlhbfjgIIgfAp8ICoqT3BlblNSRSoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL1RyYWNlci1DbG91ZC9vcGVuc3JlXShodHRwczovL2dpdGh1Yi5jb20vVHJhY2VyLUNsb3VkL29wZW5zcmUpIHwgfjEuNUsgfCDpnaLlkJFBSeaXtuS7o+eahOW8gOa6kFNSReW3peWFt+WMhe+8jOaehOW7ukFJIFNSReS7o+eQhu+8jOiDveiHquS4u+ebkeaOp+OAgeiviuaWreOAgeino+WGs+WfuuehgOiuvuaWvemXrumimOOAgiB8CnwgKipMYW5nQ2hhaW4qKiDirZDmlrDlop4gfCBbZ2l0aHViLmNvbS9sYW5nY2hhaW4tYWkvbGFuZ2NoYWluXShodHRwczovL2dpdGh1Yi5jb20vbGFuZ2NoYWluLWFpL2xhbmdjaGFpbikgfCAxMzNLIHwgQWdlbnTlt6XnqIvlubPlj7DvvIzphY3lkIhMYW5nR3JhcGjmj5Dkvpvlm77lvaLljJZBZ2VudOaehOW7uuiDveWKm++8jOimhuebllJBR+OAgeW3peWFt+iwg+eUqOWFqOmTvui3r+OAgiB8CnwgKipNQ1AgU2VydmVycyoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL21vZGVsY29udGV4dHByb3RvY29sL3NlcnZlcnNdKGh0dHBzOi8vZ2l0aHViLmNvbS9tb2RlbGNvbnRleHRwcm90b2NvbC9zZXJ2ZXJzKSB8IDg0SyB8IE1DUOWNj+iuruacjeWKoeWZqOmbhuWQiO+8jOato+aIkOS4ukFnZW505bel5YW35LqS5pON5L2c55qE6KGM5Lia5qCH5YeG44CCIHwKfCAqKmF3ZXNvbWUtbGxtLWFwcHMqKiDirZDmlrDlop4gfCBbZ2l0aHViLmNvbS9TaHViaGFtc2Fib28vYXdlc29tZS1sbG0tYXBwc10oaHR0cHM6Ly9naXRodWIuY29tL1NodWJoYW1zYWJvby9hd2Vzb21lLWxsbS1hcHBzKSB8IDEwNksgfCBMTE3lupTnlKjmoYjkvovnsr7pgInpm4bvvIzopobnm5blkITnsbtBSeW6lOeUqOW8gOWPkeWcuuaZr+eahOS8mOi0qOWtpuS5oOi1hOa6kOOAgiB8CgojIyMg5LiD44CB5py65Zmo5a2m5Lmg5qGG5p625LiO5o6o55CG5byV5pOO77yINSDpobnvvInirZDmnKzlkajmlrDlop7liIbnsbsKCnwg6aG555uu5ZCN56ewIHwgR2l0SHViIOWcsOWdgCB8IFN0YXJzIHwg566A5LuLIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS18LS0tLS0tfAp8ICoqdkxMTSoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL3ZsbG0tcHJvamVjdC92bGxtXShodHRwczovL2dpdGh1Yi5jb20vdmxsbS1wcm9qZWN0L3ZsbG0pIHwgNzZLIHwg6auY5ZCe5ZCQ6YePTExN5o6o55CG5byV5pOO77yM55Sf5Lqn57qnTExN5o6o55CG55qE5LqL5a6e5qCH5YeG44CC5pyA5pawdjAuMTkuMXJjMOaUr+aMgVB5VG9yY2ggMi4xMOOAgiB8CnwgKipPbGxhbWEqKiDirZDmlrDlop4gfCBbZ2l0aHViLmNvbS9vbGxhbWEvb2xsYW1hXShodHRwczovL2dpdGh1Yi5jb20vb2xsYW1hL29sbGFtYSkgfCAxNjlLIHwg5LiA6ZSu6L+Q6KGMTExN55qE5pys5Zyw5o6o55CG5bmz5Y+w77yM5pys5ZywTExN6L+Q6KGM55qE5YWl6Zeo6aaW6YCJ77yM5LiO5Li75rWB5qGG5p625rex5bqm6ZuG5oiQ44CCIHwKfCAqKlVuc2xvdGgqKiDirZDmlrDlop4gfCBbZ2l0aHViLmNvbS91bnNsb3RoYWkvdW5zbG90aF0oaHR0cHM6Ly9naXRodWIuY29tL3Vuc2xvdGhhaS91bnNsb3RoKSB8IDYxSyB8IOW+ruiwg+mAn+W6puaPkOWNhzLlgI3jgIHlhoXlrZjlh4/lsJE3MCXvvIzlt7LmlK/mjIFMbGFtYSA05YWo57O75YiX44CC5Lit5bCP5Zui6Zif5b6u6LCD55qE5pyA5LyY6Kej44CCIHwKfCAqKkdvb2dsZSBBREsgUHl0aG9uKiog4q2Q5paw5aKeIHwgW2dpdGh1Yi5jb20vZ29vZ2xlL2Fkay1weXRob25dKGh0dHBzOi8vZ2l0aHViLmNvbS9nb29nbGUvYWRrLXB5dGhvbikgfCA4LjJLKyB8IEdvb2dsZeWumOaWueWkmuaZuuiDveS9k+W8gOWPkeahhuaetu+8jOS4pOWRqOWGheaatOWinjgyMDAgc3RhcnPvvIzmmK8yMDI25bm0TXVsdGktQWdlbnTlvIDlj5HnmoTph43opoHmoYbmnrbjgIIgfAp8ICoqTWV0YSBMbGFtYSBTdGFjayoqIOKtkOaWsOWiniB8IFtnaXRodWIuY29tL21ldGEtbGxhbWEvbGxhbWEtc3RhY2tdKGh0dHBzOi8vZ2l0aHViLmNvbS9tZXRhLWxsYW1hL2xsYW1hLXN0YWNrKSB8IDYuNEsrIHwgTGxhbWEgNOezu+WIl+eahOe7n+S4gOmDqOe9suagiO+8jE1vReaetuaehO+8iFNjb3V0L01hdmVyaWNr77yJ55Sf5Lqn6YOo572y5b+F5aSH5qGG5p6244CCIHwKCiMjIyDlhavjgIHlhbfouqvmnLrlmajkurrkuI7mlbDmja7pm4bvvIgyIOmhue+8iQoKfCDpobnnm67lkI3np7AgfCDpk77mjqUgfCBTdGFycyB8IOeugOS7iyB8CnwtLS0tLS0tLS18LS0tLS0tfC0tLS0tLS18LS0tLS0tfAp8ICoqQUdJQk9UIFdPUkxEIDIwMjYqKiB8IFtnaXRodWIuY29tL09wZW5Ecml2ZUxhYi9BZ2lib3QtV29ybGRdKGh0dHBzOi8vZ2l0aHViLmNvbS9PcGVuRHJpdmVMYWIvQWdpYm90LVdvcmxkKSB8IC0gfCDlhajlnLrmma/lhbfouqvmnLrlmajkurrlvIDmupDmlbDmja7pm4bvvIgxMDAl55yf5a6e5LiW55WM77yJ77yMRzLmnLrlmajkurrph4fpm4bvvIzopobnm5blt6XljoIv5a625bqt5Zy65pmv44CCSVJPUyAyMDI1IEJlc3QgUGFwZXLjgIIgfAp8ICoqR2VtaW5pIFJvYm90aWNzLUVSIDEuNioqIHwgW0RlZXBNaW5kIEJsb2ddKGh0dHBzOi8vZGVlcG1pbmQuZ29vZ2xlL2Jsb2cvZ2VtaW5pLXJvYm90aWNzLWVyLTEtNi8pIHwgLSB8IERlZXBNaW5k5Y+R5biD55qE5YW36Lqr5o6o55CG5qih5Z6LMS4254mI77yM5Luq6KGo6K+75Y+W57K+5bqmOTMl77yM5oSf55+l5LiT5a62RVIgKyDmiafooYzogIVWTEHliIbnprvmnrbmnoTjgIIgfAoKLS0tCgojIyDwn5OIIOmhueebrue7n+iuoeaxh+aAuwoKfCDliIbnsbsgfCDkuIrlkajpobnnm67mlbAgfCDmnKzlkajmlrDlop4gfCDlkIjorqEgfAp8LS0tLS0tfC0tLS0tLS0tLS0tfC0tLS0tLS0tLXwtLS0tLS18Cnwg5pWw5o2u5bmz5Y+w5LiO5Y+v6KeG5YyWIHwgNCB8IDAgfCA0IHwKfCBBSSDnvJbnqIvkuI7ku6PnkIYgfCA5IHwgNyB8IDE2IHwKfCDmlofmoaPkuI7nn6Xor4blpITnkIYgfCAzIHwgMCB8IDMgfAp8IOW8gOWPkeW3peWFt+S4juW6kyB8IDUgfCAwIHwgNSB8Cnwg5a2m5Lmg6LWE5rqQ5LiO6K++56iLIHwgMyB8IDAgfCAzIHwKfCDln7rnoYDorr7mlr3kuI7ov5Dnu7QgfCAyIHwgNCB8IDYgfAp8IOacuuWZqOWtpuS5oOahhuaetuS4juaOqOeQhuW8leaTjiB8IDAgfCA1IHwgNSB8Cnwg5YW36Lqr5py65Zmo5Lq65LiO5pWw5o2u6ZuGIHwgMiB8IDAgfCAyIHwKfCAqKuWQiOiuoSoqIHwgKioyOSoqIHwgKiorMTUqKiB8ICoqNDQqKiB8CgotLS0KCiMjIPCfk4wg5pys5ZGo6LaL5Yq/5rSe5a+fCgoxLiAqKkFJIENvZGluZyDotZvpgZPmiJDnhp/ljJYqKu+8mkN1cnNvciDkvLDlgLwgNTAg5Lq/576O5YWD5qCH5b+X552A5biC5Zy65LuO5o6i57Si5pyf6L+b5YWl5oiQ54af5pyf77yb5aSaIEFnZW50IOWNj+S9nO+8iG11bHRpY2HjgIFHb29nbGUgQURL77yJ5q2j5Zyo5Y+W5Luj5Y2VIEFnZW50IOaooeW8jwoyLiAqKuaOqOeQhuW8leaTjuagvOWxgOa4heaZsCoq77yadkxMTe+8iOeUn+S6p++8ieOAgU9sbGFtYe+8iOacrOWcsO+8ieOAgVVuc2xvdGjvvIjlvq7osIPvvInkuInotrPpvI7nq4vvvIzlkITmnInkvqfph40KMy4gKipNb0Ug5p625p6E5Li75rWB5YyWKirvvJpMbGFtYSA044CBUXdlbiAzLjbjgIFEZWVwU2VlayBWMyDlnYfph4fnlKggTW9F77yMIjcwQiDnuqci5pm66IO95ZyoIDEzQiDnuqfnoazku7bkuIrov5DooYzmiJDkuLrlj6/og70KNC4gKipBSSBTUkUg5YWD5bm0KirvvJpPcGVuU1JFIOetieW3peWFt+agh+W/l+edgCBBSSDpqbHliqjov5Dnu7Tku47mpoLlv7XotbDlkJHlvIDmupDokL3lnLDvvIzkuI4gT3BlblRlbGVtZXRyeSDnmoTmt7Hluqbpm4bmiJDlgLzlvpflhbPms6gKNS4gKirorrDlv4bmjIHkuYXljJbmiJDmoIfphY0qKu+8mmNsYXVkZS1tZW3jgIFNZW1QYWxhY2XjgIFBY29udGV4dCDnrYnlt6XlhbfkupXllrfvvIxBSSDmjIHkuYXorrDlv4bku47noJTnqbbotbDlkJHlt6XnqIvlrp7ot7UKCi0tLQoKPiDmnaXmupDvvJpBZ2lsZSBSb2JpbiDmioDmnK/nrJTorrAgfCDmr4/lkajnlLEgV29ya0J1ZGR5IOiHquWKqOaVtOeQhgo+IFRhZ3M6IEdpdEh1Yiwg5byA5rqQ6aG555uuLCBBSee8lueoiywg5aSn5qih5Z6LLCDmjqjnkIblvJXmk44sIERldk9wcywg5YW36Lqr5py65Zmo5Lq6LCDlvIDlj5Hlt6XlhbcsIDIwMjYKCg==
+---
+title: "GitHub 开源项目仓库汇总（2026-04-25 更新）"
+description: "GitHub 开源项目仓库汇总（2026-04-25 更新）  数据来源：IMA 知识库 GitHub 相关内容整理 | 每周自动更新 本期新增 15 个项目，总计收录 44 个优质开源项目  📊 本周更新亮点 本周新增 15 个项目，重点聚焦 AI Coding 与 MLOps 基础设施：  🤖 AI Coding 全景图：OpenClaw（356K ⭐）、Claude Code（113K ⭐）、opencode（145K ⭐）等领跑赛道 🧠 记忆与持久化：claude-mem（59K ..."
+date: "2026-04-25"
+tags: ["AI", "Developer Tools", "GitHub", "open source"]
+readingTime: 5
+slug: "github-open-source-projects-summary-2026-04-25"
+category: "开源周报"
+---
+# GitHub 开源项目仓库汇总（2026-04-25 更新）
+
+> 数据来源：IMA 知识库 GitHub 相关内容整理 | 每周自动更新
+> 本期新增 15 个项目，总计收录 44 个优质开源项目
+
+## 📊 本周更新亮点
+
+本周新增 **15 个项目**，重点聚焦 AI Coding 与 MLOps 基础设施：
+
+- 🤖 **AI Coding 全景图**：OpenClaw（356K ⭐）、Claude Code（113K ⭐）、opencode（145K ⭐）等领跑赛道
+- 🧠 **记忆与持久化**：claude-mem（59K ⭐）、MemPalace（43.4K ⭐）解决 AI 跨会话记忆难题  
+- ⚡ **推理引擎加速**：vLLM v0.19.1（76K ⭐）、Ollama（169K ⭐）、Unsloth（61K ⭐）覆盖从本地到生产的全栈推理需求
+- 🛡️ **AI SRE 元年**：OpenSRE 开启 AI 驱动运维新时代，与 OpenTelemetry 深度集成
+- 🌐 **多 Agent 框架**：Google ADK（8.2K ⭐）、Meta Llama Stack（6.4K ⭐）、OpenAI Agents（22K ⭐）三大厂商同台竞技
+
+---
+
+## 新增项目速览
+
+### 🤖 AI Coding & Agent 工具（新增 7 项）
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **OpenClaw** | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) | 356K ⭐ | 个人AI助手框架，定位为"智能中枢"。衍生出NanoClaw轻量版及ACP协议生态，持续领跑AI Agent领域。 |
+| **opencode** | [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode) | 145K ⭐ | 开源AI编码助手，功能强大，社区关注度迅速攀升。 |
+| **claude-mem** | [github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 59K ⭐ | Claude持久记忆层工具，彻底解决Claude无法跨会话记忆的问题。 |
+| **andrej-karpathy-skills** | [github.com/forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | 47.9K ⭐ | 基于Andrej Karpathy AI理念整理的精选技能库。 |
+| **openai-agents-python** | [github.com/openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 22K ⭐ | OpenAI官方Python版代理框架，本周新增3526 stars，热度持续攀升。 |
+| **GenericAgent** | [github.com/lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | - | 通用AI代理框架，Token消耗是同类工具的1/6，高效低耗是核心竞争力。 |
+| **Hermes Agent** | [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 80K+ ⭐ | NousResearch发布的开源AI代理框架v0.10.0，社区活跃度高。 |
+
+### ⚡ 机器学习框架与推理引擎（新增 5 项）
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **vLLM** | [github.com/vllm-project/vllm](https://github.com/vllm-project/vllm) | 76K ⭐ | 高吞吐量LLM推理引擎，本周发布v0.19.1rc0，PyTorch 2.10升级。生产级LLM推理的事实标准。 |
+| **Ollama** | [github.com/ollama/ollama](https://github.com/ollama/ollama) | 169K ⭐ | 一键运行LLM的本地推理平台，支持海量开源模型，与LangChain、Dify等框架深度集成。 |
+| **Unsloth** | [github.com/unslothai/unsloth](https://github.com/unslothai/unsloth) | 61K ⭐ | 微调速度提升2倍、内存减少70%的轻量微调框架，已支持Llama 4全系列。 |
+| **Google ADK Python** | [github.com/google/adk-python](https://github.com/google/adk-python) | 8.2K+ ⭐ | Google Agent Development Kit，构建多智能体系统的官方框架，两周内暴增8200 stars。 |
+| **Meta Llama Stack** | [github.com/meta-llama/llama-stack](https://github.com/meta-llama/llama-stack) | 6.4K+ ⭐ | Llama 4系列的统一部署栈，提供推理、微调、SFT、RLHF全链路工具链。 |
+
+### 🛠️ 基础设施与运维（新增 3 项）
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **OpenSRE** | [github.com/Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | ~1.5K ⭐ | 面向AI时代的开源SRE工具包，允许开发者构建自己的AI SRE代理，与OpenTelemetry生态深度集成。 |
+| **LangChain** | [github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 133K ⭐ | Agent工程平台，与LangGraph（29K ⭐）配合，提供图形化Agent构建能力，覆盖RAG、工具调用全链路。 |
+| **MCP Servers** | [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | 84K ⭐ | MCP协议服务器集合，为LLM提供标准化工具调用能力，正成为Agent工具互操作的行业标准。 |
+
+---
+
+## 完整项目清单（44 项）
+
+### 一、数据平台与可视化（4 项）
+
+| 项目名称 | GitHub 地址 | 简介 |
+|---------|-------------|------|
+| **DataCap** | [github.com/devlive-community/datacap](https://github.com/devlive-community/datacap) | 开源数据中台软件，支持多数据源管理与监控，实现数据转换、集成、可视化等功能。Java/JavaScript开发，遵循Apache 2.0协议。 |
+| **Chartbrew** | [github.com/chartbrew/chartbrew](https://github.com/chartbrew/chartbrew) | 开源报表平台，用于从API、MySQL、PostgreSQL、MongoDB等数据源创建实时报表看板。 |
+| **Shaper** | [github.com/taleshape-com/shaper](https://github.com/taleshape-com/shaper) | 免费开源、基于SQL（DuckDB）的数据可视化工具，用于创建交互式数据仪表盘。后端Go，前端React，遵循MPL-2.0协议。 |
+| **Data Formulator** | [github.com/microsoft/data-formulator](https://github.com/microsoft/data-formulator) | 微软研究院开发的AI驱动数据可视化工具，融合拖拽UI与自然语言输入，无需复杂编码即可完成数据转换和可视化。 |
+
+### 二、AI 编程与代理（16 项）
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **BMAD-METHOD** | [github.com/bmad-code-org/BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD) | 37k+ | 现象级开源项目，将大厂敏捷开发流程引入AI世界，构建含多角色（PM、架构师、开发者）虚拟开发团队。 |
+| **GitNexus** | [github.com/abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | - | 将代码结构转化为可查询知识图谱，解决大型项目因结构知识仅存于少数人脑而导致的协作瓶颈。 |
+| **code-review-graph** | [github.com/tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | - | 专为Claude Code等AI编码助手设计的本地知识图谱工具，利用Tree-sitter构建代码结构地图，减少6.8倍审查Token。 |
+| **Maestro** | [github.com/pedramamini/Maestro](https://github.com/pedramamini/Maestro) | - | 跨平台桌面应用，编排管理多个AI代理与项目，支持Git Worktrees并行开发、Auto Run自动化。 |
+| **Acontext** | [github.com/memodb-io/Acontext](https://github.com/memodb-io/Acontext) | - | 面向自学智能体的上下文数据平台，统一存储会话上下文、任务记录与产出，将经验沉淀为长期记忆。 |
+| **Scrapling** | [github.com/ccheshirecat/scrapling](https://github.com/ccheshirecat/scrapling) | - | 面向本地AI Agent生态的高性能Python爬虫库，具备绕过Cloudflare Turnstile等反爬、网页结构自适应能力。 |
+| **multica** | [github.com/multica-ai/multica](https://github.com/multica-ai/multica) | 9.3k+ | 多Coding Agent协调平台，将Claude Code、Codex等汇成「舰队」，可认领任务、报告进度、被阻塞时自动建Issue。 |
+| **MemPalace** | [github.com/MemPalace/mempalace](https://github.com/MemPalace/mempalace) | 43.4k+ | AI记忆系统框架，"逐字存储+向量搜索"架构，ChromaDB+SQLite本地检索，零API费用。LongMemEval评分最高。 |
+| **Archon** | [github.com/coleam00/Archon](https://github.com/coleam00/Archon) | 17k+ | AI编码Harness构建器，通过YAML声明式定义AI编码工作流（计划→实现→验证→审查→PR），确保Agent确定性和可重复。 |
+| **OpenClaw** ⭐新增 | [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw) | 356k | 个人AI助手框架，定位为"智能中枢"，Star突破356K，持续领跑AI Agent领域。 |
+| **opencode** ⭐新增 | [github.com/anomalyco/opencode](https://github.com/anomalyco/opencode) | 145k | 开源AI编码助手，功能强大，社区关注度迅速攀升。 |
+| **claude-mem** ⭐新增 | [github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) | 59k | Claude持久记忆层工具，解决Claude无法跨会话记忆的问题。 |
+| **andrej-karpathy-skills** ⭐新增 | [github.com/forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | 47.9k | 基于Andrej Karpathy AI理念整理的精选技能库。 |
+| **openai-agents-python** ⭐新增 | [github.com/openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 22k | OpenAI官方Python版代理框架，持续高热度增长。 |
+| **GenericAgent** ⭐新增 | [github.com/lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | - | 通用AI代理框架，Token消耗是同类工具的1/6。 |
+| **Hermes Agent** ⭐新增 | [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 80k+ | NousResearch发布的开源AI代理框架v0.10.0。 |
+
+### 三、文档与知识处理（3 项）
+
+| 项目名称 | GitHub 地址 | 简介 |
+|---------|-------------|------|
+| **Docs2KG** | [github.com/abhigyanpatwari/Docs2KG](https://github.com/abhigyanpatwari/Docs2KG) | 将PDF、邮件、Excel等多种异构非结构化文档统一转换为可查、可推理、可追溯的多模态知识图谱。 |
+| **Markwhen** | [github.com/mark-when/markwhen](https://github.com/mark-when/markwhen) | 将类Markdown文本快速转化为交互式、可缩放和筛选的层叠时间线。 |
+| **Scriban** | [github.com/scriban/scriban](https://github.com/scriban/scriban) | 适用于.NET的快速、安全且轻量级脚本语言与文本模板引擎，语法简洁，性能高，无第三方依赖。 |
+
+### 四、开发工具与库（5 项）
+
+| 项目名称 | GitHub 地址 | 简介 |
+|---------|-------------|------|
+| **chaser-oxide** | [github.com/ccheshirecat/chaser-oxide](https://github.com/ccheshirecat/chaser-oxide) | 基于Rust的库，通过修改Chromium CDP通信协议实现反爬隐藏，从协议层消除自动化痕迹。 |
+| **Pinchtab** | [github.com/pinchtab/pinchtab](https://github.com/pinchtab/pinchtab) | 12MB的Go二进制工具，将Chrome浏览器转为LLM可直接控制的接口，轻量、稳定、防检测。 |
+| **Amphi-ETL** | [github.com/amphi-ai/amphi-etl](https://github.com/amphi-ai/amphi-etl) | 开源低代码数据管道生成器，实时生成基于pandas/DuckDB的标准Python代码，支持与AI模型协同。 |
+| **chart-visualization-skills** | [github.com/antvis/chart-visualization-skills](https://github.com/antvis/chart-visualization-skills) | 蚂蚁AntV团队打造适配Claude Code的AI原生可视化Skill，覆盖图表、信息图、地图等六大模块。 |
+| **excalidraw-diagram-generator** | [github.com/mark-when/excalidraw-diagram-generator](https://github.com/mark-when/excalidraw-diagram-generator) | 让AI直接生成Excalidraw JSON文件绘制流程图、架构图等9类图形。 |
+
+### 五、学习资源与课程（3 项）
+
+| 项目名称 | GitHub 地址 | 简介 |
+|---------|-------------|------|
+| **cs249r_book** | [github.com/harvard-edge/cs249r_book](https://github.com/harvard-edge/cs249r_book) | 哈佛团队打造的开源教材《Machine Learning Systems》，教授如何在现实环境中让AI模型稳定、可靠运行。 |
+| **Generative AI for Beginners** | [github.com/Microsoft/generative-ai-for-beginners](https://github.com/Microsoft/generative-ai-for-beginners) | 微软开源AI课程，针对文科生、产品经理及零基础跨行者，侧重应用技能。 |
+| **AI-For-Beginners** | [github.com/Microsoft/AI-For-Beginners](https://github.com/Microsoft/AI-For-Beginners) | 微软开源AI课程，针对有计算机背景的学习者，侧重底层原理与框架训练。 |
+
+### 六、基础设施与运维（6 项）
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **OpenObserve** | [github.com/openobserve/openobserve](https://github.com/openobserve/openobserve) | - | 开源云原生可观测性平台，存储成本较Elasticsearch低约140倍，支持PB级数据处理。 |
+| **Consul** | HashiCorp官方仓库 | - | HashiCorp的服务发现、健康检查、服务网格与配置管理工具。 |
+| **OpenSRE** ⭐新增 | [github.com/Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | ~1.5K | 面向AI时代的开源SRE工具包，构建AI SRE代理，能自主监控、诊断、解决基础设施问题。 |
+| **LangChain** ⭐新增 | [github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 133K | Agent工程平台，配合LangGraph提供图形化Agent构建能力，覆盖RAG、工具调用全链路。 |
+| **MCP Servers** ⭐新增 | [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | 84K | MCP协议服务器集合，正成为Agent工具互操作的行业标准。 |
+| **awesome-llm-apps** ⭐新增 | [github.com/Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 106K | LLM应用案例精选集，覆盖各类AI应用开发场景的优质学习资源。 |
+
+### 七、机器学习框架与推理引擎（5 项）⭐本周新增分类
+
+| 项目名称 | GitHub 地址 | Stars | 简介 |
+|---------|-------------|-------|------|
+| **vLLM** ⭐新增 | [github.com/vllm-project/vllm](https://github.com/vllm-project/vllm) | 76K | 高吞吐量LLM推理引擎，生产级LLM推理的事实标准。最新v0.19.1rc0支持PyTorch 2.10。 |
+| **Ollama** ⭐新增 | [github.com/ollama/ollama](https://github.com/ollama/ollama) | 169K | 一键运行LLM的本地推理平台，本地LLM运行的入门首选，与主流框架深度集成。 |
+| **Unsloth** ⭐新增 | [github.com/unslothai/unsloth](https://github.com/unslothai/unsloth) | 61K | 微调速度提升2倍、内存减少70%，已支持Llama 4全系列。中小团队微调的最优解。 |
+| **Google ADK Python** ⭐新增 | [github.com/google/adk-python](https://github.com/google/adk-python) | 8.2K+ | Google官方多智能体开发框架，两周内暴增8200 stars，是2026年Multi-Agent开发的重要框架。 |
+| **Meta Llama Stack** ⭐新增 | [github.com/meta-llama/llama-stack](https://github.com/meta-llama/llama-stack) | 6.4K+ | Llama 4系列的统一部署栈，MoE架构（Scout/Maverick）生产部署必备框架。 |
+
+### 八、具身机器人与数据集（2 项）
+
+| 项目名称 | 链接 | Stars | 简介 |
+|---------|------|-------|------|
+| **AGIBOT WORLD 2026** | [github.com/OpenDriveLab/Agibot-World](https://github.com/OpenDriveLab/Agibot-World) | - | 全场景具身机器人开源数据集（100%真实世界），G2机器人采集，覆盖工厂/家庭场景。IROS 2025 Best Paper。 |
+| **Gemini Robotics-ER 1.6** | [DeepMind Blog](https://deepmind.google/blog/gemini-robotics-er-1-6/) | - | DeepMind发布的具身推理模型1.6版，仪表读取精度93%，感知专家ER + 执行者VLA分离架构。 |
+
+---
+
+## 📈 项目统计汇总
+
+| 分类 | 上周项目数 | 本周新增 | 合计 |
+|------|-----------|---------|------|
+| 数据平台与可视化 | 4 | 0 | 4 |
+| AI 编程与代理 | 9 | 7 | 16 |
+| 文档与知识处理 | 3 | 0 | 3 |
+| 开发工具与库 | 5 | 0 | 5 |
+| 学习资源与课程 | 3 | 0 | 3 |
+| 基础设施与运维 | 2 | 4 | 6 |
+| 机器学习框架与推理引擎 | 0 | 5 | 5 |
+| 具身机器人与数据集 | 2 | 0 | 2 |
+| **合计** | **29** | **+15** | **44** |
+
+---
+
+## 📌 本周趋势洞察
+
+1. **AI Coding 赛道成熟化**：Cursor 估值 50 亿美元标志着市场从探索期进入成熟期；多 Agent 协作（multica、Google ADK）正在取代单 Agent 模式
+2. **推理引擎格局清晰**：vLLM（生产）、Ollama（本地）、Unsloth（微调）三足鼎立，各有侧重
+3. **MoE 架构主流化**：Llama 4、Qwen 3.6、DeepSeek V3 均采用 MoE，"70B 级"智能在 13B 级硬件上运行成为可能
+4. **AI SRE 元年**：OpenSRE 等工具标志着 AI 驱动运维从概念走向开源落地，与 OpenTelemetry 的深度集成值得关注
+5. **记忆持久化成标配**：claude-mem、MemPalace、Acontext 等工具井喷，AI 持久记忆从研究走向工程实践
+
+---
+
+> 来源：Agile Robin 技术笔记 | 每周由 WorkBuddy 自动整理
+> Tags: GitHub, 开源项目, AI编程, 大模型, 推理引擎, DevOps, 具身机器人, 开发工具, 2026
+

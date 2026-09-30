@@ -1,1 +1,320 @@
-LS0tCnRpdGxlOiAiR3JhZmFuYSBMb2tpIOeJiOacrOWPmOabtOS4juWtmOWCqOezu+e7n+WNh+e6p+WujOWFqOaMh+WNl++8iDIueCDihpIgMy5477yJIgpkZXNjcmlwdGlvbjogIuWJjeiogCBHcmFmYW5hIExva2kg5L2c5Li65LqR5Y6f55Sf5pel5b+X6IGa5ZCI55qE5LqL5a6e5qCH5YeG77yM5Zyo6L+H5Y675Yeg5bm057uP5Y6G5LqG5LuOIDIuMCDliLAgMy41IOeahOW3qOWkp+a8lOi/m+OAguWFtuS4re+8jOWtmOWCqOezu+e7n+eahOmHjeaehOaYr+acgOaguOW/g+eahOWPmOWMluKAlOKAlOS7jiBCb2x0REIg5pys5Zyw5a2Y5YKo5YiwIFRTREIgU2luZ2xlIFN0b3Jl77yM5LuO5aSn57Si5byV5paH5Lu25YiwIEJsb29tIEZpbHRlciDliqDpgJ/mn6Xor6LjgIIg5pys5paH57O757uf5qKz55CGIExva2kg5ZCE5Li76KaB54mI5pys55qE5Y+Y5pu06KaB54K577yM552A6YeN5YiG5p6Q5a2Y5YKo57O757uf55qE5ryU6L+b6ISJ57uc77yM5bm25o+Q5L6b6Zi/6YeM5LqRIE9TUyDkvZzkuLrlrZjlgqjlkI7nq6/nmoTlrozmlbTphY3nva7mjIfljZfjgIIgIOS4gOOAgUxva2kg54mI5pys5Y+R5biD5qaC6KeIICAgICDniYjmnKzlj5HluIPml6XmnJ/nlJ/lkb3lkajmnJ/nirbmgIHlhbPplK7ph4znqIvnopEgICAgMi4wMjAyMS0wM0UuLi4iCmRhdGU6ICIyMDI2LTA0LTI0IgpyZWFkaW5nVGltZTogNQpzbHVnOiAiZ3JhZmFuYS1sb2tpLTJ4LTN4IgpjYXRlZ29yeTogIuehrOaguOa3seaMliIKLS0tCiMjIOWJjeiogAoKR3JhZmFuYSBMb2tpIOS9nOS4uuS6keWOn+eUn+aXpeW/l+iBmuWQiOeahOS6i+Wunuagh+WHhu+8jOWcqOi/h+WOu+WHoOW5tOe7j+WOhuS6huS7jiAyLjAg5YiwIDMuNSDnmoTlt6jlpKfmvJTov5vjgILlhbbkuK3vvIwqKuWtmOWCqOezu+e7n+eahOmHjeaehCoq5piv5pyA5qC45b+D55qE5Y+Y5YyW4oCU4oCU5LuOIEJvbHREQiDmnKzlnLDlrZjlgqjliLAgVFNEQiBTaW5nbGUgU3RvcmXvvIzku47lpKfntKLlvJXmlofku7bliLAgQmxvb20gRmlsdGVyIOWKoOmAn+afpeivouOAggoK5pys5paH57O757uf5qKz55CGIExva2kg5ZCE5Li76KaB54mI5pys55qE5Y+Y5pu06KaB54K577yMKirnnYDph43liIbmnpDlrZjlgqjns7vnu5/nmoTmvJTov5vohInnu5wqKu+8jOW5tuaPkOS+m+mYv+mHjOS6kSBPU1Mg5L2c5Li65a2Y5YKo5ZCO56uv55qE5a6M5pW06YWN572u5oyH5Y2X44CCCgotLS0KCiMjIOS4gOOAgUxva2kg54mI5pys5Y+R5biD5qaC6KeICgp8IOeJiOacrCB8IOWPkeW4g+aXpeacnyB8IOeUn+WRveWRqOacn+eKtuaAgSB8IOWFs+mUrumHjOeoi+eikSB8CnwtLS0tLS18LS0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS0tLS0tfAp8ICoqMi4wKiogfCAyMDIxLTAzIHwgRU9MIHwg5byV5YWlIEhlbG0gQ2hhcnTjgIFJbmdlc3RlciDliIbniYcgfAp8ICoqMi44KiogfCAyMDIzLTA3IHwgRU9MIHwgKipUU0RCIOe0ouW8leato+W8j+aOqOiNkCoqIHwKfCAqKjIuOSoqIHwgMjAyMy0wOSB8IEVPTCB8IFRTREIg5oiQ54af44CBQmxvb20gQ29tcGFjdG9y77yI5a6e6aqM77yJIHwKfCAqKjMuMCoqIHwgMjAyNC0wNCB8IOe7tOaKpOS4rSB8ICoq6buY6K6kIHYxMyBTY2hlbWEgKyBUU0RCKirvvIzlvIPnlKjml6flrZjlgqggfAp8ICoqMy4xKiogfCAyMDI0LTA3IHwg57u05oqk5LitIHwg5oCn6IO95LyY5YyW44CBQnVnIOS/ruWkjSB8CnwgKiozLjIqKiB8IDIwMjQtMDkgfCDnu7TmiqTkuK0gfCBPVExQIOaUuei/m+OAgeafpeivouWinuW8uiB8CnwgKiozLjMqKiB8IDIwMjQtMTEgfCDnu7TmiqTkuK0gfCAqKkJsb29tIEZpbHRlciBWMyBCbG9jayoq77yM57uT5p6E5YyW5YWD5pWw5o2u57Si5byVIHwKfCAqKjMuNCoqIHwgMjAyNS0wMiB8IOe7tOaKpOS4rSB8ICoq5qCH5YeG5YyW5a+56LGh5a2Y5YKoKirjgIFUaGFub3Mg5pSv5oyB44CBU2l6aW5nIOaMh+WNlyB8CnwgKiozLjUqKiB8IDIwMjUtMDQgfCDmnIDmlrAgfCDljLrln5/mhJ/nn6UgSW5nZXN0b3LjgIHmgKfog73mlLnov5sgfAoKTG9raSDph4fnlKgqKuaciOW6puWwj+eJiOacrCArIOWto+W6puWkp+eJiOacrCoq55qE5Y+R5biD562W55Wl77yM5q+P5Liq5aSn54mI5pys57qmIDMtNCDkuKrmnIjnmoTmtLvot4Pnu7TmiqTmnJ/jgIIKCi0tLQoKIyMg5LqM44CB5a2Y5YKo57O757uf5ryU6L+b5rex5bqm5YiG5p6QCgojIyMg5a2Y5YKo5p625p6E5oC76KeICgpMb2tpIOeahOWtmOWCqOWIhuS4uuS4pOS4quaguOW/g+mDqOWIhu+8mgoKLSAqKkluZGV477yI57Si5byV77yJKirvvJrlrZjlgqjmoIfnrb7vvIhMYWJlbO+8ie+8jOaUr+aMgeW/q+mAn+afpeivoui/h+a7pAotICoqQ2h1bmtz77yI5pel5b+X5Z2X77yJKirvvJrlrZjlgqjlrp7pmYXml6Xlv5flhoXlrrnvvIzljovnvKnlkI7lrZjlgqjliLDlr7nosaHlrZjlgqgKLSAqKlNjaGVtYSBDb25maWcqKu+8muWGs+WumuS4jeWQjOaXtumXtOauteeahOWtmOWCqOaWueW8j+WSjOe0ouW8leagvOW8jwoKIyMjIOe0ouW8leWtmOWCqOeahOWbm+S4qumYtuautQoKIyMjIyDpmLbmrrXkuIDvvJrljZXkvZPntKLlvJXvvIhMb2tpIDEueO+8jOW3suWujOWFqOenu+mZpO+8iQoKfCDlrZjlgqjlkI7nq68gfCDor7TmmI4gfCDnp7vpmaTml7bpl7QgfAp8LS0tLS0tLS0tfC0tLS0tLXwtLS0tLS0tLS18CnwgKipCb2x0RELvvIjmnKzlnLDvvIkqKiB8IOWNleacuuacrOWcsOWtmOWCqO+8jOS4jeaUr+aMgeWkmuWJr+acrCB8IDIueCDkuK3lvIPnlKjvvIwzLjAg56e76ZmkIHwKfCAqKkNhc3NhbmRyYSoqIHwg5YiG5biD5byP57Si5byV77yM6L+Q57u05aSN5p2CIHwgMy4wIOW8g+eUqO+8jOiuoeWIkiA0LjAg56e76ZmkIHwKfCAqKkR5bmFtb0RCKiogfCBBV1Mg5Y6f55Sf5a2Y5YKo77yM5oiQ5pys6auYIHwgMy4wIOW8g+eUqO+8jOiuoeWIkiA0LjAg56e76ZmkIHwKfCAqKkJpZ1RhYmxlKiogfCBHQ1Ag5Y6f55Sf5a2Y5YKoIHwgMy4wIOW8g+eUqCB8CgojIyMjIOmYtuauteS6jO+8mkJvbHREQi1TaGlwcGVy77yITG9raSAxLjUgLSAyLjfvvIkKCkJvbHREQi1TaGlwcGVyIOWwhue0ouW8leaWh+S7tuS7juacrOWcsOWQjOatpeWIsOWvueixoeWtmOWCqO+8jOino+WGs+S6huWNleeCuemXrumimO+8jOS9hue0ouW8leaWh+S7tuWkp+OAgeafpeivoumcgOS4i+i9veaVtOS4quaWh+S7tuOAgeaJqeWxleaAp+S7jeeEtuaciemZkOOAggoKIyMjIyDpmLbmrrXkuInvvJpUU0RCIOe0ouW8le+8iExva2kgMi44K++8jOaOqOiNkO+8iQoK6L+Z5pivIExva2kg5a2Y5YKo5p625p6E55qEKirmoLnmnKzmgKflj5jpnakqKu+8jOWAn+mJtCBQcm9tZXRoZXVzIFRTRELvvJoKCi0g57Si5byV5ZKMIENodW5rcyDnu5/kuIDlrZjlgqjliLDlr7nosaHlrZjlgqjvvIgqKlNpbmdsZSBTdG9yZSoq77yJCi0g5oyJ5pe26Ze05YiG54mH55Sf5oiQIEJsb2Nr77yM5pSv5oyB6auY5pWI55qEIEhlYWQgQ29tcGFjdGlvbgotIOWOn+eUn+aUr+aMgSAqKkJsb29tIEZpbHRlcioqIOWKoOmAn+afpeivogotIOaUr+aMgee7k+aehOWMluWFg+aVsOaNru+8iCoqU3RydWN0dXJlZCBNZXRhZGF0YSoq77yJCgojIyMjIOmYtuauteWbm++8mlNpbmdsZSBTdG9yZSBUU0RCICsgQmxvb20gRmlsdGVyIFYz77yITG9raSAzLjMr77yJCgotICoqQmxvY2sgU2NoZW1hIFYzKirvvJrph43mlrDorr7orqEgQmxvY2sg57uT5p6E77yM6ZuG5oiQIFN0cnVjdHVyZWQgTWV0YWRhdGEg55qEIEJsb29tIOe0ouW8lQotICoqQmxvb20gQ29tcGFjdG9yKirvvJrni6znq4vnmoQgQmxvb20gRmlsdGVyIOWOi+e8qee7hOS7tgotICoq5Yqo5oCB5p+l6K+i5YiG54mHKirvvJrmoLnmja7mlbDmja7liIbluIPoh6rliqjliIbniYfmn6Xor6IKCiMjIyBTY2hlbWEg54mI5pys5ryU6L+bCgp8IFNjaGVtYSB8IOW8leWFpeeJiOacrCB8IOe0ouW8leexu+WeiyB8IOivtOaYjiB8CnwtLS0tLS0tLXwtLS0tLS0tLS18LS0tLS0tLS0tfC0tLS0tLXwKfCB2MS12MTAgfCAxLnggfCDml6flvI/ntKLlvJUgfCBCb2x0REIvQ2Fzc2FuZHJhIOetiSB8CnwgdjExIHwgMi4wKyB8IEJvbHREQi1TaGlwcGVyIHwg5pS56L+b5YiG54mHIHwKfCB2MTIgfCAyLjggfCBUU0RCIHwgVFNEQiDntKLlvJXpppbmrKHlj6/nlKggfAp8ICoqdjEzKiogfCAzLjAgfCBUU0RCIHwgKiozLjAg6buY6K6kKirvvIzmlK/mjIEgU3RydWN0dXJlZCBNZXRhZGF0YSB8CgojIyMg5ZCE54mI5pys5a2Y5YKo6YeN54K55Y+Y5pu0CgojIyMjIExva2kgMy4w77yIMjAyNC0wNO+8ieKAlOKAlCDph43lpKfph4znqIvnopEKCui/meaYryBMb2tpIOacgOmHjeimgeeahOeJiOacrOS5i+S4gO+8mgoKLSDpu5jorqQgU2NoZW1hIOWIh+aNouS4uiAqKnYxMyoqCi0g5byD55So5omA5pyJ5pen5a2Y5YKo5ZCO56uv77yIQm9sdERC44CBQ2Fzc2FuZHJh44CBRHluYW1vRELjgIFCaWdUYWJsZe+8iQotICoqU3RydWN0dXJlZCBNZXRhZGF0YSDpu5jorqTlkK/nlKgqKgotIFRTREIgU2luZ2xlIFN0b3Jl77ya57Si5byV5ZKMIENodW5rcyDnu5/kuIDlrZjlgqgKCuWNh+e6p+WIsCAzLjAg55qEIHNjaGVtYV9jb25maWcg56S65L6L77yaCgpgYGB5YW1sCnNjaGVtYV9jb25maWc6CiAgY29uZmlnczoKICAgIC0gZnJvbTogIjIwMjQtMDEtMDEiCiAgICAgIHN0b3JlOiB0c2RiCiAgICAgIG9iamVjdF9zdG9yZTogczMKICAgICAgc2NoZW1hOiB2MTMKICAgICAgaW5kZXg6CiAgICAgICAgcHJlZml4OiBsb2tpX2luZGV4XwogICAgICAgIHBlcmlvZDogMjRoCmBgYAoKIyMjIyBMb2tpIDMuM++8iDIwMjQtMTHvvInigJTigJQgQmxvb20gRmlsdGVyIOmHjeWkp+WNh+e6pwoKLSDlvJXlhaUgKipCbG9jayBTY2hlbWEgVjMqKgotIEJsb29tIEZpbHRlciDntKLlvJXnu5PmnoTljJblhYPmlbDmja4KLSDmn6Xor6Llu7bov5/mmL7okZfpmY3kvY7vvIjlpKfmoIfnrb7pm4blnLrmma/vvIkKCiMjIyMgTG9raSAzLjTvvIgyMDI1LTAy77yJ4oCU4oCUIOagh+WHhuWMluS4juaYk+eUqOaApwoKLSAqKuagh+WHhuWMluWvueixoeWtmOWCqOmFjee9rioq77yI57uf5LiAIFMzL0dDUy9BenVyZS9PU1Mg5o6l5Y+j77yJCi0gKipUaGFub3Mg6L+c56iL5a2Y5YKo5pSv5oyBKioKLSAqKlNpemluZyDmjIfljZcqKu+8muWumOaWuemmluasoeaPkOS+m+ivpue7hueahOWuuemHj+inhOWIkuaMh+WNlwoKU2l6aW5nIOWPguiAg++8mgoKfCDml6Xlv5fph48v5aSpIHwg5o6o6I2Q5p625p6EIHwg5pyA5bCP6LWE5rqQIHwKfC0tLS0tLS0tLXwtLS0tLS0tLS18LS0tLS0tLS0tfAp8IDwgMjBHQiB8IE1vbm9saXRoaWMgfCAyQzRHIHwKfCAyMC0yMDBHQiB8IFNpbXBsZSBTY2FsYWJsZSB8IDRDOEcgeCAyIHwKfCA+IDIwMEdCIHwgTWljcm9zZXJ2aWNlIHwg54us56uL6YOo572y5ZCE57uE5Lu2IHwKCiMjIyMgTG9raSAzLjXvvIgyMDI1LTA077yJ4oCU4oCUIOacgOaWsOeJiOacrAoKLSAqKuWMuuWfn+aEn+efpSBJbmdlc3Rvcioq77yIWm9uZS1Bd2FyZSBJbmdlc3Rlcu+8iQotIEhlbG0gQ2hhcnQg5pS56L+b77yIMXgucGljbyBzaXplIOaUr+aMge+8iQotIOaUuei/myBCbG9vbSBDb21wYWN0b3IKCiMjIyDlrZjlgqjlkI7nq6/lvIPnlKjml7bpl7Tnur8KCmBgYHRleHQKMi44ICAgICAgMi45ICAgICAgIDMuMCAgICAgICAgMy4zICAgICAgIDMuNSAgICAgICA0LjAoPykKVFNEQuaOqOiNkCAgVFNEQum7mOiupCAg5pen5a2Y5YKo5byD55SoICBCbG9vbSBWMyAg5Yy65Z+f5oSf55+lICAg5pen5a2Y5YKo56e76ZmkCgogICAgICAgICBCb2x0REIgICDlt7LlvIPnlKjvvIgzLjDvvIkKICAgICAgICAgQ2Fzc2FuZHJhIOW3suW8g+eUqO+8iDMuMO+8ie+8jOiuoeWIkiA0LjAg56e76ZmkCiAgICAgICAgIER5bmFtb0RCICDlt7LlvIPnlKjvvIgzLjDvvInvvIzorqHliJIgNC4wIOenu+mZpApgYGAKCi0tLQoKIyMg5LiJ44CB6Zi/6YeM5LqRIE9TUyDlrZjlgqjphY3nva7lrp7miJgKCkxva2kg5Y6f55Sf5L2/55SoIFMzIFNES++8jOmYv+mHjOS6kSBPU1Mg5a6M5YWo5YW85a65IFMzIEFQSe+8jOi/meaYryoq5pyA56iz5a6a5LiU5a6Y5pa55o6o6I2QKirnmoTmlrnlvI/jgIIKCiMjIyDlrozmlbQgWUFNTCDphY3nva4KCmBgYHlhbWwKIyBsb2tpLWNvbmZpZy55YW1sIOKAlCDpmL/ph4zkupEgT1NTIOWtmOWCqOmFjee9ru+8iFMzIOWFvOWuueaooeW8j++8iQojIOmAgueUqOS6jiBMb2tpIDMueAoKc2NoZW1hX2NvbmZpZzoKICBjb25maWdzOgogICAgLSBmcm9tOiAiMjAyNC0wMS0wMSIKICAgICAgc3RvcmU6IHRzZGIKICAgICAgb2JqZWN0X3N0b3JlOiBzMwogICAgICBzY2hlbWE6IHYxMwogICAgICBpbmRleDoKICAgICAgICBwcmVmaXg6IGxva2lfaW5kZXhfCiAgICAgICAgcGVyaW9kOiAyNGgKCnN0b3JhZ2VfY29uZmlnOgogIGF3czoKICAgIHMzOiBzM19zdG9yYWdlCiAgICBzM2ZvcmNlcGF0aHN0eWxlOiB0cnVlICAgICAgIyBPU1Mg5b+F6aG75ZCv55SoIHBhdGgtc3R5bGUKCiAgczNfc3RvcmFnZToKICAgICMgT1NTIEVuZHBvaW5077yISzhzIFBvZCDpgJrov4cgVlBDIOWGhee9keiuv+mXru+8iQogICAgZW5kcG9pbnQ6IGh0dHBzOi8vb3NzLWNuLWJlaWppbmctaW50ZXJuYWwuYWxpeXVuY3MuY29tCiAgICByZWdpb246IGNuLWJlaWppbmcKCiAgICBidWNrZXROYW1lczoKICAgICAgY2h1bmtzOiBsb2tpLWNodW5rcyAgICAgICAjIOaXpeW/l+Wdl+WtmOWCqOahtgogICAgICBydWxlcjogbG9raS1ydWxlciAgICAgICAgICMg5ZGK6K2m6KeE5YiZ5a2Y5YKo5qG2CiAgICAgIGFkbWluOiBsb2tpLWFkbWluICAgICAgICAgIyDnrqHnkIbmlbDmja7lrZjlgqjmobYKCiAgICAjIOiuv+mXruWHreivge+8iOeUn+S6p+eOr+Wig+W7uuiurueUqCBSQU0gUm9sZe+8iQogICAgYWNjZXNzX2tleV9pZDogJHtPU1NfQUNDRVNTX0tFWV9JRH0KICAgIHNlY3JldF9hY2Nlc3Nfa2V5OiAke09TU19TRUNSRVRfQUNDRVNTX0tFWX0KCiAgICAjIOi/nuaOpeWPguaVsAogICAgaW5zZWN1cmU6IGZhbHNlCiAgICBodHRwX2NvbmZpZzoKICAgICAgaWRsZV9jb25uX3RpbWVvdXQ6IDkwcwogICAgICByZXNwb25zZV9oZWFkZXJfdGltZW91dDogMHMKICAgICAgaW5zZWN1cmVfc2tpcF92ZXJpZnk6IGZhbHNlCgogICAgIyDph43or5XnrZbnlaUKICAgIG1heF9yZXRyaWVzOiA1CiAgICBiYWNrb2ZmX2NvbmZpZzoKICAgICAgbWluX3BlcmlvZDogMTAwbXMKICAgICAgbWF4X3BlcmlvZDogNXMKICAgICAgbWF4X3JldHJpZXM6IDEwCgogIHRzZGJfc2hpcHBlcjoKICAgIGFjdGl2ZV9pbmRleF9kaXJlY3Rvcnk6IC9sb2tpL3RzZGItaW5kZXgKICAgIGNhY2hlX2xvY2F0aW9uOiAvbG9raS90c2RiLWNhY2hlCgpjb21wYWN0b3I6CiAgd29ya2luZ19kaXJlY3Rvcnk6IC9sb2tpL2NvbXBhY3RvcgogIGNvbXBhY3Rpb25faW50ZXJ2YWw6IDEwbQogIHJldGVudGlvbl9lbmFibGVkOiB0cnVlCiAgZGVsZXRlX3JlcXVlc3Rfc3RvcmU6IHMzCgpsaW1pdHNfY29uZmlnOgogIHJldGVudGlvbl9wZXJpb2Q6IDMwZAogIHJldGVudGlvbl9zdHJlYW06CiAgICAtIHNlbGVjdG9yOiAne25hbWVzcGFjZT0icHJvZCJ9JwogICAgICBwcmlvcml0eTogMQogICAgICBwZXJpb2Q6IDkwZAogICAgLSBzZWxlY3RvcjogJ3tuYW1lc3BhY2U9ImRldiJ9JwogICAgICBwcmlvcml0eTogMgogICAgICBwZXJpb2Q6IDdkCmBgYAoKIyMjIE9TUyBFbmRwb2ludCDlj4LogIMKCnwg5Yy65Z+fIHwg5aSW572RIEVuZHBvaW50IHwg5YaF572RIEVuZHBvaW50IHwKfC0tLS0tLXwtLS0tLS0tLS0tLS0tfC0tLS0tLS0tLS0tLS18Cnwg5Y2O5YyXIDLvvIjljJfkuqzvvIkgfCBvc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20gfCBvc3MtY24tYmVpamluZy1pbnRlcm5hbC5hbGl5dW5jcy5jb20gfAp8IOWNjuS4nCAx77yI5p2t5bee77yJIHwgb3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbSB8IG9zcy1jbi1oYW5nemhvdS1pbnRlcm5hbC5hbGl5dW5jcy5jb20gfAp8IOWNjuS4nCAy77yI5LiK5rW377yJIHwgb3NzLWNuLXNoYW5naGFpLmFsaXl1bmNzLmNvbSB8IG9zcy1jbi1zaGFuZ2hhaS1pbnRlcm5hbC5hbGl5dW5jcy5jb20gfAp8IOWNjuWNlyAx77yI5rex5Zyz77yJIHwgb3NzLWNuLXNoZW56aGVuLmFsaXl1bmNzLmNvbSB8IG9zcy1jbi1zaGVuemhlbi1pbnRlcm5hbC5hbGl5dW5jcy5jb20gfAoKIyMjIOeUn+S6p+eOr+Wig+acgOS9s+Wunui3tQoKKirlh63or4HnrqHnkIYqKu+8muaOqOiNkOS9v+eUqCBLOHMgUkFNIFJvbGXvvIjpmL/ph4zkupEgYWNrLXBvZC1pZGVudGl0eS13ZWJob29r77yJ77yM6ICM6Z2e56Gs57yW56CBIEFjY2Vzc0tleeOAggoKYGBgeWFtbAojIFBvZCBhbm5vdGF0aW9uIOaWueW8j+iHquWKqOazqOWFpQojIHBvZC1pZGVudGl0eS5hbGliYWJhY2xvdWQuY29tL2luamVjdDogInRydWUiCiMgcG9kLWlkZW50aXR5LmFsaWJhYmFjbG91ZC5jb20vcm9sZS1hcm46IGFjczpyYW06Onh4eDpyb2xlL2xva2ktb3NzLXJvbGUKYGBgCgoqKk9TUyBCdWNrZXQg562W55WlKirvvJpMb2tpIOmcgOimgeS7peS4i+adg+mZkO+8mmBvc3M6UHV0T2JqZWN0YOOAgWBvc3M6R2V0T2JqZWN0YOOAgWBvc3M6RGVsZXRlT2JqZWN0YOOAgWBvc3M6TGlzdEJ1Y2tldGDvvIzliIbliKvlr7nlupQgY2h1bmtz44CBcnVsZXLjgIFhZG1pbiDkuInkuKogQnVja2V044CCCgotLS0KCiMjIOWbm+OAgeWNh+e6p+i3r+e6v+WbvuW7uuiurgoKIyMjIOS7jiAyLjkg5Y2H57qn5YiwIDMueAoKYGBgdGV4dAoyLjkueCAoVFNEQiArIHYxMikKICB8CiAgKy0tIFN0ZXAgMTog5Y2H57qn5YiwIDIuOS54IOacgOaWsOihpeS4ge+8jOehruS/nSBUU0RCIOeos+WumgogIHwKICArLS0gU3RlcCAyOiDmt7vliqAgdjEzIFNjaGVtYSBwZXJpb2RfY29uZmlnCiAgfAogICstLSBTdGVwIDM6IOWNh+e6p+WIsCAzLjAueO+8jOmqjOivgeW8g+eUqOitpuWRigogIHwKICArLS0gU3RlcCA0OiDpgJDmraXliLAgMy40K++8jOS9v+eUqOagh+WHhuWMluWtmOWCqOmFjee9rgogIHwKICArLS0gU3RlcCA1OiDogIPomZEgMy4177yI5Yy65Z+f5oSf55+lIEluZ2VzdG9y77yJCmBgYAoKIyMjIOS7jiBCb2x0REItU2hpcHBlciDov4Hnp7vliLAgVFNEQgoKYGBgeWFtbAojIOi/geenu+i/h+a4oeacn+mFjee9ru+8muWPjCBTY2hlbWEg5bm25a2YCnNjaGVtYV9jb25maWc6CiAgY29uZmlnczoKICAgICMg5pen5pWw5o2u5L+d5oyBIEJvbHREQi1TaGlwcGVyCiAgICAtIGZyb206ICIyMDIwLTAxLTAxIgogICAgICBzdG9yZTogYm9sdGRiLXNoaXBwZXIKICAgICAgb2JqZWN0X3N0b3JlOiBzMwogICAgICBzY2hlbWE6IHYxMgogICAgICBpbmRleDoKICAgICAgICBwcmVmaXg6IGxva2lfYm9sdGRiXwogICAgICAgIHBlcmlvZDogMjRoCiAgICAjIOaWsOaVsOaNruWIh+aNouWIsCBUU0RCCiAgICAtIGZyb206ICIyMDI0LTAxLTAxIgogICAgICBzdG9yZTogdHNkYgogICAgICBvYmplY3Rfc3RvcmU6IHMzCiAgICAgIHNjaGVtYTogdjEzCiAgICAgIGluZGV4OgogICAgICAgIHByZWZpeDogbG9raV90c2RiXwogICAgICAgIHBlcmlvZDogMjRoCmBgYAoKIyMjIOaOqOiNkOebruagh+eJiOacrAoKfCDlnLrmma8gfCDmjqjojZDniYjmnKwgfCDnkIbnlLEgfAp8LS0tLS0tfC0tLS0tLS0tLXwtLS0tLS18CnwgKirmlrDpg6jnvbIqKiB8ICoqMy41LngqKiB8IOacgOaWsOeos+WumueJiO+8jOWMheWQq+aJgOacieS8mOWMliB8CnwgKirnlJ/kuqfljYfnuqcqKiB8ICoqMy40LngqKiB8IOagh+WHhuWMluWtmOWCqCArIFNpemluZyDmjIfljZfmiJDnhp8gfAp8ICoq5LuN55SoIEJvbHREQioqIHwgKirlsL3lv6vov4Hoh7MgVFNEQioqIHwg5pen5ZCO56uv5Y2z5bCG5ZyoIDQuMCDnp7vpmaQgfAoKLS0tCgojIyDkupTjgIHlrZjlgqjpgInlnovlr7nmr5QKCnwg57u05bqmIHwgQm9sdERCLVNoaXBwZXIgfCBUU0RCIChTaW5nbGUgU3RvcmUpIHwKfC0tLS0tLXwtLS0tLS0tLS0tLS0tLS18LS0tLS0tLS0tLS0tLS0tLS0tLS0tfAp8ICoq57Si5byV5a2Y5YKoKiogfCDlr7nosaHlrZjlgqjvvIjlpKfmlofku7bvvIkgfCBUU0RCIEJsb2Nr77yI5bCP5paH5Lu244CB5oyJ5pe26Ze05YiG54mH77yJIHwKfCAqKuafpeivouaAp+iDvSoqIHwg6ZyA5LiL6L295pW05Liq57Si5byV5paH5Lu2IHwg5oyJ6ZyA5Yqg6L29IEJsb2Nr77yM5pSv5oyBIEJsb29tIOWKoOmAnyB8CnwgKirov5Dnu7TlpI3mnYLluqYqKiB8IOS9jiB8IOS4re+8iOmcgOmFjee9riBDb21wYWN0b3LvvIkgfAp8ICoq5omp5bGV5oCnKiogfCDkuIDoiKwgfCDkvJjnp4AgfAp8ICoqQmxvb20gRmlsdGVyKiogfCDkuI3mlK/mjIEgfCDljp/nlJ/mlK/mjIHvvIgzLjAr77yJIHwKfCAqKue7k+aehOWMluWFg+aVsOaNrioqIHwg5LiN5pSv5oyBIHwg5pSv5oyB77yIMy4wK++8iSB8CnwgKirnpL7ljLrnirbmgIEqKiB8IOW8g+eUqCB8IOa0u+i3g+W8gOWPkSB8CnwgKirpmL/ph4zkupEgT1NTKiogfCDmlK/mjIEgfCDmlK/mjIHvvIjmjqjojZDvvIkgfAoKLS0tCgojIyDmgLvnu5MKCkxva2kg55qE5a2Y5YKo57O757uf5bey57uP5a6M5oiQ5LqG5LuO44CM6IO955So44CN5Yiw44CM5aW955So44CN55qE6Leo6LaK44CCVFNEQiBTaW5nbGUgU3RvcmUg55qE5byV5YWl57uf5LiA5LqG57Si5byV5ZKM5pWw5o2u55qE5a2Y5YKo6Lev5b6E77yMQmxvb20gRmlsdGVyIOWkp+W5hemZjeS9juS6huafpeivouW7tui/n++8jOagh+WHhuWMluWtmOWCqOmFjee9ruS5n+iuqeWkmuS6kemDqOe9suWPmOW+l+abtOWKoOWuueaYk+OAggoK5a+55LqO5paw6YOo572y77yM55u05o6l5L2/55SoICoqTG9raSAzLjUgKyBUU0RCICsgT1NTKiog5piv5pyA5L2z6YCJ5oup44CC5a+55LqO546w5pyJ6ZuG576k77yM5bu66K6u5bC95b+r6KeE5YiS5LuOIEJvbHREQi1TaGlwcGVyIOWIsCBUU0RCIOeahOi/geenu+KAlOKAlOaXp+WQjuerr+WwhuWcqCA0LjAg54mI5pys5Lit6KKr5q2j5byP56e76Zmk44CCCgotLS0KCirlj4LogIPotYTmlpnvvJpbR3JhZmFuYSBMb2tpIOWumOaWueaWh+aho10oaHR0cHM6Ly9ncmFmYW5hLmNvbS9kb2NzL2xva2kvbGF0ZXN0LykgfCBbTG9raSBSZWxlYXNlIE5vdGVzXShodHRwczovL2dyYWZhbmEuY29tL2RvY3MvbG9raS9sYXRlc3QvcmVsZWFzZS1ub3Rlcy8pIHwgW0xva2kg5a2Y5YKo6YWN572uXShodHRwczovL2dyYWZhbmEuY29tL2RvY3MvbG9raS9sYXRlc3QvY29uZmlndXJlL3N0b3JhZ2UvKSB8IFtMb2tpIEVuZC1vZi1MaWZlXShodHRwczovL2VuZG9mbGlmZS5kYXRlL2dyYWZhbmEtbG9raSkqCg==
+---
+title: "Grafana Loki 版本变更与存储系统升级完全指南（2.x → 3.x）"
+description: "前言 Grafana Loki 作为云原生日志聚合的事实标准，在过去几年经历了从 2.0 到 3.5 的巨大演进。其中，存储系统的重构是最核心的变化——从 BoltDB 本地存储到 TSDB Single Store，从大索引文件到 Bloom Filter 加速查询。 本文系统梳理 Loki 各主要版本的变更要点，着重分析存储系统的演进脉络，并提供阿里云 OSS 作为存储后端的完整配置指南。  一、Loki 版本发布概览     版本发布日期生命周期状态关键里程碑    2.02021-03E..."
+date: "2026-04-24"
+readingTime: 5
+slug: "grafana-loki-2x-3x"
+category: "硬核深挖"
+---
+## 前言
+
+Grafana Loki 作为云原生日志聚合的事实标准，在过去几年经历了从 2.0 到 3.5 的巨大演进。其中，**存储系统的重构**是最核心的变化——从 BoltDB 本地存储到 TSDB Single Store，从大索引文件到 Bloom Filter 加速查询。
+
+本文系统梳理 Loki 各主要版本的变更要点，**着重分析存储系统的演进脉络**，并提供阿里云 OSS 作为存储后端的完整配置指南。
+
+---
+
+## 一、Loki 版本发布概览
+
+| 版本 | 发布日期 | 生命周期状态 | 关键里程碑 |
+|------|----------|-------------|-----------|
+| **2.0** | 2021-03 | EOL | 引入 Helm Chart、Ingester 分片 |
+| **2.8** | 2023-07 | EOL | **TSDB 索引正式推荐** |
+| **2.9** | 2023-09 | EOL | TSDB 成熟、Bloom Compactor（实验） |
+| **3.0** | 2024-04 | 维护中 | **默认 v13 Schema + TSDB**，弃用旧存储 |
+| **3.1** | 2024-07 | 维护中 | 性能优化、Bug 修复 |
+| **3.2** | 2024-09 | 维护中 | OTLP 改进、查询增强 |
+| **3.3** | 2024-11 | 维护中 | **Bloom Filter V3 Block**，结构化元数据索引 |
+| **3.4** | 2025-02 | 维护中 | **标准化对象存储**、Thanos 支持、Sizing 指南 |
+| **3.5** | 2025-04 | 最新 | 区域感知 Ingestor、性能改进 |
+
+Loki 采用**月度小版本 + 季度大版本**的发布策略，每个大版本约 3-4 个月的活跃维护期。
+
+---
+
+## 二、存储系统演进深度分析
+
+### 存储架构总览
+
+Loki 的存储分为两个核心部分：
+
+- **Index（索引）**：存储标签（Label），支持快速查询过滤
+- **Chunks（日志块）**：存储实际日志内容，压缩后存储到对象存储
+- **Schema Config**：决定不同时间段的存储方式和索引格式
+
+### 索引存储的四个阶段
+
+#### 阶段一：单体索引（Loki 1.x，已完全移除）
+
+| 存储后端 | 说明 | 移除时间 |
+|---------|------|---------|
+| **BoltDB（本地）** | 单机本地存储，不支持多副本 | 2.x 中弃用，3.0 移除 |
+| **Cassandra** | 分布式索引，运维复杂 | 3.0 弃用，计划 4.0 移除 |
+| **DynamoDB** | AWS 原生存储，成本高 | 3.0 弃用，计划 4.0 移除 |
+| **BigTable** | GCP 原生存储 | 3.0 弃用 |
+
+#### 阶段二：BoltDB-Shipper（Loki 1.5 - 2.7）
+
+BoltDB-Shipper 将索引文件从本地同步到对象存储，解决了单点问题，但索引文件大、查询需下载整个文件、扩展性仍然有限。
+
+#### 阶段三：TSDB 索引（Loki 2.8+，推荐）
+
+这是 Loki 存储架构的**根本性变革**，借鉴 Prometheus TSDB：
+
+- 索引和 Chunks 统一存储到对象存储（**Single Store**）
+- 按时间分片生成 Block，支持高效的 Head Compaction
+- 原生支持 **Bloom Filter** 加速查询
+- 支持结构化元数据（**Structured Metadata**）
+
+#### 阶段四：Single Store TSDB + Bloom Filter V3（Loki 3.3+）
+
+- **Block Schema V3**：重新设计 Block 结构，集成 Structured Metadata 的 Bloom 索引
+- **Bloom Compactor**：独立的 Bloom Filter 压缩组件
+- **动态查询分片**：根据数据分布自动分片查询
+
+### Schema 版本演进
+
+| Schema | 引入版本 | 索引类型 | 说明 |
+|--------|---------|---------|------|
+| v1-v10 | 1.x | 旧式索引 | BoltDB/Cassandra 等 |
+| v11 | 2.0+ | BoltDB-Shipper | 改进分片 |
+| v12 | 2.8 | TSDB | TSDB 索引首次可用 |
+| **v13** | 3.0 | TSDB | **3.0 默认**，支持 Structured Metadata |
+
+### 各版本存储重点变更
+
+#### Loki 3.0（2024-04）—— 重大里程碑
+
+这是 Loki 最重要的版本之一：
+
+- 默认 Schema 切换为 **v13**
+- 弃用所有旧存储后端（BoltDB、Cassandra、DynamoDB、BigTable）
+- **Structured Metadata 默认启用**
+- TSDB Single Store：索引和 Chunks 统一存储
+
+升级到 3.0 的 schema_config 示例：
+
+```yaml
+schema_config:
+  configs:
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_index_
+        period: 24h
+```
+
+#### Loki 3.3（2024-11）—— Bloom Filter 重大升级
+
+- 引入 **Block Schema V3**
+- Bloom Filter 索引结构化元数据
+- 查询延迟显著降低（大标签集场景）
+
+#### Loki 3.4（2025-02）—— 标准化与易用性
+
+- **标准化对象存储配置**（统一 S3/GCS/Azure/OSS 接口）
+- **Thanos 远程存储支持**
+- **Sizing 指南**：官方首次提供详细的容量规划指南
+
+Sizing 参考：
+
+| 日志量/天 | 推荐架构 | 最小资源 |
+|---------|---------|---------|
+| < 20GB | Monolithic | 2C4G |
+| 20-200GB | Simple Scalable | 4C8G x 2 |
+| > 200GB | Microservice | 独立部署各组件 |
+
+#### Loki 3.5（2025-04）—— 最新版本
+
+- **区域感知 Ingestor**（Zone-Aware Ingester）
+- Helm Chart 改进（1x.pico size 支持）
+- 改进 Bloom Compactor
+
+### 存储后端弃用时间线
+
+```text
+2.8      2.9       3.0        3.3       3.5       4.0(?)
+TSDB推荐  TSDB默认  旧存储弃用  Bloom V3  区域感知   旧存储移除
+
+         BoltDB   已弃用（3.0）
+         Cassandra 已弃用（3.0），计划 4.0 移除
+         DynamoDB  已弃用（3.0），计划 4.0 移除
+```
+
+---
+
+## 三、阿里云 OSS 存储配置实战
+
+Loki 原生使用 S3 SDK，阿里云 OSS 完全兼容 S3 API，这是**最稳定且官方推荐**的方式。
+
+### 完整 YAML 配置
+
+```yaml
+# loki-config.yaml — 阿里云 OSS 存储配置（S3 兼容模式）
+# 适用于 Loki 3.x
+
+schema_config:
+  configs:
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_index_
+        period: 24h
+
+storage_config:
+  aws:
+    s3: s3_storage
+    s3forcepathstyle: true      # OSS 必须启用 path-style
+
+  s3_storage:
+    # OSS Endpoint（K8s Pod 通过 VPC 内网访问）
+    endpoint: https://oss-cn-beijing-internal.aliyuncs.com
+    region: cn-beijing
+
+    bucketNames:
+      chunks: loki-chunks       # 日志块存储桶
+      ruler: loki-ruler         # 告警规则存储桶
+      admin: loki-admin         # 管理数据存储桶
+
+    # 访问凭证（生产环境建议用 RAM Role）
+    access_key_id: ${OSS_ACCESS_KEY_ID}
+    secret_access_key: ${OSS_SECRET_ACCESS_KEY}
+
+    # 连接参数
+    insecure: false
+    http_config:
+      idle_conn_timeout: 90s
+      response_header_timeout: 0s
+      insecure_skip_verify: false
+
+    # 重试策略
+    max_retries: 5
+    backoff_config:
+      min_period: 100ms
+      max_period: 5s
+      max_retries: 10
+
+  tsdb_shipper:
+    active_index_directory: /loki/tsdb-index
+    cache_location: /loki/tsdb-cache
+
+compactor:
+  working_directory: /loki/compactor
+  compaction_interval: 10m
+  retention_enabled: true
+  delete_request_store: s3
+
+limits_config:
+  retention_period: 30d
+  retention_stream:
+    - selector: '{namespace="prod"}'
+      priority: 1
+      period: 90d
+    - selector: '{namespace="dev"}'
+      priority: 2
+      period: 7d
+```
+
+### OSS Endpoint 参考
+
+| 区域 | 外网 Endpoint | 内网 Endpoint |
+|------|-------------|-------------|
+| 华北 2（北京） | oss-cn-beijing.aliyuncs.com | oss-cn-beijing-internal.aliyuncs.com |
+| 华东 1（杭州） | oss-cn-hangzhou.aliyuncs.com | oss-cn-hangzhou-internal.aliyuncs.com |
+| 华东 2（上海） | oss-cn-shanghai.aliyuncs.com | oss-cn-shanghai-internal.aliyuncs.com |
+| 华南 1（深圳） | oss-cn-shenzhen.aliyuncs.com | oss-cn-shenzhen-internal.aliyuncs.com |
+
+### 生产环境最佳实践
+
+**凭证管理**：推荐使用 K8s RAM Role（阿里云 ack-pod-identity-webhook），而非硬编码 AccessKey。
+
+```yaml
+# Pod annotation 方式自动注入
+# pod-identity.alibabacloud.com/inject: "true"
+# pod-identity.alibabacloud.com/role-arn: acs:ram::xxx:role/loki-oss-role
+```
+
+**OSS Bucket 策略**：Loki 需要以下权限：`oss:PutObject`、`oss:GetObject`、`oss:DeleteObject`、`oss:ListBucket`，分别对应 chunks、ruler、admin 三个 Bucket。
+
+---
+
+## 四、升级路线图建议
+
+### 从 2.9 升级到 3.x
+
+```text
+2.9.x (TSDB + v12)
+  |
+  +-- Step 1: 升级到 2.9.x 最新补丁，确保 TSDB 稳定
+  |
+  +-- Step 2: 添加 v13 Schema period_config
+  |
+  +-- Step 3: 升级到 3.0.x，验证弃用警告
+  |
+  +-- Step 4: 逐步到 3.4+，使用标准化存储配置
+  |
+  +-- Step 5: 考虑 3.5（区域感知 Ingestor）
+```
+
+### 从 BoltDB-Shipper 迁移到 TSDB
+
+```yaml
+# 迁移过渡期配置：双 Schema 并存
+schema_config:
+  configs:
+    # 旧数据保持 BoltDB-Shipper
+    - from: "2020-01-01"
+      store: boltdb-shipper
+      object_store: s3
+      schema: v12
+      index:
+        prefix: loki_boltdb_
+        period: 24h
+    # 新数据切换到 TSDB
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_tsdb_
+        period: 24h
+```
+
+### 推荐目标版本
+
+| 场景 | 推荐版本 | 理由 |
+|------|---------|------|
+| **新部署** | **3.5.x** | 最新稳定版，包含所有优化 |
+| **生产升级** | **3.4.x** | 标准化存储 + Sizing 指南成熟 |
+| **仍用 BoltDB** | **尽快迁至 TSDB** | 旧后端即将在 4.0 移除 |
+
+---
+
+## 五、存储选型对比
+
+| 维度 | BoltDB-Shipper | TSDB (Single Store) |
+|------|---------------|---------------------|
+| **索引存储** | 对象存储（大文件） | TSDB Block（小文件、按时间分片） |
+| **查询性能** | 需下载整个索引文件 | 按需加载 Block，支持 Bloom 加速 |
+| **运维复杂度** | 低 | 中（需配置 Compactor） |
+| **扩展性** | 一般 | 优秀 |
+| **Bloom Filter** | 不支持 | 原生支持（3.0+） |
+| **结构化元数据** | 不支持 | 支持（3.0+） |
+| **社区状态** | 弃用 | 活跃开发 |
+| **阿里云 OSS** | 支持 | 支持（推荐） |
+
+---
+
+## 总结
+
+Loki 的存储系统已经完成了从「能用」到「好用」的跨越。TSDB Single Store 的引入统一了索引和数据的存储路径，Bloom Filter 大幅降低了查询延迟，标准化存储配置也让多云部署变得更加容易。
+
+对于新部署，直接使用 **Loki 3.5 + TSDB + OSS** 是最佳选择。对于现有集群，建议尽快规划从 BoltDB-Shipper 到 TSDB 的迁移——旧后端将在 4.0 版本中被正式移除。
+
+---
+
+*参考资料：[Grafana Loki 官方文档](https://grafana.com/docs/loki/latest/) | [Loki Release Notes](https://grafana.com/docs/loki/latest/release-notes/) | [Loki 存储配置](https://grafana.com/docs/loki/latest/configure/storage/) | [Loki End-of-Life](https://endoflife.date/grafana-loki)*

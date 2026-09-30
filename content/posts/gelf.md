@@ -1,1 +1,85 @@
-LS0tCnRpdGxlOiAiR2VsZuaXpeW/l+agvOW8j+a8q+iwiCIKZGVzY3JpcHRpb246ICLku4DkuYjmmK9HRUxGIEdyYXlsb2fmianlsZXml6Xlv5fmoLzlvI/vvIhHRUxG77yJ5piv5LiA56eN5pel5b+X5qC85byP44CCICBTdHJ1Y3R1cmVkIGV2ZW50cyBmcm9tIGFueXdoZXJlLiBDb21wcmVzc2VkIGFuZCBjaHVua2VkLiBUaGUgR3JheWxvZyBFeHRlbmRlZCBMb2cgRm9ybWF0IChHRUxGKSBpcyBhIGxvZyBmb3JtYXQgdGhhdCBhdm9pZHMgdGhlIHNob3J0Y29taW5ncyBvZiBjbGFzc2ljIHBsYWluIHN5c2xvZzogIExpbWl0ZWQgdG8gbGVuZ3RoIG9mIDEwMjQgYnl0ZXMg4oCTIE5vdCBtdWNoIHNwYS4uLiIKZGF0ZTogIjIwMTctMDYtMTIiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzQ5MDIxNzcvZjIwNjZhZjMtMzJlNC00YTllLWEwYmQtZjRiOGI2NTM3ZmE1LmpwZWciCnJlYWRpbmdUaW1lOiAyCnNsdWc6ICJnZWxmIgotLS0KIyMg5LuA5LmI5pivR0VMRgoKR3JheWxvZ+aJqeWxleaXpeW/l+agvOW8j++8iEdFTEbvvInmmK/kuIDnp43ml6Xlv5fmoLzlvI/jgIIKCj4gIyMgU3RydWN0dXJlZCBldmVudHMgZnJvbSBhbnl3aGVyZS4gQ29tcHJlc3NlZCBhbmQgY2h1bmtlZC4KPiBUaGUgR3JheWxvZyBFeHRlbmRlZCBMb2cgRm9ybWF0IChHRUxGKSBpcyBhIGxvZyBmb3JtYXQgdGhhdCBhdm9pZHMgdGhlIHNob3J0Y29taW5ncyBvZiBjbGFzc2ljIHBsYWluIHN5c2xvZzoKPiAKPiAtIExpbWl0ZWQgdG8gbGVuZ3RoIG9mIDEwMjQgYnl0ZXMg4oCTIE5vdCBtdWNoIHNwYWNlIGZvciBwYXlsb2FkcyBsaWtlIGJhY2t0cmFjZXMKPiAtIE5vIGRhdGEgdHlwZXMgaW4gc3RydWN0dXJlZCBzeXNsb2cuIFlvdSBkb27igJl0IGtub3cgd2hhdCBpcyBhIG51bWJlciBhbmQgd2hhdCBpcyBhIHN0cmluZy4KPiAtIFRoZSBSRkNzIGFyZSBzdHJpY3QgZW5vdWdoIGJ1dCB0aGVyZSBhcmUgc28gbWFueSBzeXNsb2cgZGlhbGVjdHMgb3V0IHRoZXJlIHRoYXQgeW91IGNhbm5vdCBwb3NzaWJseSBwYXJzZSBhbGwgb2YgdGhlbS4KPiAtIE5vIGNvbXByZXNzaW9uCgpbR0VMRiDop4TojINdKGh0dHA6Ly9kb2NzLmdyYXlsb2cub3JnL2VuLzIuNC9wYWdlcy9nZWxmLmh0bWwjZ2VsZi1wYXlsb2FkLXNwZWNpZmljYXRpb24pCgo+IEEgR0VMRiBtZXNzYWdlIGlzIGEgSlNPTiBzdHJpbmcgd2l0aCB0aGUgZm9sbG93aW5nIGZpZWxkczogCj4gLSAgKip2ZXJzaW9uKiogYHN0cmluZyAoVVRGLTgpYAo+Cj4gICAgIEdFTEYgc3BlYyB2ZXJzaW9uIOKAkyDigJwxLjHigJ07ICoqTVVTVCoqIGJlIHNldCBieSBjbGllbnQgbGlicmFyeS4KPgo+IC0gKipob3N0KiogYHN0cmluZyAoVVRGLTgpYAo+Cj4gICAgIHRoZSBuYW1lIG9mIHRoZSBob3N0LCBzb3VyY2Ugb3IgYXBwbGljYXRpb24gdGhhdCBzZW50IHRoaXMgbWVzc2FnZTsgKipNVVNUKiogYmUgc2V0IGJ5IGNsaWVudCBsaWJyYXJ5Lgo+Cj4gLSAgKipzaG9ydF9tZXNzYWdlKiogYHN0cmluZyAoVVRGLTgpYAo+Cj4gICAgIGEgc2hvcnQgZGVzY3JpcHRpdmUgbWVzc2FnZTsgKipNVVNUKiogYmUgc2V0IGJ5IGNsaWVudCBsaWJyYXJ5Lgo+Cj4gLSAgKipmdWxsX21lc3NhZ2UqKiBgc3RyaW5nIChVVEYtOClgCj4KPiAgICAgYSBsb25nIG1lc3NhZ2UgdGhhdCBjYW4gaS5lLiBjb250YWluIGEgYmFja3RyYWNlOyBvcHRpb25hbC4KPgo+IC0gICoqdGltZXN0YW1wKiogYG51bWJlcmAKPgo+ICAgICBTZWNvbmRzIHNpbmNlIFVOSVggZXBvY2ggd2l0aCBvcHRpb25hbCBkZWNpbWFsIHBsYWNlcyBmb3IgbWlsbGlzZWNvbmRzOyAqU0hPVUxEKiBiZSBzZXQgYnkgY2xpZW50IGxpYnJhcnkuIFdpbGwgYmUgc2V0IHRvIHRoZSBjdXJyZW50IHRpbWVzdGFtcCAobm93KSBieSB0aGUgc2VydmVyIGlmIGFic2VudC4KPgo+IC0gICoqbGV2ZWwqKiBgbnVtYmVyYAo+Cj4gICAgIHRoZSBsZXZlbCBlcXVhbCB0byB0aGUgc3RhbmRhcmQgc3lzbG9nIGxldmVsczsgb3B0aW9uYWwsIGRlZmF1bHQgaXMgMSAoQUxFUlQpLgo+Cj4gLSAqKmZhY2lsaXR5KiogYHN0cmluZyAoVVRGLTgpYAo+Cj4gICAgIG9wdGlvbmFsLCBkZXByZWNhdGVkLiBTZW5kIGFzIGFkZGl0aW9uYWwgZmllbGQgaW5zdGVhZC4KPgo+IC0gICoqbGluZSoqIGBudW1iZXJgCj4KPiAgICAgdGhlIGxpbmUgaW4gYSBmaWxlIHRoYXQgY2F1c2VkIHRoZSBlcnJvciAoZGVjaW1hbCk7IG9wdGlvbmFsLCBkZXByZWNhdGVkLiBTZW5kIGFzIGFkZGl0aW9uYWwgZmllbGQgaW5zdGVhZC4KPgo+IC0gICoqZmlsZSoqIGBzdHJpbmcgKFVURi04KWAKPgo+ICAgICB0aGUgZmlsZSAod2l0aCBwYXRoIGlmIHlvdSB3YW50KSB0aGF0IGNhdXNlZCB0aGUgZXJyb3IgKHN0cmluZyk7IG9wdGlvbmFsLCBkZXByZWNhdGVkLiBTZW5kIGFzIGFkZGl0aW9uYWwgZmllbGQgaW5zdGVhZC4KPgo+IC0gICoqX1thZGRpdGlvbmFsIGZpZWxkXSoqIGBzdHJpbmcgKFVURi04KWAgb3IgYG51bWJlcmAKPgo+ICAgICBldmVyeSBmaWVsZCB5b3Ugc2VuZCBhbmQgcHJlZml4IHdpdGggYW4gdW5kZXJzY29yZSAoYF9gKSB3aWxsIGJlIHRyZWF0ZWQgYXMgYW4gYWRkaXRpb25hbCBmaWVsZC4gQWxsb3dlZCBjaGFyYWN0ZXJzIGluIGZpZWxkIG5hbWVzIGFyZSBhbnkgd29yZCBjaGFyYWN0ZXIgKGxldHRlciwgbnVtYmVyLCB1bmRlcnNjb3JlKSwgZGFzaGVzIGFuZCBkb3RzLiBUaGUgdmVyaWZ5aW5nIHJlZ3VsYXIgZXhwcmVzc2lvbiBpczogYF5bXHdcLlwtXSokYC4gTGlicmFyaWVzIFNIT1VMRCBub3QgYWxsb3cgdG8gc2VuZCBpZCBhcyBhZGRpdGlvbmFsIGZpZWxkIChgX2lkYCkuIEdyYXlsb2cgc2VydmVyIG5vZGVzIG9taXQgdGhpcyBmaWVsZCBhdXRvbWF0aWNhbGx544CCCgojIyBHRUxGIOiDveino+WGs+S7gOS5iOmXrumimAotIOi/meaYr+S4quagvOW8j+inhOiMg++8jOiDveWkn+iuqee7neWkp+mDqOWIhuaXpeW/l+agvOW8j+ebuOWvuee7n+S4gOWQiOeQhu+8jOaPkOmrmOaXpeW/l+WPr+ivu+aAp+OAggotIOi/meaYr+S4qmpzb27op4TojIPvvIzlrp7njrDmr5TovoPnroDljZXjgIIKLSDnlLHkuo7ml6Dop4bmupDmlofmnKznsbvlnovvvIzlr7nkuo7nu53lpKfpg6jliIbml6Xlv5flt6Xlhbfnsbvog73lvojlpb3mlK/mjIEKIyMg5a6e6Le15Lit77yMR0VMRiDlrZjlnKjlk6rkupvpl67popgKLSDov5nmmK/kuIDkuKrpnZ7lvLrliLbmgKfnuqbmnZ/vvIzkuZ/lsLHmhI/lkbPnnYDvvIzkvaDpnIDopoHmoLnmja7njrDmnInkuJrliqHlop7liqDmm7TlpJrnmoTnuqbmnZ/mnaHku7bvvIzmr5TlpoLlvILluLjloIbmoIjnrYnmoIflh4bkv6Hmga/vvJsKCi0g6L+e57ut5pel5b+X55qE6L+96Liq6ZyA6KaB5aKe5Yqg5pu06auY57qn5Yir55qE5pSv5oyB77yM57G75Ly8Q29ycmVsYXRpb25JRO+8mwoKLSDlhbPkuo7mlY/mhJ/kv6Hmga/ov4fmu6Tpl67popjvvIzlgYforr7opoHlrp7njrDnlKjmiLflr4bnoIHlrZfmrrXnmoTov4fmu6TvvIzlj6rog73pgJrov4fmraPliJnlpITnkIbnlJ/miJDlkI7nmoTml6Xlv5fmlofmnKzmnaXov4fmu6TvvIzml6Dms5XliY3nva7ov4fmu6TvvJsKCi0g5pel5b+X5qih5p2/6Zeu6aKY77yM5aSn6YOo5YiG5pel5b+X5piv5L6d5o2u5qC85byP5YyW55qE5qih5p2/55Sf5oiQ55qE77yM57G75Ly84oCce3RpbWVzdGFtcH0te2NvbnRyb2xsZXJuYW1lfTp7dG9la259LXtwb3N0ZGF0YX3igJ3vvJvml6Xlv5fmqKHmnb/og73lpJ/mnoHlpKfnmoTpmY3kvY7kvKDovpPnmoTmlbDmja7ph4/vvIzlvojpgZfmhr7vvIzov5nlpZfop4TojIPkuK3lvojpmr7ljrvmianlsZXlrp7njrDov5nnp43mqKHmnb/mlK/mjIHvvJsKCi0g5a+55LqOU2VyaWxvZ+i/meexu+aPkOS+m+abtOWkmuaXpeW/l+S/oeaBr+eahOW6k++8jOWuueaYk+S4ouWkseaUr+aMgeeahOWGheWuuQoKCgojIyBHRUxGK1Nlcmlsb2crdGVtcGxhdGXlrp7ot7UKCiByZXBv6L+R5pyf5Lya6L+B5YWlZ2l0aHViCgoK
+---
+title: "Gelf日志格式漫谈"
+description: "什么是GELF Graylog扩展日志格式（GELF）是一种日志格式。  Structured events from anywhere. Compressed and chunked. The Graylog Extended Log Format (GELF) is a log format that avoids the shortcomings of classic plain syslog:  Limited to length of 1024 bytes – Not much spa..."
+date: "2017-06-12"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834902177/f2066af3-32e4-4a9e-a0bd-f4b8b6537fa5.jpeg"
+readingTime: 2
+slug: "gelf"
+---
+## 什么是GELF
+
+Graylog扩展日志格式（GELF）是一种日志格式。
+
+> ## Structured events from anywhere. Compressed and chunked.
+> The Graylog Extended Log Format (GELF) is a log format that avoids the shortcomings of classic plain syslog:
+> 
+> - Limited to length of 1024 bytes – Not much space for payloads like backtraces
+> - No data types in structured syslog. You don’t know what is a number and what is a string.
+> - The RFCs are strict enough but there are so many syslog dialects out there that you cannot possibly parse all of them.
+> - No compression
+
+[GELF 规范](http://docs.graylog.org/en/2.4/pages/gelf.html#gelf-payload-specification)
+
+> A GELF message is a JSON string with the following fields: 
+> -  **version** `string (UTF-8)`
+>
+>     GELF spec version – “1.1”; **MUST** be set by client library.
+>
+> - **host** `string (UTF-8)`
+>
+>     the name of the host, source or application that sent this message; **MUST** be set by client library.
+>
+> -  **short_message** `string (UTF-8)`
+>
+>     a short descriptive message; **MUST** be set by client library.
+>
+> -  **full_message** `string (UTF-8)`
+>
+>     a long message that can i.e. contain a backtrace; optional.
+>
+> -  **timestamp** `number`
+>
+>     Seconds since UNIX epoch with optional decimal places for milliseconds; *SHOULD* be set by client library. Will be set to the current timestamp (now) by the server if absent.
+>
+> -  **level** `number`
+>
+>     the level equal to the standard syslog levels; optional, default is 1 (ALERT).
+>
+> - **facility** `string (UTF-8)`
+>
+>     optional, deprecated. Send as additional field instead.
+>
+> -  **line** `number`
+>
+>     the line in a file that caused the error (decimal); optional, deprecated. Send as additional field instead.
+>
+> -  **file** `string (UTF-8)`
+>
+>     the file (with path if you want) that caused the error (string); optional, deprecated. Send as additional field instead.
+>
+> -  **_[additional field]** `string (UTF-8)` or `number`
+>
+>     every field you send and prefix with an underscore (`_`) will be treated as an additional field. Allowed characters in field names are any word character (letter, number, underscore), dashes and dots. The verifying regular expression is: `^[\w\.\-]*$`. Libraries SHOULD not allow to send id as additional field (`_id`). Graylog server nodes omit this field automatically。
+
+## GELF 能解决什么问题
+- 这是个格式规范，能够让绝大部分日志格式相对统一合理，提高日志可读性。
+- 这是个json规范，实现比较简单。
+- 由于无视源文本类型，对于绝大部分日志工具类能很好支持
+## 实践中，GELF 存在哪些问题
+- 这是一个非强制性约束，也就意味着，你需要根据现有业务增加更多的约束条件，比如异常堆栈等标准信息；
+
+- 连续日志的追踪需要增加更高级别的支持，类似CorrelationID；
+
+- 关于敏感信息过滤问题，假设要实现用户密码字段的过滤，只能通过正则处理生成后的日志文本来过滤，无法前置过滤；
+
+- 日志模板问题，大部分日志是依据格式化的模板生成的，类似“{timestamp}-{controllername}:{toekn}-{postdata}”；日志模板能够极大的降低传输的数据量，很遗憾，这套规范中很难去扩展实现这种模板支持；
+
+- 对于Serilog这类提供更多日志信息的库，容易丢失支持的内容
+
+
+
+## GELF+Serilog+template实践
+
+ repo近期会迁入github
+
+
