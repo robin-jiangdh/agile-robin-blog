@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/((?!_next/static|static|rss\.xml|search\\.json|favicon\\.ico).*)",
+      "source": "/((?!_next/static|static|rss\\.xml|search\\.json|favicon\\.ico).*)",
       "headers": [
         {
           "key": "Cache-Control",
