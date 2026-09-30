@@ -1,0 +1,64 @@
+---
+title: "python 使用pycryptodome 进行AES 加密解密操作"
+date: '2024-08-14'
+tags: ["pycryptodome", "Python", "aes"]
+categories: ["工具盘点"]
+draft: false
+summary: "在Python中，你可以使用pycryptodome库来进行AES加密和解密。首先，你需要安装这个库："
+authors:
+  - default
+---
+
+在Python中，你可以使用pycryptodome库来进行AES加密和解密。首先，你需要安装这个库：
+```
+pip install pycryptodome
+```
+然后，你可以使用以下代码来实现AES加密和解密：
+```
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
+import base64
+
+def aes_encrypt(plain_text, key):
+    """
+    使用AES加密文本。
+
+    :param plain_text: 要加密的文本
+    :param key: 加密密钥，长度必须是16, 24, 或 32字节
+    :return: 加密后的文本
+    """
+    cipher = AES.new(key, AES.MODE_CBC)
+    ct_bytes = cipher.encrypt(pad(plain_text.encode('utf-8'), AES.block_size))
+    iv = base64.b64encode(cipher.iv).decode('utf-8')
+    ct = base64.b64encode(ct_bytes).decode('utf-8')
+    return iv + ':' + ct
+
+def aes_decrypt(encrypted_text, key):
+    """
+    使用AES解密文本。
+
+    :param encrypted_text: 加密的文本
+    :param key: 解密密钥，长度必须是16, 24, 或 32字节
+    :return: 解密后的文本
+    """
+    iv, ct = encrypted_text.split(':')
+    iv = base64.b64decode(iv)
+    ct = base64.b64decode(ct)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    pt = unpad(cipher.decrypt(ct), AES.block_size).decode('utf-8')
+    return pt
+```
+# 示例用法
+```
+key = get_random_bytes(16)  # 生成一个16字节的随机密钥
+plain_text = "Hello, World!"
+encrypted_text = aes_encrypt(plain_text, key)
+decrypted_text = aes_decrypt(encrypted_text, key)
+
+print("Plain text:", plain_text)
+print("Encrypted text:", encrypted_text)
+print("Decrypted text:", decrypted_text)
+```
+在这个例子中，我们使用了CBC模式（Cipher Block Chaining）和随机初始化向量（IV）。加密后的文本和IV都被编码为base64，以便可以安全地存储或传输。解密时，需要先解码base64，然后提取IV和密文进行解密。
+
