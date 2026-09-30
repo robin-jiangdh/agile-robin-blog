@@ -1,0 +1,110 @@
+---
+title: "AI 中转站测评：23 个公益站实测分档，附官方免费档与自建网关方案"
+description: "基于 23 个公益 AI 中转站的注册门槛、免费额度、模型覆盖与探活数据实测分档：哪些能直接用、哪些先占位、哪些该避坑。Home Lab 玩家的终极答案是自建网关聚合上游。"
+date: "2026-09-30"
+category: "工具盘点"
+tags: ["AI", "Home Lab", "API", "测评"]
+slug: "ai-relay-stations-review-2026"
+---
+
+## 一、中转站是什么，一句话讲清
+
+把各家 LLM API（OpenAI / Claude / Gemini / 国产模型）统一成 OpenAI 兼容的 `/v1` 接口。你只需要换 `base_url` 和 `key`，代码一行不用改，Claude Code、 Cherry Studio、各类 Agent 框架即插即用。
+
+生态位很好理解：官方 API 要绑卡付费 → **公益站**（站长自建付费池，免费或签到给额度）→ **官方免费档**（大厂真免费）→ **自建网关**（自己搭，把上面都当上游聚合）。
+
+## 二、这次怎么测
+
+数据来源是我的 Asana「AI 中转站追踪」项目：23 个站点，2026-09-30 统一收录并探活。五个维度打分：**注册门槛 / 免费额度 / 模型覆盖 / 探活状态 / 风险**。
+
+先说结论（老规矩，给人群画像，不给唯一答案）：
+
+- 要稳定、怕折腾 → 直接看官方免费档，别碰公益站
+- 重度用 Claude、能过 GitHub 门槛 → Any Router / Agent Router
+- 零门槛、即开即用 → 维云 / CM-API / 可萌中转站 / 快跑 API / Token 能量站
+- Home Lab 玩家 → 自建 New-API / One-API 网关，把公益站当可替换的上游渠道
+
+## 三、第一梯队：官方免费档（不用测，最稳）
+
+公益站再香，也香不过大厂的免费层。这几家是**优先推荐**：
+
+- **OpenRouter**：20+ 个 `:free` 模型，统一 OpenAI 接口，一个 key 全搞定
+- **Google AI Studio**：Gemini Flash 免费额度给得大方
+- **硅基流动**（国内）：部分模型永久免费
+- **火山方舟**（国内）：每模型每天免费 250 万 token
+- **NVIDIA NIM**：100+ 模型，约 40 RPM
+- **Groq / Cerebras**：免费 tier，主打一个快
+- **GitHub Models**：GitHub 账号直接用，零门槛
+
+## 四、公益站分档实测
+
+### 能直接用的（探活 200，注册无门槛）
+
+- **维云模型开放平台**（vsllm.cc）：69 个模型，每日做任务领额度，覆盖最全的一档
+- **CM-API 公益站**（api.chengmo.cc.cd）：Claude / GPT / GLM / DeepSeek 等 46 个，每日签到
+- **可萌中转站**（api456.me）：29 个，覆盖 Claude / GPT / GLM / DeepSeek / Gemini / Qwen，每日签到
+- **快跑 API**（kuaipao.ai）：Claude / GPT / GLM / DeepSeek 等 100+ 个，每日签到
+- **Token 能量站**（factory.pub）：20 个，每日签到，仅支持 yaohuo / GitHub 注册
+- **hkai**（share.hkai25.top）：xAI / minimax / GLM / DeepSeek 等 10 个，每日签到
+
+### Claude 重度用户（有门槛，但货好）
+
+- **Any Router**（anyrouter.top）：GitHub 满 5 年 / linux.do 账号 / .edu.cn 邮箱三选一；注册约 $100，邀请 +$50，每日重新登录签到 $25。15 个模型，Claude 主力（Opus 4.x / Sonnet / Haiku）+ gpt-5-codex / gemini-2.5-pro。门槛最高，Claude 浓度也最高。
+- **Agent Router**（agentrouter.org）：GitHub 满 1 年 / linux.do 账号；注册约 $100，每日签到 $25。每天 00:00 / 08:00 / 16:00 三波补货，需特定 UA 接入——有点折腾，但 Claude / GPT / GLM / DeepSeek 全。
+
+### 机制特殊的（按需取用）
+
+- **onomeo**（onomeo.com）：注册不用绑卡；35 个免费模型不花积分，12 个大模型每日限 50,000 积分；限流严格（密钥 12 次/分钟）。注意它的模型页注明上游可能拿提示词训练。
+- **PM-API**：完全免费、无签到，Claude / GPT / GLM / DeepSeek 等 240 个模型——域名是 punycode 且未探活，白嫖党狂喜，谨慎党先小额试。
+- **hub.linux.do**：Linux DO 官方公益站，闲置额度置换 marketplace，多模型，相对可持续。
+- **始皇 OAI**（api.oaipro.com）：老牌公益中转，GPT / Claude，注册领 key。
+- **速语 API**（free.suyu.io）、**辉哥中转**（lzhiyu.ccwu.cc）：曾实测 `/v1/models` 可达。
+- **糯喵喵の AI 驿站**（ai.yangwj.me）：xAI / GPT / GLM / DeepSeek 等 47 个，每日签到，未探活。
+- **Huan API**（ai.huan666.de）：Claude / xAI / Moonshot / DeepSeek 等 17 个，每日签到，未探活。
+
+### 避坑名单（先别上车）
+
+- **BER 分公益站**（ai.berf1.cn）：探活失败，疑似已关停。
+- **GoRouter / KKToken / TaBiAI / SeekAI**：收录时全部无模型（缺货中）。可以先注册占位（GitHub 满 1 年门槛），别指望即用。另：GoRouter 曾被曝提示词注入，SeekAI 疑似网页反代、工具调用可能异常。
+- **ZeroCat**（zero.cat）：探活 403，Cloudflare 拦截，API 调用可能异常，浏览器可试。
+- **JustDoWork**（api.justwoker.icu）：目前只剩 3 个 GPT 模型，聊胜于无。
+
+## 五、Home Lab 终极答案：自建网关
+
+公益站的原罪是**单点**：关停、改规则、降级，半夜跑批挂了你都不知道。Home Lab 玩法的标准答案，是自建网关把多家上游聚合起来：
+
+- **New-API**（QuantumNous/new-api）：统一转 OpenAI / Claude / Gemini 格式，自带额度看板
+- **One API**（songquanpeng/one-api）：38k+ star 的老牌，支持 100+ 渠道
+- **FreeLLMAPI**（Alvaro-Cintas/freellmapi）：聚合多家免费额度为单一端点，自动故障转移
+
+架构长这样：
+
+```text
+Claude Code / 业务代码
+        │  一个 key
+        ▼
+  自建网关（New-API / One-API）
+   ┌──────┼──────┐
+   ▼      ▼      ▼
+公益站A  官方免费档  付费API兜底
+```
+
+哪家挂了网关自动切，额度看板一眼看清。这才是把"白嫖"变成"基础设施"。
+
+这也是本篇归入 Home Lab 系列的原因：**中转站不是拿来薅的，是拿来接入你 Home Lab 的 AI 网关、当可替换上游渠道的**。
+
+## 六、风险提示（必读）
+
+1. 公益站随时可能关停、改规则、降级——**不要传隐私 / 客户数据，不要绑主账号，不要大额充值**。
+2. Grok 相关：xAI 官方没有免费层，所有标 xAI 覆盖的公益站都是站长自建的付费池，最不稳定。
+3. 部分站点的上游会拿提示词训练（如 onomeo 模型页有注明），敏感内容别上。
+4. 所有额度、模型数据截至 2026-09-30，随时会变，以各站实时页面为准。
+
+## 结语
+
+- 偶尔调用、怕麻烦 → 官方免费档（OpenRouter `:free` / 硅基流动）
+- 重度用 Claude、能过 GitHub 门槛 → Any Router / Agent Router
+- 零门槛尝鲜 → 维云 / CM-API / 可萌 / 快跑
+- Home Lab 玩家 → 自建网关，公益站只当上游渠道
+
+> 数据来源：Asana「AI 中转站追踪」项目 23 个站点，核验日期 2026-09-30。本文为 Home Lab 系列续篇之一。
