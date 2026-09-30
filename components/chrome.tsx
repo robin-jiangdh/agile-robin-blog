@@ -1,1 +1,62 @@
-ZXhwb3J0IGZ1bmN0aW9uIExvZ28oeyBzaXplID0gMzAgfTogeyBzaXplPzogbnVtYmVyIH0pIHsKICByZXR1cm4gKAogICAgPHN2ZyB3aWR0aD17c2l6ZX0gaGVpZ2h0PXtzaXplfSB2aWV3Qm94PSIwIDAgMzIgMzIiIGZpbGw9Im5vbmUiIGFyaWEtaGlkZGVuPgogICAgICA8cmVjdCB4PSIxLjUiIHk9IjEuNSIgd2lkdGg9IjI5IiBoZWlnaHQ9IjI5IiByeD0iNyIgc3Ryb2tlPSIjMDBlNWEwIiBzdHJva2VXaWR0aD0iMiIgLz4KICAgICAgPHBhdGggZD0iTTggMTJsNCAzLjVMOCAxOSIgc3Ryb2tlPSIjMDBlNWEwIiBzdHJva2VXaWR0aD0iMiIgc3Ryb2tlTGluZWNhcD0icm91bmQiIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIgLz4KICAgICAgPGxpbmUgeDE9IjE0IiB5MT0iMjAuNSIgeDI9IjIyIiB5Mj0iMjAuNSIgc3Ryb2tlPSIjMDBlNWEwIiBzdHJva2VXaWR0aD0iMiIgc3Ryb2tlTGluZWNhcD0icm91bmQiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgZD0iTTQgMjQuNWg0bDItNCAzIDcgMy05IDIuNSA2SDI4IgogICAgICAgIHN0cm9rZT0iI2ZiYmYyNCIKICAgICAgICBzdHJva2VXaWR0aD0iMS42IgogICAgICAgIHN0cm9rZUxpbmVjYXA9InJvdW5kIgogICAgICAgIHN0cm9rZUxpbmVqb2luPSJyb3VuZCIKICAgICAgICBvcGFjaXR5PSIwLjkiCiAgICAgIC8+CiAgICA8L3N2Zz4KICApOwp9CgpleHBvcnQgZnVuY3Rpb24gSGVhZGVyKHsgYWN0aXZlIH06IHsgYWN0aXZlPzogc3RyaW5nIH0pIHsKICBjb25zdCBsaW5rcyA9IFsKICAgIHsgaHJlZjogIi8iLCBsYWJlbDogIummlumhtSIsIGtleTogImhvbWUiIH0sCiAgICB7IGhyZWY6ICIvYXJjaGl2ZSIsIGxhYmVsOiAi5b2S5qGjIiwga2V5OiAiYXJjaGl2ZSIgfSwKICAgIHsgaHJlZjogIi9hYm91dCIsIGxhYmVsOiAi5YWz5LqOIiwga2V5OiAiYWJvdXQiIH0sCiAgXTsKICByZXR1cm4gKAogICAgPGhlYWRlciBjbGFzc05hbWU9InNpdGUtaGVhZGVyIj4KICAgICAgPGRpdiBjbGFzc05hbWU9ImlubmVyIj4KICAgICAgICA8YSBjbGFzc05hbWU9ImJyYW5kIiBocmVmPSIvIj4KICAgICAgICAgIDxMb2dvIC8+CiAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9Im5hbWUiPgogICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9InByb21wdCI+fi88L3NwYW4+YWdpbGUtcm9iaW4KICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2E+CiAgICAgICAgPG5hdiBjbGFzc05hbWU9Im5hdiI+CiAgICAgICAgICB7bGlua3MubWFwKChsKSA9PiAoCiAgICAgICAgICAgIDxhIGtleT17bC5rZXl9IGhyZWY9e2wuaHJlZn0gY2xhc3NOYW1lPXthY3RpdmUgPT09IGwua2V5ID8gImFjdGl2ZSIgOiAiIn0+CiAgICAgICAgICAgICAge2wubGFiZWx9CiAgICAgICAgICAgIDwvYT4KICAgICAgICAgICkpfQogICAgICAgICAgPGEgaHJlZj0iL3Jzcy54bWwiPlJTUzwvYT4KICAgICAgICA8L25hdj4KICAgICAgPC9kaXY+CiAgICA8L2hlYWRlcj4KICApOwp9CgpleHBvcnQgZnVuY3Rpb24gRm9vdGVyKCkgewogIHJldHVybiAoCiAgICA8Zm9vdGVyIGNsYXNzTmFtZT0ic2l0ZS1mb290ZXIiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0iaW5uZXIiPgogICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ic2lnIj4KICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0icHJvbXB0Ij4kPC9zcGFuPiBlY2hvICJBZ2lsZSBSb2JpbiDCtyDlhpnnu5nniLHmipjohb7nmoTlt6XnqIvluIgiCiAgICAgICAgPC9zcGFuPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJsaW5rcyI+CiAgICAgICAgICA8YSBocmVmPSIvYXJjaGl2ZSI+5b2S5qGjPC9hPgogICAgICAgICAgPGEgaHJlZj0iL2Fib3V0Ij7lhbPkuo48L2E+CiAgICAgICAgICA8YSBocmVmPSIvcnNzLnhtbCI+UlNTPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZm9vdGVyPgogICk7Cn0K
+export function Logo({ size = 30 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <rect x="1.5" y="1.5" width="29" height="29" rx="7" stroke="#00e5a0" strokeWidth="2" />
+      <path d="M8 12l4 3.5L8 19" stroke="#00e5a0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="14" y1="20.5" x2="22" y2="20.5" stroke="#00e5a0" strokeWidth="2" strokeLinecap="round" />
+      <path
+        d="M4 24.5h4l2-4 3 7 3-9 2.5 6H28"
+        stroke="#fbbf24"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+export function Header({ active }: { active?: string }) {
+  const links = [
+    { href: "/", label: "首页", key: "home" },
+    { href: "/archive", label: "归档", key: "archive" },
+    { href: "/about", label: "关于", key: "about" },
+  ];
+  return (
+    <header className="site-header">
+      <div className="inner">
+        <a className="brand" href="/">
+          <Logo />
+          <span className="name">
+            <span className="prompt">~/</span>agile-robin
+          </span>
+        </a>
+        <nav className="nav">
+          {links.map((l) => (
+            <a key={l.key} href={l.href} className={active === l.key ? "active" : ""}>
+              {l.label}
+            </a>
+          ))}
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="site-footer">
+      <div className="inner">
+        <span className="sig">
+          <span className="prompt">$</span> echo "Agile Robin · 写给爱折腾的工程师"
+        </span>
+        <div className="links">
+          <a href="/archive">归档</a>
+          <a href="/about">关于</a>
+          <a href="/rss.xml">RSS</a>
+        </div>
+      </div>
+    </footer>
+  );
+}

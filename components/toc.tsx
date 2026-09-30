@@ -1,1 +1,54 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKCmludGVyZmFjZSBJdGVtIHsKICBpZDogc3RyaW5nOwogIHRleHQ6IHN0cmluZzsKICBsZXZlbDogbnVtYmVyOwp9CgpleHBvcnQgZnVuY3Rpb24gVGFibGVPZkNvbnRlbnRzKCkgewogIGNvbnN0IFtpdGVtcywgc2V0SXRlbXNdID0gdXNlU3RhdGU8SXRlbVtdPihbXSk7CiAgY29uc3QgW2FjdGl2ZSwgc2V0QWN0aXZlXSA9IHVzZVN0YXRlKCIiKTsKCiAgdXNlRWZmZWN0KCgpID0+IHsKICAgIGNvbnN0IGVscyA9IEFycmF5LmZyb20oCiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIi5tZC1ib2R5IGgyLCAubWQtYm9keSBoMyIpCiAgICApIGFzIEhUTUxFbGVtZW50W107CiAgICBzZXRJdGVtcygKICAgICAgZWxzCiAgICAgICAgLmZpbHRlcigoZWwpID0+IGVsLmlkKQogICAgICAgIC5tYXAoKGVsKSA9PiAoewogICAgICAgICAgaWQ6IGVsLmlkLAogICAgICAgICAgdGV4dDogZWwuaW5uZXJUZXh0LnJlcGxhY2UoL1sjXHNdKiQvLCAiIikudHJpbSgpLAogICAgICAgICAgbGV2ZWw6IGVsLnRhZ05hbWUgPT09ICJIMiIgPyAyIDogMywKICAgICAgICB9KSkKICAgICk7CiAgICBjb25zdCBvblNjcm9sbCA9ICgpID0+IHsKICAgICAgbGV0IGN1ciA9ICIiOwogICAgICBmb3IgKGNvbnN0IGVsIG9mIGVscykgewogICAgICAgIGlmIChlbC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS50b3AgPCAxMjApIGN1ciA9IGVsLmlkOwogICAgICB9CiAgICAgIHNldEFjdGl2ZShjdXIpOwogICAgfTsKICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJzY3JvbGwiLCBvblNjcm9sbCwgeyBwYXNzaXZlOiB0cnVlIH0pOwogICAgcmV0dXJuICgpID0+IHdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCJzY3JvbGwiLCBvblNjcm9sbCk7CiAgfSwgW10pOwoKICBpZiAoaXRlbXMubGVuZ3RoIDwgMikgcmV0dXJuIG51bGw7CiAgcmV0dXJuICgKICAgIDxuYXYgY2xhc3NOYW1lPSJ0b2MiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0idG9jLXRpdGxlIj5PbiB0aGlzIHBhZ2U8L2Rpdj4KICAgICAgPHVsPgogICAgICAgIHtpdGVtcy5tYXAoKGl0KSA9PiAoCiAgICAgICAgICA8bGkga2V5PXtpdC5pZH0gY2xhc3NOYW1lPXtpdC5sZXZlbCA9PT0gMyA/ICJsMyIgOiAiIn0+CiAgICAgICAgICAgIDxhIGhyZWY9e2AjJHtpdC5pZH1gfSBjbGFzc05hbWU9e2FjdGl2ZSA9PT0gaXQuaWQgPyAiYWN0aXZlIiA6ICIifT4KICAgICAgICAgICAgICB7aXQudGV4dH0KICAgICAgICAgICAgPC9hPgogICAgICAgICAgPC9saT4KICAgICAgICApKX0KICAgICAgPC91bD4KICAgIDwvbmF2PgogICk7Cn0K
+"use client";
+
+import { useEffect, useState } from "react";
+
+interface Item {
+  id: string;
+  text: string;
+  level: number;
+}
+
+export function TableOfContents() {
+  const [items, setItems] = useState<Item[]>([]);
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const els = Array.from(
+      document.querySelectorAll(".md-body h2, .md-body h3")
+    ) as HTMLElement[];
+    setItems(
+      els
+        .filter((el) => el.id)
+        .map((el) => ({
+          id: el.id,
+          text: el.innerText.replace(/[#\s]*$/, "").trim(),
+          level: el.tagName === "H2" ? 2 : 3,
+        }))
+    );
+    const onScroll = () => {
+      let cur = "";
+      for (const el of els) {
+        if (el.getBoundingClientRect().top < 120) cur = el.id;
+      }
+      setActive(cur);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  if (items.length < 2) return null;
+  return (
+    <nav className="toc">
+      <div className="toc-title">On this page</div>
+      <ul>
+        {items.map((it) => (
+          <li key={it.id} className={it.level === 3 ? "l3" : ""}>
+            <a href={`#${it.id}`} className={active === it.id ? "active" : ""}>
+              {it.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}

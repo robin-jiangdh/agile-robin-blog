@@ -1,1 +1,50 @@
-LS0tCnRpdGxlOiAi57Si5byV5LyY5YyW5Y6f5YiZIgpkZXNjcmlwdGlvbjogIuacgOW3puWJjee8gOWMuemFjeWOn+WImSAgIOiBlOWQiOe0ouW8le+8jG15c3Fs5Lya5LuO5YGa5ZCR5Y+z5Yy56YWN55u05Yiw6YGH5Yiw6IyD5Zu05p+l6K+iKD7jgIE844CBYmV0d2VlbuOAgWxpa2Up5bCx5YGc5q2i5Yy56YWN77yM5q+U5aaCYSA9IDEgYW5kIGIgPSAyIGFuZCBjID4gMyBhbmQgZCA9IDQg5aaC5p6c5bu656uLKGEsYixjLGQp6aG65bqP55qE57Si5byV77yMZOaYr+eUqOS4jeWIsOe0ouW8leeahO+8jOWmguaenOW7uueriyhhLGIsZCxjKeeahOe0ouW8leWImemDveWPr+S7peeUqOWIsO+8jGEsYixk55qE6aG65bqP5Y+v5Lul5Lu75oSP6LCD5pW0ICAgPeWSjGlu5Y+v5Lul5Lmx5bqP77yM5q+U5aaCYSA9IDEgYW5kIGIgPSAyIGFuZCBjID0gMyDlu7rnq4soYSxiLGMp57Si5byV5Y+v5Lul5Lu75oSP6aG65bqP77yMbXlzcWznmoTmn6Xor6LkvJjljJblmajkvJrluK7kvaDkvJjljJbmiJDntKLlvJXlj6/ku6Xor4bliKvnmoTlvaLlvI8gIOe0oi4uLiIKZGF0ZTogIjIwMTYtMDEtMTMiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzQ5MjA4OTEvNmE5OGM5Y2ItMDY0MS00ZDU0LWI2NmEtMTIxZWMxYWFjM2Q0LmpwZWciCnJlYWRpbmdUaW1lOiAxCnNsdWc6ICI1N3NpNWJ5djVseXk1eXl3NXk2ZjV5aXoiCi0tLQotIOacgOW3puWJjee8gOWMuemFjeWOn+WImQogIAo+IOiBlOWQiOe0ouW8le+8jG15c3Fs5Lya5LuO5YGa5ZCR5Y+z5Yy56YWN55u05Yiw6YGH5Yiw6IyD5Zu05p+l6K+iKD7jgIE844CBYmV0d2VlbuOAgWxpa2Up5bCx5YGc5q2i5Yy56YWN77yM5q+U5aaCYSA9IDEgYW5kIGIgPSAyIGFuZCBjID4gMyBhbmQgZCA9IDQg5aaC5p6c5bu656uLKGEsYixjLGQp6aG65bqP55qE57Si5byV77yMZOaYr+eUqOS4jeWIsOe0ouW8leeahO+8jOWmguaenOW7uueriyhhLGIsZCxjKeeahOe0ouW8leWImemDveWPr+S7peeUqOWIsO+8jGEsYixk55qE6aG65bqP5Y+v5Lul5Lu75oSP6LCD5pW0CgotID3lkoxpbuWPr+S7peS5seW6j++8jOavlOWmgmEgPSAxIGFuZCBiID0gMiBhbmQgYyA9IDMg5bu656uLKGEsYixjKee0ouW8leWPr+S7peS7u+aEj+mhuuW6j++8jG15c3Fs55qE5p+l6K+i5LyY5YyW5Zmo5Lya5biu5L2g5LyY5YyW5oiQ57Si5byV5Y+v5Lul6K+G5Yir55qE5b2i5byPCgotIOe0ouW8leWIl+S4jeiDveWPguS4juiuoeeul++8jOS/neaMgeWIl+KAnOW5suWHgOKAne+8jOavlOWmgmZyb21fdW5peHRpbWUoY3JlYXRlX3RpbWUpID0g4oCZMjAxNC0wNS0yOeKAmeWwseS4jeiDveS9v+eUqOWIsOe0ouW8le+8jOWOn+WboOW+iOeugOWNle+8jGIr5qCR5Lit5a2Y55qE6YO95piv5pWw5o2u6KGo5Lit55qE5a2X5q615YC877yM5L2G6L+b6KGM5qOA57Si5pe277yM6ZyA6KaB5oqK5omA5pyJ5YWD57Sg6YO95bqU55So5Ye95pWw5omN6IO95q+U6L6D77yM5pi+54S25oiQ5pys5aSq5aSn44CC5omA5Lul6K+t5Y+l5bqU6K+l5YaZ5oiQY3JlYXRlX3RpbWUgPSB1bml4X3RpbWVzdGFtcCjigJkyMDE0LTA1LTI54oCZKQoKLSDkvb/nlKjntKLlvJXml7bvvIzntKLlvJXlrZfmrrXmnIDlpb3lsI/ogIzkuJTllK/kuIDvvIzpgb/lhY1zZWxlY3QgKiDnmoTmg4XlhrUKCi0gKirkuI3lhpfkvZnljp/liJkqKu+8muWwvemHj+eahOaJqeWxlee0ouW8le+8jOS4jeimgeaWsOW7uue0ouW8leOAguavlOWmguihqOS4reW3sue7j+aciWHnmoTntKLlvJXvvIznjrDlnKjopoHliqAoYSxiKeeahOe0ouW8le+8jOmCo+S5iOWPqumcgOimgeS/ruaUueWOn+adpeeahOe0ouW8leWNs+WPr++8jOW7uueri+S4jeW/heimgee0ouW8leS8muWinuWKoE15U1FM56m66Ze044CCKirln7rkuo7liJrmiY3nmoTmnIDlt6bljLnphY3ljp/liJnvvIzlsL3ph4/lnKjljp/mnInln7rnoYDkuIrmianlsZXntKLlvJXvvIzkuI3opoHmlrDlop7ntKLlvJXjgIIg6IO955So5Y2V57Si5byV77yM5LiN55So6IGU5ZCI57Si5byV77yb6IO955So56qE57Si5byV77yM5LiN55So5a6957Si5byV77yb6IO95aSN55So57Si5byV77yM5LiN5paw5bu657Si5byVKioKCi0g5aaC5p6c56Gu5a6a5pyJ5aSa5bCR5p2h5pWw5o2u77yM5L2/55SoIGxpbWl0IOmZkOWItuS4gOS4i++8jE15U1FM5Zyo5p+l5om+5Yiw5a+55bqU5p2h5pWw55qE5pWw5o2u55qE5pe25YCZ77yM5Lya5YGc5q2i57un57ut5p+l5om+CgotIOWIqeeUqOafpeivoue8k+WtmO+8jOW+iOWkmuaXtuWAmU15U1FM5Lya5a+55p+l6K+i57uT5p6c6L+b6KGMY2FjaGXvvIzkvYbmmK/lr7nlupTigJzliqjmgIHigJ3nmoTmlbDmja7kvJrkuI1jYWNoZe+8jOS+i+Wmgu+8mgogICBgYGAKICDml6Dms5Xkvb/nlKhjYWNoZQogIDEgU0VMRUNUIHVzZXJuYW1lIEZST00gdXNlciBXSEVSRSBzaWdudXBfZGF0ZSA+PSBDVVJEQVRFKCkgCiAg5Y+v5LulY2FjaGUKICAyIFNFTEVDVCB1c2VybmFtZSBGUk9NIHVzZXIgV0hFUkUgc2lnbnVwX2RhdGUgPj0gJzIwMTctMDUtMDYnIAogIGBgYAogIOW9k+S9v+eUqOS6hk15U1FM55qE5LiA5YaZ5Ye95pWw5LmL5ZCO77yMTXlTUUzml6Dms5Xnoa7lrprnu5PmnpzmmK/mmJPlj5jnmoTvvIzmiYDku6XkuI3kvJpjYWNoZe+8jOi/mOaciW5vdygpLHJhbmQoKeS5n+S4gOagt+S4jeW8gOWQr2NhY2hlCgotIGpvaW4g6K+t5rOV77yM5bC96YeP5bCG5bCP55qE6KGo5pS+5Zyo5YmN6Z2i77yM5Zyo6ZyA6KaBb27nmoTlrZfmrrXkuIrvvIzmlbDmja7nsbvlnovkv53mjIHkuIDoh7TvvIzlubborr7nva7lr7nlupTnmoTntKLlvJXvvIzlkKbliJlNeVNRTOaXoOazleS9v+eUqOe0ouW8leadpWpvaW7mn6Xor6IKCi0g5Zyo5aSn6KGo5LiK5YGa5aSn6YeP5pu05paw5pe277yM5aaC5p6c5Lya6ZSB5YWo6KGo77yM5YiZ6ZyA6KaB5ouG5YiG5omn6KGM77yM6YG/5YWN6ZW/5pe26Ze06ZSB5L2P6KGo77yM5a+86Ie05YW25LuW6K+35rGC56ev57Sv5aSq5aSa77yISW5ub0RCIOaUr+aMgeihjOmUge+8jOS9huWJjeaPkOaYr1doZXJl5a2Q5Y+l6ZyA6KaB5bu656uL57Si5byV77yM5rKh5pyJ57Si5byV5Lmf5LiA5qC35piv6ZSB5YWo6KGo77yJCgogYGBgCiAgIHdoaWxlICgxKSB7CiAgICAgICAvL+avj+asoeWPquWBmjEwMDDmnaEKICAgICAgbXlzcWxfcXVlcnkoIkRFTEVURSBGUk9NIGxvZ3MgV0hFUkUgbG9nX2RhdGUgPD0gJzIwMDktMTEtMDEnIExJTUlUIDEwMDAiKTsKICAgICAgaWYgKG15c3FsX2FmZmVjdGVkX3Jvd3MoKSA9PSAwKSB7CiAgICAgICAgICAgLy8g5rKh5b6X5Y+v5Yig5LqG77yM6YCA5Ye677yBCiAgICAgICAgICAgYnJlYWs7CiAgICAgICB9CiAgICAgICAvLyDmr4/mrKHpg73opoHkvJHmga/kuIDkvJrlhL8KICAgICAgIHVzbGVlcCg1MDAwMCk7CiAgIH0KIGBgYAoKLSDmnIDlpKfpgInmi6nmgKfljp/liJkKICDpgInmi6nljLrliIbluqbpq5jliJflgZrntKLlvJUg5LuA5LmI5piv5Yy65YiG5bqm6auY55qE5a2X5q615ZGi77yfIOS4gOiIrOS4pOenjeaDheWGteS4jeW7uuiuruW7uue0ouW8le+8miAx44CB5LiA5Lik5Y2D5p2h55Sa6Iez5Yeg55m+5p2h77yM5rKh5b+F6KaB5bu657Si5byV77yM6K6p5p+l6K+i5YGa5YWo6KGo5omr5o+P5bCx5aW95LqG44CCIOWboOS4uuS4jeaYr+S9oOW7uuS6huWwseS4gOWumuS8mui1sOe0ouW8le+8jOaJp+ihjOiuoeWIkuS8mumAieaLqeS4gOS4quacgOS8mOeahOaWueW8j++8jG1zcWzovoXliqnntKLlvJXnmoTlj7blrZDoioLngrnlubbkuI3nm7TmjqXlrZjlgqjlrp7pmYXmlbDmja7vvIzlj6rmmK/kuLvlu7pJRO+8jOWGjemAmui/h+S4u+mUrue0ouW8leS6jOasoeafpeaJvuOAgui/meS5iOS4gOadpeWFqOihqOWPr+iDveW+iOacieWPr+iDveaViOeOh+abtOmrmOOAgiAy44CB57Si5byV6YCJ5oup5oCn6L6D5L2O55qE5oOF5Ya144CCIOaJgOiwk+mAieaLqeaAp++8iFNlbGVjdGl2aXR577yJ77yM5piv5oyH5LiN6YeN5aSN55qE57Si5byV5YC877yI5Lmf5Y+r5Z+65pWw77yMQ2FyZGluYWxpdHnvvInkuI7ooajorrDlvZXmlbDvvIgjVO+8ieeahOavlOWAvOOAggo=
+---
+title: "索引优化原则"
+description: "最左前缀匹配原则   联合索引，mysql会从做向右匹配直到遇到范围查询(>、<、between、like)就停止匹配，比如a = 1 and b = 2 and c > 3 and d = 4 如果建立(a,b,c,d)顺序的索引，d是用不到索引的，如果建立(a,b,d,c)的索引则都可以用到，a,b,d的顺序可以任意调整   =和in可以乱序，比如a = 1 and b = 2 and c = 3 建立(a,b,c)索引可以任意顺序，mysql的查询优化器会帮你优化成索引可以识别的形式  索..."
+date: "2016-01-13"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834920891/6a98c9cb-0641-4d54-b66a-121ec1aac3d4.jpeg"
+readingTime: 1
+slug: "57si5byv5lyy5yyw5y6f5yiz"
+---
+- 最左前缀匹配原则
+  
+> 联合索引，mysql会从做向右匹配直到遇到范围查询(>、<、between、like)就停止匹配，比如a = 1 and b = 2 and c > 3 and d = 4 如果建立(a,b,c,d)顺序的索引，d是用不到索引的，如果建立(a,b,d,c)的索引则都可以用到，a,b,d的顺序可以任意调整
+
+- =和in可以乱序，比如a = 1 and b = 2 and c = 3 建立(a,b,c)索引可以任意顺序，mysql的查询优化器会帮你优化成索引可以识别的形式
+
+- 索引列不能参与计算，保持列“干净”，比如from_unixtime(create_time) = ’2014-05-29’就不能使用到索引，原因很简单，b+树中存的都是数据表中的字段值，但进行检索时，需要把所有元素都应用函数才能比较，显然成本太大。所以语句应该写成create_time = unix_timestamp(’2014-05-29’)
+
+- 使用索引时，索引字段最好小而且唯一，避免select * 的情况
+
+- **不冗余原则**：尽量的扩展索引，不要新建索引。比如表中已经有a的索引，现在要加(a,b)的索引，那么只需要修改原来的索引即可，建立不必要索引会增加MySQL空间。**基于刚才的最左匹配原则，尽量在原有基础上扩展索引，不要新增索引。 能用单索引，不用联合索引；能用窄索引，不用宽索引；能复用索引，不新建索引**
+
+- 如果确定有多少条数据，使用 limit 限制一下，MySQL在查找到对应条数的数据的时候，会停止继续查找
+
+- 利用查询缓存，很多时候MySQL会对查询结果进行cache，但是对应“动态”的数据会不cache，例如：
+   ```
+  无法使用cache
+  1 SELECT username FROM user WHERE signup_date >= CURDATE() 
+  可以cache
+  2 SELECT username FROM user WHERE signup_date >= '2017-05-06' 
+  ```
+  当使用了MySQL的一写函数之后，MySQL无法确定结果是易变的，所以不会cache，还有now(),rand()也一样不开启cache
+
+- join 语法，尽量将小的表放在前面，在需要on的字段上，数据类型保持一致，并设置对应的索引，否则MySQL无法使用索引来join查询
+
+- 在大表上做大量更新时，如果会锁全表，则需要拆分执行，避免长时间锁住表，导致其他请求积累太多（InnoDB 支持行锁，但前提是Where子句需要建立索引，没有索引也一样是锁全表）
+
+ ```
+   while (1) {
+       //每次只做1000条
+      mysql_query("DELETE FROM logs WHERE log_date <= '2009-11-01' LIMIT 1000");
+      if (mysql_affected_rows() == 0) {
+           // 没得可删了，退出！
+           break;
+       }
+       // 每次都要休息一会儿
+       usleep(50000);
+   }
+ ```
+
+- 最大选择性原则
+  选择区分度高列做索引 什么是区分度高的字段呢？ 一般两种情况不建议建索引： 1、一两千条甚至几百条，没必要建索引，让查询做全表扫描就好了。 因为不是你建了就一定会走索引，执行计划会选择一个最优的方式，msql辅助索引的叶子节点并不直接存储实际数据，只是主建ID，再通过主键索引二次查找。这么一来全表可能很有可能效率更高。 2、索引选择性较低的情况。 所谓选择性（Selectivity），是指不重复的索引值（也叫基数，Cardinality）与表记录数（#T）的比值。

@@ -1,1 +1,29 @@
-InVzZSBjbGllbnQiOwoKaW1wb3J0IEdpc2N1cyBmcm9tICJAZ2lzY3VzL3JlYWN0IjsKCmNvbnN0IFJFUE8gPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19HSVNDVVNfUkVQTyB8fCAiIjsKY29uc3QgUkVQT19JRCA9IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0dJU0NVU19SRVBPX0lEIHx8ICIiOwpjb25zdCBDQVRFR09SWSA9IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX0dJU0NVU19DQVRFR09SWSB8fCAiIjsKY29uc3QgQ0FURUdPUllfSUQgPSBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19HSVNDVVNfQ0FURUdPUllfSUQgfHwgIiI7CgpleHBvcnQgZnVuY3Rpb24gQ29tbWVudHMoKSB7CiAgaWYgKCFSRVBPIHx8ICFSRVBPX0lEIHx8ICFDQVRFR09SWV9JRCkgcmV0dXJuIG51bGw7CiAgcmV0dXJuICgKICAgIDxkaXYgc3R5bGU9e3sgbWFyZ2luVG9wOiA0MCB9fT4KICAgICAgPEdpc2N1cwogICAgICAgIHJlcG89e1JFUE8gYXMgYCR7c3RyaW5nfS8ke3N0cmluZ31gfQogICAgICAgIHJlcG9JZD17UkVQT19JRH0KICAgICAgICBjYXRlZ29yeT17Q0FURUdPUlkgfHwgIkdlbmVyYWwifQogICAgICAgIGNhdGVnb3J5SWQ9e0NBVEVHT1JZX0lEfQogICAgICAgIG1hcHBpbmc9InBhdGhuYW1lIgogICAgICAgIHN0cmljdD0iMCIKICAgICAgICByZWFjdGlvbnNFbmFibGVkPSIxIgogICAgICAgIGVtaXRNZXRhZGF0YT0iMCIKICAgICAgICBpbnB1dFBvc2l0aW9uPSJ0b3AiCiAgICAgICAgdGhlbWU9ImRhcmsiCiAgICAgICAgbGFuZz0iemgtQ04iCiAgICAgIC8+CiAgICA8L2Rpdj4KICApOwp9Cg==
+"use client";
+
+import Giscus from "@giscus/react";
+
+const REPO = process.env.NEXT_PUBLIC_GISCUS_REPO || "";
+const REPO_ID = process.env.NEXT_PUBLIC_GISCUS_REPO_ID || "";
+const CATEGORY = process.env.NEXT_PUBLIC_GISCUS_CATEGORY || "";
+const CATEGORY_ID = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || "";
+
+export function Comments() {
+  if (!REPO || !REPO_ID || !CATEGORY_ID) return null;
+  return (
+    <div style={{ marginTop: 40 }}>
+      <Giscus
+        repo={REPO as `${string}/${string}`}
+        repoId={REPO_ID}
+        category={CATEGORY || "General"}
+        categoryId={CATEGORY_ID}
+        mapping="pathname"
+        strict="0"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme="dark"
+        lang="zh-CN"
+      />
+    </div>
+  );
+}
