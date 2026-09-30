@@ -1,18 +1,23 @@
-import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/posts";
-import { site } from "@/lib/site";
+import { MetadataRoute } from 'next'
+import { allBlogs } from 'contentlayer/generated'
+import siteMetadata from '@/data/siteMetadata'
+
+export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts();
-  return [
-    { url: site.url, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
-    { url: `${site.url}/archive`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${site.url}/about`, changeFrequency: "monthly", priority: 0.5 },
-    ...posts.map((p) => ({
-      url: `${site.url}/posts/${p.slug}`,
-      lastModified: new Date(p.updated || p.date),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
-  ];
+  const siteUrl = siteMetadata.siteUrl
+
+  const blogRoutes = allBlogs
+    .filter((post) => !post.draft)
+    .map((post) => ({
+      url: `${siteUrl}/${post.path}`,
+      lastModified: post.lastmod || post.date,
+    }))
+
+  const routes = ['', 'blog', 'projects', 'tags'].map((route) => ({
+    url: `${siteUrl}/${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+  }))
+
+  return [...routes, ...blogRoutes]
 }
