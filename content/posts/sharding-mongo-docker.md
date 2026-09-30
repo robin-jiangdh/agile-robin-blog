@@ -1,1 +1,493 @@
-LS0tCnRpdGxlOiAiQ29uZmlndXJlIFNoYXJkaW5nIGluIE1vbmdvREIgb24gRG9ja2VyIENvbnRhaW5lcnMiCmRlc2NyaXB0aW9uOiAiSW4gbXkgcHJldmlvdXMgYmxvZyBwb3N0LCBJIHBvc3RlZCBhYm91dCBjb25maWd1cmluZyBSZXBsaWNhIFNldCB0byBtZWV0IGhpZ2ggYXZhaWxhYmlsaXR5IHJlcXVpcmVtZW50cy4gIEluIHRoaXMgcG9zdCwgaSBjb3ZlciAgIE1vbmdvREIgU2hhcmRlZCBDbHVzdGVyIENvbXBvbmVudHMgIFN0ZXBzIHRvIGNyZWF0ZSBNb25nb0RCIFNoYXJkZWQgQ2x1c3RlciB1c2luZyBEb2NrZXIgQ29tcG9zZSBBZGQgUmVwbGljYSBTZXQgYXMgYSBTaC4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwMTQzNjQvYjRhNDIxMWItZjBiYi00ZDQ4LWI5ZDYtNTc4OWVmODMyYjY4LmpwZWciCnJlYWRpbmdUaW1lOiA3CnNsdWc6ICJzaGFyZGluZy1tb25nby1kb2NrZXIiCi0tLQpJbiBteSBwcmV2aW91cyBbYmxvZ10oMjAyMS0wOS0xOC1tb25nb2RiLXJzLWRvY2tlci1wZXJzaXN0ZW50LXZvbHVtZS5tZCkgcG9zdCwgSSBwb3N0ZWQgYWJvdXQgY29uZmlndXJpbmcgUmVwbGljYSBTZXQgdG8gbWVldCBoaWdoIGF2YWlsYWJpbGl0eSByZXF1aXJlbWVudHMuIAoKSW4gdGhpcyBwb3N0LCBpIGNvdmVyIAoKKiBNb25nb0RCIFNoYXJkZWQgQ2x1c3RlciBDb21wb25lbnRzIAoqIFN0ZXBzIHRvIGNyZWF0ZSBNb25nb0RCIFNoYXJkZWQgQ2x1c3RlciB1c2luZyBEb2NrZXIgQ29tcG9zZQoqIEFkZCBSZXBsaWNhIFNldCBhcyBhIFNoYXJkCiogU2hhcmRpbmcgRGF0YQoqIFZlcmlmeSBEaXN0cmlidXRpb24gb2YgRGF0YSAKCjwhLS10cnVuY2F0ZS0tPgoKIyMgUmVwbGljYSBTZXQgdnMgU2hhcmRpbmcgCgoqKlJlcGxpY2EgU2V0KiogaXMgdGhlIHdheSBvZiBrZWVwaW5nIGlkZW50aWNhbCBzZXQgb2YgZGF0YSBvbiBtdWx0aXBsZSBzZXJ2ZXJzLiBTaGFyZGluZyByZWZlcnMgdG8gdGhlIHByb2Nlc3Mgb2Ygc3BsaXR0aW5nIGRhdGEgYWNyb3NzIG5vZGVzLCBhbHNvIGtub3duIGFzIGhvcml6b250YWwgcGFydGl0aW9uaW5nLiAKCkEgZGF0YWJhc2UgKipzaGFyZCoqLCBpcyBhIGhvcml6b250YWwgcGFydGl0aW9uIG9mIGRhdGEgaW4gYSBkYXRhYmFzZSwgIGVhY2ggbm9kZSBjb250YWlucyBkaWZmZXJlbnQgc2V0IG9mIHRoZSBkYXRhLiAKCk1vbmdvREIgc3VwcG9ydHMgYW5kIGltcGxlbWVudHMgYGF1dG8tc2hhcmRpbmdgIGJ5IGF1dG9tYXRpbmcgYmFsYW5jaW5nIG9mIGRhdGEgYWNyb3NzIHRoZSBzaGFyZHMuIAoKCgoKIyMgTW9uZ29EQiBTaGFyZGluZyBDb21wb25lbnRzIAoKVGhlIGZpcnN0IHN0ZXAgaW4gY3JlYXRpbmcgYSBTaGFyZGVkIE1vbmdvREIgY2x1c3RlciBpcyB0byB1bmRlcnN0YW5kIGFsbCB0aGUgY29tcG9uZW50cyBhbmQgcHJvY2Vzc2VzIHRoYXQgY29uc3RpdHV0ZSBhIGNsdXN0ZXIgCgoqICoqUXVlcnkgUm91dGVyIC0gbW9uZ29zKioKCm1vbmdvcyBpcyB0aGUgcm91dGluZyBwcm9jZXNzLiBUaGUgZ29hbCBvZiBzaGFyZGluZyBpcyB0byBtYWtlIGNsdXN0ZXIgb2YgMTAwLTEwMDAgbm9kZXMgbG9va3MgbGlrZSBhIHNpbmdsZSBpbnRlcmZhY2UgZm9yIHRoZSBhcHBsaWNhdGlvbiBhbmQgYWJzdHJhY3QgYWxsIHRoZSBjb21wbGV4aXR5IG9mIGRhdGEgYWNjZXNzIGZyb20gbXVsdGlwbGUgc2hhcmRzLiBUaGUgbW9uZ29zIHJvdXRlciBpcyB0YWJsZSBvZiBjb250ZW50cyBhbmQga25vd3Mgd2hlcmUgdGhlICBkYXRhIHJlcXVpcmVkIGJ5IGFwcGxpY2F0aW9uIGlzIGxvY2F0ZWQsIG1vbmdvcyBmb3J3YXJkcyB0aGUgYXBwbGljYXRpb24gcmVxdWVzdCB0byBhcHByb3ByaWF0ZSBzaGFyZChzKS4gICAKCiogKipDb25maWcgU2VydmVycyoqCgpDb25maWcgU2VydmVycyBob2xkIGFsbCB0aGUgbWV0YWRhdGEgYWJvdXQgd2hpY2ggbm9kZSBpcyBob2xkaW5nIHdoaWNoIGRhdGEoY2h1bmtzKS4gbW9uZ29zIHJldHJpZXZlcyBhbGwgdGhlIG1ldGFkYXRhIGZyb20gQ29uZmlnIFNlcnZlcnMuIENvbmZpZyBTZXJ2ZXJzIGFyZSBjcml0aWNhbCBhbmQgaXRzIGltcG9ydGFudCB0byBjb25maWd1cmUgYW5kIGJyaW5nIHRoZSBjb25maWcgc2VydmVycyBmaXJzdCwgYmFja3VwIGNvbmZpZyBzZXJ2ZXJzIGFuZCBzZXR1cCBjb25maWcgc2VydmVycyBhcyBSZXBsaWNhIFNldC4gIAoKIyMgU3RlcHMgdG8gY3JlYXRlIE1vbmdvREIgU2hhcmRlZCBDbHVzdGVyIHVzaW5nIERvY2tlciBDb21wb3NlCgpCZWxvdyBpbWFnZSBzaG93IGRpZmZlcmVudCBjb21wb25lbnRzIHJlcXVpcmVkIHRvIHNldHVwIE1vbmdvREIgc2hhcmRpbmcgd2l0aCBSZXBsaWNhIFNldC4gVGhlIGltYWdlIGFsc28gc2hvd3MgaG93IGFwcGxpY2F0aW9uIGNvbW11bmljYXRlcyB0byBNb25nb0RCIHNoYXJkZWQgY2x1c3Rlci4gQXMgZGlzY3Vzc2VkIGluIHRoZSBzaGFyZGluZyBjb21wb25lbnRzIGFwcGxpY2F0aW9uIGFsd2F5cyBjb25uZWN0cyBmaXJzdCB0byBtb25nb3MgYW5kIG1vbmdvcyBjb21tdW5pY2F0ZXMgd2l0aCBjb25maWcgc2VydmVyIChjZmcxLCBjZmcyLCBjZmczIGFyZSBwYXJ0IG9mIHJlcGxpY2FzZXQgaW4gYmVsb3cgaW1hZ2UpCgpgYGBtZXJtYWlkCiAgc3RhdGVEaWFncmFtLXYyCiAgICBbKl0gLS0+IEFwcGxpY2F0aW9uCiAgICBkaXJlY3Rpb24gTFIKICAgIHN0YXRlIEFwcGxpY2F0aW9uCiAgICBzdGF0ZSBRdWVyeVJvdXRlciAKICAgIHsKICAgCiAgIG1vbmdvcyAKICAgfQogICBBcHBsaWNhdGlvbiAtLT4gUXVlcnlSb3V0ZXIgOiBSZWFkCiAgIFF1ZXJ5Um91dGVyIC0tPiBBcHBsaWNhdGlvbjogUmVzdWx0cwogICAgc3RhdGUgY2ZnOiBjb25maWcgCiAgICB7CiAgICAgICAgCiAgICAgICAgY2ZnMSAKICAgICAgICBjZmcyCiAgICAgICAgY2ZnMwogICAgICAgIAogICB9CiAgICBRdWVyeVJvdXRlciAtLT4gY29uZmlnCiAgICBjb25maWcgLS0+IFF1ZXJ5Um91dGVyCiAgIHN0YXRlIFNoYXJkMTogcnNfbW9uZ28xCiAgICB7CiAgICBzaGFyZDFfbW9uZ28xCiAgICBzaGFyZDFfbW9uZ28yCiAgICBzaGFyZDFfbW9uZ28zCiAgICB9CiAgICBzdGF0ZSBTaGFyZDI6IHJzX21vbmdvMgogICAgewogICAgc2hhcmQyX21vbmdvMQogICAgc2hhcmQyX21vbmdvMgogICAgc2hhcmQyX21vbmdvMwogICAgfQogICAgCiAgICBzdGF0ZSBTaGFyZDM6IHJzX21vbmdvMyAKICAgIHsKICAgICBzaGFyZDNfbW9uZ28xCiAgICBzaGFyZDNfbW9uZ28yCiAgICBzaGFyZDNfbW9uZ28zCiAgICB9CgogICAgCiAgICAgIFF1ZXJ5Um91dGVyIC0tPiByc19tb25nbzEKICAgIFF1ZXJ5Um91dGVyIC0tPiByc19tb25nbzIKICAgIFF1ZXJ5Um91dGVyIC0tPiByc19tb25nbzMKICAgIHJzX21vbmdvMSAtLT4gUXVlcnlSb3V0ZXIKICAgIHJzX21vbmdvMiAtLT4gUXVlcnlSb3V0ZXIKICAgIHJzX21vbmdvMyAtLT4gUXVlcnlSb3V0ZXIKIApgYGAKCkxldHMgc2V0dXAgYWJvdmUgTW9uZ29EQiBTaGFyZGluZyBDbHVzdGVyIHVzaW5nIGRvY2tlciBjb21wb3NlCgojIyMgU3RlcCAxIC0gQXV0aG9yIERvY2tlciBDb21wb3NlIGZpbGUgCgo6Ojpub3RlCkVuc3VyZSBkaXJlY3RvcnkgcGF0aCBtZW50aW9uZWQgaW4gZG9ja2VyIGNvbXBvc2UgZm9yIHBlcnNpc3RlbnQgdm9sdW1lIGJlZm9yZSB0aGUg4oCcOuKAnSBpcyBleGlzdGluZyBvbiBsb2NhbCBob3N0Cjo6OgoKYGBgWUFNTApzZXJ2aWNlczoKICBzaGFyZDFfbW9uZ28xOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMV9tb25nbzEKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDFfbW9uZ28xCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMS9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28xL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28xL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMS9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwNToyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDFfbW9uZ28yOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMV9tb25nbzIKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDFfbW9uZ28yCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMi9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28yL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28yL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMi9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwNjoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDFfbW9uZ28zOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMV9tb25nbzMKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDFfbW9uZ28zCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMy9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28zL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDFfbW9uZ28zL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQxX21vbmdvMy9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwNzoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDJfbW9uZ28xOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMl9tb25nbzEKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDJfbW9uZ28xCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMS9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28xL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28xL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMS9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwODoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDJfbW9uZ28yOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMl9tb25nbzIKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDJfbW9uZ28yCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMi9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28yL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28yL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMi9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwOToyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDJfbW9uZ28zOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkMl9tb25nbzMKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDJfbW9uZ28zCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMy9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28zL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDJfbW9uZ28zL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQyX21vbmdvMy9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxMDoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDNfbW9uZ28xOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkM19tb25nbzEKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDNfbW9uZ28xCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMS9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28xL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28xL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMS9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxMToyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDNfbW9uZ28yOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkM19tb25nbzIKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDNfbW9uZ28yCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMi9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28yL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28yL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMi9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxMjoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBzaGFyZDNfbW9uZ28zOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IHNoYXJkM19tb25nbzMKICAgIGNvbnRhaW5lcl9uYW1lOiBzaGFyZDNfbW9uZ28zCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMy9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28zL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9zaGFyZDNfbW9uZ28zL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvc2hhcmQzX21vbmdvMy9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxMzoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiMgTW9uZ29EQiBDb25maXVncmF0aW9uIFNlcnZlciAKICBjZmcxOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IGNmZzEKICAgIGNvbnRhaW5lcl9uYW1lOiBjZmcxCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvY2ZnMS9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9jZmcxL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9jZmcxL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvY2ZnMS9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxNDoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBjZmcyOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IGNmZzIKICAgIGNvbnRhaW5lcl9uYW1lOiBjZmcyCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvY2ZnMi9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9jZmcyL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9jZmcyL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvY2ZnMi9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxNToyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBjZmczOgogICAgaW1hZ2U6IG1vbmdvX3NzaAogICAgaG9zdG5hbWU6IGNmZzMKICAgIGNvbnRhaW5lcl9uYW1lOiBjZmczCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvY2ZnMy9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gfi9kYi9jZmczL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gfi9kYi9jZmczL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvY2ZnMy9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAxNjoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBtb25nb3M6CiAgICBpbWFnZTogbW9uZ29fc3NoCiAgICBob3N0bmFtZTogbW9uZ29zCiAgICBjb250YWluZXJfbmFtZTogbW9uZ29zCiAgICB2b2x1bWVzOgogICAgICAtIH4vZGIvbW9uZ29zL21vbmdvZC5jb25mOi9ldGMvbW9uZ29kLmNvbmYKICAgICAgLSB+L2RiL21vbmdvcy9pbml0ZGIuZC86L2RvY2tlci1lbnRyeXBvaW50LWluaXRkYi5kLwogICAgICAtIH4vZGIvbW9uZ29zL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIH4vZGIvbW9uZ29zL2xvZy86L3Zhci9sb2cvbW9uZ29kYi8KICAgIHBvcnRzOgogICAgICAtIDIwMDE3OjI3MDE3CiAgICBjb21tYW5kOiBbIm1vbmdvcyIsIi1mIiwgIi9ldGMvbW9uZ29kLmNvbmYiXQogICAgbmV0d29ya19tb2RlOiBtb25nb19uZXQKCgpgYGAKCiMjIyBTdGVwIDIgLSBEcmFmdCBDb25maWcgU2VydmVyIGNvbmZpZ3VyYXRpb24gZmlsZSAocGFzcyBjbHVzdGVyUm9sZTogY29uZmlnc3ZyIHRvIGluZGljYXRlIHRoaXMgc2VydmVyIGlzIENvbmZpZyBTZXJ2ZXIpCgpgYGBZQU1MCnN5c3RlbUxvZzoKICBkZXN0aW5hdGlvbjogZmlsZQogIGxvZ0FwcGVuZDogdHJ1ZQogIHBhdGg6IC92YXIvbG9nL21vbmdvZGIvbW9uZ29kLmxvZwpzdG9yYWdlOgogIGRiUGF0aDogL2RhdGEvZGIKICBqb3VybmFsOgogICAgZW5hYmxlZDogdHJ1ZQogIGVuZ2luZTogIHdpcmVkVGlnZXIKbmV0OgogIHBvcnQ6IDI3MDE3CiAgYmluZElwOiAxMjcuMC4wLjEgICMgRW50ZXIgMC4wLjAuMCw6OiB0byBiaW5kIHRvIGFsbCBJUHY0IGFuZCBJUHY2IGFkZHJlc3NlcyBvciwgYWx0ZXJuYXRpdmVseSwgdXNlIHRoZSBuZXQuYmluZElwQWxsIHNldHRpbmcuCnNoYXJkaW5nOgogIGNsdXN0ZXJSb2xlOiBjb25maWdzdnIKcmVwbGljYXRpb246CiAgcmVwbFNldE5hbWU6IHJzX2NvbmZpZwpgYGAKCiMjIyBTdGVwIDMgLSBEcmFmdCBRdWVyeSBSb3V0ZXIgbW9uZ29zIGNvbmZpZ3VyYXRpb24gZmlsZSAocGFzcyBjb25maWdEQjpjb25maWcgc2VydmVyIGxpc3QpCgpgYGBZQU1MCnN5c3RlbUxvZzoKICBkZXN0aW5hdGlvbjogZmlsZQogIGxvZ0FwcGVuZDogdHJ1ZQogIHBhdGg6IC92YXIvbG9nL21vbmdvZGIvbW9uZ29kLmxvZwogCm5ldDoKICBwb3J0OiAyNzAxNwogIGJpbmRJcDogMTI3LjAuMC4xICAjIEVudGVyIDAuMC4wLjAsOjogdG8gYmluZCB0byBhbGwgSVB2NCBhbmQgSVB2NiBhZGRyZXNzZXMgb3IsIGFsdGVybmF0aXZlbHksIHVzZSB0aGUgbmV0LmJpbmRJcEFsbCBzZXR0aW5nLgogCnNoYXJkaW5nOgogIGNvbmZpZ0RCOiByc19jb25maWcvY2ZnMToyNzAxNyxjZmcyOjI3MDE3LGNmZzM6MjcwMTcKYGBgCgojIyMgU3RlcCA0IC0gQ29weSBtb25nb2QuY29uZiBhbmQgbW9uZ29zLmNvbmYgdG8gdGhlIHBhdGggbWVudGlvbmVkIGluIHN0ZXAgMSBgZG9ja2VyLWNvbXBvc2UueWFtbGAKCiMjIyBTdGVwIDUgLSBTcGluIHVwIENvbmZpZyBTZXJ2ZXIsIG1vbmdvcywgYWxsIG1vbmdvZCBub2RlcwoKYGBgc2hlbGwgCiQgZG9ja2VyIGNvbXBvc2UgdXAgLWQKYGBgCgojIyMgU3RlcCA2IC0gQ29ubmVjdCB0byBjb25maWcgc2VydmVyIGFuZCBhZGQgY29uZmlnIHNlcnZlciBpbiBhIFJlcGxpY2EgU2V0CgpgYGBqYXZhc2NyaXB0IApyc19jb25maWc6UFJJTUFSWT4gcnMuaW5pdGlhdGUoKSAKcnNfY29uZmlnOlBSSU1BUlk+IHJzLmFkZCgiY2ZnMjoyNzAxNyIpCnJzX2NvbmZpZzpQUklNQVJZPiBycy5hZGQoImNmZzM6MjcwMTciKQpgYGAKCiMjIyBTdGVwIDcgLSAgQWRkIGFsbCBkYXRhIG5vZGVzIHRvIHJlcGxpY2FzZXQKCmBgYGphdmFzY3JpcHQgCiMgQ29ubmVjdCB0byBzaGFyZDFfbW9uZ28xCiAKYWRtaW4+IHJzLmluaXRpYXRlKCkKcnNfbW9uZ28xIFtkaXJlY3Q6IHByaW1hcnldIGFkbWluPiBycy5hZGQoInNoYXJkMV9tb25nbzIiKQpyc19tb25nbzEgW2RpcmVjdDogcHJpbWFyeV0gYWRtaW4+IHJzLmFkZCgic2hhcmQxX21vbmdvMyIpCiAKIyBDb25uZWN0IHRvIHNoYXJkMl9tb25nbzEKIAphZG1pbj4gcnMuaW5pdGlhdGUoKQpyc19tb25nbzIgW2RpcmVjdDogcHJpbWFyeV0gdGVzdD4gcnMuYWRkKCJzaGFyZDJfbW9uZ28yIikKcnNfbW9uZ28yIFtkaXJlY3Q6IHByaW1hcnldIHRlc3Q+IHJzLmFkZCgic2hhcmQyX21vbmdvMyIpCiAKIyBDb25uZWN0IHRvIHNoYXJkM19tb25nbzEKIAp0ZXN0PiBycy5pbml0aWF0ZSgpCnJzX21vbmdvMyBbZGlyZWN0OiBvdGhlcl0gdGVzdD4gcnMuYWRkKCJzaGFyZDNfbW9uZ28yIikKcnNfbW9uZ28zIFtkaXJlY3Q6IHByaW1hcnldIHRlc3Q+IHJzLmFkZCgic2hhcmQzX21vbmdvMyIpCgpgYGAKCiMjIyBTdGVwIDgg4oCTIENvbm5lY3QgdG8gbW9uZ29zIGFuZCBjb252ZXJ0IGRhdGEgcmVwbGljYXNldCBub2RlcyB0byBzaGFyZHMKCmBgYGphdmFzY3JpcHQKCm1vbmdvcz5zaC5hZGRTaGFyZCgicnNfbW9uZ28xL3NoYXJkMV9tb25nbzE6MjcwMTcsc2hhcmQxX21vbmdvMjoyNzAxNyxzaGFyZDFfbW9uZ28zOjI3MDE3IikKIAptb25nb3M+c2guYWRkU2hhcmQoInJzX21vbmdvMi9zaGFyZDJfbW9uZ28xOjI3MDE3LHNoYXJkMl9tb25nbzI6MjcwMTcsc2hhcmQyX21vbmdvMzoyNzAxNyIpCiAKbW9uZ29zPnNoLmFkZFNoYXJkKCJyc19tb25nbzMvc2hhcmQzX21vbmdvMToyNzAxNyxzaGFyZDNfbW9uZ28yOjI3MDE3LAoKYGBgCgojIyMgU3RlcCA5IOKAkyBDb25uZWN0IHRvIG1vbmdvcyBhbmQgZW5hYmxlIHNoYXJkaW5nIG9uIGEgdGVzdCBkYXRhYmFzZSDigJxFbXBsb3llZeKAnQoKYGBgamF2YXNjcmlwdAptb25nb3M+IGRiLmFkbWluQ29tbWFuZCh7ZW5hYmxlU2hhcmRpbmcgOiAiZW1wbG95ZWUifSkKYGBgCgojIyMgU3RlcCAxMCDigJMgR2VuZXJhdGUgdGVzdCBkYXRhIDsgQ3JlYXRlIGFuIGluZGV4IG9uIHRoZSBrZXkgdG8gYmUgc2hhcmRlZCBhbmQgc2hhcmQgdGhlIGNvbGxlY3Rpb24KCmBgYGphdmFzY3JpcHQKbW9uZ29zPiB1c2UgZW1wbG95ZWUKc3dpdGNoZWQgdG8gZGIgZW1wbG95ZWUKIAptb25nb3M+IGZvciAodmFyIGkgPSAwOyBpIDwgMTAwMDAwOyBpKyspIHsgZGIuZW1wX2xpc3QyLmluc2VydCh7ICJzcl9ubyI6ICJlbXAgIyAiICsgaSwgImNyZWF0ZV9kYXRlIjogbmV3IERhdGUoKSB9KTsgfQogCm1vbmdvcz4gZGIuZW1wX2xpc3QyLmVuc3VyZUluZGV4KHsic3Jfbm8iIDogImhhc2hlZCJ9KQogCm1vbmdvcz4gc2guc2hhcmRDb2xsZWN0aW9uKCJlbXBsb3llZS5lbXBfbGlzdDIiLCB7InNyX25vIjoiaGFzaGVkIn0pCiAKewogICAgImNvbGxlY3Rpb25zaGFyZGVkIiA6ICJlbXBsb3llZS5lbXBfbGlzdDIiLAogICAgImNvbGxlY3Rpb25VVUlEIiA6IFVVSUQoIjE3MTk1YmFhLWZjNmMtNGMzZS04YTJiLTU4ZmIxMjc4ZTQwYyIpLAogICAgIm9rIiA6IDEsCiAgICAib3BlcmF0aW9uVGltZSIgOiBUaW1lc3RhbXAoMTYzMzE3NzM5OCwgMjYpLAogICAgIiRjbHVzdGVyVGltZSIgOiB7CiAgICAgICAgImNsdXN0ZXJUaW1lIiA6IFRpbWVzdGFtcCgxNjMzMTc3Mzk4LCAyNiksCiAgICAgICAgInNpZ25hdHVyZSIgOiB7CiAgICAgICAgICAgICJoYXNoIiA6IEJpbkRhdGEoMCwiQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBPSIpLAogICAgICAgICAgICAia2V5SWQiIDogTnVtYmVyTG9uZygwKQogICAgICAgIH0KICAgIH0KfQpgYGAKCiMjIyBTdGVwIDExIOKAkyBWYWxpZGF0ZSBzaGFyZGluZyBzdGF0dXMKCmBgYGphdmFzY3JpcHQgCgoKbW9uZ29zPiBzaC5zdGF0dXMoKQotLS0gU2hhcmRpbmcgU3RhdHVzIC0tLQogIHNoYXJkaW5nIHZlcnNpb246IHsKICAgICJfaWQiIDogMSwKICAgICJtaW5Db21wYXRpYmxlVmVyc2lvbiIgOiA1LAogICAgImN1cnJlbnRWZXJzaW9uIiA6IDYsCiAgICAiY2x1c3RlcklkIiA6IE9iamVjdElkKCI2MTU3ZWZkNzk4Mjc4MmUzMTRmMWI2NTEiKQogIH0KICBzaGFyZHM6CiAgICAgICAgeyAgIl9pZCIgOiAicnNfbW9uZ28xIiwgICJob3N0IiA6ICJyc19tb25nbzEvc2hhcmQxX21vbmdvMToyNzAxNyxzaGFyZDFfbW9uZ28yOjI3MDE3LHNoYXJkMV9tb25nbzM6MjcwMTciLCAgInN0YXRlIiA6IDEgfQogICAgICAgIHsgICJfaWQiIDogInJzX21vbmdvMiIsICAiaG9zdCIgOiAicnNfbW9uZ28yL3NoYXJkMl9tb25nbzE6MjcwMTcsc2hhcmQyX21vbmdvMjoyNzAxNyxzaGFyZDJfbW9uZ28zOjI3MDE3IiwgICJzdGF0ZSIgOiAxIH0KICAgICAgICB7ICAiX2lkIiA6ICJyc19tb25nbzMiLCAgImhvc3QiIDogInJzX21vbmdvMy9zaGFyZDNfbW9uZ28xOjI3MDE3LHNoYXJkM19tb25nbzI6MjcwMTcsc2hhcmQzX21vbmdvMzoyNzAxNyIsICAic3RhdGUiIDogMSB9CiAgYWN0aXZlIG1vbmdvc2VzOgogICAgICAgICI0LjQuOCIgOiAxCiAgYXV0b3NwbGl0OgogICAgICAgIEN1cnJlbnRseSBlbmFibGVkOiB5ZXMKICBiYWxhbmNlcjoKICAgICAgICBDdXJyZW50bHkgZW5hYmxlZDogIHllcwogICAgICAgIEN1cnJlbnRseSBydW5uaW5nOiAgbm8KICAgICAgICBGYWlsZWQgYmFsYW5jZXIgcm91bmRzIGluIGxhc3QgNSBhdHRlbXB0czogIDAKICAgICAgICBNaWdyYXRpb24gUmVzdWx0cyBmb3IgdGhlIGxhc3QgMjQgaG91cnM6CiAgICAgICAgICAgICAgICA2ODIgOiBTdWNjZXNzCiAgZGF0YWJhc2VzOgogICAgICAgIHsgICJfaWQiIDogImNvbmZpZyIsICAicHJpbWFyeSIgOiAiY29uZmlnIiwgICJwYXJ0aXRpb25lZCIgOiB0cnVlIH0KICAgICAgICAgICAgICAgIGNvbmZpZy5zeXN0ZW0uc2Vzc2lvbnMKICAgICAgICAgICAgICAgICAgICAgICAgc2hhcmQga2V5OiB7ICJfaWQiIDogMSB9CiAgICAgICAgICAgICAgICAgICAgICAgIHVuaXF1ZTogZmFsc2UKICAgICAgICAgICAgICAgICAgICAgICAgYmFsYW5jaW5nOiB0cnVlCiAgICAgICAgICAgICAgICAgICAgICAgIGNodW5rczoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByc19tb25nbzEgICAzNDIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByc19tb25nbzIgICAzNDEKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByc19tb25nbzMgICAzNDEKICAgICAgICAgICAgICAgICAgICAgICAgdG9vIG1hbnkgY2h1bmtzIHRvIHByaW50LCB1c2UgdmVyYm9zZSBpZiB5b3Ugd2FudCB0byBmb3JjZSBwcmludAogICAgICAgZW1wbG95ZWUuZW1wX2xpc3QyCiAgICAgICAgICAgICAgICAgICAgICAgIHNoYXJkIGtleTogeyAic3Jfbm8iIDogImhhc2hlZCIgfQogICAgICAgICAgICAgICAgICAgICAgICB1bmlxdWU6IGZhbHNlCiAgICAgICAgICAgICAgICAgICAgICAgIGJhbGFuY2luZzogdHJ1ZQogICAgICAgICAgICAgICAgICAgICAgICBjaHVua3M6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcnNfbW9uZ28xICAgMgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJzX21vbmdvMiAgIDIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByc19tb25nbzMgICAKYGBgCgojIyMgU3RlcCAxMiAtIFZhbGlkYXRlIGNodW5rIGRpc3RyaWJ1dGlvbiAKYGBgamF2YXNjcmlwdAoKbW9uZ29zPiBkYi5nZXRTaWJsaW5nREIoImVtcGxveWVlIikuZW1wX2xpc3QyLmdldFNoYXJkRGlzdHJpYnV0aW9uKCk7CiAKU2hhcmQgcnNfbW9uZ28xIGF0IHJzX21vbmdvMS9zaGFyZDFfbW9uZ28xOjI3MDE3LHNoYXJkMV9tb25nbzI6MjcwMTcsc2hhcmQxX21vbmdvMzoyNzAxNwogZGF0YSA6IDIuMDlNaUIgZG9jcyA6IDMzNDI2IGNodW5rcyA6IDIKIGVzdGltYXRlZCBkYXRhIHBlciBjaHVuayA6IDEuMDRNaUIKIGVzdGltYXRlZCBkb2NzIHBlciBjaHVuayA6IDE2NzEzCiAKU2hhcmQgcnNfbW9uZ28zIGF0IHJzX21vbmdvMy9zaGFyZDNfbW9uZ28xOjI3MDE3LHNoYXJkM19tb25nbzI6MjcwMTcsc2hhcmQzX21vbmdvMzoyNzAxNwogZGF0YSA6IDIuMDlNaUIgZG9jcyA6IDMzMzc5IGNodW5rcyA6IDIKIGVzdGltYXRlZCBkYXRhIHBlciBjaHVuayA6IDEuMDRNaUIKIGVzdGltYXRlZCBkb2NzIHBlciBjaHVuayA6IDE2Njg5CiAKU2hhcmQgcnNfbW9uZ28yIGF0IHJzX21vbmdvMi9zaGFyZDJfbW9uZ28xOjI3MDE3LHNoYXJkMl9tb25nbzI6MjcwMTcsc2hhcmQyX21vbmdvMzoyNzAxNwogZGF0YSA6IDIuMDhNaUIgZG9jcyA6IDMzMTk1IGNodW5rcyA6IDIKIGVzdGltYXRlZCBkYXRhIHBlciBjaHVuayA6IDEuMDRNaUIKIGVzdGltYXRlZCBkb2NzIHBlciBjaHVuayA6IDE2NTk3CiAKVG90YWxzCiBkYXRhIDogNi4yOE1pQiBkb2NzIDogMTAwMDAwIGNodW5rcyA6IDYKIFNoYXJkIHJzX21vbmdvMSBjb250YWlucyAzMy40MiUgZGF0YSwgMzMuNDIlIGRvY3MgaW4gY2x1c3RlciwgYXZnIG9iaiBzaXplIG9uIHNoYXJkIDogNjVCCiBTaGFyZCByc19tb25nbzMgY29udGFpbnMgMzMuMzclIGRhdGEsIDMzLjM3JSBkb2NzIGluIGNsdXN0ZXIsIGF2ZyBvYmogc2l6ZSBvbiBzaGFyZCA6IDY1QgogU2hhcmQgcnNfbW9uZ28yIGNvbnRhaW5zIDMzLjE5JSBkYXRhLCAzMy4xOSUgZG9jcyBpbiBjbHVzdGVyLCBhdmcgCgpgYGAKCgoK
+---
+title: "Configure Sharding in MongoDB on Docker Containers"
+description: "In my previous blog post, I posted about configuring Replica Set to meet high availability requirements.  In this post, i cover   MongoDB Sharded Cluster Components  Steps to create MongoDB Sharded Cluster using Docker Compose Add Replica Set as a Sh..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835014364/b4a4211b-f0bb-4d48-b9d6-5789ef832b68.jpeg"
+readingTime: 7
+slug: "sharding-mongo-docker"
+---
+In my previous [blog](2021-09-18-mongodb-rs-docker-persistent-volume.md) post, I posted about configuring Replica Set to meet high availability requirements. 
+
+In this post, i cover 
+
+* MongoDB Sharded Cluster Components 
+* Steps to create MongoDB Sharded Cluster using Docker Compose
+* Add Replica Set as a Shard
+* Sharding Data
+* Verify Distribution of Data 
+
+<!--truncate-->
+
+## Replica Set vs Sharding 
+
+**Replica Set** is the way of keeping identical set of data on multiple servers. Sharding refers to the process of splitting data across nodes, also known as horizontal partitioning. 
+
+A database **shard**, is a horizontal partition of data in a database,  each node contains different set of the data. 
+
+MongoDB supports and implements `auto-sharding` by automating balancing of data across the shards. 
+
+
+
+
+## MongoDB Sharding Components 
+
+The first step in creating a Sharded MongoDB cluster is to understand all the components and processes that constitute a cluster 
+
+* **Query Router - mongos**
+
+mongos is the routing process. The goal of sharding is to make cluster of 100-1000 nodes looks like a single interface for the application and abstract all the complexity of data access from multiple shards. The mongos router is table of contents and knows where the  data required by application is located, mongos forwards the application request to appropriate shard(s).   
+
+* **Config Servers**
+
+Config Servers hold all the metadata about which node is holding which data(chunks). mongos retrieves all the metadata from Config Servers. Config Servers are critical and its important to configure and bring the config servers first, backup config servers and setup config servers as Replica Set.  
+
+## Steps to create MongoDB Sharded Cluster using Docker Compose
+
+Below image show different components required to setup MongoDB sharding with Replica Set. The image also shows how application communicates to MongoDB sharded cluster. As discussed in the sharding components application always connects first to mongos and mongos communicates with config server (cfg1, cfg2, cfg3 are part of replicaset in below image)
+
+```mermaid
+  stateDiagram-v2
+    [*] --> Application
+    direction LR
+    state Application
+    state QueryRouter 
+    {
+   
+   mongos 
+   }
+   Application --> QueryRouter : Read
+   QueryRouter --> Application: Results
+    state cfg: config 
+    {
+        
+        cfg1 
+        cfg2
+        cfg3
+        
+   }
+    QueryRouter --> config
+    config --> QueryRouter
+   state Shard1: rs_mongo1
+    {
+    shard1_mongo1
+    shard1_mongo2
+    shard1_mongo3
+    }
+    state Shard2: rs_mongo2
+    {
+    shard2_mongo1
+    shard2_mongo2
+    shard2_mongo3
+    }
+    
+    state Shard3: rs_mongo3 
+    {
+     shard3_mongo1
+    shard3_mongo2
+    shard3_mongo3
+    }
+
+    
+      QueryRouter --> rs_mongo1
+    QueryRouter --> rs_mongo2
+    QueryRouter --> rs_mongo3
+    rs_mongo1 --> QueryRouter
+    rs_mongo2 --> QueryRouter
+    rs_mongo3 --> QueryRouter
+ 
+```
+
+Lets setup above MongoDB Sharding Cluster using docker compose
+
+### Step 1 - Author Docker Compose file 
+
+:::note
+Ensure directory path mentioned in docker compose for persistent volume before the “:” is existing on local host
+:::
+
+```YAML
+services:
+  shard1_mongo1:
+    image: mongo_ssh
+    hostname: shard1_mongo1
+    container_name: shard1_mongo1
+    volumes:
+      - ~/db/shard1_mongo1/mongod.conf:/etc/mongod.conf
+      - ~/db/shard1_mongo1/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard1_mongo1/data/db/:/data/db/
+      - ~/db/shard1_mongo1/log/:/var/log/mongodb/
+    ports:
+      - 20005:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard1_mongo2:
+    image: mongo_ssh
+    hostname: shard1_mongo2
+    container_name: shard1_mongo2
+    volumes:
+      - ~/db/shard1_mongo2/mongod.conf:/etc/mongod.conf
+      - ~/db/shard1_mongo2/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard1_mongo2/data/db/:/data/db/
+      - ~/db/shard1_mongo2/log/:/var/log/mongodb/
+    ports:
+      - 20006:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard1_mongo3:
+    image: mongo_ssh
+    hostname: shard1_mongo3
+    container_name: shard1_mongo3
+    volumes:
+      - ~/db/shard1_mongo3/mongod.conf:/etc/mongod.conf
+      - ~/db/shard1_mongo3/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard1_mongo3/data/db/:/data/db/
+      - ~/db/shard1_mongo3/log/:/var/log/mongodb/
+    ports:
+      - 20007:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard2_mongo1:
+    image: mongo_ssh
+    hostname: shard2_mongo1
+    container_name: shard2_mongo1
+    volumes:
+      - ~/db/shard2_mongo1/mongod.conf:/etc/mongod.conf
+      - ~/db/shard2_mongo1/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard2_mongo1/data/db/:/data/db/
+      - ~/db/shard2_mongo1/log/:/var/log/mongodb/
+    ports:
+      - 20008:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard2_mongo2:
+    image: mongo_ssh
+    hostname: shard2_mongo2
+    container_name: shard2_mongo2
+    volumes:
+      - ~/db/shard2_mongo2/mongod.conf:/etc/mongod.conf
+      - ~/db/shard2_mongo2/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard2_mongo2/data/db/:/data/db/
+      - ~/db/shard2_mongo2/log/:/var/log/mongodb/
+    ports:
+      - 20009:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard2_mongo3:
+    image: mongo_ssh
+    hostname: shard2_mongo3
+    container_name: shard2_mongo3
+    volumes:
+      - ~/db/shard2_mongo3/mongod.conf:/etc/mongod.conf
+      - ~/db/shard2_mongo3/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard2_mongo3/data/db/:/data/db/
+      - ~/db/shard2_mongo3/log/:/var/log/mongodb/
+    ports:
+      - 20010:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard3_mongo1:
+    image: mongo_ssh
+    hostname: shard3_mongo1
+    container_name: shard3_mongo1
+    volumes:
+      - ~/db/shard3_mongo1/mongod.conf:/etc/mongod.conf
+      - ~/db/shard3_mongo1/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard3_mongo1/data/db/:/data/db/
+      - ~/db/shard3_mongo1/log/:/var/log/mongodb/
+    ports:
+      - 20011:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard3_mongo2:
+    image: mongo_ssh
+    hostname: shard3_mongo2
+    container_name: shard3_mongo2
+    volumes:
+      - ~/db/shard3_mongo2/mongod.conf:/etc/mongod.conf
+      - ~/db/shard3_mongo2/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard3_mongo2/data/db/:/data/db/
+      - ~/db/shard3_mongo2/log/:/var/log/mongodb/
+    ports:
+      - 20012:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  shard3_mongo3:
+    image: mongo_ssh
+    hostname: shard3_mongo3
+    container_name: shard3_mongo3
+    volumes:
+      - ~/db/shard3_mongo3/mongod.conf:/etc/mongod.conf
+      - ~/db/shard3_mongo3/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/shard3_mongo3/data/db/:/data/db/
+      - ~/db/shard3_mongo3/log/:/var/log/mongodb/
+    ports:
+      - 20013:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+# MongoDB Confiugration Server 
+  cfg1:
+    image: mongo_ssh
+    hostname: cfg1
+    container_name: cfg1
+    volumes:
+      - ~/db/cfg1/mongod.conf:/etc/mongod.conf
+      - ~/db/cfg1/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/cfg1/data/db/:/data/db/
+      - ~/db/cfg1/log/:/var/log/mongodb/
+    ports:
+      - 20014:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  cfg2:
+    image: mongo_ssh
+    hostname: cfg2
+    container_name: cfg2
+    volumes:
+      - ~/db/cfg2/mongod.conf:/etc/mongod.conf
+      - ~/db/cfg2/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/cfg2/data/db/:/data/db/
+      - ~/db/cfg2/log/:/var/log/mongodb/
+    ports:
+      - 20015:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  cfg3:
+    image: mongo_ssh
+    hostname: cfg3
+    container_name: cfg3
+    volumes:
+      - ~/db/cfg3/mongod.conf:/etc/mongod.conf
+      - ~/db/cfg3/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/cfg3/data/db/:/data/db/
+      - ~/db/cfg3/log/:/var/log/mongodb/
+    ports:
+      - 20016:27017
+    command: ["-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+ 
+  mongos:
+    image: mongo_ssh
+    hostname: mongos
+    container_name: mongos
+    volumes:
+      - ~/db/mongos/mongod.conf:/etc/mongod.conf
+      - ~/db/mongos/initdb.d/:/docker-entrypoint-initdb.d/
+      - ~/db/mongos/data/db/:/data/db/
+      - ~/db/mongos/log/:/var/log/mongodb/
+    ports:
+      - 20017:27017
+    command: ["mongos","-f", "/etc/mongod.conf"]
+    network_mode: mongo_net
+
+
+```
+
+### Step 2 - Draft Config Server configuration file (pass clusterRole: configsvr to indicate this server is Config Server)
+
+```YAML
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+storage:
+  dbPath: /data/db
+  journal:
+    enabled: true
+  engine:  wiredTiger
+net:
+  port: 27017
+  bindIp: 127.0.0.1  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
+sharding:
+  clusterRole: configsvr
+replication:
+  replSetName: rs_config
+```
+
+### Step 3 - Draft Query Router mongos configuration file (pass configDB:config server list)
+
+```YAML
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+ 
+net:
+  port: 27017
+  bindIp: 127.0.0.1  # Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.
+ 
+sharding:
+  configDB: rs_config/cfg1:27017,cfg2:27017,cfg3:27017
+```
+
+### Step 4 - Copy mongod.conf and mongos.conf to the path mentioned in step 1 `docker-compose.yaml`
+
+### Step 5 - Spin up Config Server, mongos, all mongod nodes
+
+```shell 
+$ docker compose up -d
+```
+
+### Step 6 - Connect to config server and add config server in a Replica Set
+
+```javascript 
+rs_config:PRIMARY> rs.initiate() 
+rs_config:PRIMARY> rs.add("cfg2:27017")
+rs_config:PRIMARY> rs.add("cfg3:27017")
+```
+
+### Step 7 -  Add all data nodes to replicaset
+
+```javascript 
+# Connect to shard1_mongo1
+ 
+admin> rs.initiate()
+rs_mongo1 [direct: primary] admin> rs.add("shard1_mongo2")
+rs_mongo1 [direct: primary] admin> rs.add("shard1_mongo3")
+ 
+# Connect to shard2_mongo1
+ 
+admin> rs.initiate()
+rs_mongo2 [direct: primary] test> rs.add("shard2_mongo2")
+rs_mongo2 [direct: primary] test> rs.add("shard2_mongo3")
+ 
+# Connect to shard3_mongo1
+ 
+test> rs.initiate()
+rs_mongo3 [direct: other] test> rs.add("shard3_mongo2")
+rs_mongo3 [direct: primary] test> rs.add("shard3_mongo3")
+
+```
+
+### Step 8 – Connect to mongos and convert data replicaset nodes to shards
+
+```javascript
+
+mongos>sh.addShard("rs_mongo1/shard1_mongo1:27017,shard1_mongo2:27017,shard1_mongo3:27017")
+ 
+mongos>sh.addShard("rs_mongo2/shard2_mongo1:27017,shard2_mongo2:27017,shard2_mongo3:27017")
+ 
+mongos>sh.addShard("rs_mongo3/shard3_mongo1:27017,shard3_mongo2:27017,
+
+```
+
+### Step 9 – Connect to mongos and enable sharding on a test database “Employee”
+
+```javascript
+mongos> db.adminCommand({enableSharding : "employee"})
+```
+
+### Step 10 – Generate test data ; Create an index on the key to be sharded and shard the collection
+
+```javascript
+mongos> use employee
+switched to db employee
+ 
+mongos> for (var i = 0; i < 100000; i++) { db.emp_list2.insert({ "sr_no": "emp # " + i, "create_date": new Date() }); }
+ 
+mongos> db.emp_list2.ensureIndex({"sr_no" : "hashed"})
+ 
+mongos> sh.shardCollection("employee.emp_list2", {"sr_no":"hashed"})
+ 
+{
+    "collectionsharded" : "employee.emp_list2",
+    "collectionUUID" : UUID("17195baa-fc6c-4c3e-8a2b-58fb1278e40c"),
+    "ok" : 1,
+    "operationTime" : Timestamp(1633177398, 26),
+    "$clusterTime" : {
+        "clusterTime" : Timestamp(1633177398, 26),
+        "signature" : {
+            "hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+            "keyId" : NumberLong(0)
+        }
+    }
+}
+```
+
+### Step 11 – Validate sharding status
+
+```javascript 
+
+
+mongos> sh.status()
+--- Sharding Status ---
+  sharding version: {
+    "_id" : 1,
+    "minCompatibleVersion" : 5,
+    "currentVersion" : 6,
+    "clusterId" : ObjectId("6157efd7982782e314f1b651")
+  }
+  shards:
+        {  "_id" : "rs_mongo1",  "host" : "rs_mongo1/shard1_mongo1:27017,shard1_mongo2:27017,shard1_mongo3:27017",  "state" : 1 }
+        {  "_id" : "rs_mongo2",  "host" : "rs_mongo2/shard2_mongo1:27017,shard2_mongo2:27017,shard2_mongo3:27017",  "state" : 1 }
+        {  "_id" : "rs_mongo3",  "host" : "rs_mongo3/shard3_mongo1:27017,shard3_mongo2:27017,shard3_mongo3:27017",  "state" : 1 }
+  active mongoses:
+        "4.4.8" : 1
+  autosplit:
+        Currently enabled: yes
+  balancer:
+        Currently enabled:  yes
+        Currently running:  no
+        Failed balancer rounds in last 5 attempts:  0
+        Migration Results for the last 24 hours:
+                682 : Success
+  databases:
+        {  "_id" : "config",  "primary" : "config",  "partitioned" : true }
+                config.system.sessions
+                        shard key: { "_id" : 1 }
+                        unique: false
+                        balancing: true
+                        chunks:
+                                rs_mongo1   342
+                                rs_mongo2   341
+                                rs_mongo3   341
+                        too many chunks to print, use verbose if you want to force print
+       employee.emp_list2
+                        shard key: { "sr_no" : "hashed" }
+                        unique: false
+                        balancing: true
+                        chunks:
+                                rs_mongo1   2
+                                rs_mongo2   2
+                                rs_mongo3   
+```
+
+### Step 12 - Validate chunk distribution 
+```javascript
+
+mongos> db.getSiblingDB("employee").emp_list2.getShardDistribution();
+ 
+Shard rs_mongo1 at rs_mongo1/shard1_mongo1:27017,shard1_mongo2:27017,shard1_mongo3:27017
+ data : 2.09MiB docs : 33426 chunks : 2
+ estimated data per chunk : 1.04MiB
+ estimated docs per chunk : 16713
+ 
+Shard rs_mongo3 at rs_mongo3/shard3_mongo1:27017,shard3_mongo2:27017,shard3_mongo3:27017
+ data : 2.09MiB docs : 33379 chunks : 2
+ estimated data per chunk : 1.04MiB
+ estimated docs per chunk : 16689
+ 
+Shard rs_mongo2 at rs_mongo2/shard2_mongo1:27017,shard2_mongo2:27017,shard2_mongo3:27017
+ data : 2.08MiB docs : 33195 chunks : 2
+ estimated data per chunk : 1.04MiB
+ estimated docs per chunk : 16597
+ 
+Totals
+ data : 6.28MiB docs : 100000 chunks : 6
+ Shard rs_mongo1 contains 33.42% data, 33.42% docs in cluster, avg obj size on shard : 65B
+ Shard rs_mongo3 contains 33.37% data, 33.37% docs in cluster, avg obj size on shard : 65B
+ Shard rs_mongo2 contains 33.19% data, 33.19% docs in cluster, avg 
+
+```
+
+
+

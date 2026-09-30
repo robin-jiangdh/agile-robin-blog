@@ -1,1 +1,38 @@
-LS0tCnRpdGxlOiAiU29uYXJxdWJlIGNvbW11bml0eSB3aXRoIEJyYW5jaCIKZGVzY3JpcHRpb246ICLkuLpzb25hcnF1YmXlvIDmupDniYjmnKzlop7liqDlpJrliIbmlK/mlK/mjIEg5o+S5Lu25Zyw5Z2AIOmhueebruWcsOWdgO+8mmh0dHBzOi8vZ2l0aHViLmNvbS9tYzFhcmtlL3NvbmFycXViZS1jb21tdW5pdHktYnJhbmNoLXBsdWdpbiDkuIvovb3lnLDlnYDvvJpodHRwczovL2dpdGh1Yi5jb20vbWMxYXJrZS9zb25hcnF1YmUtY29tbXVuaXR5LWJyYW5jaC1wbHVnaW4vcmVsZWFzZXMgd2dldCBodHRwczovL2dpdGh1Yi5jb20vbWMxYXJrZS9zb25hcnF1YmUtY29tbXVuaXR5LWJyYW5jaC1wbHVnaW4vcmVsZWFzZXMvZG93bmxvYS4uLiIKZGF0ZTogIjIwMjQtMDItMDQiCnRhZ3M6IFsic29uYXJxdWJlIiwgIlNvbmFyIFN5c3RlbXMgTWFya2V0Il0KcmVhZGluZ1RpbWU6IDEKc2x1ZzogInNvbmFycXViZS1jb21tdW5pdHktd2l0aC1icmFuY2gtcGx1Z2lucyIKLS0tCuS4unNvbmFycXViZeW8gOa6kOeJiOacrOWinuWKoOWkmuWIhuaUr+aUr+aMgQojIOaPkuS7tuWcsOWdgArpobnnm67lnLDlnYDvvJpodHRwczovL2dpdGh1Yi5jb20vbWMxYXJrZS9zb25hcnF1YmUtY29tbXVuaXR5LWJyYW5jaC1wbHVnaW4KCuS4i+i9veWcsOWdgO+8mmh0dHBzOi8vZ2l0aHViLmNvbS9tYzFhcmtlL3NvbmFycXViZS1jb21tdW5pdHktYnJhbmNoLXBsdWdpbi9yZWxlYXNlcwpgYGAKd2dldCBodHRwczovL2dpdGh1Yi5jb20vbWMxYXJrZS9zb25hcnF1YmUtY29tbXVuaXR5LWJyYW5jaC1wbHVnaW4vcmVsZWFzZXMvZG93bmxvYWQvMS4xNC4wL3NvbmFycXViZS1jb21tdW5pdHktYnJhbmNoLXBsdWdpbi0xLjE0LjAuamFyCmBgYAojIOaPkuS7tuS9jee9rgpgYGAKbXYgIHNvbmFycXViZS1jb21tdW5pdHktYnJhbmNoLXBsdWdpbi0xLjE0LjAuamFyIC91c3IvbG9jYWwvc29uYXJxdWJlL2V4dGVuc2lvbnMvcGx1Z2lucy8gICMvdXNyL2xvY2FsL3NvbmFycXViZeS4unNvbmFycXViZeeahOWuieijheebruW9le+8jOagueaNruWunumZheaDheWGteS/ruaUuQpgYGAKIyDkv67mlLnphY3nva4KYGBgCmdyZXAgJ3NvbmFyLmNlLmphdmFBZGRpdGlvbmFsT3B0c3xzb25hci53ZWIuamF2YUFkZGl0aW9uYWxPcHRzJyBzb25hci5wcm9wZXJ0aWVzICPku6XkuIvkuKTpobnphY3nva7lhbbku5bkuI3lj5jvvIzkv67mlLkxLjE0LjDkuLrkvaDkuIvovb3nmoTniYjmnKwKc29uYXIud2ViLmphdmFBZGRpdGlvbmFsT3B0cz0tamF2YWFnZW50Oi4vZXh0ZW5zaW9ucy9wbHVnaW5zL3NvbmFycXViZS1jb21tdW5pdHktYnJhbmNoLXBsdWdpbi0xLjE0LjAuamFyPXdlYgpzb25hci5jZS5qYXZhQWRkaXRpb25hbE9wdHM9LWphdmFhZ2VudDouL2V4dGVuc2lvbnMvcGx1Z2lucy9zb25hcnF1YmUtY29tbXVuaXR5LWJyYW5jaC1wbHVnaW4tMS4xNC4wLmphcj1jZQpgYGAKIyDph43lkK8KYGBgCnN1IC0gc29uYXIKY2QgL3Vzci9sb2NhbC9zb25hcnF1YmUvYmluL2xpbnV4LXg4Ni02NAouL3NvbmFyLnNoIHN0b3AKLi9zb25hci5zaCBzdGFydApgYGAKCiMg5L+u5pS5c29uYXLmiavmj4/lj4LmlbAKYGBgClNvbmFyU2Nhbm5lci5NU0J1aWxkIFtiZWdpbnxlbmRdIC9rZXk6cHJvamVjdF9rZXkgWy9uYW1lOnByb2plY3RfbmFtZV0gWy92ZXJzaW9uOnByb2plY3RfdmVyc2lvbl0gWy9zOnNldHRpbmdzX2ZpbGVdIFsvZDpzb25hci50b2tlbj10b2tlbl0gWy9kOnNvbmFyLntwcm9wZXJ0eV9uYW1lfT12YWx1ZV0KYGBgCg==
+---
+title: "Sonarqube community with Branch"
+description: "为sonarqube开源版本增加多分支支持 插件地址 项目地址：https://github.com/mc1arke/sonarqube-community-branch-plugin 下载地址：https://github.com/mc1arke/sonarqube-community-branch-plugin/releases wget https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/downloa..."
+date: "2024-02-04"
+tags: ["sonarqube", "Sonar Systems Market"]
+readingTime: 1
+slug: "sonarqube-community-with-branch-plugins"
+---
+为sonarqube开源版本增加多分支支持
+# 插件地址
+项目地址：https://github.com/mc1arke/sonarqube-community-branch-plugin
+
+下载地址：https://github.com/mc1arke/sonarqube-community-branch-plugin/releases
+```
+wget https://github.com/mc1arke/sonarqube-community-branch-plugin/releases/download/1.14.0/sonarqube-community-branch-plugin-1.14.0.jar
+```
+# 插件位置
+```
+mv  sonarqube-community-branch-plugin-1.14.0.jar /usr/local/sonarqube/extensions/plugins/  #/usr/local/sonarqube为sonarqube的安装目录，根据实际情况修改
+```
+# 修改配置
+```
+grep 'sonar.ce.javaAdditionalOpts|sonar.web.javaAdditionalOpts' sonar.properties #以下两项配置其他不变，修改1.14.0为你下载的版本
+sonar.web.javaAdditionalOpts=-javaagent:./extensions/plugins/sonarqube-community-branch-plugin-1.14.0.jar=web
+sonar.ce.javaAdditionalOpts=-javaagent:./extensions/plugins/sonarqube-community-branch-plugin-1.14.0.jar=ce
+```
+# 重启
+```
+su - sonar
+cd /usr/local/sonarqube/bin/linux-x86-64
+./sonar.sh stop
+./sonar.sh start
+```
+
+# 修改sonar扫描参数
+```
+SonarScanner.MSBuild [begin|end] /key:project_key [/name:project_name] [/version:project_version] [/s:settings_file] [/d:sonar.token=token] [/d:sonar.{property_name}=value]
+```

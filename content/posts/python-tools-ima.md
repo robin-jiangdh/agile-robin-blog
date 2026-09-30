@@ -1,1 +1,142 @@
-LS0tCnRpdGxlOiAi8J+TpiBQeXRob24gVG9vbHMg55+l6K+G5bqT5rGH5oC7IC0g5LuOIElNQSDnn6Xor4blupPmorPnkIbnmoTlrp7nlKjlt6XlhbciCmRlc2NyaXB0aW9uOiAi5pys5paH5piv5LuOIElNQSDkuKrkurrnn6Xor4blupPkuK3morPnkIblh7rnmoQgUHl0aG9uIOebuOWFs+W3peWFt+WSjOW6k++8jOa2teeblue9kee7nOivt+axguOAgeaVsOaNruWkhOeQhuOAgeWPr+inhuWMluetieWkmuS4qumihuWfn+OAgiIKZGF0ZTogIjIwMjYtMDQtMTciCnJlYWRpbmdUaW1lOiAyCnNsdWc6ICJweXRob24tdG9vbHMtaW1hIgpjYXRlZ29yeTogIuW3peWFt+ebmOeCuSIKLS0tCiMg8J+TpiBQeXRob24gVG9vbHMg55+l6K+G5bqT5rGH5oC7Cgo+IOacrOaWh+aYr+S7jiBJTUEg5Liq5Lq655+l6K+G5bqT5Lit5qKz55CG5Ye655qEIFB5dGhvbiDnm7jlhbPlt6XlhbflkozlupPvvIzmtrXnm5bnvZHnu5zor7fmsYLjgIHmlbDmja7lpITnkIbjgIHlj6/op4bljJbnrYnlpJrkuKrpoobln5/jgIIKCiMjIOamgui/sAoK5a6a5pyf5pW055CG55+l6K+G5bqT5piv5L+d5oyB5oqA5pyv5pWP5oSf5bqm55qE6YeN6KaB5Lmg5oOv44CC5pys5paH5rGH5oC75LqG5LuOIElNQSDnn6Xor4blupPkuK3lj5HnjrDnmoQgKio3IOS4quWunueUqCBQeXRob24g5bel5YW3KirvvIzmjInlip/og73liIbnsbvmlbTnkIbvvIzmlrnkvr/lpKflrrbmoLnmja7pnIDmsYLlv6vpgJ/mn6Xmib7jgIIKCi0tLQoKIyMg572R57uc6K+35rGC5LiO54is6JmrCgojIyMgMS4gTmlxdWVzdHMKCioq5a6a5L2NKio6IOWFqOaWsOeahCBQeXRob24gSFRUUCDlrqLmiLfnq6/pobnnm64KCioq54m554K5Kio6Ci0g6auY5oCn6IO95a6e546wCi0gQVBJIOS4jiByZXF1ZXN0cyDpq5jluqblhbzlrrkKLSDpgILlkIjku44gcmVxdWVzdHMg6L+B56e75Yiw5pu0546w5Luj44CB6auY5oCn6IO955qEIEhUVFAg5bqTCgoqKumAgueUqOWcuuaZryoqOiDpnIDopoHpq5jmgKfog70gSFRUUCDor7fmsYLlpITnkIbnmoQgV2ViIOW6lOeUqOOAgUFQSSDlrqLmiLfnq6/lvIDlj5EKCi0tLQoKIyMjIDIuIFNjcmFwbGluZwoKKirlrprkvY0qKjogUHl0aG9uIOeIrOiZq+e7iOe7k+iAhQoKKirnibnngrkqKjoKLSDog73nu5Xov4cgQ2xvdWRmbGFyZSBUdXJuc3RpbGUg562J5Y+N54is5py65Yi2Ci0g5Y+v55u05o6l5LiOIENsYXcgQWdlbnQg6ZuG5oiQCi0g5Li6IEFJIOmpseWKqOeahOaVsOaNrueIrOWPluaPkOS+m+W3peS4mue6p+iDveWKmwoKKirpgILnlKjlnLrmma8qKjog5aSN5p2C572R56uZ55qE5pWw5o2u54is5Y+W44CB6ZyA6KaB57uV6L+H5Y+N54is5py65Yi255qE54is6Jmr6aG555uuCgotLS0KCiMjIOaVsOaNruWkhOeQhuS4juWPr+inhuWMlgoKIyMjIDMuIGx1eAoKKirlrprkvY0qKjog55u06KeC6auY5pWI55qEIFB5dGhvbiDmlbDmja7lj6/op4bljJblupMKCioq54m554K5Kio6Ci0g6Ieq5Yqo5o6o6I2Q5Y+v6KeG5YyW5pa55qGICi0g5ZyoIEp1cHl0ZXIg5Lit5bGV56S6IERhdGFGcmFtZSDml7boh6rliqjliIbmnpDnm7jlhbPmgKfjgIHliIbluIPjgIHml7bpl7Totovlir/nrYkKLSDkuIDplK7lr7zlh7rlj6/op4bljJbku6PnoIEKCioq6YCC55So5Zy65pmvKio6IOaOoue0ouaAp+aVsOaNruWIhuaekCAoRURBKeOAgeW/q+mAn+aVsOaNruWPr+inhuWMluWOn+WeiwoKLS0tCgojIyMgNC4gd292ZQoKKirlrprkvY0qKjog5pm66IO957K+566A55qEIFB5dGhvbiDmlbDmja7nvJbnu4flupMKCioq54m554K5Kio6Ci0g55So5LqO5pW05ZCI5aSa5Liq5pWw5o2u5rqQ77yI5pWw5o2u5bqT44CBQVBJ44CB5paH5Lu277yJCi0g5aOw5piO5byP5pWw5o2u6L2s5o2iCi0g566A5YyW5aSN5p2C55qE5pWw5o2u566h6YGT5Lu75YqhCgoqKumAgueUqOWcuuaZryoqOiDlpJrmlbDmja7mupDmlbTlkIjjgIFFVEwg5rWB56iL44CB5pWw5o2u566h6YGT5p6E5bu6CgotLS0KCiMjIyA1LiBQYW5kYXMgKyBBSQoKKirlrprkvY0qKjog55So5Y+v6KeG5YyWICsgQUkg5YGa5a6M5pW05pWw5o2u5riF5rSXCgoqKueJueeCuSoqOgotIOWPr+inhuWMlueVjOmdouaTjeS9nOaVsOaNrua4hea0lwotIEFJIOi+heWKqeaVsOaNruWIhuaekOWSjOi9rOaNogotIOS4gOmUruWvvOWHuiBQeXRob24g5Luj56CBCgoqKumAgueUqOWcuuaZryoqOiDmlbDmja7muIXmtJfjgIHmlbDmja7pooTlpITnkIbjgIHpnZ7nqIvluo/lkZjlj4vlpb3nmoTmlbDmja7lpITnkIYKCi0tLQoKIyMg5pWw5o2u5bqP5YiX5YyW5LiOIFVSTCDlpITnkIYKCiMjIyA2LiBvcmpzb24KCioq5a6a5L2NKio6IOaegemAnyBKU09OIOW6kwoKKirnibnngrkqKjoKLSDln7rkuo4gUnVzdCDlrp7njrAKLSDmgKfog73lpKfluYXotoXotormoIflh4blupMganNvbiDmqKHlnZcKLSDmlK/mjIEgZGF0ZXRpbWXjgIFVVUlEIOetieexu+WeiwoKKirpgILnlKjlnLrmma8qKjog6auY5bm25Y+R44CB5a+5IEpTT04g5aSE55CG5oCn6IO95pyJ5p6B6Ie06KaB5rGC55qEIFdlYiDlupTnlKjlkozmlbDmja7lpITnkIYKCi0tLQoKIyMjIDcuIGZ1cmwKCioq5a6a5L2NKio6IOebtOingueahCBQeXRob24gVVJMIOWkhOeQhuW6kwoKKirnibnngrkqKjoKLSDlsIYgVVJMIOS9nOS4uuWvueixoeWkhOeQhgotIOWPr+mTvuW8j+iwg+eUqOa3u+WKoOOAgeS/ruaUueOAgeWIoOmZpOafpeivouWPguaVsAotIOiHquWKqOWkhOeQhue8lueggQoKKirpgILnlKjlnLrmma8qKjog6ZyA6KaB6aKR57mB5pON5L2cIFVSTCDmn6Xor6Llj4LmlbDnmoQgV2ViIOW8gOWPkeOAgeeIrOiZq+mhueebrgoKLS0tCgojIyDmgLvnu5MKCuS7peS4iiA3IOS4quW3peWFt+imhuebluS6hiBQeXRob24g5byA5Y+R5Lit5bi46KeB55qE5Yeg5Liq6aKG5Z+f77yaCgp8IOexu+WIqyB8IOW3peWFtyB8CnwtLS0tLS18LS0tLS0tfAp8IEhUVFAg5a6i5oi356uvIHwgTmlxdWVzdHMgfAp8IOe9kee7nOeIrOiZqyB8IFNjcmFwbGluZyB8Cnwg5pWw5o2u5Y+v6KeG5YyWIHwgbHV4IHwKfCDmlbDmja7nvJbnu4cgfCB3b3ZlIHwKfCDmlbDmja7lpITnkIYgfCBQYW5kYXMgKyBBSSB8CnwgSlNPTiDlpITnkIYgfCBvcmpzb24gfAp8IFVSTCDlpITnkIYgfCBmdXJsIHwKCui/meS6m+W3peWFt+mDvee7j+i/h+S6huWunumZhemhueebrueahOajgOmqjO+8jOWPr+S7peagueaNruWFt+S9k+mcgOaxgumAieaLqeWQiOmAgueahOW3peWFt+adpeaPkOWNh+W8gOWPkeaViOeOh+OAggoKLS0tCgojIyDlj4LogIMKCi0g5Y6f5aeL56yU6K6wOiBJTUEg5Liq5Lq655+l6K+G5bqTCi0g5pW055CG5pe26Ze0OiAyMDI2LTA0LTE3Ci0gQXNhbmEg5Lu75YqhOiBjbGF3TG9nIOmhueebruS4i+eahCBQeXRob24gVG9vbHMg5rGH5oC7CgotLS0KCirmnKzmlofmmK8gSU1BIOefpeivhuW6k+iHquWKqOWMluais+eQhuezu+WIl+eahOS4gOmDqOWIhu+8jOWumuacn+aVtOeQhuefpeivhuW6k+S4reeahOacieS7t+WAvOWGheWuueOAgioK
+---
+title: "📦 Python Tools 知识库汇总 - 从 IMA 知识库梳理的实用工具"
+description: "本文是从 IMA 个人知识库中梳理出的 Python 相关工具和库，涵盖网络请求、数据处理、可视化等多个领域。"
+date: "2026-04-17"
+readingTime: 2
+slug: "python-tools-ima"
+category: "工具盘点"
+---
+# 📦 Python Tools 知识库汇总
+
+> 本文是从 IMA 个人知识库中梳理出的 Python 相关工具和库，涵盖网络请求、数据处理、可视化等多个领域。
+
+## 概述
+
+定期整理知识库是保持技术敏感度的重要习惯。本文汇总了从 IMA 知识库中发现的 **7 个实用 Python 工具**，按功能分类整理，方便大家根据需求快速查找。
+
+---
+
+## 网络请求与爬虫
+
+### 1. Niquests
+
+**定位**: 全新的 Python HTTP 客户端项目
+
+**特点**:
+- 高性能实现
+- API 与 requests 高度兼容
+- 适合从 requests 迁移到更现代、高性能的 HTTP 库
+
+**适用场景**: 需要高性能 HTTP 请求处理的 Web 应用、API 客户端开发
+
+---
+
+### 2. Scrapling
+
+**定位**: Python 爬虫终结者
+
+**特点**:
+- 能绕过 Cloudflare Turnstile 等反爬机制
+- 可直接与 Claw Agent 集成
+- 为 AI 驱动的数据爬取提供工业级能力
+
+**适用场景**: 复杂网站的数据爬取、需要绕过反爬机制的爬虫项目
+
+---
+
+## 数据处理与可视化
+
+### 3. lux
+
+**定位**: 直观高效的 Python 数据可视化库
+
+**特点**:
+- 自动推荐可视化方案
+- 在 Jupyter 中展示 DataFrame 时自动分析相关性、分布、时间趋势等
+- 一键导出可视化代码
+
+**适用场景**: 探索性数据分析 (EDA)、快速数据可视化原型
+
+---
+
+### 4. wove
+
+**定位**: 智能精简的 Python 数据编织库
+
+**特点**:
+- 用于整合多个数据源（数据库、API、文件）
+- 声明式数据转换
+- 简化复杂的数据管道任务
+
+**适用场景**: 多数据源整合、ETL 流程、数据管道构建
+
+---
+
+### 5. Pandas + AI
+
+**定位**: 用可视化 + AI 做完整数据清洗
+
+**特点**:
+- 可视化界面操作数据清洗
+- AI 辅助数据分析和转换
+- 一键导出 Python 代码
+
+**适用场景**: 数据清洗、数据预处理、非程序员友好的数据处理
+
+---
+
+## 数据序列化与 URL 处理
+
+### 6. orjson
+
+**定位**: 极速 JSON 库
+
+**特点**:
+- 基于 Rust 实现
+- 性能大幅超越标准库 json 模块
+- 支持 datetime、UUID 等类型
+
+**适用场景**: 高并发、对 JSON 处理性能有极致要求的 Web 应用和数据处理
+
+---
+
+### 7. furl
+
+**定位**: 直观的 Python URL 处理库
+
+**特点**:
+- 将 URL 作为对象处理
+- 可链式调用添加、修改、删除查询参数
+- 自动处理编码
+
+**适用场景**: 需要频繁操作 URL 查询参数的 Web 开发、爬虫项目
+
+---
+
+## 总结
+
+以上 7 个工具覆盖了 Python 开发中常见的几个领域：
+
+| 类别 | 工具 |
+|------|------|
+| HTTP 客户端 | Niquests |
+| 网络爬虫 | Scrapling |
+| 数据可视化 | lux |
+| 数据编织 | wove |
+| 数据处理 | Pandas + AI |
+| JSON 处理 | orjson |
+| URL 处理 | furl |
+
+这些工具都经过了实际项目的检验，可以根据具体需求选择合适的工具来提升开发效率。
+
+---
+
+## 参考
+
+- 原始笔记: IMA 个人知识库
+- 整理时间: 2026-04-17
+- Asana 任务: clawLog 项目下的 Python Tools 汇总
+
+---
+
+*本文是 IMA 知识库自动化梳理系列的一部分，定期整理知识库中的有价值内容。*

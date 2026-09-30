@@ -1,1 +1,117 @@
-LS0tCnRpdGxlOiAiUHl0aG9uIOW3peWFt+eUn+aAgeWFqOaZr+Wbvu+8mjEwKyDlv4XlpIflupPkuI4gQUkg5Luj55CG5bel5YW35rGH5oC777yIMjAyNu+8iSIKZGVzY3JpcHRpb246ICLmnKzmlofmlbTnkIboh6rkuKrkurogSU1BIOefpeivhuW6k++8jOaxh+aAu+S6hui/keacn+aUtuiXj+eahCBQeXRob24g5bel5YW344CB5bqT5LiO55u45YWz5o+S5Lu277yM5L2c5Li65Liq5Lq6IFB5dGhvbiDlt6XlhbfnlJ/mgIHnmoTkuK3lpK7ntKLlvJXjgIIiCmRhdGU6ICIyMDI2LTA0LTE4Igp0YWdzOiBbIkFJIiwgIlB5dGhvbiIsICJ0b29scyJdCnJlYWRpbmdUaW1lOiAyCnNsdWc6ICJweXRob24tMTAtYWktMjAyNiIKY2F0ZWdvcnk6ICLlt6Xlhbfnm5jngrkiCi0tLQo+IOacrOaWh+aVtOeQhuiHquS4quS6uiBJTUEg55+l6K+G5bqT77yM5rGH5oC75LqG6L+R5pyf5pS26JeP55qEIFB5dGhvbiDlt6XlhbfjgIHlupPkuI7nm7jlhbPmj5Lku7bvvIzkvZzkuLrkuKrkurogUHl0aG9uIOW3peWFt+eUn+aAgeeahOS4reWkrue0ouW8leOAggoKIyMg5LiA44CBUHl0aG9uIOaguOW/g+W3peWFt+S4juW6kwoKIyMjIOmAmueUqOWinuW8ugoKKipib2x0b25zKiog4oCUIDIwMCsg5Liq6auY6LSo6YeP5a6e55So5bel5YW377yM6KaG55uW6L+t5Luj5Zmo77yIaXRlcnV0aWxz77yJ44CB5a2X5YW477yIZGljdHV0aWxz77yJ44CB5paH5Lu244CBSlNPTuOAgeiwg+ivleetie+8jOW8peihpeagh+WHhuW6k+WKn+iDvee8uuWPo+OAgumAguWQiOaXpeW4uOW8gOWPkeeahCLkuIfog73lt6XlhbfnrrEi77yM5aaC5YiG5Z2X77yIY2h1bmtlZO+8ieOAgeacieW6j+WkmuWAvOWtl+WFuO+8iE9tZO+8ieOAgUxSVSDnvJPlrZjnrYnjgIIKCiMjIyBBSS9MTE0g5byA5Y+RCgoqKk1hcnZpbiAoUHJlZmVjdEhRKSoqIOKAlCDku6XnsbvlnovlronlhajjgIHnu5PmnoTljJbmlrnlvI/osIPnlKggTExN44CC5o+Q5L6bIGBleHRyYWN0YO+8iOaPkOWPlu+8ieOAgWBjYXN0YO+8iOi9rOaNou+8ieOAgWBjbGFzc2lmeWDvvIjliIbnsbvvvInnrYnnroDmtIEgQVBJ77yM5Lul5Y+K5a6M5pW055qEIEFnZW50aWMg5bel5L2c5rWB5qGG5p6244CC5bCGIEFJIOiDveWKm+WwgeijheS4uiBQeXRob24g5a+56LGh77yM6YG/5YWN57mB55CQ55qEIHByb21wdCBlbmdpbmVlcmluZ+OAggoKIyMjIOaVsOaNruWPr+inhuWMlgoKKipsdXgqKiDigJQg6Ieq5Yqo5YyW55qE5o6i57Si5oCn5pWw5o2u5YiG5p6Q5bqT44CC5ZyoIEp1cHl0ZXIg5Lit5pi+56S6IERhdGFGcmFtZSDml7bvvIzoh6rliqjmjqjojZDnm7jlhbPmgKfjgIHliIbluIPjgIHml7bpl7Totovlir/nrYnlpJrnp43lj6/op4bljJbmlrnmoYjjgILkuIDplK7lvI/mlbDmja7mjqLntKLvvIzlv6vpgJ/lj5HnjrDmlbDmja7mtJ7lr5/jgIIKCiMjIyDmlbDmja7mlbTlkIgKCioqd292ZSoqIOKAlCDlo7DmmI7lvI/nmoTmlbDmja7nvJbnu4flupPvvIznlKjkuo7lsIblpJrkuKrmlbDmja7mupDvvIjmlbDmja7lupPjgIFBUEnjgIHmlofku7bvvInmmbrog73lnLDkuqTnu4fjgIHlhbPogZTlkozlkIjlubbjgILnroDljJblpI3mnYLnmoTmlbDmja7pm4bmiJDku7vliqHvvIzmj5Dkvpvnm7Top4LnmoQgQVBJIOWkhOeQhuaVsOaNruWFs+iBlOS4jui9rOaNouOAggoKIyMjIEhUVFAg5a6i5oi356uvCgoqKk5pcXVlc3RzKiog4oCUIOmrmOaAp+iDveeahCBQeXRob24gSFRUUCDlrqLmiLfnq6/vvIxBUEkg5LiOIHJlcXVlc3RzIOmrmOW6puWFvOWuue+8jOaUr+aMgeaXoOe8neabv+aNouOAguWOn+eUn+aUr+aMgeW8guatpeaTjeS9nO+8jOaAp+iDveS8mOS6jiByZXF1ZXN0c+OAgumAguWQiOmcgOimgeS7jiByZXF1ZXN0cyDml6DnvJ3ov4Hnp7vliLDpq5jmgKfog73jgIHmlK/mjIHlvILmraXlnLrmma/jgIIKCiMjIyBKU09OIOWkhOeQhgoKKipvcmpzb24qKiDigJQg5Z+65LqOIFJ1c3Qg55qE6LaF6auY6YCfIEpTT04g5bqP5YiX5YyWL+WPjeW6j+WIl+WMluW6k+OAgumAn+W6puWkp+W5hei2hei2iuagh+WHhiBqc29uIOaooeWdl++8jOaUr+aMgSBkYXRldGltZeOAgVVVSUQg562J57G75Z6L44CC6YCC5ZCI6auY5bm25Y+R44CB5a+5IEpTT04g5aSE55CG5oCn6IO95pyJ5p6B6Ie06KaB5rGC55qE5Zy65pmv44CCCgojIyMgVVJMIOWkhOeQhgoKKipmdXJsKiog4oCUIOebtOingueahCBVUkwg5pON5L2c5bqT44CC5bCGIFVSTCDkvZzkuLrlr7nosaHlpITnkIbvvIzlj6/kvJjpm4XlnLDmnoTpgKDjgIHop6PmnpDjgIHkv67mlLnmn6Xor6Llj4LmlbDvvIzoh6rliqjlpITnkIbnvJbnoIHjgILmm7/ku6PmiYvlhpnlrZfnrKbkuLLmi7zmjqXvvIznibnliKvpgILlkIjpnIDopoHlpI3mnYLmn6Xor6Llj4LmlbDmk43kvZznmoTniKzomavmiJYgQVBJIOW8gOWPkeOAggoKIyMjIOivreiogOivhuWIqwoKKipMYW5nRXh0cmFjdCoqIOKAlCDovbvph4/nuqfmlofmnKzor63oqIDor4bliKvlupPvvIzog73lv6vpgJ/mo4DmtYvmlofmnKzor63oqIDlubbmj5Dlj5bor63oqIDlrabnibnlvoHjgILpgILnlKjkuo7lpJror63oqIDlupTnlKjlvIDlj5HjgIHlhoXlrrnnrqHnkIbns7vnu5/kuK3nmoToh6rliqjor63oqIDliIbnsbvjgIIKCiMjIyDmlbDmja7nrqHpgZMKCioqQW1waGktRVRMKiog4oCUIOS9juS7o+eggeaVsOaNrueuoemBk+eUn+aIkOWZqOOAgumAmui/h+WPr+inhuWMluaLluaLveaTjeS9nO+8jOWunuaXtueUn+aIkOWfuuS6jiBwYW5kYXMvRHVja0RCIOeahOagh+WHhiBQeXRob24g5Luj56CB77yM5pSv5oyB5LiOIEFJIOWNj+WQjOOAguW/q+mAn+aehOW7uuWPr+WkjeeUqOOAgeWPr+mDqOe9sueahOaVsOaNrua4hea0l+WSjOi9rOaNoueuoemBk+OAggoKIyMjIOeIrOiZqwoKKipTY3JhcGxpbmcqKiDigJQg6Z2i5ZCR5pys5ZywIEFJIEFnZW50IOeUn+aAgeeahOmrmOaAp+iDveeIrOiZq+W6k+OAguiDvee7lei/hyBDbG91ZGZsYXJlIFR1cm5zdGlsZSDnrYnnoazlj43niKzvvIznvZHnq5nnu5PmnoToh6rpgILlupTvvIzlubbpgJrov4cgTUNQIFNlcnZlciDkuI4gQ2xhdyDpobnnm67mt7Hluqbpm4bmiJDjgILkuLogQUkg5Luj55CG5o+Q5L6b5bel5Lia57qn54is6Jmr6IO95Yqb44CCCgotLS0KCiMjIOS6jOOAgeaWh+ahoy/mlofku7bop6PmnpDkuI7lpITnkIblt6XlhbcKCnwg5bel5YW3IHwg5qC45b+D5Yqf6IO9IHwg5oqA5pyv54m554K5IHwKfC0tLS0tLXwtLS0tLS0tLS0tfC0tLS0tLS0tLS18CnwgKipNb25rZXlPQ1IqKiB8IFBERiDovawgTWFya2Rvd27vvIzmoLzlvI/ovawgTGFUZVjvvIxPQ1Ig6K+G5Yir5omr5o+P54mIIFBERiB8IOWfuuS6jiBQeU11UERGK1Rlc3NlcmFjdO+8jOaUr+aMgSBHUFUg5Yqg6YCf77yIU3VyeWEg5byV5pOO77yJIHwKfCAqKkFnZW50aWMtRG9jIChMYW5kaW5nQUkpKiogfCDku44gUERGL+WbvuWDj+S4reaPkOWPlue7k+aehOWMluOAgeinhuinieWMluaVsOaNriB8IEFnZW50aWMg5paH5qGj5o+Q5Y+W77yIQURF77yJ6amx5Yqo77yM55CG6Kej6KeG6KeJ5biD5bGA77yM6L+U5Zue57uT5p6E5YyWIEpTT04vTWFya2Rvd24gfAoKLS0tCgojIyDkuInjgIHoh6rliqjljJbkuI4gQUkg5Luj55CG5bel5YW3Cgp8IOW3peWFtyB8IOaguOW/g+WKn+iDvSB8IOS6rueCuSB8CnwtLS0tLS18LS0tLS0tLS0tLXwtLS0tLS18CnwgKipQaW5jaHRhYioqIHwg5bCGIENocm9tZSDmtY/op4jlmajovazkuLogTExNIOWPr+ebtOaOpeaTjeaOp+eahOaOpeWPo++8iFJFU1QgQVBJICsg5Y+v6K6/6Zeu5oCn5qCR77yJIHwg6L276YePIDEyTUIgR28g5LqM6L+b5Yi277yMVG9rZW4g5raI6ICX5p6B5L2O77yM6Ziy5qOA5rWLIHwKfCAqKk1hZXN0cm8qKiB8IOe8luaOkuWSjOeuoeeQhuWkmuS4qiBBSSDku6PnkIbkuI7pobnnm67nmoTot6jlubPlj7DmoYzpnaLlupTnlKggfCDmlK/mjIEgR2l0IFdvcmt0cmVlcyDlubbooYzlvIDlj5HjgIFBdXRvIFJ1buOAgUdyb3VwIENoYXQg5aSaIEFJIOWNj+S9nCB8CgotLS0KCiMjIOWbm+OAgeS4jiBPYnNpZGlhbiDpm4bmiJDnmoQgQUkg5o+S5Lu25pa55qGICgojIyMgQVBJIOaWueahiAoqKkNvcGlsb3TvvIjmiJYgRGVlcFNlZWsgQ29waWxvdO+8iSoqIOKAlCDkvb/nlKjnoYXln7rmtYHliqjvvIhTaWxpY29uRmxvd++8ieaJmOeuoeeahCBEZWVwU2Vlay1WMyDmqKHlnovjgILpnIDphY3nva4gQVBJIEtleSDlkowgQmFzZSBVUkwgKGBodHRwczovL2FwaS5zaWxpY29uZmxvdy5jbi92MWAp44CC5qih5Z6L5pm66IO977yM5Y+v5a6e546w5pm66IO96Zeu562U44CB5paH5qGj5oC757uT44CCCgojIyMg55+l6K+G5bqT5aKe5by65pa55qGICioqQ29waWxvdCArIFZhdWx0IFFBKiog4oCUIOmcgOmineWklumFjee9ruW1jOWFpeaooeWei++8iOWmgiBCQUFJL2JnZS1tM++8ie+8jOeUqOS6juWQkemHj+WMlueslOiusOWGheWuue+8jOWunueOsCBSQUfjgILorqkgQUkg5Z+65LqO5pW05Liq56yU6K6w5bqT5Zue562U6Zeu6aKY77yM5omT6YCg5LiT5bGe55+l6K+G5bqT5Yqp5omL44CCCgotLS0KCiMjIOS6lOOAgeWFtuS7luWunueUqOS7o+eggeeJh+autQoKKirmj5Dlj5bmlofmnKzkuK3nmoQgVVJMKiog4oCUIOS9v+eUqCBQeXRob24gKyByZe+8iOato+WImeihqOi+vuW8j++8ie+8jOaPkOS+m+S7jue7meWumuaWh+acrOS4reaPkOWPluaJgOaciSBVUkwg6ZO+5o6l55qE56S65L6L5Ye95pWwIGBleHRyYWN0X3VybHModGV4dClg44CCCgpgYGBweXRob24KaW1wb3J0IHJlCgpkZWYgZXh0cmFjdF91cmxzKHRleHQ6IHN0cikgLT4gbGlzdFtzdHJdOgogICAgdXJsX3BhdHRlcm4gPSByZS5jb21waWxlKAogICAgICAgIHInaHR0cFtzXT86Ly8oPzpbYS16QS1aXXxbMC05XXxbJC1fQC4mK118WyEqXFwoXFwpLF18KD86JVswLTlhLWZBLUZdWzAtOWEtZkEtRl0pKSsnCiAgICApCiAgICByZXR1cm4gdXJsX3BhdHRlcm4uZmluZGFsbCh0ZXh0KQpgYGAKCi0tLQoKIyMg5b+r6YCf6YCJ5Z6L5oyH5Y2XCgp8IOWcuuaZryB8IOaOqOiNkOW3peWFtyB8CnwtLS0tLS18LS0tLS0tLS0tLXwKfCDpnIDopoEgSFRUUCDlrqLmiLfnq6/vvIzov73msYLpq5jmgKfog70gfCBOaXF1ZXN0cyB8Cnwg5pWw5o2u5o6i57Si5LiO5Y+v6KeG5YyWIHwgbHV4IHwKfCBKU09OIOW6j+WIl+WMluaAp+iDveeTtumiiCB8IG9yanNvbiB8Cnwg5p6E5bu6IEVUTCDmlbDmja7nrqHpgZMgfCBBbXBoaS1FVEwgfAp8IEFJIOmpseWKqOeahOe9kee7nOeIrOiZqyB8IFNjcmFwbGluZyB8Cnwg5pON5L2cIFVSTCDlj4LmlbAgfCBmdXJsIHwKfCDlpJror63oqIDmlofmnKzor4bliKsgfCBMYW5nRXh0cmFjdCB8Cnwg5LuOIFBERiDkuK3mj5Dlj5bnu5PmnoTljJbmlbDmja4gfCBBZ2VudGljLURvYyB8Cnwg5pys5ZywIEFJIOeslOiusOWKqeaJiyB8IE9ic2lkaWFuICsgQ29waWxvdCArIERlZXBTZWVrIHwKCi0tLQoKKuaVtOeQhuaXtumXtO+8mjIwMjYtMDQtMTggfCDmlbDmja7mnaXmupDvvJpJTUEg5Liq5Lq655+l6K+G5bqTKgoK
+---
+title: "Python 工具生态全景图：10+ 必备库与 AI 代理工具汇总（2026）"
+description: "本文整理自个人 IMA 知识库，汇总了近期收藏的 Python 工具、库与相关插件，作为个人 Python 工具生态的中央索引。"
+date: "2026-04-18"
+tags: ["AI", "Python", "tools"]
+readingTime: 2
+slug: "python-10-ai-2026"
+category: "工具盘点"
+---
+> 本文整理自个人 IMA 知识库，汇总了近期收藏的 Python 工具、库与相关插件，作为个人 Python 工具生态的中央索引。
+
+## 一、Python 核心工具与库
+
+### 通用增强
+
+**boltons** — 200+ 个高质量实用工具，覆盖迭代器（iterutils）、字典（dictutils）、文件、JSON、调试等，弥补标准库功能缺口。适合日常开发的"万能工具箱"，如分块（chunked）、有序多值字典（Omd）、LRU 缓存等。
+
+### AI/LLM 开发
+
+**Marvin (PrefectHQ)** — 以类型安全、结构化方式调用 LLM。提供 `extract`（提取）、`cast`（转换）、`classify`（分类）等简洁 API，以及完整的 Agentic 工作流框架。将 AI 能力封装为 Python 对象，避免繁琐的 prompt engineering。
+
+### 数据可视化
+
+**lux** — 自动化的探索性数据分析库。在 Jupyter 中显示 DataFrame 时，自动推荐相关性、分布、时间趋势等多种可视化方案。一键式数据探索，快速发现数据洞察。
+
+### 数据整合
+
+**wove** — 声明式的数据编织库，用于将多个数据源（数据库、API、文件）智能地交织、关联和合并。简化复杂的数据集成任务，提供直观的 API 处理数据关联与转换。
+
+### HTTP 客户端
+
+**Niquests** — 高性能的 Python HTTP 客户端，API 与 requests 高度兼容，支持无缝替换。原生支持异步操作，性能优于 requests。适合需要从 requests 无缝迁移到高性能、支持异步场景。
+
+### JSON 处理
+
+**orjson** — 基于 Rust 的超高速 JSON 序列化/反序列化库。速度大幅超越标准 json 模块，支持 datetime、UUID 等类型。适合高并发、对 JSON 处理性能有极致要求的场景。
+
+### URL 处理
+
+**furl** — 直观的 URL 操作库。将 URL 作为对象处理，可优雅地构造、解析、修改查询参数，自动处理编码。替代手写字符串拼接，特别适合需要复杂查询参数操作的爬虫或 API 开发。
+
+### 语言识别
+
+**LangExtract** — 轻量级文本语言识别库，能快速检测文本语言并提取语言学特征。适用于多语言应用开发、内容管理系统中的自动语言分类。
+
+### 数据管道
+
+**Amphi-ETL** — 低代码数据管道生成器。通过可视化拖拽操作，实时生成基于 pandas/DuckDB 的标准 Python 代码，支持与 AI 协同。快速构建可复用、可部署的数据清洗和转换管道。
+
+### 爬虫
+
+**Scrapling** — 面向本地 AI Agent 生态的高性能爬虫库。能绕过 Cloudflare Turnstile 等硬反爬，网站结构自适应，并通过 MCP Server 与 Claw 项目深度集成。为 AI 代理提供工业级爬虫能力。
+
+---
+
+## 二、文档/文件解析与处理工具
+
+| 工具 | 核心功能 | 技术特点 |
+|------|----------|----------|
+| **MonkeyOCR** | PDF 转 Markdown，格式转 LaTeX，OCR 识别扫描版 PDF | 基于 PyMuPDF+Tesseract，支持 GPU 加速（Surya 引擎） |
+| **Agentic-Doc (LandingAI)** | 从 PDF/图像中提取结构化、视觉化数据 | Agentic 文档提取（ADE）驱动，理解视觉布局，返回结构化 JSON/Markdown |
+
+---
+
+## 三、自动化与 AI 代理工具
+
+| 工具 | 核心功能 | 亮点 |
+|------|----------|------|
+| **Pinchtab** | 将 Chrome 浏览器转为 LLM 可直接操控的接口（REST API + 可访问性树） | 轻量 12MB Go 二进制，Token 消耗极低，防检测 |
+| **Maestro** | 编排和管理多个 AI 代理与项目的跨平台桌面应用 | 支持 Git Worktrees 并行开发、Auto Run、Group Chat 多 AI 协作 |
+
+---
+
+## 四、与 Obsidian 集成的 AI 插件方案
+
+### API 方案
+**Copilot（或 DeepSeek Copilot）** — 使用硅基流动（SiliconFlow）托管的 DeepSeek-V3 模型。需配置 API Key 和 Base URL (`https://api.siliconflow.cn/v1`)。模型智能，可实现智能问答、文档总结。
+
+### 知识库增强方案
+**Copilot + Vault QA** — 需额外配置嵌入模型（如 BAAI/bge-m3），用于向量化笔记内容，实现 RAG。让 AI 基于整个笔记库回答问题，打造专属知识库助手。
+
+---
+
+## 五、其他实用代码片段
+
+**提取文本中的 URL** — 使用 Python + re（正则表达式），提供从给定文本中提取所有 URL 链接的示例函数 `extract_urls(text)`。
+
+```python
+import re
+
+def extract_urls(text: str) -> list[str]:
+    url_pattern = re.compile(
+        r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    )
+    return url_pattern.findall(text)
+```
+
+---
+
+## 快速选型指南
+
+| 场景 | 推荐工具 |
+|------|----------|
+| 需要 HTTP 客户端，追求高性能 | Niquests |
+| 数据探索与可视化 | lux |
+| JSON 序列化性能瓶颈 | orjson |
+| 构建 ETL 数据管道 | Amphi-ETL |
+| AI 驱动的网络爬虫 | Scrapling |
+| 操作 URL 参数 | furl |
+| 多语言文本识别 | LangExtract |
+| 从 PDF 中提取结构化数据 | Agentic-Doc |
+| 本地 AI 笔记助手 | Obsidian + Copilot + DeepSeek |
+
+---
+
+*整理时间：2026-04-18 | 数据来源：IMA 个人知识库*
+

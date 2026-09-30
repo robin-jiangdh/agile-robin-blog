@@ -1,1 +1,61 @@
-LS0tCnRpdGxlOiAicHl0aG9uIOS9v+eUqHB5Y3J5cHRvZG9tZSDov5vooYxBRVMg5Yqg5a+G6Kej5a+G5pON5L2cIgpkZXNjcmlwdGlvbjogIuWcqFB5dGhvbuS4re+8jOS9oOWPr+S7peS9v+eUqHB5Y3J5cHRvZG9tZeW6k+adpei/m+ihjEFFU+WKoOWvhuWSjOino+WvhuOAgummluWFiO+8jOS9oOmcgOimgeWuieijhei/meS4quW6k++8miIKZGF0ZTogIjIwMjQtMDgtMTQiCnRhZ3M6IFsicHljcnlwdG9kb21lIiwgIlB5dGhvbiIsICJhZXMiXQpyZWFkaW5nVGltZTogMQpzbHVnOiAicHl0aG9uLXB5Y3J5cHRvZG9tZS1hZXMiCmNhdGVnb3J5OiAi5bel5YW355uY54K5IgotLS0K5ZyoUHl0aG9u5Lit77yM5L2g5Y+v5Lul5L2/55SocHljcnlwdG9kb21l5bqT5p2l6L+b6KGMQUVT5Yqg5a+G5ZKM6Kej5a+G44CC6aaW5YWI77yM5L2g6ZyA6KaB5a6J6KOF6L+Z5Liq5bqT77yaCmBgYApwaXAgaW5zdGFsbCBweWNyeXB0b2RvbWUKYGBgCueEtuWQju+8jOS9oOWPr+S7peS9v+eUqOS7peS4i+S7o+eggeadpeWunueOsEFFU+WKoOWvhuWSjOino+Wvhu+8mgpgYGAKZnJvbSBDcnlwdG8uQ2lwaGVyIGltcG9ydCBBRVMKZnJvbSBDcnlwdG8uVXRpbC5QYWRkaW5nIGltcG9ydCBwYWQsIHVucGFkCmZyb20gQ3J5cHRvLlJhbmRvbSBpbXBvcnQgZ2V0X3JhbmRvbV9ieXRlcwppbXBvcnQgYmFzZTY0CgpkZWYgYWVzX2VuY3J5cHQocGxhaW5fdGV4dCwga2V5KToKICAgICIiIgogICAg5L2/55SoQUVT5Yqg5a+G5paH5pys44CCCgogICAgOnBhcmFtIHBsYWluX3RleHQ6IOimgeWKoOWvhueahOaWh+acrAogICAgOnBhcmFtIGtleTog5Yqg5a+G5a+G6ZKl77yM6ZW/5bqm5b+F6aG75pivMTYsIDI0LCDmiJYgMzLlrZfoioIKICAgIDpyZXR1cm46IOWKoOWvhuWQjueahOaWh+acrAogICAgIiIiCiAgICBjaXBoZXIgPSBBRVMubmV3KGtleSwgQUVTLk1PREVfQ0JDKQogICAgY3RfYnl0ZXMgPSBjaXBoZXIuZW5jcnlwdChwYWQocGxhaW5fdGV4dC5lbmNvZGUoJ3V0Zi04JyksIEFFUy5ibG9ja19zaXplKSkKICAgIGl2ID0gYmFzZTY0LmI2NGVuY29kZShjaXBoZXIuaXYpLmRlY29kZSgndXRmLTgnKQogICAgY3QgPSBiYXNlNjQuYjY0ZW5jb2RlKGN0X2J5dGVzKS5kZWNvZGUoJ3V0Zi04JykKICAgIHJldHVybiBpdiArICc6JyArIGN0CgpkZWYgYWVzX2RlY3J5cHQoZW5jcnlwdGVkX3RleHQsIGtleSk6CiAgICAiIiIKICAgIOS9v+eUqEFFU+ino+WvhuaWh+acrOOAggoKICAgIDpwYXJhbSBlbmNyeXB0ZWRfdGV4dDog5Yqg5a+G55qE5paH5pysCiAgICA6cGFyYW0ga2V5OiDop6Plr4blr4bpkqXvvIzplb/luqblv4XpobvmmK8xNiwgMjQsIOaIliAzMuWtl+iKggogICAgOnJldHVybjog6Kej5a+G5ZCO55qE5paH5pysCiAgICAiIiIKICAgIGl2LCBjdCA9IGVuY3J5cHRlZF90ZXh0LnNwbGl0KCc6JykKICAgIGl2ID0gYmFzZTY0LmI2NGRlY29kZShpdikKICAgIGN0ID0gYmFzZTY0LmI2NGRlY29kZShjdCkKICAgIGNpcGhlciA9IEFFUy5uZXcoa2V5LCBBRVMuTU9ERV9DQkMsIGl2KQogICAgcHQgPSB1bnBhZChjaXBoZXIuZGVjcnlwdChjdCksIEFFUy5ibG9ja19zaXplKS5kZWNvZGUoJ3V0Zi04JykKICAgIHJldHVybiBwdApgYGAKIyDnpLrkvovnlKjms5UKYGBgCmtleSA9IGdldF9yYW5kb21fYnl0ZXMoMTYpICAjIOeUn+aIkOS4gOS4qjE25a2X6IqC55qE6ZqP5py65a+G6ZKlCnBsYWluX3RleHQgPSAiSGVsbG8sIFdvcmxkISIKZW5jcnlwdGVkX3RleHQgPSBhZXNfZW5jcnlwdChwbGFpbl90ZXh0LCBrZXkpCmRlY3J5cHRlZF90ZXh0ID0gYWVzX2RlY3J5cHQoZW5jcnlwdGVkX3RleHQsIGtleSkKCnByaW50KCJQbGFpbiB0ZXh0OiIsIHBsYWluX3RleHQpCnByaW50KCJFbmNyeXB0ZWQgdGV4dDoiLCBlbmNyeXB0ZWRfdGV4dCkKcHJpbnQoIkRlY3J5cHRlZCB0ZXh0OiIsIGRlY3J5cHRlZF90ZXh0KQpgYGAK5Zyo6L+Z5Liq5L6L5a2Q5Lit77yM5oiR5Lus5L2/55So5LqGQ0JD5qih5byP77yIQ2lwaGVyIEJsb2NrIENoYWluaW5n77yJ5ZKM6ZqP5py65Yid5aeL5YyW5ZCR6YeP77yISVbvvInjgILliqDlr4blkI7nmoTmlofmnKzlkoxJVumDveiiq+e8lueggeS4umJhc2U2NO+8jOS7peS+v+WPr+S7peWuieWFqOWcsOWtmOWCqOaIluS8oOi+k+OAguino+WvhuaXtu+8jOmcgOimgeWFiOino+eggWJhc2U2NO+8jOeEtuWQjuaPkOWPlklW5ZKM5a+G5paH6L+b6KGM6Kej5a+G44CCCg==
+---
+title: "python 使用pycryptodome 进行AES 加密解密操作"
+description: "在Python中，你可以使用pycryptodome库来进行AES加密和解密。首先，你需要安装这个库："
+date: "2024-08-14"
+tags: ["pycryptodome", "Python", "aes"]
+readingTime: 1
+slug: "python-pycryptodome-aes"
+category: "工具盘点"
+---
+在Python中，你可以使用pycryptodome库来进行AES加密和解密。首先，你需要安装这个库：
+```
+pip install pycryptodome
+```
+然后，你可以使用以下代码来实现AES加密和解密：
+```
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
+import base64
+
+def aes_encrypt(plain_text, key):
+    """
+    使用AES加密文本。
+
+    :param plain_text: 要加密的文本
+    :param key: 加密密钥，长度必须是16, 24, 或 32字节
+    :return: 加密后的文本
+    """
+    cipher = AES.new(key, AES.MODE_CBC)
+    ct_bytes = cipher.encrypt(pad(plain_text.encode('utf-8'), AES.block_size))
+    iv = base64.b64encode(cipher.iv).decode('utf-8')
+    ct = base64.b64encode(ct_bytes).decode('utf-8')
+    return iv + ':' + ct
+
+def aes_decrypt(encrypted_text, key):
+    """
+    使用AES解密文本。
+
+    :param encrypted_text: 加密的文本
+    :param key: 解密密钥，长度必须是16, 24, 或 32字节
+    :return: 解密后的文本
+    """
+    iv, ct = encrypted_text.split(':')
+    iv = base64.b64decode(iv)
+    ct = base64.b64decode(ct)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    pt = unpad(cipher.decrypt(ct), AES.block_size).decode('utf-8')
+    return pt
+```
+# 示例用法
+```
+key = get_random_bytes(16)  # 生成一个16字节的随机密钥
+plain_text = "Hello, World!"
+encrypted_text = aes_encrypt(plain_text, key)
+decrypted_text = aes_decrypt(encrypted_text, key)
+
+print("Plain text:", plain_text)
+print("Encrypted text:", encrypted_text)
+print("Decrypted text:", decrypted_text)
+```
+在这个例子中，我们使用了CBC模式（Cipher Block Chaining）和随机初始化向量（IV）。加密后的文本和IV都被编码为base64，以便可以安全地存储或传输。解密时，需要先解码base64，然后提取IV和密文进行解密。

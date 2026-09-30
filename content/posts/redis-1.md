@@ -1,1 +1,97 @@
-LS0tCnRpdGxlOiAi5YWz5LqOcmVkaXPliIbluIPlvI/plIHlhaXpl6giCmRlc2NyaXB0aW9uOiAi5Y6f55CGIOWNleS4gOWunuS+i+S4i++8muS9v+eUqHNldG545ZG95LukKOWcqGtleeS4jeWtmOWcqOaXtizliJvlu7rlubborr7nva52YWx1ZSDov5Tlm54xLGtleeWtmOWcqOaXtizkvJrov5Tlm54wKeadpeiOt+WPlumUgeOAgiDlupTnlKgg5Lul5omj5bqT5a2Y5Li65L6L77yM5L2/55So6ZSB6IO95aSf5pyJ5pWI5L+d6K+B5LiN5Lya6KKr6LaF5Y2W77ybICDln7rnoYDniYjmlrnmoYjvvJrmlbDmja7lupPplIEgU0VMRUNUIHN0b2NrIGZyb20gZ29vZHMgd2hlcmUgSUQgPTEgZm9yIHVwZGF0ZTsgdXBkYXRlICBnb29kcyBzZXQgc3RvY2s9c3RvY2stMSB3aGVyZSBpZD0xIGFuZCBzdG9jaz0xMCAvLyDmraPluLjmg4XlhrXkuIvnnIvkvaDkuJrliqHpnIDmsYLvvIzlpoLmnpzog73lpJ/lnKjokL3lupPliY3noa7orqTlupPlrZjnmoTor53vvIzkuIrpnaLov5nlj6Xor53lkI7pnaLnmoRzdG9jaz0xMOiDvS4uLiIKZGF0ZTogIjIwMTYtMDgtMDYiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzQ5NDg2MTcvNTc3MTdkOWYtYTk4Ny00NjUwLWE3MDMtNGExYWQyODVhZjcyLmpwZWciCnJlYWRpbmdUaW1lOiAxCnNsdWc6ICJyZWRpcy0xIgotLS0KIyDljp/nkIYKCuWNleS4gOWunuS+i+S4i++8muS9v+eUqHNldG545ZG95LukKOWcqGtleeS4jeWtmOWcqOaXtizliJvlu7rlubborr7nva52YWx1ZSDov5Tlm54xLGtleeWtmOWcqOaXtizkvJrov5Tlm54wKeadpeiOt+WPlumUgeOAggoKIyDlupTnlKgKCuS7peaJo+W6k+WtmOS4uuS+i++8jOS9v+eUqOmUgeiDveWkn+acieaViOS/neivgeS4jeS8muiiq+i2heWNlu+8mwoKLSDln7rnoYDniYjmlrnmoYjvvJrmlbDmja7lupPplIEKCiAgYGBgCiAgU0VMRUNUIHN0b2NrIGZyb20gZ29vZHMgd2hlcmUgSUQgPTEgZm9yIHVwZGF0ZTsKICB1cGRhdGUgIGdvb2RzIHNldCBzdG9jaz1zdG9jay0xIHdoZXJlIGlkPTEgYW5kIHN0b2NrPTEwCiAgLy8g5q2j5bi45oOF5Ya15LiL55yL5L2g5Lia5Yqh6ZyA5rGC77yM5aaC5p6c6IO95aSf5Zyo6JC95bqT5YmN56Gu6K6k5bqT5a2Y55qE6K+d77yM5LiK6Z2i6L+Z5Y+l6K+d5ZCO6Z2i55qEc3RvY2s9MTDog73lpJ/pmZDlrprlupPlrZjplIHlrprlgLwKICAvLyDlpoLmnpzkuI3kvb/nlKjov5nkuKpzdG9jaz0xMOeahOivne+8jOS8muacieS4gOWumueahOWJr+S9nOeUqO+8jOavlOWmguivtOW4uOingeeahO+8jOWkmue6v+eoi+i9ruaJowogIGBgYAoKLSAjIyByZWRpcyDniYh2MAoK4oCLICAgICDkvb/nlKhzZXRueOWGmeWFpeS4gOS4qumUruWAvO+8jOWmguaenOaIkOWKn+WImeihqOaYjuiOt+WPluWIsOmUge+8jOaJp+ihjOS4muWKoTvlr7nkuo7msqHmnInojrflj5bliLDplIHnmoTvvIzliJnkvJrova7or6Lojrflj5bjgIIKCmBgYAogICAgICAgICAgICBpbnQgd2FpdEludGVydmFsTXMgPSA1MDsvL+mXtOmalOetieW+heaXtumVvyDmr6vnp5IKICAgICAgICAgICAgc3RyaW5nIGxvY2tLZXkgPSAibG9ja19rZXk6IiArIGtleTsgCiAgICAgICAgICAgIERhdGVUaW1lIGJlZ2luID0gRGF0ZVRpbWUuTm93OwogICAgICAgICAgICB3aGlsZSAodHJ1ZSkKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgaWYgKHJlZGlzQ2xpZW50LlNldE5YKGxvY2tLZXksIG5ldyBieXRlW10geyAxIH0pID09IDEpCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgcmVkaXNDbGllbnQuRXhwaXJlKGxvY2tLZXksIGV4cGlyeVNlY29uZHMpOwogICAgICAgICAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgICAgICAgICAgfSAKICAgICAgICAgICAgICAgIC8v5LiN562J5b6F6ZSB5YiZ6L+U5ZueCiAgICAgICAgICAgICAgICBpZiAod2FpdFNlY29uZHMgPD0gMCkKICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICBpZiAoKERhdGVUaW1lLk5vdyAtIGJlZ2luKS5Ub3RhbFNlY29uZHMgPj0gd2FpdFNlY29uZHMpLy/nrYnlvoXotoXml7YKICAgICAgICAgICAgICAgICAgICBicmVhazsKCiAgICAgICAgICAgICAgICBTeXN0ZW0uVGhyZWFkaW5nLlRocmVhZC5TbGVlcCh3YWl0SW50ZXJ2YWxNcyk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwpgYGAKCiAqKuS4jeeuoeaYr+ivpeS4muWKoeaIkOWKn+OAgeWksei0peaIluiAheW8guW4uO+8jOmcgOimgeehruS/neivpemUgeWcqOWRqOacn+e7k+adn+WQjuiDveiiq+mHiuaUvioqCgotIHJlZGlzIOeJiHYxCgogIFYw54mI5pys5a2Y5Zyo55qE57y66Zm377ya5q+U6L6D6Ie05ZG955qE5piv5Y+v6IO95Lya5Ye6546w77yM5Lu75Yqh6L+Y5pyq5a6M5oiQ77yM6ZSB5bCx6LaF5pe25LqG77yM5a+86Ie0a2V56KKr5Zue5pS25LqG77yM6YKj5LmI6IO95LiN6IO95bCG6ZSB55qE55Sz6K+35pe26Ze05L2c5Li65YC86L+b6KGM5a2Y5YKo5ZGi77yfCgogIGBgYAogIOKAi2BgYAogIGludCB3YWl0SW50ZXJ2YWxNcyA9IDIwMDsvL+mXtOmalOetieW+heaXtumVvyDmr6vnp5Ig6K6+572u5oiQ6Laz5aSf6ZW/77yM6Iez5bCR6KaB6LaF6L+H5pWw5o2u5bqT55qE6LaF5pe25ZON5bqU5pe26Ze0CiAgc3RyaW5nIGxvY2tLZXkgPSAibG9ja19rZXk6IiArIGtleTsgCiAgRGF0ZVRpbWUgYmVnaW4gPSBEYXRlVGltZS5Ob3c7CiAgRGF0ZVRpbWUgbm93ID0gRGF0ZVRpbWUuTm93OwogIHdoaWxlICh0cnVlKQogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIC8v5Zyoa2V55YC85a2Y5Zyo55qE5oOF5Ya15LiLCiAgICAgICAgICAgICAgICAgaWYocmVkaXNjbGllbnQuRXhpc3RLZXkobG9ja0tleSkpCiAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgIC8v5aaC5p6ca2V55a+55bqU55qEdmFsdWXlgLwr6LaF5pe25pe26Ze05ZCO5bCP5LqO5b2T5YmN5pe26Ze077yM5YiZ56e76Zmka2V55YC877yM6K6p5Lia5Yqh5q2j5bi46L+Q6KGMCiAgICAgICAgICAgICAgICAgaWYoQ29udmVydC5Ub0RhdGVUaW1lKHJlZGlzY2xpZW50LkdldEtleShsb2Nra2V5KS5WYWx1ZSkrVGltZUxpbWl0PG5vdyl7CiAgICAgICAgICAgICAgICAgcmVkaXNjbGllbnQucmVtb3ZlKGxvY2trZXkpOwogICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgIGlmIChyZWRpc0NsaWVudC5TZXROWChsb2NrS2V5LCBub3cudG9zdHJpbmcoKSkgPT0gMSkKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAgcmVkaXNDbGllbnQuRXhwaXJlKGxvY2tLZXksIGV4cGlyeVNlY29uZHMpOwogICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgICAgICAgICAgIH0gCiAgICAgICAgICAgICAgICAgIC8v5LiN562J5b6F6ZSB5YiZ6L+U5ZueCiAgICAgICAgICAgICAgICAgIGlmICh3YWl0U2Vjb25kcyA8PSAwKQogICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgCiAgICAgICAgICAgICAgICAgIGlmICgoRGF0ZVRpbWUuTm93IC0gYmVnaW4pLlRvdGFsU2Vjb25kcyA+PSB3YWl0U2Vjb25kcykvL+etieW+hei2heaXtgogICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgCiAgICAgICAgICAgICAgICAgIFN5c3RlbS5UaHJlYWRpbmcuVGhyZWFkLlNsZWVwKHdhaXRJbnRlcnZhbE1zKTsKICAgICAgICAgICAgICAKICAgICAgICAgICAgICAKICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOyAKICBgYGAKICAKICAjIOmBl+eVmeeahOmXrumimAogIAogIOWcqOWNleS4qnJlZGlz5a6e5L6L5LiL77yM5LiK6L+w5Luj56CB5bel5L2c6YO9b2vvvIzlpoLmnpzlrZjlnKhyZWRpc+mbhue+pO+8jOS4lG1hc3RlcuaMguaOieeahOaDheWGte+8jOmCo+S5iOi/meS4qumUgeS4gOWumumUgeS4jeS9jwoK
+---
+title: "关于redis分布式锁入门"
+description: "原理 单一实例下：使用setnx命令(在key不存在时,创建并设置value 返回1,key存在时,会返回0)来获取锁。 应用 以扣库存为例，使用锁能够有效保证不会被超卖；  基础版方案：数据库锁 SELECT stock from goods where ID =1 for update; update  goods set stock=stock-1 where id=1 and stock=10 // 正常情况下看你业务需求，如果能够在落库前确认库存的话，上面这句话后面的stock=10能..."
+date: "2016-08-06"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834948617/57717d9f-a987-4650-a703-4a1ad285af72.jpeg"
+readingTime: 1
+slug: "redis-1"
+---
+# 原理
+
+单一实例下：使用setnx命令(在key不存在时,创建并设置value 返回1,key存在时,会返回0)来获取锁。
+
+# 应用
+
+以扣库存为例，使用锁能够有效保证不会被超卖；
+
+- 基础版方案：数据库锁
+
+  ```
+  SELECT stock from goods where ID =1 for update;
+  update  goods set stock=stock-1 where id=1 and stock=10
+  // 正常情况下看你业务需求，如果能够在落库前确认库存的话，上面这句话后面的stock=10能够限定库存锁定值
+  // 如果不使用这个stock=10的话，会有一定的副作用，比如说常见的，多线程轮扣
+  ```
+
+- ## redis 版v0
+
+​     使用setnx写入一个键值，如果成功则表明获取到锁，执行业务;对于没有获取到锁的，则会轮询获取。
+
+```
+            int waitIntervalMs = 50;//间隔等待时长 毫秒
+            string lockKey = "lock_key:" + key; 
+            DateTime begin = DateTime.Now;
+            while (true)
+            {
+                if (redisClient.SetNX(lockKey, new byte[] { 1 }) == 1)
+                {
+                    redisClient.Expire(lockKey, expirySeconds);
+                    return true;
+                } 
+                //不等待锁则返回
+                if (waitSeconds <= 0)
+                    break;
+
+                if ((DateTime.Now - begin).TotalSeconds >= waitSeconds)//等待超时
+                    break;
+
+                System.Threading.Thread.Sleep(waitIntervalMs);
+            }
+            return false;
+```
+
+ **不管是该业务成功、失败或者异常，需要确保该锁在周期结束后能被释放**
+
+- redis 版v1
+
+  V0版本存在的缺陷：比较致命的是可能会出现，任务还未完成，锁就超时了，导致key被回收了，那么能不能将锁的申请时间作为值进行存储呢？
+
+  ```
+  ​```
+  int waitIntervalMs = 200;//间隔等待时长 毫秒 设置成足够长，至少要超过数据库的超时响应时间
+  string lockKey = "lock_key:" + key; 
+  DateTime begin = DateTime.Now;
+  DateTime now = DateTime.Now;
+  while (true)
+              {
+                //在key值存在的情况下
+                 if(redisclient.ExistKey(lockKey))
+                 {
+                 //如果key对应的value值+超时时间后小于当前时间，则移除key值，让业务正常运行
+                 if(Convert.ToDateTime(redisclient.GetKey(lockkey).Value)+TimeLimit<now){
+                 redisclient.remove(lockkey);
+                 }
+                 }
+                  if (redisClient.SetNX(lockKey, now.tostring()) == 1)
+                  {
+                      redisClient.Expire(lockKey, expirySeconds);
+                      return true;
+                  } 
+                  //不等待锁则返回
+                  if (waitSeconds <= 0)
+                      break;
+  
+                  if ((DateTime.Now - begin).TotalSeconds >= waitSeconds)//等待超时
+                      break;
+  
+                  System.Threading.Thread.Sleep(waitIntervalMs);
+              
+              
+              }
+              return false; 
+  ```
+  
+  # 遗留的问题
+  
+  在单个redis实例下，上述代码工作都ok，如果存在redis集群，且master挂掉的情况，那么这个锁一定锁不住
+

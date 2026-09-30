@@ -1,1 +1,300 @@
-LS0tCnRpdGxlOiAiVW5kZXJzdGFuZGluZyBSRVNUIEFQSSBEZXNpZ24gUnVsZXMiCmRlc2NyaXB0aW9uOiAiSW50cm9kdWN0aW9uIHRvIFJFU1QgQVBJIFJFU1QgKFJlcHJlc2VudGF0aW9uYWwgU3RhdGUgVHJhbnNmZXIpIGlzIGFuIGFyY2hpdGVjdHVyYWwgc3R5bGUgZm9yIGJ1aWxkaW5nIGRpc3RyaWJ1dGVkIHN5c3RlbXMuIEEgV2ViIEFQSSBjb25mb3JtcyB0byB0aGUgUkVTVCBhcmNoaXRlY3R1cmFsIHN0eWxlLCBjYWxsZWQgUkVTVGZ1bCBXZWIgQVBJLiAgUkVTVCBBUElzIGFyZSBzdGF0ZWxlc3MsIGNsaWVudC1zZXJ2ZXIsIGNhY2hlYWJsZS4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwNDcxOTIvNWFhMTNiNDUtM2NjZC00ZTNmLWEyZjUtNTYzNzA4NTNjNGFhLmpwZWciCnJlYWRpbmdUaW1lOiAxMApzbHVnOiAicmVzdC1hcGktZGVzaWduLXJ1bGVzIgpjYXRlZ29yeTogIuehrOaguOa3seaMliIKLS0tCiMjIEludHJvZHVjdGlvbiB0byBSRVNUIEFQSSAKClJFU1QgKFJlcHJlc2VudGF0aW9uYWwgU3RhdGUgVHJhbnNmZXIpIGlzIGFuIGFyY2hpdGVjdHVyYWwgc3R5bGUgZm9yIGJ1aWxkaW5nIGRpc3RyaWJ1dGVkIHN5c3RlbXMuIEEgV2ViIEFQSSBjb25mb3JtcyB0byB0aGUgUkVTVCBhcmNoaXRlY3R1cmFsIHN0eWxlLCBjYWxsZWQgUkVTVGZ1bCBXZWIgQVBJLiAKClJFU1QgQVBJcyBhcmUgc3RhdGVsZXNzLCBjbGllbnQtc2VydmVyLCBjYWNoZWFibGUsIGxheWVyZWQgc3lzdGVtcyBkZXNpZ25lZCBhcm91bmQgcmVzb3VyY2VzLiBUaGUgc2V0IG9mIHJlc291cmNlcyBpcyBrbm93biBhcyB0aGUgUkVTVCBBUEkncyBfcmVzb3VyY2UgbW9kZWxfCgo8IS0tdHJ1bmNhdGUtLT4KCmBgYG1lcm1haWQKCnNlcXVlbmNlRGlhZ3JhbQoKcGFydGljaXBhbnQgQ2xpZW50CnBhcnRpY2lwYW50IFdlYiBBUEkgClBhcnRpY2lwYW50IFdlYiBTZXJ2aWNlIApDbGllbnQtPj5XZWIgQVBJOiBSZXF1ZXN0CldlYiBBUEktPj5XZWIgU2VydmljZTogUmVxdWVzdApXZWIgU2VydmljZS0+PldlYiBBUEk6IFJlc3BvbnNlCldlYiBBUEktPj5DbGllbnQ6IFJlc3BvbnNlCgpgYGAKClJFU1QgQVBJcyBhcmUgb25lIG9mIHRoZSBtb3N0IGNvbW1vbiBhbmQgZnVuZGFtZW50YWwgd2F5cyB0byBleHBvc2UgZGF0YSBhbmQgZnVuY3Rpb25hbGl0eSBhcyB3ZWIgc2VydmljZXMuIFJFU1QgQVBJcyB1c2UgSFRUUCByZXF1ZXN0cyB0byBHRVQsIFBVVCwgUE9TVCwgYW5kIERFTEVURSBkYXRhLiAKCkFuIGFkZXF1YXRlbHkgZGVzaWduZWQgUkVTVCBBUEkgc2hvdWxkIGJlIGVhc3kgdG8gdW5kZXJzdGFuZCwgdXNlLCBhbmQgZXZvbHZlIG92ZXIgdGltZS4gSXQgd2lsbCBoZWxwIGNsaWVudHMgYW5kIGJyb3dzZXIgYXBwcyBjb25zdW1lIHRoZSBBUEkgbW9yZSBlZmZpY2llbnRseS4gCgpCZWZvcmUgZGVzaWduaW5nIGFuZCBkZXZlbG9waW5nIGEgUkVTVCBBUEksIHdlIG5lZWQgdG8gc2VlayBhbnN3ZXJzIHRvIHRoZSBmb2xsb3dpbmcgcXVlc3Rpb25zOgoKLSBXaGF0IGFyZSBVUkkgUGF0aHM/IFN0cnVjdHVyZSBvZiBVUkkgUGF0aCBzZWdtZW50cz8gCi0gV2hlbiB0byB1c2UgcGx1cmFsIG5vdW5zIG9yIHZlcmJzIGZvciBVUkkgUGF0aCBzZWdtZW50cz8KLSBXaGF0IGlzIHRoZSBIVFRQIHJlc3BvbnNlIHN0YXR1cyBjb2RlLCBhbmQgaG93IHRvIHVzZSBpdCBpbiBhIHNwZWNpZmljIHNjZW5hcmlvPyAKLSBIb3cgdG8gbWFwIG5vbi1DUlVEIG9wZXJhdGlvbnMgdG8gSFRUUCBtZXRob2RzPyAKCiMjIFVuZGVyc3RhbmRpbmcgVW5pZm9ybSBSZXNvdXJjZSBJZGVudGlmaWVyIChVUkkpCgpSRVNUIEFQSXMgdXNlIFVuaWZvcm0gUmVzb3VyY2UgSWRlbnRpZmllcnMgKFVSSXMpIHRvIGlkZW50aWZ5IHJlc291cmNlcy4gQSByZXNvdXJjZSBpcyBhbnkgaW5mb3JtYXRpb24gdGhhdCBjYW4gYmUgbmFtZWQuIFJlc291cmNlcyBhcmUgc2VwYXJhdGVkIGJ5IGZvcndhcmQgc2xhc2hlcyAoLykuIEEgZ29vZCBVUkkgc2hvdWxkIGJlIHNob3J0LCBlYXN5IHRvIHJlbWVtYmVyLCBhbmQgc2hvdWxkIGdpdmUgdGhlIHVzZXIgYW4gaWRlYSBhYm91dCB0aGUgcmVzb3VyY2UuCgojIyMgVVJJIEZvcm1hdAoKVGhlIFVSSSBmb3JtYXQgaXMgYXMgZm9sbG93czoKClVSSSA9IHNjaGVtZSAiOi8vIiBob3N0IFsgIjoiIHBvcnQgXSBbICIvIiBwYXRoIF0gWyAiPyIgcXVlcnkgXSBbICIjIiBmcmFnbWVudCBdCgpgYGBodHRwIHJlcXVlc3QKaHR0cDovLzxkb21haW4tbmFtZT4vPHJlc291cmNlLW5hbWU+LzxyZXNvdXJjZS1pZD4KYGBgCgojIyMgVVJJIFJlc291cmNlIE1vZGVsIAoKSGVhZGVyfERlc2NyaXB0aW9uCi0tLS0tLXwtLS0tLS0tLS0tLQpEb2N1bWVudCB8IEEgZG9jdW1lbnQgcmVzb3VyY2UgaXMgc2ltaWxhciB0byBkYXRhYmFzZSByZWNvcmQgb3IgaW5zdGFuY2Ugb2YgYW4gb2JqZWN0LiBJdCBpcyBhIHNpbmdsZSByZXNvdXJjZSB0aGF0IGNhbiBiZSByZXRyaWV2ZWQsIGNyZWF0ZWQsIHVwZGF0ZWQsIG9yIGRlbGV0ZWQuIDxici8+IEZvciBleGFtcGxlLCBpbmZvcm1hdGlvbiBhYm91dCBhIGJsb2cgYXV0aG9yIGlzIGEgZG9jdW1lbnQgcmVzb3VyY2UuIDxici8+IGBodHRwOi8vYXBpLmJsb2cuY29tL2F1dGhvcnMvcm9iaW4tZ2FuZGhpYApDb2xsZWN0aW9uIHwgQSBjb2xsZWN0aW9uIHJlc291cmNlIGlzIGEgc2VydmVyLW1hbmFnZWQgZGlyZWN0b3J5IG9mIHJlc291cmNlcy4gPGJyLz4gRm9yIGV4YW1wbGUsIGEgbGlzdCBvZiBibG9nIGF1dGhvcnMgaXMgYSBjb2xsZWN0aW9uIHJlc291cmNlLiA8YnIvPiBgaHR0cDovL2FwaS5ibG9nLmNvbS9hdXRob3JzYApTdG9yZSB8IEEgc3RvcmUgaXMgYSByZXBvc2l0b3J5IHdoaWNoIGlzIG1hbmFnZWQgYnkgY2xpZW50LiBVc2luZyBzdG9yZSByZXNvdXJjZSBjbGllbnQgY2FuIGNyZWF0ZSwgdXBkYXRlLCBkZWxldGUgYW5kIHJldHJpZXZlIGRvY3VtZW50cy4gPGJyLz4gYGh0dHA6Ly9hcGkuYmxvZy5jb20vc3RvcmUvYXV0aG9ycy9yb2Jpbi1nYW5kaGlgCkNvbnRyb2xsZXIgfCBBIGNvbnRyb2xsZXIgcmVzb3VyY2UgbW9kZWxzIGEgcHJvY2VkdXJlIGNvbmNlcHQuIEl0IGlzIGEgcmVzb3VyY2UgdGhhdCByZXByZXNlbnRzIGEgcHJvY2VkdXJlIHRoYXQgY2FuIGJlIGludm9rZWQuIEEgY29udHJvbGxlciByZXNvdXJjZSBpcyBhIGNvbGxlY3Rpb24gcmVzb3VyY2UgdGhhdCBzdXBwb3J0cyB0aGUgUE9TVCBtZXRob2QuIFRoZSBQT1NUIG1ldGhvZCBpcyB1c2VkIHRvIGludm9rZSB0aGUgY29udHJvbGxlciByZXNvdXJjZS4gVGhlIGNvbnRyb2xsZXIgcmVzb3VyY2UgY2FuIGJlIHVzZWQgdG8gbW9kZWwgYSBwcm9jZWR1cmUgdGhhdCBjYW4gYmUgaW52b2tlZC4gRm9yIGV4YW1wbGUsIHRoZSBmb2xsb3dpbmcgVVJJIG1vZGVscyBhIGNvbnRyb2xsZXIgcmVzb3VyY2UgdGhhdCByZXByZXNlbnRzIGEgcHJvY2VkdXJlIHRoYXQgY2FuIGJlIGludm9rZWQgdG8gc2VuZCBhbiBlbWFpbDogPGJyLz4gYGBgUE9TVCAvYXBpLmJsb2cuY29tL2VtYWlsL2VtYWlsL3NlbmRgYGAgPGJyLz4gYGBgIHtDb2xsZWN0aW9ufS97U3RvcmV9L3tEb2N1bWVudH0ve0NvbnRyb2xsZXJ9IGBgYAoKIyMgUkVTVCBBUEkgRGVzaWduIFJ1bGVzICAKCiMjIyBVUkkgCgotICoqUnVsZSA6IEZvcndhcmQgU2xhc2ggKC8pIGlzIHVzZWQgdG8gc2VwYXJhdGUgcmVzb3VyY2VzIGluIHRoZSBVUkkgYW5kIGluZGljYXRlIGEgaGllcmFyY2hpY2FsIHJlbGF0aW9uc2hpcCoqCgpBIHRyYWlsaW5nIGZvcndhcmQgc2xhc2ggKC8pIGlzIG5vdCByZXF1aXJlZCBhcyB0aGUgbGFzdCBjaGFyYWN0ZXIgb2YgYSBVUkkuIE1hbnkgd2ViIHNlcnZlcnMgYXV0b21hdGljYWxseSByZWRpcmVjdCByZXF1ZXN0cyB3aXRoIGEgdHJhaWxpbmcgZm9yd2FyZCBzbGFzaCB0byB0aGUgc2FtZSBVUkkgd2l0aG91dCB0aGUgdHJhaWxpbmcgZm9yd2FyZCBzbGFzaC4KCgotICoqUnVsZSA6IFVzZSBwbHVyYWwgbm91bnMgZm9yIFVSSSBQYXRoIHNlZ21lbnRzIHRoYXQgcmVwcmVzZW50IGNvbGxlY3Rpb25zIG9yIHJlc291cmNlcyoqCgotICoqUnVsZSA6IFVzZSBIVFRQIE1ldGhvZHMgdG8gUGVyZm9ybSBPcGVyYXRpb25zIG9uIFJlc291cmNlcyoqCgpIVFRQIG1ldGhvZHMgYXJlIHVzZWQgdG8gcGVyZm9ybSBvcGVyYXRpb25zIG9uIHJlc291cmNlcy4gVGhlIGZvbGxvd2luZyB0YWJsZSBsaXN0cyB0aGUgSFRUUCBtZXRob2RzIGFuZCB0aGVpciBjb3JyZXNwb25kaW5nIG9wZXJhdGlvbnM6Cgp8IEhUVFAgTWV0aG9kIHwgT3BlcmF0aW9uIHwKfCAtLS0tLS0tLS0tLSB8IC0tLS0tLS0tLSB8CnwgR0VUICAgICAgICAgfCBSZXRyaWV2ZSBhIHJlc291cmNlIHwKfCBQT1NUICAgICAgICB8IENyZWF0ZSBhIHJlc291cmNlIHwKfCBQVVQgICAgICAgICB8IFVwZGF0ZSBhIHJlc291cmNlIHwKfCBERUxFVEUgICAgICB8IERlbGV0ZSBhIHJlc291cmNlIHwKfCBQQVRDSCAgICAgICB8IFVwZGF0ZSBhIHJlc291cmNlIHdpdGggUGFydGlhbCBkYXRhIHwKCgpgYGBKUwpjb25zdCBleHByZXNzID0gcmVxdWlyZSgnZXhwcmVzcycpOwpjb25zdCBib2R5UGFyc2VyID0gcmVxdWlyZSgnYm9keS1wYXJzZXInKTsKY29uc3QgYXBwID0gZXhwcmVzcygpOwpjb25zdCBwb3J0ID0gMzAwMDsKCmFwcC51c2UoYm9keVBhcnNlci5qc29uKCkpOwoKYXBwLmdldCgnL2F1dGhvcnMnLCAocmVxLCByZXMpID0+IHsKCnJlcy5zZW5kKCdBdXRob3JzIExpc3QnKTsgCgovL2dldCBhdXRob3IgbGlzdCBmcm9tIFNxbCBsaXRlIGJhY2tlbmQgCgpyZXMuanNvbihhdXRob3JzKTsKCn0pOwogIAphcHAucG9zdCgnL2F1dGhvcnMnLCAocmVxLCByZXMpID0+IHsKICAKICByZXMuc2VuZCgnQWRkIEF1dGhvcicpOwoKICAvL2FkZCBhdXRob3IgdG8gU3FsIGxpdGUgYmFja2VuZAoKICByZXMuanNvbihhdXRob3IpOwoKfSk7CgoKLy91cGRhdGUgYW4gYXV0aG9yCgphcHAucHV0KCcvYXV0aG9ycy86aWQnLCAocmVxLCByZXMpID0+IHsKCiAgcmVzLnNlbmQoJ1VwZGF0ZSBBdXRob3InKTsKCiAgcmVzLmpzb24oYXV0aG9yKTsKCn0pOwoKLy9kZWxldGUgYW4gYXV0aG9yCgphcHAuZGVsZXRlKCcvYXV0aG9ycy86aWQnLCAocmVxLCByZXMpID0+IHsKCiAgcmVzLnNlbmQoJ0RlbGV0ZSBBdXRob3InKTsKCiAgcmVzLmpzb24oYXV0aG9yKTsKCn0pOwoKYXBwLnBhdGNoKCcvYXV0aG9ycy86aWQnLCAocmVxLCByZXMpID0+IHsKCiAgcmVzLnNlbmQoJ1VwZGF0ZSBBdXRob3IgRW1haWwnKTsKCiAgcmVzLmpzb24oYXV0aG9yKTsKCn0pOyAKCgphcHAubGlzdGVuKHBvcnQsICgpID0+IHsKICBjb25zb2xlLmxvZyhgQmxvZyBFeGFtcGxlIGFwcCBsaXN0ZW5pbmcgYXQgaHR0cDovL2xvY2FsaG9zdDoke3BvcnR9YCk7Cn0pOwpgYGAKCi0gKipSdWxlIDogSHlwaGVuICgtKSBpcyB1c2VkIHRvIHNlcGFyYXRlIHdvcmRzIGluIFVSSSBQYXRoKioKCkh5cGhlbnMgKC0pIGFyZSB1c2VkIHRvIHNlcGFyYXRlIHdvcmRzIGluIFVSSSBwYXRoLiBGb3IgZXhhbXBsZSwgdGhlIFVSSSBwYXRoIGZvciBhIHJlc291cmNlIG5hbWVkIF91c2VyLXByb2ZpbGVfIGlzIF8vdXNlci1wcm9maWxlXy4KCi0gKipSdWxlIDogVW5kZXJzY29yZSAoXykgaXMgbm90IHVzZWQgaW4gVVJJKioKClVuZGVyc2NvcmVzIChfKSBhcmUgbm90IHVzZWQgaW4gVVJJIHBhdGggZHVlIHRvIHRleHQgZWRpdG9ycyBhbmQgYnJvd3NlcnMgZGVwZW5kaW5nIG9uIHRoZSBmb250IGhpZGUgdGhlIHVuZGVyc2NvcmUgYnkgdW5kZXJsaW5pbmcgdGhlIHRleHQuCgotICoqUnVsZSA6IEZpbGUgRXh0ZW5zaW9ucyBhcmUgbm90IHVzZWQgaW4gVVJJKioKCkEgUkVTVCBBUEkgc2hvdWxkIG5vdCB1c2UgZmlsZSBleHRlbnNpb25zIGluIHRoZSBVUkkuIEZvciBleGFtcGxlLCB0aGUgVVJJIHBhdGggZm9yIGEgcmVzb3VyY2UgbmFtZWQgX3VzZXItcHJvZmlsZV8gaXMgXy91c2VyLXByb2ZpbGVfIGFuZCBub3QgXy91c2VyLXByb2ZpbGUuanNvbl8uCgotICoqUnVsZSA6IElmIEFQSSBQcm92aWRlcyBhIGRldmVsb3BlciBwb3J0YWwgdGhlbiBpdCBzaG91bGQgYmUgYWNjZXNzaWJsZSB2aWEgYSBjb25zaXN0ZW50IHN1YmRvbWFpbioqCgpJZiBhbiBBUEkgcHJvdmlkZXMgYSBkZXZlbG9wZXIgcG9ydGFsLCB0aGVuIHRoZSBkZXZlbG9wZXIgcG9ydGFsIHNob3VsZCBiZSBhY2Nlc3NpYmxlIHZpYSBhIGNvbnNpc3RlbnQgc3ViZG9tYWluLiBGb3IgZXhhbXBsZSwgdGhlIGRldmVsb3BlciBwb3J0YWwgZm9yIHRoZSB3ZWF0aGVyIEFQSSBpcyBhY2Nlc3NpYmxlIHZpYSBfZGV2ZWxvcGVyLmJsb2cuYXBpLmNvbV8uCgotICoqUnVsZSA6IExvd2VyY2FzZSBsZXR0ZXJzIGFyZSBwcmVmZXJyZWQgaW4gVVJJKioKCkxvd2VyY2FzZSBsZXR0ZXJzIGFyZSBwcmVmZXJyZWQgaW4gVVJJLiBGb3IgZXhhbXBsZSwgdGhlIFVSSSBwYXRoIGZvciBhIHJlc291cmNlIG5hbWVkIF91c2VyLXByb2ZpbGVfIGlzIF8vdXNlci1wcm9maWxlXyBhbmQgbm90IF8vVXNlci1Qcm9maWxlXy4KCi0gKipSdWxlOiBVc2UgYSBWZXJiIG9yIHZlcmIgcGhyYXNlIGZvciBDb250cm9sbGVyIE5hbWVzKioKCmBgYGh0dHAgcmVxdWVzdApQT1NUIC9hcGkuYmxvZy5jb20vZW1haWwvZW1haWwvc2VuZApgYGAKCi0gKipSdWxlOiBDUlVEIGZ1bmN0aW9uIG5hbWVzIHNob3VsZCBub3QgYmUgdXNlZCBpbiB0aGUgVVJJKioKClRoZSBmb2xsb3dpbmcgdGFibGUgbGlzdHMgdGhlIENSVUQgZnVuY3Rpb25zIGFuZCB0aGVpciBjb3JyZXNwb25kaW5nIEhUVFAgbWV0aG9kczoKCnwgQ1JVRCBGdW5jdGlvbiB8IEhUVFAgTWV0aG9kIHwKfCAtLS0tLS0tLS0tLS0tIHwgLS0tLS0tLS0tLS0gfAp8IENyZWF0ZSAgICAgICAgfCBQT1NUICAgICAgICB8CnwgUmVhZCAgICAgICAgICB8IEdFVCAgICAgICAgIHwKfCBVcGRhdGUgICAgICAgIHwgUFVUICAgICAgICAgfAp8IERlbGV0ZSAgICAgICAgfCBERUxFVEUgICAgICB8CgplLmcuIFByZWZlcnJlZCBBUEkgSW50ZXJmYWNlCgpgYGBodHRwIHJlcXVlc3QKUFVUIC9hcGkuYmxvZy5jb20vYXV0aG9ycy9yb2Jpbi1nYW5kaGkKYGBgCgpBbnRpIHBhdHRlcm4gCgpgYGBodHRwIHJlcXVlc3QKREVMRVRFIC9kZWxldGV1c2Vycy9hYmMvCmBgYAoKLSAqKlJ1bGU6IE5ldyBVUklzIHNob3VsZCBiZSBpbnRyb2R1Y2VkIG5ldyBjb25jZXB0cyoqCgpBIFJFU1QgQVBJIHNob3VsZCBpbnRyb2R1Y2UgbmV3IFVSSXMgZm9yIG5ldyBjb25jZXB0cy4gRm9yIGV4YW1wbGUsIHRoZSBmb2xsb3dpbmcgdGFibGUgbGlzdHMgdGhlIFVSSXMgZm9yIGEgdXNlciByZXNvdXJjZToKCnwgVVJJIHwgRGVzY3JpcHRpb24gfAp8IC0tLSB8IC0tLS0tLS0tLS0tIHwKfCAvYXV0aG9ycyB8IFJldHVybnMgYSBsaXN0IG9mIGF1dGhvcnMgfAp8IC9hdXRob3JzL3JvYmluIHwgUmV0dXJucyB0aGUgYXV0aG9yIGRldGFpbHMgfAp8IC9hdXRob3JzL3JvYmluL2Jvb2tzIHwgUmV0dXJucyBhIGxpc3Qgb2YgYXJ0aWNsZXMgd3JpdHRlbiBieSB0aGUgYXV0aG9yIAoKLSAqKlJ1bGU6IEpTT04gc2hvdWxkIGJlIHdlbGwgZm9ybWVkIGFuZCBzdXBwb3J0ZWQgZm9yIHJlc291cmNlIHJlcHJlc2VudGF0aW9uKioKCi0gKipSdWxlOiBBZGQgVmVyc2lvbmluZyBhdCB0aGUgc3RhcnQgb2YgdGhlIFVSSSoqCgpgYGBodHRwIHJlcXVlc3QKCmh0dHA6Ly9hcGkuYmxvZy5jb20vdjEvYXV0aG9ycy9yb2Jpbi1nYW5kaGkKCmBgYAoKCiMjIyBIVFRQIE1ldGhvZHMKCi0gKipSdWxlOiBHRVQgbXVzdCBiZSB1c2VkIHRvIHJldHJpZXZlIHJlcHJlc2VudGF0aW9uIG9mIGEgcmVzb3VyY2UqKgoKLSAqKlJ1bGU6IEhlYWQgbXVzdCBiZSB1c2VkIHRvIHJldHJpZXZlIG1ldGFkYXRhIG9mIGEgcmVzb3VyY2UgYW5kIHJlc3BvbnNlIGhlYWRlcnMqKgoKLSAqKlJ1bGU6IFBVVCBtdXN0IGJlIHVzZWQgdG8gYm90aCBpbnNlcnQgYW5kIHVwZGF0ZSBhIHJlc291cmNlKioKCi0gKipSdWxlOiBQT1NUIG11c3QgYmUgdXNlZCB0byBjcmVhdGUgYSByZXNvdXJjZSoqCgotICoqUnVsZTogUE9TVCBtdXN0IGJlIHVzZWQgdG8gZXhlY3V0ZSBhIGNvbnRyb2xsZXIqKgoKLSAqKlJ1bGU6IERFTEVURSBtdXN0IGJlIHVzZWQgdG8gZGVsZXRlIGEgcmVzb3VyY2UqKgoKLSAqKlJ1bGU6IE9QVElPTlMgbXVzdCBiZSB1c2VkIHRvIHJldHJpZXZlIHN1cHBvcnRlZCBIVFRQIG1ldGhvZHMqKgoKLSAqKlJ1bGUgOiBVc2UgSFRUUCBTdGF0dXMgQ29kZXMgdG8gSW5kaWNhdGUgUmVzcG9uc2UgU3RhdHVzKioKCgoKSFRUUCBzdGF0dXMgY29kZXMgYXJlIHVzZWQgdG8gaW5kaWNhdGUgdGhlIHJlc3BvbnNlIHN0YXR1cyBvZiBhbiBIVFRQIHJlcXVlc3QuIFRoZSBmb2xsb3dpbmcgdGFibGUgbGlzdHMgdGhlIEhUVFAgc3RhdHVzIGNvZGVzIGFuZCB0aGVpciBjb3JyZXNwb25kaW5nIG1lYW5pbmdzOgoKfCBIVFRQIFN0YXR1cyBDb2RlIHwgTWVhbmluZyB8IEluZm9ybWF0aW9uIHwKfCAtLS0tLS0tLS0tLS0tLS0tIHwgLS0tLS0tLSB8IC0tLS0tLS0tLS0tIHwKMTAwIHwgMTAwIGFuZCBhYm92ZSBhcmUgaW5mb3JtYXRpb24gfCAxMDAgYW5kIGFib3ZlIGFyZSBmb3IgIkluZm9ybWF0aW9uIi4gWW91IHJhcmVseSB1c2UgdGhlbSBkaXJlY3RseS4gUmVzcG9uc2VzIHdpdGggdGhlc2Ugc3RhdHVzIGNvZGVzIGNhbm5vdCBoYXZlIGEgYm9keS4KfCAyMDAgT0sgICAgICAgICAgIHwgVGhlIHJlcXVlc3Qgd2FzIHN1Y2Nlc3NmdWwgfCAyMDAgYW5kIGFib3ZlIGFyZSBmb3IgIlN1Y2Nlc3NmdWwiIHJlc3BvbnNlcy4gVGhlc2UgYXJlIHRoZSBvbmVzIHlvdSB3b3VsZCB1c2UgdGhlIG1vc3QuIDIwMCBpcyB0aGUgZGVmYXVsdCBzdGF0dXMgY29kZSBmb3IgYSBzdWNjZXNzZnVsIHJlc3BvbnNlLgp8IDIwMSBDcmVhdGVkICAgICAgfCBUaGUgcmVxdWVzdCB3YXMgc3VjY2Vzc2Z1bCBhbmQgYSByZXNvdXJjZSB3YXMgY3JlYXRlZCB8IDIwMSBpcyAiQ3JlYXRlZCIuIFRoaXMgaXMgdXNlZCB3aGVuIGEgbmV3IHJlc291cmNlIGlzIGNyZWF0ZWQuIFRoZSByZXNwb25zZSB3aWxsIGNvbnRhaW4gYSBMb2NhdGlvbiBoZWFkZXIgd2l0aCB0aGUgVVJJIG9mIHRoZSBuZXcgcmVzb3VyY2UuCnwgMjA0IE5vIENvbnRlbnQgICB8IFRoZSByZXF1ZXN0IHdhcyBzdWNjZXNzZnVsIGJ1dCB0aGVyZSBpcyBubyByZXByZXNlbnRhdGlvbiB0byByZXR1cm4gfCBBIHNwZWNpYWwgY2FzZSBpcyAyMDQsICJObyBDb250ZW50Ii4gVGhpcyByZXNwb25zZSBpcyB1c2VkIHdoZW4gdGhlcmUgaXMgbm8gY29udGVudCB0byByZXR1cm4gdG8gdGhlIGNsaWVudCwgYW5kIHNvIHRoZSByZXNwb25zZSBtdXN0IG5vdCBoYXZlIGEgYm9keS4KfCAzMDAgTXVsdGlwbGUgQ2hvaWNlcyB8IFRoZSByZXF1ZXN0ZWQgcmVzb3VyY2UgY29ycmVzcG9uZHMgdG8gYW55IG9uZSBvZiBhIHNldCBvZiByZXByZXNlbnRhdGlvbnMsIGVhY2ggd2l0aCBpdHMgb3duIHNwZWNpZmljIGxvY2F0aW9uIHwgMzAwIGFuZCBhYm92ZSBhcmUgZm9yICJSZWRpcmVjdGlvbiIuIFRoZXNlIGFyZSB1c2VkIHdoZW4gdGhlIGNsaWVudCBuZWVkcyB0byB0YWtlIHNvbWUgYWRkaXRpb25hbCBhY3Rpb24gaW4gb3JkZXIgdG8gY29tcGxldGUgdGhlIHJlcXVlc3QuIEZvciBleGFtcGxlLCBpZiB5b3UgcmVxdWVzdCBhIHJlc291cmNlIHRoYXQgaGFzIGJlZW4gbW92ZWQgdG8gYSBkaWZmZXJlbnQgbG9jYXRpb24sIHRoZSByZXNwb25zZSB3aWxsIGJlIDMwMSwgIk1vdmVkIFBlcm1hbmVudGx5IiwgYW5kIHRoZSByZXNwb25zZSB3aWxsIGNvbnRhaW4gYSBMb2NhdGlvbiBoZWFkZXIgd2l0aCB0aGUgbmV3IGxvY2F0aW9uIG9mIHRoZSByZXNvdXJjZS4gVGhlIGNsaWVudCBjYW4gdGhlbiBtYWtlIGEgbmV3IHJlcXVlc3QgdG8gdGhhdCBsb2NhdGlvbi4KfCA0MDAgQmFkIFJlcXVlc3QgIHwgVGhlIHJlcXVlc3QgY291bGQgbm90IGJlIHVuZGVyc3Rvb2QgYnkgdGhlIHNlcnZlciB8IDQwMCBhbmQgYWJvdmUgYXJlIGZvciAiQ2xpZW50IEVycm9yIiByZXNwb25zZXMuIFRoZXNlIGFyZSB1c2VkIHdoZW4gdGhlIGNsaWVudCBoYXMgbWFkZSBhIG1pc3Rha2UgaW4gaXRzIHJlcXVlc3QuIEZvciBleGFtcGxlLCBpZiB5b3UgcmVxdWVzdCBhIHJlc291cmNlIHRoYXQgZG9lc24ndCBleGlzdCwgdGhlIHJlc3BvbnNlIHdpbGwgYmUgNDA0LCAiTm90IEZvdW5kIi4gCnwgNDAxIFVuYXV0aG9yaXplZCB8IFRoZSByZXF1ZXN0IHJlcXVpcmVzIHVzZXIgYXV0aGVudGljYXRpb24gfCA0MDEgaXMgIlVuYXV0aG9yaXplZCIuIFRoaXMgaXMgdXNlZCB3aGVuIHRoZSBjbGllbnQgbmVlZHMgdG8gYXV0aGVudGljYXRlIGl0c2VsZiB0byBnZXQgdGhlIHJlcXVlc3RlZCByZXNwb25zZS4KfCA0MDMgRm9yYmlkZGVuICAgIHwgVGhlIHNlcnZlciB1bmRlcnN0b29kIHRoZSByZXF1ZXN0LCBidXQgaXMgcmVmdXNpbmcgdG8gZnVsZmlsbCBpdCB8IDQwMyBpcyAiRm9yYmlkZGVuIi4gVGhpcyBpcyB1c2VkIHdoZW4gdGhlIGNsaWVudCBpcyBub3QgYWxsb3dlZCB0byBhY2Nlc3MgdGhlIHJlc291cmNlLiBGb3IgZXhhbXBsZSwgaWYgeW91IHRyeSB0byBhY2Nlc3MgYSByZXNvdXJjZSB0aGF0IHlvdSBkb24ndCBoYXZlIHBlcm1pc3Npb24gdG8gYWNjZXNzLCB0aGUgcmVzcG9uc2Ugd2lsbCBiZSA0MDMsICJGb3JiaWRkZW4iLgp8IDQwNCBOb3QgRm91bmQgICAgfCBUaGUgc2VydmVyIGhhcyBub3QgZm91bmQgYW55dGhpbmcgbWF0Y2hpbmcgdGhlIFJlcXVlc3QtVVJJIHwgNDA0IGlzICJOb3QgRm91bmQiLiBUaGlzIGlzIHVzZWQgd2hlbiB0aGUgY2xpZW50IHJlcXVlc3RzIGEgcmVzb3VyY2UgdGhhdCBkb2Vzbid0IGV4aXN0LiBGb3IgZXhhbXBsZSwgaWYgeW91IHJlcXVlc3QgYSByZXNvdXJjZSB0aGF0IGRvZXNuJ3QgZXhpc3QsIHRoZSByZXNwb25zZSB3aWxsIGJlIDQwNCwgIk5vdCBGb3VuZCIuCnwgNDA1IE1ldGhvZCBOb3QgQWxsb3dlZCB8IFRoZSBtZXRob2Qgc3BlY2lmaWVkIGluIHRoZSBSZXF1ZXN0LUxpbmUgaXMgbm90IGFsbG93ZWQgZm9yIHRoZSByZXNvdXJjZSBpZGVudGlmaWVkIGJ5IHRoZSBSZXF1ZXN0LVVSSSB8IDQwNSBpcyAiTWV0aG9kIE5vdCBBbGxvd2VkIi4gVGhpcyBpcyB1c2VkIHdoZW4gdGhlIGNsaWVudCByZXF1ZXN0cyBhIHJlc291cmNlIHVzaW5nIGEgbWV0aG9kIHRoYXQgaXNuJ3QgYWxsb3dlZC4gRm9yIGV4YW1wbGUsIGlmIHlvdSB0cnkgdG8gYWNjZXNzIGEgcmVzb3VyY2UgdXNpbmcgdGhlIFBPU1QgbWV0aG9kLCBidXQgdGhlIHJlc291cmNlIG9ubHkgc3VwcG9ydHMgdGhlIEdFVCBtZXRob2QsIHRoZSByZXNwb25zZSB3aWxsIGJlIDQwNSwgIk1ldGhvZCBOb3QgQWxsb3dlZCIuCnwgNTAwIEludGVybmFsIFNlcnZlciBFcnJvciB8IFRoZSBzZXJ2ZXIgZW5jb3VudGVyZWQgYW4gdW5leHBlY3RlZCBjb25kaXRpb24gd2hpY2ggcHJldmVudGVkIGl0IGZyb20gZnVsZmlsbGluZyB0aGUgcmVxdWVzdCB8IDUwMCBhbmQgYWJvdmUgYXJlIGZvciAiU2VydmVyIEVycm9yIiByZXNwb25zZXMuIFRoZXNlIGFyZSB1c2VkIHdoZW4gdGhlIHNlcnZlciBlbmNvdW50ZXJzIGFuIGVycm9yIHdoaWxlIGZ1bGZpbGxpbmcgdGhlIHJlcXVlc3QuIEZvciBleGFtcGxlLCBpZiB0aGUgc2VydmVyIHJ1bnMgb3V0IG9mIG1lbW9yeSB3aGlsZSBmdWxmaWxsaW5nIHRoZSByZXF1ZXN0LCB0aGUgcmVzcG9uc2Ugd2lsbCBiZSA1MDAsICJJbnRlcm5hbCBTZXJ2ZXIgRXJyb3IiLgoKVGhlIGFwcHJvYWNoZXMgYW5kIGJlc3QgcHJhY3RpY2VzIG9mIFJFU1QgQVBJIG91dGxpbmVkIGluIHRoaXMgYmxvZyBhcnRpY2xlIHdpbGwgaGVscCBhbnlvbmUgZm9sbG93IGNvbnNpc3RlbnQgZ3VpZGVsaW5lcyBmb3IgZGVzaWduaW5nIGFuZCBkZXZlbG9waW5nIFJFU1QgQVBJcy4gCgojIyBSZWZlcmVuY2VzCgotIFtSb3kgRmllbGRpbmcncyBEaXNzZXJ0YXRpb25dKGh0dHBzOi8vd3d3Lmljcy51Y2kuZWR1L35maWVsZGluZy9wdWJzL2Rpc3NlcnRhdGlvbi9yZXN0X2FyY2hfc3R5bGUuaHRtKQotIFtXaGF0IGlzIFJFU1RdKGh0dHBzOi8vcmVzdGZ1bGFwaS5uZXQvKQotIFtSRVNUIEFQSSBEZXNpZ24gUnVsZWJvb2tdKGh0dHBzOi8vd3d3LmFtYXpvbi5pbi9SRVNULUFQSS1EZXNpZ24tUnVsZWJvb2stQ29uc2lzdGVudC1lYm9vay9kcC9CMDA1WEU1QTdRL3JlZj1zcl8xXzE/a2V5d29yZHM9cmVzdCthcGkrZGVzaWduK3J1bGVib29rJnFpZD0xNjY1OTI2MTk0JnF1PWV5SnhjMk1pT2lJd0xqUXpJaXdpY1hOaElqb2lNQzQxTkNJc0luRnpjQ0k2SWpBdU1EQWlmUSUzRCUzRCZzcHJlZml4PVJFU1QrQVBJK0QlMkNhcHMlMkMxOTQmc3I9OC0xKQotIFtIYW5kcy1vbiBSRVNUZnVsIEFQSSBEZXNpZ24gUGF0dGVybnNdKGh0dHBzOi8vd3d3LmFtYXpvbi5pbi9IYW5kcy1SRVNUZnVsLURlc2lnbi1QYXR0ZXJucy1QcmFjdGljZXMtZWJvb2svZHAvQjA3QkpMMzk5RC9yZWY9c3JfMV8yP2tleXdvcmRzPXJlc3QrYXBpK2Rlc2lnbitydWxlYm9vayZxaWQ9MTY2NTkyNjE5NCZxdT1leUp4YzJNaU9pSXdMalF6SWl3aWNYTmhJam9pTUM0MU5DSXNJbkZ6Y0NJNklqQXVNREFpZlElM0QlM0Qmc3ByZWZpeD1SRVNUK0FQSStEJTJDYXBzJTJDMTk0JnNyPTgtMikKCgoKCjwhLS0gQ2hhbmdlIEhUVFAgQ29kZXMgdG8gYmVsb3cgCgoxMDAgYW5kIGFib3ZlIGFyZSBmb3IgIkluZm9ybWF0aW9uIi4gWW91IHJhcmVseSB1c2UgdGhlbSBkaXJlY3RseS4gUmVzcG9uc2VzIHdpdGggdGhlc2Ugc3RhdHVzIGNvZGVzIGNhbm5vdCBoYXZlIGEgYm9keS4KMjAwIGFuZCBhYm92ZSBhcmUgZm9yICJTdWNjZXNzZnVsIiByZXNwb25zZXMuIFRoZXNlIGFyZSB0aGUgb25lcyB5b3Ugd291bGQgdXNlIHRoZSBtb3N0LgoyMDAgaXMgdGhlIGRlZmF1bHQgc3RhdHVzIGNvZGUsIHdoaWNoIG1lYW5zIGV2ZXJ5dGhpbmcgd2FzICJPSyIuCkFub3RoZXIgZXhhbXBsZSB3b3VsZCBiZSAyMDEsICJDcmVhdGVkIi4gSXQgaXMgY29tbW9ubHkgdXNlZCBhZnRlciBjcmVhdGluZyBhIG5ldyByZWNvcmQgaW4gdGhlIGRhdGFiYXNlLgpBIHNwZWNpYWwgY2FzZSBpcyAyMDQsICJObyBDb250ZW50Ii4gVGhpcyByZXNwb25zZSBpcyB1c2VkIHdoZW4gdGhlcmUgaXMgbm8gY29udGVudCB0byByZXR1cm4gdG8gdGhlIGNsaWVudCwgYW5kIHNvIHRoZSByZXNwb25zZSBtdXN0IG5vdCBoYXZlIGEgYm9keS4KMzAwIGFuZCBhYm92ZSBhcmUgZm9yICJSZWRpcmVjdGlvbiIuIFJlc3BvbnNlcyB3aXRoIHRoZXNlIHN0YXR1cyBjb2RlcyBtYXkgb3IgbWF5IG5vdCBoYXZlIGEgYm9keSwgZXhjZXB0IGZvciAzMDQsICJOb3QgTW9kaWZpZWQiLCB3aGljaCBtdXN0IG5vdCBoYXZlIG9uZS4KNDAwIGFuZCBhYm92ZSBhcmUgZm9yICJDbGllbnQgZXJyb3IiIHJlc3BvbnNlcy4gVGhlc2UgYXJlIHRoZSBzZWNvbmQgdHlwZSB5b3Ugd291bGQgcHJvYmFibHkgdXNlIHRoZSBtb3N0LgpBbiBleGFtcGxlIGlzIDQwNCwgZm9yIGEgIk5vdCBGb3VuZCIgcmVzcG9uc2UuCkZvciBnZW5lcmljIGVycm9ycyBmcm9tIHRoZSBjbGllbnQsIHlvdSBjYW4ganVzdCB1c2UgNDAwLgo1MDAgYW5kIGFib3ZlIGFyZSBmb3Igc2VydmVyIGVycm9ycy4gWW91IGFsbW9zdCBuZXZlciB1c2UgdGhlbSBkaXJlY3RseS4gV2hlbiBzb21ldGhpbmcgZ29lcyB3cm9uZyBhdCBzb21lIHBhcnQgaW4geW91ciBhcHBsaWNhdGlvbiBjb2RlLCBvciBzZXJ2ZXIsIGl0IHdpbGwgYXV0b21hdGljYWxseSByZXR1cm4gb25lIG9mIHRoZXNlIHN0YXR1cyBjb2Rlcy4gLS0+CgoKCgoKCgoKCgoKCgoKCgoKCg==
+---
+title: "Understanding REST API Design Rules"
+description: "Introduction to REST API REST (Representational State Transfer) is an architectural style for building distributed systems. A Web API conforms to the REST architectural style, called RESTful Web API.  REST APIs are stateless, client-server, cacheable..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835047192/5aa13b45-3ccd-4e3f-a2f5-56370853c4aa.jpeg"
+readingTime: 10
+slug: "rest-api-design-rules"
+category: "硬核深挖"
+---
+## Introduction to REST API 
+
+REST (Representational State Transfer) is an architectural style for building distributed systems. A Web API conforms to the REST architectural style, called RESTful Web API. 
+
+REST APIs are stateless, client-server, cacheable, layered systems designed around resources. The set of resources is known as the REST API's _resource model_
+
+<!--truncate-->
+
+```mermaid
+
+sequenceDiagram
+
+participant Client
+participant Web API 
+Participant Web Service 
+Client->>Web API: Request
+Web API->>Web Service: Request
+Web Service->>Web API: Response
+Web API->>Client: Response
+
+```
+
+REST APIs are one of the most common and fundamental ways to expose data and functionality as web services. REST APIs use HTTP requests to GET, PUT, POST, and DELETE data. 
+
+An adequately designed REST API should be easy to understand, use, and evolve over time. It will help clients and browser apps consume the API more efficiently. 
+
+Before designing and developing a REST API, we need to seek answers to the following questions:
+
+- What are URI Paths? Structure of URI Path segments? 
+- When to use plural nouns or verbs for URI Path segments?
+- What is the HTTP response status code, and how to use it in a specific scenario? 
+- How to map non-CRUD operations to HTTP methods? 
+
+## Understanding Uniform Resource Identifier (URI)
+
+REST APIs use Uniform Resource Identifiers (URIs) to identify resources. A resource is any information that can be named. Resources are separated by forward slashes (/). A good URI should be short, easy to remember, and should give the user an idea about the resource.
+
+### URI Format
+
+The URI format is as follows:
+
+URI = scheme "://" host [ ":" port ] [ "/" path ] [ "?" query ] [ "#" fragment ]
+
+```http request
+http://<domain-name>/<resource-name>/<resource-id>
+```
+
+### URI Resource Model 
+
+Header|Description
+------|-----------
+Document | A document resource is similar to database record or instance of an object. It is a single resource that can be retrieved, created, updated, or deleted. <br/> For example, information about a blog author is a document resource. <br/> `http://api.blog.com/authors/robin-gandhi`
+Collection | A collection resource is a server-managed directory of resources. <br/> For example, a list of blog authors is a collection resource. <br/> `http://api.blog.com/authors`
+Store | A store is a repository which is managed by client. Using store resource client can create, update, delete and retrieve documents. <br/> `http://api.blog.com/store/authors/robin-gandhi`
+Controller | A controller resource models a procedure concept. It is a resource that represents a procedure that can be invoked. A controller resource is a collection resource that supports the POST method. The POST method is used to invoke the controller resource. The controller resource can be used to model a procedure that can be invoked. For example, the following URI models a controller resource that represents a procedure that can be invoked to send an email: <br/> ```POST /api.blog.com/email/email/send``` <br/> ``` {Collection}/{Store}/{Document}/{Controller} ```
+
+## REST API Design Rules  
+
+### URI 
+
+- **Rule : Forward Slash (/) is used to separate resources in the URI and indicate a hierarchical relationship**
+
+A trailing forward slash (/) is not required as the last character of a URI. Many web servers automatically redirect requests with a trailing forward slash to the same URI without the trailing forward slash.
+
+
+- **Rule : Use plural nouns for URI Path segments that represent collections or resources**
+
+- **Rule : Use HTTP Methods to Perform Operations on Resources**
+
+HTTP methods are used to perform operations on resources. The following table lists the HTTP methods and their corresponding operations:
+
+| HTTP Method | Operation |
+| ----------- | --------- |
+| GET         | Retrieve a resource |
+| POST        | Create a resource |
+| PUT         | Update a resource |
+| DELETE      | Delete a resource |
+| PATCH       | Update a resource with Partial data |
+
+
+```JS
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+app.get('/authors', (req, res) => {
+
+res.send('Authors List'); 
+
+//get author list from Sql lite backend 
+
+res.json(authors);
+
+});
+  
+app.post('/authors', (req, res) => {
+  
+  res.send('Add Author');
+
+  //add author to Sql lite backend
+
+  res.json(author);
+
+});
+
+
+//update an author
+
+app.put('/authors/:id', (req, res) => {
+
+  res.send('Update Author');
+
+  res.json(author);
+
+});
+
+//delete an author
+
+app.delete('/authors/:id', (req, res) => {
+
+  res.send('Delete Author');
+
+  res.json(author);
+
+});
+
+app.patch('/authors/:id', (req, res) => {
+
+  res.send('Update Author Email');
+
+  res.json(author);
+
+}); 
+
+
+app.listen(port, () => {
+  console.log(`Blog Example app listening at http://localhost:${port}`);
+});
+```
+
+- **Rule : Hyphen (-) is used to separate words in URI Path**
+
+Hyphens (-) are used to separate words in URI path. For example, the URI path for a resource named _user-profile_ is _/user-profile_.
+
+- **Rule : Underscore (_) is not used in URI**
+
+Underscores (_) are not used in URI path due to text editors and browsers depending on the font hide the underscore by underlining the text.
+
+- **Rule : File Extensions are not used in URI**
+
+A REST API should not use file extensions in the URI. For example, the URI path for a resource named _user-profile_ is _/user-profile_ and not _/user-profile.json_.
+
+- **Rule : If API Provides a developer portal then it should be accessible via a consistent subdomain**
+
+If an API provides a developer portal, then the developer portal should be accessible via a consistent subdomain. For example, the developer portal for the weather API is accessible via _developer.blog.api.com_.
+
+- **Rule : Lowercase letters are preferred in URI**
+
+Lowercase letters are preferred in URI. For example, the URI path for a resource named _user-profile_ is _/user-profile_ and not _/User-Profile_.
+
+- **Rule: Use a Verb or verb phrase for Controller Names**
+
+```http request
+POST /api.blog.com/email/email/send
+```
+
+- **Rule: CRUD function names should not be used in the URI**
+
+The following table lists the CRUD functions and their corresponding HTTP methods:
+
+| CRUD Function | HTTP Method |
+| ------------- | ----------- |
+| Create        | POST        |
+| Read          | GET         |
+| Update        | PUT         |
+| Delete        | DELETE      |
+
+e.g. Preferred API Interface
+
+```http request
+PUT /api.blog.com/authors/robin-gandhi
+```
+
+Anti pattern 
+
+```http request
+DELETE /deleteusers/abc/
+```
+
+- **Rule: New URIs should be introduced new concepts**
+
+A REST API should introduce new URIs for new concepts. For example, the following table lists the URIs for a user resource:
+
+| URI | Description |
+| --- | ----------- |
+| /authors | Returns a list of authors |
+| /authors/robin | Returns the author details |
+| /authors/robin/books | Returns a list of articles written by the author 
+
+- **Rule: JSON should be well formed and supported for resource representation**
+
+- **Rule: Add Versioning at the start of the URI**
+
+```http request
+
+http://api.blog.com/v1/authors/robin-gandhi
+
+```
+
+
+### HTTP Methods
+
+- **Rule: GET must be used to retrieve representation of a resource**
+
+- **Rule: Head must be used to retrieve metadata of a resource and response headers**
+
+- **Rule: PUT must be used to both insert and update a resource**
+
+- **Rule: POST must be used to create a resource**
+
+- **Rule: POST must be used to execute a controller**
+
+- **Rule: DELETE must be used to delete a resource**
+
+- **Rule: OPTIONS must be used to retrieve supported HTTP methods**
+
+- **Rule : Use HTTP Status Codes to Indicate Response Status**
+
+
+
+HTTP status codes are used to indicate the response status of an HTTP request. The following table lists the HTTP status codes and their corresponding meanings:
+
+| HTTP Status Code | Meaning | Information |
+| ---------------- | ------- | ----------- |
+100 | 100 and above are information | 100 and above are for "Information". You rarely use them directly. Responses with these status codes cannot have a body.
+| 200 OK           | The request was successful | 200 and above are for "Successful" responses. These are the ones you would use the most. 200 is the default status code for a successful response.
+| 201 Created      | The request was successful and a resource was created | 201 is "Created". This is used when a new resource is created. The response will contain a Location header with the URI of the new resource.
+| 204 No Content   | The request was successful but there is no representation to return | A special case is 204, "No Content". This response is used when there is no content to return to the client, and so the response must not have a body.
+| 300 Multiple Choices | The requested resource corresponds to any one of a set of representations, each with its own specific location | 300 and above are for "Redirection". These are used when the client needs to take some additional action in order to complete the request. For example, if you request a resource that has been moved to a different location, the response will be 301, "Moved Permanently", and the response will contain a Location header with the new location of the resource. The client can then make a new request to that location.
+| 400 Bad Request  | The request could not be understood by the server | 400 and above are for "Client Error" responses. These are used when the client has made a mistake in its request. For example, if you request a resource that doesn't exist, the response will be 404, "Not Found". 
+| 401 Unauthorized | The request requires user authentication | 401 is "Unauthorized". This is used when the client needs to authenticate itself to get the requested response.
+| 403 Forbidden    | The server understood the request, but is refusing to fulfill it | 403 is "Forbidden". This is used when the client is not allowed to access the resource. For example, if you try to access a resource that you don't have permission to access, the response will be 403, "Forbidden".
+| 404 Not Found    | The server has not found anything matching the Request-URI | 404 is "Not Found". This is used when the client requests a resource that doesn't exist. For example, if you request a resource that doesn't exist, the response will be 404, "Not Found".
+| 405 Method Not Allowed | The method specified in the Request-Line is not allowed for the resource identified by the Request-URI | 405 is "Method Not Allowed". This is used when the client requests a resource using a method that isn't allowed. For example, if you try to access a resource using the POST method, but the resource only supports the GET method, the response will be 405, "Method Not Allowed".
+| 500 Internal Server Error | The server encountered an unexpected condition which prevented it from fulfilling the request | 500 and above are for "Server Error" responses. These are used when the server encounters an error while fulfilling the request. For example, if the server runs out of memory while fulfilling the request, the response will be 500, "Internal Server Error".
+
+The approaches and best practices of REST API outlined in this blog article will help anyone follow consistent guidelines for designing and developing REST APIs. 
+
+## References
+
+- [Roy Fielding's Dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- [What is REST](https://restfulapi.net/)
+- [REST API Design Rulebook](https://www.amazon.in/REST-API-Design-Rulebook-Consistent-ebook/dp/B005XE5A7Q/ref=sr_1_1?keywords=rest+api+design+rulebook&qid=1665926194&qu=eyJxc2MiOiIwLjQzIiwicXNhIjoiMC41NCIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=REST+API+D%2Caps%2C194&sr=8-1)
+- [Hands-on RESTful API Design Patterns](https://www.amazon.in/Hands-RESTful-Design-Patterns-Practices-ebook/dp/B07BJL399D/ref=sr_1_2?keywords=rest+api+design+rulebook&qid=1665926194&qu=eyJxc2MiOiIwLjQzIiwicXNhIjoiMC41NCIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=REST+API+D%2Caps%2C194&sr=8-2)
+
+
+
+
+<!-- Change HTTP Codes to below 
+
+100 and above are for "Information". You rarely use them directly. Responses with these status codes cannot have a body.
+200 and above are for "Successful" responses. These are the ones you would use the most.
+200 is the default status code, which means everything was "OK".
+Another example would be 201, "Created". It is commonly used after creating a new record in the database.
+A special case is 204, "No Content". This response is used when there is no content to return to the client, and so the response must not have a body.
+300 and above are for "Redirection". Responses with these status codes may or may not have a body, except for 304, "Not Modified", which must not have one.
+400 and above are for "Client error" responses. These are the second type you would probably use the most.
+An example is 404, for a "Not Found" response.
+For generic errors from the client, you can just use 400.
+500 and above are for server errors. You almost never use them directly. When something goes wrong at some part in your application code, or server, it will automatically return one of these status codes. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

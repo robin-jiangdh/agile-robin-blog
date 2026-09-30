@@ -1,1 +1,302 @@
-LS0tCnRpdGxlOiAiSG93IHRvIGNvbmZpZ3VyZSBQZXJjb25hIE1vbmdvREIgUmVwbGljYXNldCwgUGVyY29uYSBCYWNrdXAgTWFuYWdlciwgQmFja3VwIEFnZW50IHVzaW5nIERvY2tlciBhbmQgcGVyZm9ybSBSZXBsaWNhc2V0IGJhY2t1cCwgcmVzdG9yZSB1c2kuLi4iCmRlc2NyaXB0aW9uOiAiSW4gdGhpcyBibG9nIHBvc3QsIGkgd2lsbCB3YWxrIHlvdSB0aHJvdWdoIHRoZSBzdGVwcyByZXF1aXJlZCB0byBjb250YWluZXJpemUgUGVyY29uYSBTZXJ2ZXIgZm9yIE1vbmdvREIsIFBlcmNvbmEgQmFja3VwIE1hbmFnZXIsIGFuZCBBZ2VudCBmcm9tIHNvdXJjZSBhbmQgY29uZmlndXJlIGNsb3VkLW5hdGl2ZSBTMyhTaW1wbGUgU3RvcmFnZSBTZXJ2aWNlKSBjb21wYXRpYmxlIGRpc3RyaWJ1dGVkIG9iamVjdCBzdG9yYWdlIE1JTklPIC4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCnRhZ3M6IFsiTW9uZ29EQiJdCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwMjg0ODcvOTUxMjA4NmYtMjBiNS00NDIwLTk1MWEtOTMwNzVlMjg1MjI0LmpwZWciCnJlYWRpbmdUaW1lOiA0CnNsdWc6ICJwZXJjb25hLW1vbmdvLXJlcGxpY2FzZXQtbWluaW8iCi0tLQpJbiB0aGlzIGJsb2cgcG9zdCwgaSB3aWxsIHdhbGsgeW91IHRocm91Z2ggdGhlIHN0ZXBzIHJlcXVpcmVkIHRvIGNvbnRhaW5lcml6ZSBbUGVyY29uYSBTZXJ2ZXIgZm9yIE1vbmdvREJdKGh0dHBzOi8vZ2l0aHViLmNvbS9wZXJjb25hL3BlcmNvbmEtc2VydmVyLW1vbmdvZGIpLCBbUGVyY29uYSBCYWNrdXAgTWFuYWdlcl0oaHR0cHM6Ly9naXRodWIuY29tL3BlcmNvbmEvcGVyY29uYS1iYWNrdXAtbW9uZ29kYiksIGFuZCBBZ2VudCBmcm9tIHNvdXJjZSBhbmQgY29uZmlndXJlIGNsb3VkLW5hdGl2ZSBTMygqKlMqKmltcGxlICoqUyoqdG9yYWdlICoqUyoqZXJ2aWNlKSBjb21wYXRpYmxlIGRpc3RyaWJ1dGVkIG9iamVjdCBzdG9yYWdlIFtNSU5JT10oaHR0cHM6Ly9taW4uaW8vKSB0byBiYWNrdXAgYW5kIHJlc3RvcmUgUGVyY29uYSBNb25nb0RCIHNuYXBzaG90IGJhY2t1cHMuCgo8IS0tdHJ1bmNhdGUtLT4KCiFbXShtaW5pby53ZWJwKQoKIyMgUHJlcmVxdWlzaXRlcwpFbnN1cmUgdGhlIGJlbG93IGJpbmFyaWVzIGFyZSBpbnN0YWxsZWQgYmVmb3JlIHN0YXJ0aW5nIHRoZSBzZXR1cCBhbmQgY29uZmlndXJhdGlvbgoKW0RvY2tlcl0oaHR0cHM6Ly93d3cuZG9ja2VyLmNvbS9nZXQtc3RhcnRlZC8pIG9yIFtQb2RtYW5dKGh0dHBzOi8vcG9kbWFuLmlvLykgdG8gY29udGFpbmVyaXplIFBlcmNvbmEgTW9uZ29EQiByZXBsaWNhc2V0IGFuZCBQQk0gQWdlbnQKW0RvY2tlciBDb21wb3NlXShodHRwczovL2RvY3MuZG9ja2VyLmNvbS9jb21wb3NlL2luc3RhbGwvKQpbR29sYW5nXShodHRwczovL2dvLmRldi9sZWFybi8pIGNvbXBpbGVyIOKAkyBCdWlsZCBQZXJjb25hIEJhY2t1cCBNYW5hZ2VyIGJpbmFyaWVzCltQb3J0YWluZXJdKGh0dHBzOi8vd3d3LnBvcnRhaW5lci5pby8pIChPcHRpb25hbCkg4oCTIEludHVpdGl2ZSBVSSBmb3IgY29udGFpbmVyIGNvbmZpZ3VyYXRpb24gYW5kIG1vbml0b3JpbmcKTGV0IHVzIHBlcmZvcm0gdGhlIGJlbG93IHN0ZXBzIHRvIHNldCB1cCBQU01EQiBSZXBsaWNhc2V0OyBQQk0gQWdlbnQ7IE1pbmlvLCBTMyBjb21wYXRpYmxlIGJ1Y2tldCwgYW5kIFBCTSBjb25maWd1cmF0aW9uIHRvIHBlcmZvcm0gYmFja3VwcyBhbmQgcmVzdG9yZXMgZnJvbSB0aGUgYnVja2V0LgoKIyMgU3RlcHMKKiBDcmVhdGUgdGhlIERvY2tlciBlbnZpcm9ubWVudCBmaWxlIHdpdGggRG9ja2VyIEltYWdlLCB0YWcsIHBvcnQsIGFuZCByZXBsaWNhc2V0IGluZm9ybWF0aW9uLiBTYXZlIHRoZSBmaWxlIGFzIC5lbnYgaW4gdGhlIHdvcmtpbmcgZGlyZWN0b3J5CgpgYGBzaGVsbCAKTU9OR09EQl9JTUFHRT1wZXJjb25hL3BlcmNvbmEtc2VydmVyLW1vbmdvZGIKTU9OR09EQl9WRVJTSU9OPTUuMApNT05HTzFfUE9SVD0wLjAuMC4wOjE1MDAwCk1PTkdPMl9QT1JUPTAuMC4wLjA6MTUwMDEKTU9OR08zX1BPUlQ9MC4wLjAuMDoxNTAwMgpNT05HT0RCX1BPUlQ9MjcwMTcKTU9OR09EQl9ET0NLRVJfTkVUV09SSz1tb25nb19uZXQKUlNfTkFNRT1yczEKCmBgYAoqIENyZWF0ZSBrZXlGaWxlICwgRG9ja2VyZmlsZSBhbmQgZG93bmxvYWQgcGVyY29uYS1iYWNrdXAtbWFuYWdlciBzb3VyY2UgY29kZSBpbiB0aGUgd29ya2luZyBkaXJlY3RvcnkKCmBgYHNoZWxsCiQgZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9wZXJjb25hL3BlcmNvbmEtYmFja3VwLW1vbmdvZGIuZ2l0CgpBUkcgTU9OR09EQl9WRVJTSU9OCkFSRyBNT05HT0RCX0lNQUdFCkZST00gJHtNT05HT0RCX0lNQUdFfToke01PTkdPREJfVkVSU0lPTn0KVVNFUiByb290CkNPUFkga2V5RmlsZSAvb3B0L2tleUZpbGUKUlVOIGNob3duIG1vbmdvZGIgL29wdC9rZXlGaWxlICYmIGNobW9kIDQwMCAvb3B0L2tleUZpbGUgJiYgbWtkaXIgLXAgL2hvbWUvbW9uZ29kYi8gJiYgY2hvd24gbW9uZ29kYiAvaG9tZS9tb25nb2RiClVTRVIgbW9uZ29kYgpgYGAKKiBDcmVhdGUgRG9ja2VyIENvbXBvc2UgZmlsZQoKYGBgWUFNTAp2ZXJzaW9uOiAiMy44IgpzZXJ2aWNlczoKICByczEwMToKICAgIGJ1aWxkOgogICAgICBkb2NrZXJmaWxlOiBEb2NrZXJmaWxlCiAgICAgIGNvbnRleHQ6IC9ob21lL3JvYmluL2Rldi9wc21kYgogICAgICBhcmdzOgogICAgICAgIC0gTU9OR09EQl9WRVJTSU9OPSR7TU9OR09EQl9WRVJTSU9OfQogICAgICAgIC0gTU9OR09EQl9JTUFHRT0ke01PTkdPREJfSU1BR0V9CiAgICBob3N0bmFtZTogcnMxMDEKICAgIGxhYmVsczoKICAgICAgLSAiY29tLnBlcmNvbmEucGJtLmFwcD1tb25nb2QiCiAgICBlbnZpcm9ubWVudDoKICAgICAgLSBSRVBMU0VUX05BTUU9cnMxCiAgICAgIC0gTU9OR09fVVNFUj1kYmEKICAgICAgLSBCQUNLVVBfVVNFUj1iY3AKICAgICAgLSBNT05HT19QQVNTPXRlc3QxMjM0CiAgICBwb3J0czoKICAgICAgLSAiJHtNT05HTzFfUE9SVH06JHtNT05HT0RCX1BPUlR9IgogICAgIyBjb21tYW5kOiBtb25nb2QgLS1yZXBsU2V0IHJzMSAtLXBvcnQgJHtNT05HTzFfUE9SVH06MjcwMTcgLS1zdG9yYWdlRW5naW5lIHdpcmVkVGlnZXIgLS1rZXlGaWxlIC9vcHQva2V5RmlsZSAtLXdpcmVkVGlnZXJDYWNoZVNpemVHQiAxCiAgICBjb21tYW5kOiBbIi0tcmVwbFNldCIsICIke1JTX05BTUV9IiwgIi0tYmluZF9pcF9hbGwiLCAiLS1zdG9yYWdlRW5naW5lIiwgIndpcmVkVGlnZXIiICwgIi0ta2V5RmlsZSIsICIvb3B0L2tleUZpbGUiXQogICAgdm9sdW1lczoKICAgICAgLSBkYXRhLXJzMTAxOi9kYXRhL2RiCiAgICAgIC0gLi9zY3JpcHRzL3N0YXJ0LnNoOi9vcHQvc3RhcnQuc2gKICByczEwMjoKICAgIGJ1aWxkOgogICAgICBkb2NrZXJmaWxlOiBEb2NrZXJmaWxlCiAgICAgIGNvbnRleHQ6IC9ob21lL3JvYmluL2Rldi9wc21kYgogICAgICBhcmdzOgogICAgICAgIC0gTU9OR09EQl9WRVJTSU9OPSR7TU9OR09EQl9WRVJTSU9OfQogICAgICAgIC0gTU9OR09EQl9JTUFHRT0ke01PTkdPREJfSU1BR0V9CiAgICBob3N0bmFtZTogcnMxMDIKICAgIGxhYmVsczoKICAgICAgLSAiY29tLnBlcmNvbmEucGJtLmFwcD1tb25nb2QiCiAgICAjIGNvbW1hbmQ6IG1vbmdvZCAtLXJlcGxTZXQgcnMxIC0tcG9ydCAyNzAxNyAtLXN0b3JhZ2VFbmdpbmUgd2lyZWRUaWdlciAtLWtleUZpbGUgL29wdC9rZXlGaWxlIC0td2lyZWRUaWdlckNhY2hlU2l6ZUdCIDEKICAgIHBvcnRzOgogICAgICAtICIke01PTkdPMl9QT1JUfToke01PTkdPREJfUE9SVH0iCiAgICBjb21tYW5kOiBbIi0tcmVwbFNldCIsICIke1JTX05BTUV9IiwgIi0tYmluZF9pcF9hbGwiLCAiLS1zdG9yYWdlRW5naW5lIiwgIndpcmVkVGlnZXIiICwgIi0ta2V5RmlsZSIsICIvb3B0L2tleUZpbGUiXQogICAgdm9sdW1lczoKICAgICAgLSBkYXRhLXJzMTAyOi9kYXRhL2RiCiAgcnMxMDM6CiAgICBidWlsZDoKICAgICAgZG9ja2VyZmlsZTogRG9ja2VyZmlsZQogICAgICBjb250ZXh0OiAvaG9tZS9yb2Jpbi9kZXYvcHNtZGIKICAgICAgYXJnczoKICAgICAgICAtIE1PTkdPREJfVkVSU0lPTj0ke01PTkdPREJfVkVSU0lPTn0KICAgICAgICAtIE1PTkdPREJfSU1BR0U9JHtNT05HT0RCX0lNQUdFfQogICAgaG9zdG5hbWU6IHJzMTAzCiAgICBsYWJlbHM6CiAgICAgIC0gImNvbS5wZXJjb25hLnBibS5hcHA9bW9uZ29kIgogICAgIyBjb21tYW5kOiBtb25nb2QgLS1yZXBsU2V0IHJzMSAtLXBvcnQgMjcwMTcgLS1zdG9yYWdlRW5naW5lIHdpcmVkVGlnZXIgLS1rZXlGaWxlIC9vcHQva2V5RmlsZSAtLXdpcmVkVGlnZXJDYWNoZVNpemVHQiAxCiAgICBwb3J0czoKICAgICAgLSAiJHtNT05HTzNfUE9SVH06JHtNT05HT0RCX1BPUlR9IgogICAgY29tbWFuZDogWyItLXJlcGxTZXQiLCAiJHtSU19OQU1FfSIsICItLWJpbmRfaXBfYWxsIiwgIi0tc3RvcmFnZUVuZ2luZSIsICJ3aXJlZFRpZ2VyIiAsICItLWtleUZpbGUiLCAiL29wdC9rZXlGaWxlIl0KICAgIHZvbHVtZXM6CiAgICAgIC0gZGF0YS1yczEwMzovZGF0YS9kYgogIGFnZW50LXJzMTAxOgogICAgY29udGFpbmVyX25hbWU6ICJwYm1hZ2VudF9yczEwMSIKICAgIHVzZXI6ICIxMDAxIgogICAgbGFiZWxzOgogICAgICAtICJjb20ucGVyY29uYS5wYm0uYXBwPWFnZW50IgogICAgICAtICJjb20ucGVyY29uYS5wYm0uYWdlbnQucnM9cnMxIgogICAgZW52aXJvbm1lbnQ6CiAgICAgIC0gIlBCTV9NT05HT0RCX1VSST1tb25nb2RiOi8vJHtCQUNLVVBfVVNFUjotYmNwfToke01PTkdPX1BBU1M6LXRlc3QxMjM0fUByczEwMToyNzAxNyIKICAgIGJ1aWxkOgogICAgICBsYWJlbHM6CiAgICAgICAgLSAiY29tLnBlcmNvbmEucGJtLmFwcD1hZ2VudCIKICAgICAgZG9ja2VyZmlsZTogL2hvbWUvcm9iaW4vb3Blbi1zb3VyY2UvcGVyY29uYS1iYWNrdXAtbW9uZ29kYi9kb2NrZXIvRG9ja2VyZmlsZQogICAgICBjb250ZXh0OiAvaG9tZS9yb2Jpbi9vcGVuLXNvdXJjZS9wZXJjb25hLWJhY2t1cC1tb25nb2RiLwogICAgICBhcmdzOgogICAgICAgIC0gTU9OR09EQl9WRVJTSU9OPSR7TU9OR09EQl9WRVJTSU9OOi01LjB9CiAgICB2b2x1bWVzOgogICAgICAtIC4vY29uZjovZXRjL3BibQogICAgICAtIC4vYmFja3Vwczovb3B0L2JhY2t1cHMKICAgICAgLSBkYXRhLXJzMTAxOi9kYXRhL2RiCiAgICBjb21tYW5kOiBwYm0tYWdlbnQKICAgIGNhcF9hZGQ6CiAgICAgIC0gTkVUX0FETUlOCiAgYWdlbnQtcnMxMDI6CiAgICBjb250YWluZXJfbmFtZTogInBibWFnZW50X3JzMTAyIgogICAgdXNlcjogIjEwMDEiCiAgICBsYWJlbHM6CiAgICAgIC0gImNvbS5wZXJjb25hLnBibS5hcHA9YWdlbnQiCiAgICAgIC0gImNvbS5wZXJjb25hLnBibS5hZ2VudC5ycz1yczEiCiAgICBlbnZpcm9ubWVudDoKICAgICAgLSAiUEJNX01PTkdPREJfVVJJPW1vbmdvZGI6Ly8ke0JBQ0tVUF9VU0VSOi1iY3B9OiR7TU9OR09fUEFTUzotdGVzdDEyMzR9QHJzMTAyOjI3MDE3IgogICAgYnVpbGQ6CiAgICAgIGxhYmVsczoKICAgICAgICAtICJjb20ucGVyY29uYS5wYm0uYXBwPWFnZW50IgogICAgICBkb2NrZXJmaWxlOiAvaG9tZS9yb2Jpbi9vcGVuLXNvdXJjZS9wZXJjb25hLWJhY2t1cC1tb25nb2RiL2RvY2tlci9Eb2NrZXJmaWxlCiAgICAgIGNvbnRleHQ6IC9ob21lL3JvYmluL29wZW4tc291cmNlL3BlcmNvbmEtYmFja3VwLW1vbmdvZGIvCiAgICAgIGFyZ3M6CiAgICAgICAgLSBNT05HT0RCX1ZFUlNJT049JHtNT05HT0RCX1ZFUlNJT046LTUuMH0KICAgIHZvbHVtZXM6CiAgICAgIC0gLi9jb25mOi9ldGMvcGJtCiAgICAgIC0gLi9iYWNrdXBzOi9vcHQvYmFja3VwcwogICAgICAtIGRhdGEtcnMxMDI6L2RhdGEvZGIKICAgIGNvbW1hbmQ6IHBibS1hZ2VudAogICAgY2FwX2FkZDoKICAgICAgLSBORVRfQURNSU4KICBhZ2VudC1yczEwMzoKICAgIGNvbnRhaW5lcl9uYW1lOiAicGJtYWdlbnRfcnMxMDMiCiAgICB1c2VyOiAiMTAwMSIKICAgIGxhYmVsczoKICAgICAgLSAiY29tLnBlcmNvbmEucGJtLmFwcD1hZ2VudCIKICAgICAgLSAiY29tLnBlcmNvbmEucGJtLmFnZW50LnJzPXJzMSIKICAgIGVudmlyb25tZW50OgogICAgICAtICJQQk1fTU9OR09EQl9VUkk9bW9uZ29kYjovLyR7QkFDS1VQX1VTRVI6LWJjcH06JHtNT05HT19QQVNTOi10ZXN0MTIzNH1AcnMxMDM6MjcwMTciCiAgICBidWlsZDoKICAgICAgbGFiZWxzOgogICAgICAgIC0gImNvbS5wZXJjb25hLnBibS5hcHA9YWdlbnQiCiAgICAgIGRvY2tlcmZpbGU6IC9ob21lL3JvYmluL29wZW4tc291cmNlL3BlcmNvbmEtYmFja3VwLW1vbmdvZGIvZG9ja2VyL0RvY2tlcmZpbGUKICAgICAgY29udGV4dDogL2hvbWUvcm9iaW4vb3Blbi1zb3VyY2UvcGVyY29uYS1iYWNrdXAtbW9uZ29kYi8KICAgICAgYXJnczoKICAgICAgICAtIE1PTkdPREJfVkVSU0lPTj0ke01PTkdPREJfVkVSU0lPTjotNS4wfQogICAgdm9sdW1lczoKICAgICAgLSAuL2NvbmY6L2V0Yy9wYm0KICAgICAgLSAuL2JhY2t1cHM6L29wdC9iYWNrdXBzCiAgICAgIC0gZGF0YS1yczEwMzovZGF0YS9kYgogICAgY29tbWFuZDogcGJtLWFnZW50CiAgICBjYXBfYWRkOgogICAgICAtIE5FVF9BRE1JTgp2b2x1bWVzOgogIGJhY2t1cHM6IG51bGwKICBkYXRhLXJzMTAxOiBudWxsCiAgZGF0YS1yczEwMjogbnVsbAogIGRhdGEtcnMxMDM6IG51bGwKCmBgYAoKKiBSdW4gRG9ja2VyIGNvbXBvc2UKVGhlIGJlbG93IGNvbW1hbmQgd2lsbCBidWlsZCBhbmQgc3RhcnQgdGhlIGRvY2tlciBjb250YWluZXIgZm9yIFBlcmNvbmEgU2VydmVyIE1vbmdvREIgUHJpbWFyeSBTZWNvbmRhcnkgU2Vjb25kYXJ5IHJlcGxpY2FzZXQgYW5kIFBlcmNvbmEgQmFja3VwIE1hbmFnZXIgQWdlbnQgZm9yIGVhY2ggcmVwbGljYXNldAoKYGBgCiQgcHNtZGIgZG9ja2VyIGNvbXBvc2UgLWYgZG9ja2VyLWNvbXBvc2UtcnMueWFtbCB1cCAtZApbK10gUnVubmluZyA4LzgK4qC/IENvbnRhaW5lciBwc21kYi1yczEwMi0xIFJ1bm5pbmcgMC4wcwrioL8gQ29udGFpbmVyIHBzbWRiLXJzMTAzLTEgUnVubmluZyAwLjBzCuKgvyBDb250YWluZXIgcGJtYWdlbnRfcnMxMDMgUnVubmluZyAwLjBzCuKgvyBDb250YWluZXIgcGJtYWdlbnRfcnMxMDIgUnVubmluZyAwLjBzCuKgvyBDb250YWluZXIgcHNtZGItcnMxMDEtMSBSdW5uaW5nIDAuMHMK4qC/IENvbnRhaW5lciBwYm1hZ2VudF9yczEwMSBSdW5uaW5nIDAuMHMKCmBgYAoKKiBDb25uZWN0IHRvIE1vbmdvREIgcmVwbGljYXNldCBhbmQgZW5zdXJlIHJlcGxpY2F0aW9uIGFuZCBjb250YWluZXJzIGFyZSB3b3JraW5nCgpgYGBzaGVsbAokIG1vbmdvICJtb25nb2RiOi8vZGJhOnRlc3QxMjM0QDE5Mi4xNjguNTAuMTEzOjE1MDAwLDE5Mi4xNjguNTAuMTEzOjE1MDAxLDE5Mi4xNjguNTAuMTEzOjE1MDAyL2FkbWluP3JlcGxpY2FTZXQ9cnMxIgpgYGAKCiogU2V0dXAgTWluaW8gYW5kIE1pbmlvIENMSQoKYGBgc2hlbGwKCiQgY2Qgfi9kb3dubG9hZHMgJiYgd2dldCBodHRwczovL2RsLm1pbi5pby9zZXJ2ZXIvbWluaW8vcmVsZWFzZS9saW51eC1hbWQ2NC9taW5pbwogCiQgd2dldCBodHRwczovL2RsLm1pbi5pby9jbGllbnQvbWMvcmVsZWFzZS9saW51eC1hbWQ2NC9tYwpjaG1vZCAreCBtYwouL21jIC0taGVscAogCiQgIGRvd25sb2FkcyAuL21pbmlvIHNlcnZlciAvaG9tZS9yb2Jpbi9kYXRhIC0tYWRkcmVzcz0wLjAuMC4wOjcwMDAKIAoKQVBJOiBodHRwOi8vMC4wLjAuMDo3MDAwIApSb290VXNlcjogbWluaW9hZG1pbiAKUm9vdFBhc3M6IG1pbmlvYWRtaW4gCkZpbmlzaGVkIGxvYWRpbmcgSUFNIHN1Yi1zeXN0ZW0gKHRvb2sgMC4wcyBvZiAwLjBzIHRvIGxvYWQgZGF0YSkuCiAKQ29uc29sZTogaHR0cDovLzE5Mi4xNjguNTAuMTEzOjQzODU5IGh0dHA6Ly8xOTIuMTY4LjE2MC4xOjQzODU5IGh0dHA6Ly8xNzIuMTguMC4xOjQzODU5IGh0dHA6Ly8xNzIuMTkuMC4xOjQzODU5IGh0dHA6Ly8xNzIuMjQuMC4xOjQzODU5IGh0dHA6Ly8xNzIuMjYuMC4xOjQzODU5IGh0dHA6Ly8xNzIuMTcuMC4xOjQzODU5IGh0dHA6Ly8xMjcuMC4wLjE6NDM4NTkgICAgICAgICAgICAgICAgICAgClJvb3RVc2VyOiBtaW5pb2FkbWluIApSb290UGFzczogbWluaW9hZG1pbiAKIApDb21tYW5kLWxpbmU6IGh0dHBzOi8vZG9jcy5taW4uaW8vZG9jcy9taW5pby1jbGllbnQtcXVpY2tzdGFydC1ndWlkZQogICAkIG1jIGFsaWFzIHNldCBteW1pbmlvIGh0dHA6Ly8wLjAuMC4wOjcwMDAgbWluaW9hZG1pbiBtaW5pb2FkbWluCiAKRG9jdW1lbnRhdGlvbjogaHR0cHM6Ly9kb2NzLm1pbi5pbwoKCmBgYAoKKiBTZXR1cCBNaW5pbyBzZXJ2ZXIgYWxpYXMgYW5kIExpc3QgYnVja2V0cwoKYGBgc2hlbGwKJCAgbWMgYWxpYXMgc2V0IG1pbmlvLWRlYiBodHRwOi8vMTkyLjE2OC41MC4xMTM6NzAwMCBtaW5pb2FkbWluIG1pbmlvYWRtaW4KJCAgbWMgbHMgbWluaW8tZGViClsyMDIyLTA1LTI5IDE0OjU5OjMyIElTVF0gMEIgbm9jb2RiLwpbMjAyMi0wNS0yOSAwMDoxOTo0MSBJU1RdIDBCIHR5cGVzZW5zZS8KCmBgYAoKKiBDcmVhdGUgYSBuZXcgYnVja2V0IGFuZCBuYW1lIGl0IGBwYm1gCgpgYGBzaGVsbAokIG1jIGFsaWFzIHNldCBtaW5pby1kZWIgaHR0cDovLzE5Mi4xNjguNTAuMTEzOjcwMDAgbWluaW9hZG1pbiBtaW5pb2FkbWluCiQgbWMgbHMgbWluaW8tZGViCiAgWzIwMjItMDUtMjkgMTQ6NTk6MzIgSVNUXSAwQiBub2NvZGIvCiAgWzIwMjItMDUtMjkgMDA6MTk6NDEgSVNUXSAwQiB0eXBlc2Vuc2UvCmBgYAoKKiBTZXR1cCBQQk0gb3IgY29tcGlsZSBQQk0gZnJvbSB0aGUgc291cmNlIHJlcG9zaXRvcnkKCmBgYHNoZWxsCiQgc3VkbyBhcHQtZ2V0IGluc3RhbGwgLXkgbGlia3JiNS1kZXYKJCBjZCBwZXJjb25hLWJhY2t1cC1tb25nb2RiCiQgbWFrZSBidWlsZAokIG1ha2UgaW5zdGFsbApgYGAKKiBjcmVhdGUgcGJtX2NvbmZpZy5ZQU1MIHRvIGJlIHVzZWQgZm9yIGNvbmZpZ3VyaW5nIFBCTSBmb3IgdXNpbmcgTUlOSU8KCmBgYFlBTUwKCnN0b3JhZ2U6CiAgICB0eXBlOiBzMwogICAgczM6CiAgICAgIGVuZHBvaW50VXJsOiBodHRwOi8vMTkyLjE2OC41MC4xMTM6NzAwMAogICAgICBidWNrZXQ6IHBibQogICAgICBjcmVkZW50aWFsczoKICAgICAgICBhY2Nlc3Mta2V5LWlkOiAibWluaW9hZG1pbiIKICAgICAgICBzZWNyZXQtYWNjZXNzLWtleTogIm1pbmlvYWRtaW4iCgoKYGBgCgoqIENvbmZpZ3VyZSBQQk0KCmBgYHNoZWxsCiQgLi9wYm0gY29uZmlnIC0tZmlsZSAvaG9tZS9yb2Jpbi9kZXYvcHNtZGIvcGJtX2NvbmZpZy55YW1sIC0tbW9uZ29kYi11cmk9Im1vbmdvZGI6Ly9iY3A6dGVzdDEyMzRAMTkyLjE2OC41MC4xMTM6MTUwMDAvP3JlcGxTZXROYW1lPXJzMSIKCmBgYAoqIFZhbGlkYXRlIGFnZW50IGNvbnRhaW5lciBsb2dzIGFuZCBydW4gdGhlIHBibSBsaXN0IGNvbW1hbmQuIElmIE1JTklPIGlzIGNvbmZpZ3VyZWQgc3VjY2Vzc2Z1bGx5LCBhZ2VudCBjb250YWluZXIgbG9ncyBzaG91bGRu4oCZdCBsb2cgYW55IGVycm9ycy4KCmBgYHNoZWxsCjIwMjItMDUtMjlUMDE6MzE6MTQuMDAwKzAwMDAgRCBbcmVzeW5jXSBnb3QgYmFja3VwcyBsaXN0OiAwMjAyMi0wNS0yOVQwMTozMToxNC4wMDArMDAwMCBEIFtyZXN5bmNdIGdvdCBwaHlzaWNhbCByZXN0b3JlcyBsaXN0OiAwCgokIGJpbiBnaXQ6KG1haW4pIC4vcGJtIGxpc3QgLS1tb25nb2RiLXVyaT0ibW9uZ29kYjovL2JjcDp0ZXN0MTIzNEAxOTIuMTY4LjUwLjExMzoxNTAwMC8/cmVwbFNldE5hbWU9cnMxIgpCYWNrdXAgc25hcHNob3RzOgoyMDIyLTA1LTI5VDAxOjI5OjEyWiBbY29tcGxldGU6IDIwMjItMDUtMjlUMDE6Mjk6MTZaXQoyMDIyLTA1LTI5VDAxOjM4OjM4WiBbY29tcGxldGU6IDIwMjItMDUtMjlUMDE6Mzg6NDJaXQoyMDIyLTA1LTI5VDA0OjA0OjQ0WiBbY29tcGxldGU6IDIwMjItMDUtMjlUMDQ6MDQ6NDhaXQpgYGAKCiogVG8gcnVuIFBCTSBiYWNrdXAgYW5kIHJlc3RvcmUgZXhlY3V0ZSB0aGUgYmVsb3cgY29tbWFuZHMKCmBgYGJhc2ggCiQgLi9wYm0gYmFja3VwIC0tbW9uZ29kYi11cmk9Im1vbmdvZGI6Ly9iY3A6dGVzdDEyMzRAMTkyLjE2OC41MC4xMTM6MTUwMDAvP3JlcGxTZXROYW1lPXJzMSIgCiQgLi9wYm0gcmVzdG9yZSAyMDIyLTA1LTI5VDA0OjA0OjQ0WiAtLW1vbmdvZGItdXJpPSJtb25nb2RiOi8KYGBgCg==
+---
+title: "How to configure Percona MongoDB Replicaset, Percona Backup Manager, Backup Agent using Docker and perform Replicaset backup, restore usi..."
+description: "In this blog post, i will walk you through the steps required to containerize Percona Server for MongoDB, Percona Backup Manager, and Agent from source and configure cloud-native S3(Simple Storage Service) compatible distributed object storage MINIO ..."
+date: "2023-12-29"
+tags: ["MongoDB"]
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835028487/9512086f-20b5-4420-951a-93075e285224.jpeg"
+readingTime: 4
+slug: "percona-mongo-replicaset-minio"
+---
+In this blog post, i will walk you through the steps required to containerize [Percona Server for MongoDB](https://github.com/percona/percona-server-mongodb), [Percona Backup Manager](https://github.com/percona/percona-backup-mongodb), and Agent from source and configure cloud-native S3(**S**imple **S**torage **S**ervice) compatible distributed object storage [MINIO](https://min.io/) to backup and restore Percona MongoDB snapshot backups.
+
+<!--truncate-->
+
+![](minio.webp)
+
+## Prerequisites
+Ensure the below binaries are installed before starting the setup and configuration
+
+[Docker](https://www.docker.com/get-started/) or [Podman](https://podman.io/) to containerize Percona MongoDB replicaset and PBM Agent
+[Docker Compose](https://docs.docker.com/compose/install/)
+[Golang](https://go.dev/learn/) compiler – Build Percona Backup Manager binaries
+[Portainer](https://www.portainer.io/) (Optional) – Intuitive UI for container configuration and monitoring
+Let us perform the below steps to set up PSMDB Replicaset; PBM Agent; Minio, S3 compatible bucket, and PBM configuration to perform backups and restores from the bucket.
+
+## Steps
+* Create the Docker environment file with Docker Image, tag, port, and replicaset information. Save the file as .env in the working directory
+
+```shell 
+MONGODB_IMAGE=percona/percona-server-mongodb
+MONGODB_VERSION=5.0
+MONGO1_PORT=0.0.0.0:15000
+MONGO2_PORT=0.0.0.0:15001
+MONGO3_PORT=0.0.0.0:15002
+MONGODB_PORT=27017
+MONGODB_DOCKER_NETWORK=mongo_net
+RS_NAME=rs1
+
+```
+* Create keyFile , Dockerfile and download percona-backup-manager source code in the working directory
+
+```shell
+$ git clone https://github.com/percona/percona-backup-mongodb.git
+
+ARG MONGODB_VERSION
+ARG MONGODB_IMAGE
+FROM ${MONGODB_IMAGE}:${MONGODB_VERSION}
+USER root
+COPY keyFile /opt/keyFile
+RUN chown mongodb /opt/keyFile && chmod 400 /opt/keyFile && mkdir -p /home/mongodb/ && chown mongodb /home/mongodb
+USER mongodb
+```
+* Create Docker Compose file
+
+```YAML
+version: "3.8"
+services:
+  rs101:
+    build:
+      dockerfile: Dockerfile
+      context: /home/robin/dev/psmdb
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION}
+        - MONGODB_IMAGE=${MONGODB_IMAGE}
+    hostname: rs101
+    labels:
+      - "com.percona.pbm.app=mongod"
+    environment:
+      - REPLSET_NAME=rs1
+      - MONGO_USER=dba
+      - BACKUP_USER=bcp
+      - MONGO_PASS=test1234
+    ports:
+      - "${MONGO1_PORT}:${MONGODB_PORT}"
+    # command: mongod --replSet rs1 --port ${MONGO1_PORT}:27017 --storageEngine wiredTiger --keyFile /opt/keyFile --wiredTigerCacheSizeGB 1
+    command: ["--replSet", "${RS_NAME}", "--bind_ip_all", "--storageEngine", "wiredTiger" , "--keyFile", "/opt/keyFile"]
+    volumes:
+      - data-rs101:/data/db
+      - ./scripts/start.sh:/opt/start.sh
+  rs102:
+    build:
+      dockerfile: Dockerfile
+      context: /home/robin/dev/psmdb
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION}
+        - MONGODB_IMAGE=${MONGODB_IMAGE}
+    hostname: rs102
+    labels:
+      - "com.percona.pbm.app=mongod"
+    # command: mongod --replSet rs1 --port 27017 --storageEngine wiredTiger --keyFile /opt/keyFile --wiredTigerCacheSizeGB 1
+    ports:
+      - "${MONGO2_PORT}:${MONGODB_PORT}"
+    command: ["--replSet", "${RS_NAME}", "--bind_ip_all", "--storageEngine", "wiredTiger" , "--keyFile", "/opt/keyFile"]
+    volumes:
+      - data-rs102:/data/db
+  rs103:
+    build:
+      dockerfile: Dockerfile
+      context: /home/robin/dev/psmdb
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION}
+        - MONGODB_IMAGE=${MONGODB_IMAGE}
+    hostname: rs103
+    labels:
+      - "com.percona.pbm.app=mongod"
+    # command: mongod --replSet rs1 --port 27017 --storageEngine wiredTiger --keyFile /opt/keyFile --wiredTigerCacheSizeGB 1
+    ports:
+      - "${MONGO3_PORT}:${MONGODB_PORT}"
+    command: ["--replSet", "${RS_NAME}", "--bind_ip_all", "--storageEngine", "wiredTiger" , "--keyFile", "/opt/keyFile"]
+    volumes:
+      - data-rs103:/data/db
+  agent-rs101:
+    container_name: "pbmagent_rs101"
+    user: "1001"
+    labels:
+      - "com.percona.pbm.app=agent"
+      - "com.percona.pbm.agent.rs=rs1"
+    environment:
+      - "PBM_MONGODB_URI=mongodb://${BACKUP_USER:-bcp}:${MONGO_PASS:-test1234}@rs101:27017"
+    build:
+      labels:
+        - "com.percona.pbm.app=agent"
+      dockerfile: /home/robin/open-source/percona-backup-mongodb/docker/Dockerfile
+      context: /home/robin/open-source/percona-backup-mongodb/
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION:-5.0}
+    volumes:
+      - ./conf:/etc/pbm
+      - ./backups:/opt/backups
+      - data-rs101:/data/db
+    command: pbm-agent
+    cap_add:
+      - NET_ADMIN
+  agent-rs102:
+    container_name: "pbmagent_rs102"
+    user: "1001"
+    labels:
+      - "com.percona.pbm.app=agent"
+      - "com.percona.pbm.agent.rs=rs1"
+    environment:
+      - "PBM_MONGODB_URI=mongodb://${BACKUP_USER:-bcp}:${MONGO_PASS:-test1234}@rs102:27017"
+    build:
+      labels:
+        - "com.percona.pbm.app=agent"
+      dockerfile: /home/robin/open-source/percona-backup-mongodb/docker/Dockerfile
+      context: /home/robin/open-source/percona-backup-mongodb/
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION:-5.0}
+    volumes:
+      - ./conf:/etc/pbm
+      - ./backups:/opt/backups
+      - data-rs102:/data/db
+    command: pbm-agent
+    cap_add:
+      - NET_ADMIN
+  agent-rs103:
+    container_name: "pbmagent_rs103"
+    user: "1001"
+    labels:
+      - "com.percona.pbm.app=agent"
+      - "com.percona.pbm.agent.rs=rs1"
+    environment:
+      - "PBM_MONGODB_URI=mongodb://${BACKUP_USER:-bcp}:${MONGO_PASS:-test1234}@rs103:27017"
+    build:
+      labels:
+        - "com.percona.pbm.app=agent"
+      dockerfile: /home/robin/open-source/percona-backup-mongodb/docker/Dockerfile
+      context: /home/robin/open-source/percona-backup-mongodb/
+      args:
+        - MONGODB_VERSION=${MONGODB_VERSION:-5.0}
+    volumes:
+      - ./conf:/etc/pbm
+      - ./backups:/opt/backups
+      - data-rs103:/data/db
+    command: pbm-agent
+    cap_add:
+      - NET_ADMIN
+volumes:
+  backups: null
+  data-rs101: null
+  data-rs102: null
+  data-rs103: null
+
+```
+
+* Run Docker compose
+The below command will build and start the docker container for Percona Server MongoDB Primary Secondary Secondary replicaset and Percona Backup Manager Agent for each replicaset
+
+```
+$ psmdb docker compose -f docker-compose-rs.yaml up -d
+[+] Running 8/8
+⠿ Container psmdb-rs102-1 Running 0.0s
+⠿ Container psmdb-rs103-1 Running 0.0s
+⠿ Container pbmagent_rs103 Running 0.0s
+⠿ Container pbmagent_rs102 Running 0.0s
+⠿ Container psmdb-rs101-1 Running 0.0s
+⠿ Container pbmagent_rs101 Running 0.0s
+
+```
+
+* Connect to MongoDB replicaset and ensure replication and containers are working
+
+```shell
+$ mongo "mongodb://dba:test1234@192.168.50.113:15000,192.168.50.113:15001,192.168.50.113:15002/admin?replicaSet=rs1"
+```
+
+* Setup Minio and Minio CLI
+
+```shell
+
+$ cd ~/downloads && wget https://dl.min.io/server/minio/release/linux-amd64/minio
+ 
+$ wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+./mc --help
+ 
+$  downloads ./minio server /home/robin/data --address=0.0.0.0:7000
+ 
+
+API: http://0.0.0.0:7000 
+RootUser: minioadmin 
+RootPass: minioadmin 
+Finished loading IAM sub-system (took 0.0s of 0.0s to load data).
+ 
+Console: http://192.168.50.113:43859 http://192.168.160.1:43859 http://172.18.0.1:43859 http://172.19.0.1:43859 http://172.24.0.1:43859 http://172.26.0.1:43859 http://172.17.0.1:43859 http://127.0.0.1:43859                   
+RootUser: minioadmin 
+RootPass: minioadmin 
+ 
+Command-line: https://docs.min.io/docs/minio-client-quickstart-guide
+   $ mc alias set myminio http://0.0.0.0:7000 minioadmin minioadmin
+ 
+Documentation: https://docs.min.io
+
+
+```
+
+* Setup Minio server alias and List buckets
+
+```shell
+$  mc alias set minio-deb http://192.168.50.113:7000 minioadmin minioadmin
+$  mc ls minio-deb
+[2022-05-29 14:59:32 IST] 0B nocodb/
+[2022-05-29 00:19:41 IST] 0B typesense/
+
+```
+
+* Create a new bucket and name it `pbm`
+
+```shell
+$ mc alias set minio-deb http://192.168.50.113:7000 minioadmin minioadmin
+$ mc ls minio-deb
+  [2022-05-29 14:59:32 IST] 0B nocodb/
+  [2022-05-29 00:19:41 IST] 0B typesense/
+```
+
+* Setup PBM or compile PBM from the source repository
+
+```shell
+$ sudo apt-get install -y libkrb5-dev
+$ cd percona-backup-mongodb
+$ make build
+$ make install
+```
+* create pbm_config.YAML to be used for configuring PBM for using MINIO
+
+```YAML
+
+storage:
+    type: s3
+    s3:
+      endpointUrl: http://192.168.50.113:7000
+      bucket: pbm
+      credentials:
+        access-key-id: "minioadmin"
+        secret-access-key: "minioadmin"
+
+
+```
+
+* Configure PBM
+
+```shell
+$ ./pbm config --file /home/robin/dev/psmdb/pbm_config.yaml --mongodb-uri="mongodb://bcp:test1234@192.168.50.113:15000/?replSetName=rs1"
+
+```
+* Validate agent container logs and run the pbm list command. If MINIO is configured successfully, agent container logs shouldn’t log any errors.
+
+```shell
+2022-05-29T01:31:14.000+0000 D [resync] got backups list: 02022-05-29T01:31:14.000+0000 D [resync] got physical restores list: 0
+
+$ bin git:(main) ./pbm list --mongodb-uri="mongodb://bcp:test1234@192.168.50.113:15000/?replSetName=rs1"
+Backup snapshots:
+2022-05-29T01:29:12Z [complete: 2022-05-29T01:29:16Z]
+2022-05-29T01:38:38Z [complete: 2022-05-29T01:38:42Z]
+2022-05-29T04:04:44Z [complete: 2022-05-29T04:04:48Z]
+```
+
+* To run PBM backup and restore execute the below commands
+
+```bash 
+$ ./pbm backup --mongodb-uri="mongodb://bcp:test1234@192.168.50.113:15000/?replSetName=rs1" 
+$ ./pbm restore 2022-05-29T04:04:44Z --mongodb-uri="mongodb:/
+```
