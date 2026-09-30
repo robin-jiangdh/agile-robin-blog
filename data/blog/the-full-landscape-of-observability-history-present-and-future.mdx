@@ -1,0 +1,391 @@
+---
+title: "The Full Landscape of Observability: History, Present, and Future"
+date: '2026-04-16'
+tags: ["cloud native", "Devops", "observability", "OpenTelemetry", "SRE"]
+categories: ["硬核深挖"]
+draft: false
+summary: "Preface: Why \\\"Monitoring\\\" Is No Longer Enough"
+authors:
+  - default
+---
+
+## Preface: Why "Monitoring" Is No Longer Enough
+
+In 2016, Charity Majors — then an engineer at Parse, later co-founder of Honeycomb — wrote something that has since been quoted countless times:
+
+> *"Monitoring tells you whether something is wrong. Observability tells you **why**."*
+
+For most of the past two decades, "monitoring" was the word we used. Its underlying model was simple: pre-plant probes at known failure points, configure thresholds, wait for alerts. It worked well when systems were relatively simple and failures were predictable. But in a world of microservices, containers, and serverless functions, that model is quietly falling apart.
+
+A single user request today might traverse dozens of services, span multiple availability zones, and trigger hundreds of downstream calls. When it fails, you often don't know *where* it failed, *why* it failed, or even *that* it failed in a way you've seen before. No pre-configured alert rule would have caught it — because you never imagined that failure mode existed.
+
+This is exactly what **observability** tries to solve: making system behavior transparent to engineers, *even for failure modes they've never anticipated*.
+
+This article traces the full arc — where the concept came from, the pivotal milestones along the way, where things stand today, and where they're headed.
+
+---
+
+## I. Origins: From Control Theory to Software Engineering
+
+"Observability" didn't originate in software. The term was formalized in **1960 by Rudolf E. Kálmán**, a Hungarian-American engineer working in control theory. His definition was precise:
+
+> A system is observable if, from its external outputs, you can fully reconstruct its internal state.
+
+Software engineering borrowed this concept almost verbatim. When we say a distributed system is *observable*, we mean: **given the data the system emits — logs, metrics, traces — can engineers answer any question about its behavior without needing to modify the code or redeploy?**
+
+That last clause — "without modifying the code" — is the key distinction. Monitoring is reactive and pre-defined; observability is proactive and exploratory. You can ask questions you didn't know to ask in advance.
+
+---
+
+## II. Four Stages of Evolution
+
+### Stage 1 — Monitoring 1.0 (Pre-2010): "Is It Alive?"
+
+The demands of this era were elemental: is the server up? Is the process running? Can I reach the network?
+
+Tools were script-based: cron jobs running `ping`, shell checks on process lists, emails for alerts. **Nagios** (1999) was the benchmark — it codified the check→alert→notify cycle and became the default operations toolbox for the next decade.
+
+The fundamental limitation: it could tell you the system was *dead*, but not *why*, and offered no performance visibility whatsoever.
+
+### Stage 2 — Monitoring 2.0 (2010–2016): "Is It Slow?"
+
+As web-scale systems grew, "alive" stopped being sufficient. Performance became the metric that mattered.
+
+This era was defined by the rise of **time-series databases and metrics ecosystems**. Graphite (2006) brought time-series storage into practical engineering. The bigger shift came in 2012 when SoundCloud engineers Matt T. Proud and Julius Volz built **Prometheus** — introducing a Pull-based collection model, a multi-dimensional label system, and the PromQL query language. All three were genuinely novel at the time.
+
+**Grafana** followed in 2014 as a visualization layer, and the Prometheus + Grafana pairing quickly became the de facto standard for metrics monitoring — a position it still holds today.
+
+### Stage 3 — Observability 1.0 (2016–2020): "The Three Pillars and the Standards War"
+
+Around 2016, "observability" began appearing frequently in engineering conversations. The era's primary intellectual contribution was establishing the **three-pillar framework**:
+
+| Pillar | What it answers |
+|--------|----------------|
+| **Metrics** | How is the system performing overall? |
+| **Logs** | What exactly happened? |
+| **Traces** | What did this specific request go through? |
+
+The framework was clean and resonated immediately. But alongside it came a standards war that would drag on for years:
+
+- **OpenTracing** (2015, CNCF) — a vendor-neutral Tracing API spec, but Traces only, no Metrics support.
+- **OpenCensus** (2017, Google) — covered both Metrics and Traces, with a more complete API, but raised vendor-neutrality concerns given its Google provenance.
+
+The two were incompatible. Users couldn't choose. SDK authors had to maintain parallel implementations. This fragmentation was the direct motivation for what came next.
+
+### Stage 4 — Observability 2.0 (2020–Present): "Unified, Integrated, Intelligent"
+
+The turning point was 2019. OpenTracing and OpenCensus announced they would merge to form **OpenTelemetry** — ending four years of standards fragmentation. A genuinely neutral, unified observability standard began to take shape.
+
+What followed: the three pillars reached GA status one by one, AI and eBPF entered the mainstream, and Profiling emerged as a potential "fourth signal." Observability evolved from *collecting data* to *understanding system behavior*.
+
+---
+
+## III. A Timeline of Key Systems and Events (2010–2025)
+
+### The Foundational Years (2010–2014)
+
+**2010**
+Google publishes the **Dapper paper** (*Dapper, a Large-Scale Distributed Systems Tracing Infrastructure*). The paper describes Google's internal approach to tracking cross-service requests and introduces the foundational concepts of Span, Trace, and Annotation. Nearly every distributed tracing system that followed — Zipkin, Jaeger, SkyWalking — drew directly from it.
+
+**2012**
+- **Prometheus** is created at SoundCloud. The Pull model, multi-dimensional labels, and PromQL were each revolutionary. Together, they redefined how metrics collection worked.
+- **Zipkin** is open-sourced by Twitter — the first publicly available Dapper-inspired tracing system, making distributed tracing engineering-practical for the first time.
+
+**2013**
+**Docker** launches. Container-based deployment's short lifecycle and high density made host-based monitoring models obsolete almost immediately.
+
+**2014**
+- **Grafana 0.x** is released, initially as a visualization front-end for Graphite and InfluxDB, eventually growing into a full observability platform.
+- **Kubernetes** is open-sourced by Google. Cloud-native infrastructure enters the mainstream. System complexity increases by an order of magnitude; observability requirements follow.
+
+---
+
+### The Standards Exploration Years (2015–2018)
+
+**2015**
+- **Jaeger** is open-sourced by Uber, purpose-built for microservices with Cassandra/Elasticsearch backends and better scalability than Zipkin.
+- **OpenTracing** is accepted into the CNCF (becoming its third project), proposing "one API, many implementations" for distributed tracing.
+
+**2016**
+- **Prometheus** joins the CNCF, becoming its second project after Kubernetes — formally anchoring metrics monitoring in the cloud-native core.
+- The three-pillar theory enters widespread engineering discourse. Honeycomb and other startups begin building high-cardinality observability platforms.
+
+**2017**
+- **OpenCensus** is released by Google with support for both Metrics and Traces and multi-language SDKs.
+- **Apache SkyWalking** is created by Wu Sheng in China and enters Apache incubation — it would go on to become the dominant APM platform in Chinese Java ecosystems.
+
+**2018**
+- **Grafana Loki** development begins (open-sourced in 2019). Its core insight: apply Prometheus's label-based indexing philosophy to logs, dramatically cutting storage costs versus Elasticsearch.
+- **eBPF** starts entering observability discussions. Cilium is the first project to use eBPF for Kubernetes network observation, demonstrating the potential of zero-instrumentation data collection.
+
+---
+
+### The Unification and Maturity Years (2019–2023)
+
+**2019 — The Pivotal Year**
+
+More happened in this single year than in the previous five combined:
+
+- **OpenTelemetry is born**: OpenTracing and OpenCensus communities announce their merger at KubeCon NA 2019. The fragmentation problem is solved at the source. OTel enters CNCF incubation and within 18 months becomes CNCF's second most active project (behind only Kubernetes).
+- **Jaeger graduates from CNCF** at the highest (graduated) status.
+- **Grafana Loki 1.0** is officially open-sourced.
+- **Apache SkyWalking** graduates to Apache top-level project status.
+
+**2020**
+- OTel enters active development across all major language SDKs.
+- COVID-19 accelerates cloud-native adoption globally — companies that had been gradually migrating are forced to move quickly, driving a surge in observability demand.
+- **Thanos** and **Cortex** become the primary solutions for Prometheus long-term storage and high availability. Cortex later evolves into **Grafana Mimir**.
+
+**2021**
+- **OTel Tracing SDK** reaches v1.0 stable status in Go, Java, Python, and .NET — production-grade distributed tracing via an open standard becomes reality.
+- **Grafana Tempo** launches as the tracing backend for Grafana Stack, completing a coherent Grafana observability trio: Tempo (traces) + Loki (logs) + Prometheus/Mimir (metrics).
+- **Datadog** exceeds a $40B market cap, validating the commercial scale of the observability market.
+
+**2022**
+- **OTel Metrics reaches GA** in major language SDKs.
+- **OpenTracing is officially archived** by the CNCF, having been superseded by OpenTelemetry.
+- **VictoriaMetrics** gains significant adoption as a resource-efficient Prometheus-compatible storage alternative.
+
+**2023**
+- **OTel Logs reaches GA** — the final piece of the three-pillar standard is stable. OTel's completeness is no longer in question.
+- **OpenCensus announces end-of-life**, explicitly directing all users to migrate to OpenTelemetry.
+- **eBPF observability tools proliferate**: Cilium/Hubble (network), Tetragon (security), Parca/Pyroscope (continuous profiling) all enter mainstream use. The OTel community formally begins discussing Profiling as a "fourth signal."
+- **Grafana acquires Pyroscope**, incorporating continuous profiling into the Grafana Stack.
+
+---
+
+### The Convergence Years (2024–2025)
+
+**2024**
+- **OTel Profiling data model draft** is published — fourth-pillar standardization enters a substantive phase.
+- **AI-assisted observability lands quickly**: natural language log querying (Chat2Loki), LLM-driven root cause analysis, and auto-generated PromQL queries appear across platforms. Datadog, Dynatrace, and New Relic all ship AI features.
+- **Datadog acquires Quickwit**, positioning for next-generation, cost-efficient log search.
+- **Cost optimization becomes a top-line concern**: large enterprises are spending tens of millions annually on observability infrastructure. Intelligent sampling, tiered storage, and usage-based pricing models become priorities.
+
+**2025 (Current)**
+- **OTel Profiling GA** is expected to land, bringing all four signals (Metrics / Logs / Traces / Profiling) under a stable, unified standard.
+- **Platform Engineering meets observability**: eBPF collection capabilities migrate down into the platform layer. Developers no longer need to manually instrument — the platform handles baseline observability automatically.
+- AI observability enters the **co-pilot phase**: anomaly detection, root cause suggestions, and Runbook generation become platform-native features rather than standalone products.
+- **New commercial models emerge** in response to cost pressure: usage-based observability SaaS gains ground.
+
+---
+
+## IV. OpenTelemetry: How a Divided Community Found Unity
+
+The OpenTelemetry story deserves a dedicated chapter, because it's not just a technical achievement — it's a lesson in open-source community governance.
+
+### Why Merge?
+
+The coexistence of OpenTracing and OpenCensus was unsustainable for four reasons:
+
+1. **Dual maintenance burden** — SDK authors had to implement two separate adapter layers.
+2. **User paralysis** — new projects didn't know which standard to pick; existing projects faced costly migrations.
+3. **Ecosystem fragmentation** — Jaeger was OpenTracing-native; Google Stackdriver assumed OpenCensus. Nothing interoperated cleanly.
+4. **A shared adversary** — commercial APM vendors (Datadog, New Relic, Dynatrace) weren't bound by either open standard and benefited from the infighting.
+
+The core consensus that made the merger possible: **standardization belongs in the API and data model layer; competition should happen at the implementation layer** — backends, storage, visualization, and AI analysis.
+
+### The Architecture
+
+OpenTelemetry uses a clean layered design:
+
+```
+Your Application Code
+        │
+  OTel API  ──── (lightweight, stable, minimal dependencies)
+        │
+  OTel SDK  ──── (collection, processing, batching, sampling)
+        │
+OTel Collector ── (receive → process → export)
+        │
+ Backend Storage (Jaeger / Tempo / Prometheus / Loki / SaaS)
+```
+
+The **OTel Collector** is the architectural linchpin: a standalone process that receives signals in any format, applies processing pipelines (sampling, filtering, enrichment), and exports to any backend. It decouples your application from any specific vendor or storage system.
+
+### Language SDK Maturity (as of 2025)
+
+| Language | Traces | Metrics | Logs |
+|----------|--------|---------|------|
+| Go | ✅ GA | ✅ GA | ✅ GA |
+| Java | ✅ GA | ✅ GA | ✅ GA |
+| Python | ✅ GA | ✅ GA | ✅ GA |
+| .NET | ✅ GA | ✅ GA | ✅ GA |
+| Node.js | ✅ GA | ✅ GA | ✅ GA |
+| Rust | 🔶 Beta | 🔶 Beta | 🔸 Alpha |
+| PHP | 🔷 RC | 🔶 Beta | 🔸 Alpha |
+
+---
+
+## V. The Three Pillars — and a Fourth Signal Emerging
+
+### Metrics
+
+Metrics are the **aggregated view** of system state. They sacrifice per-event detail in exchange for extremely low storage cost and fast time-series querying.
+
+The four standard types:
+
+| Type | Behavior | Example |
+|------|----------|--------|
+| **Counter** | Monotonically increasing | `http_requests_total` |
+| **Gauge** | Current value, up or down | `memory_usage_bytes` |
+| **Histogram** | Distribution of values | Request latency at P50/P95/P99 |
+| **Summary** | Client-side quantiles | Similar to Histogram |
+
+PromQL is the de facto query language. Expressions like `rate()`, `histogram_quantile()`, and `sum by()` cover the vast majority of real-world metrics analysis.
+
+### Logs
+
+Logs are the **richest information source** in any system — and the hardest to scale.
+
+Modern logging best practices:
+
+- **Structured JSON output** — queryable by field, not just grep-able
+- **Carry Trace IDs** — enabling correlation between logs and distributed traces
+- **Follow OTel semantic conventions** — consistent field naming across services
+- **Apply sampling** — critical for high-throughput services to control costs
+
+On storage: Loki's "index labels, not content" philosophy makes it far cheaper than Elasticsearch. The trade-off is weaker full-text search. Pick based on your query patterns.
+
+### Traces
+
+Distributed tracing is the **most direct tool for understanding request flow** across a complex system — and the most engineering-intensive pillar to implement.
+
+The core mental model:
+
+- **Trace** — a complete end-to-end record of one request, composed of multiple Spans
+- **Span** — a single operation (one HTTP call, one DB query), with timestamps, tags, and events attached
+- **Context Propagation** — the mechanism that threads Trace IDs across process boundaries; getting this right is the hardest part
+
+The sampling decision matters enormously:
+
+| Strategy | How | Trade-off |
+|----------|-----|----------|
+| **Head-based** | Decide at request entry | Simple, but loses anomalous long-tail events |
+| **Tail-based** | Decide after completion | Catches everything important, but requires buffering all spans |
+| **Adaptive** | Dynamic rules + ML | Best of both worlds; highest complexity |
+
+### Profiling — The Fourth Signal
+
+Continuous Profiling answers a question the other three pillars can't: **which lines of code are consuming the most CPU, memory, or I/O right now?**
+
+Unlike on-demand profiling (fire it up when something's already broken), Continuous Profiling runs permanently at low overhead — giving you a always-on, always-available view of performance hotspots.
+
+**Pyroscope** (Grafana Labs) and **Parca** (Polar Signals) are the leading open-source implementations. OTel's Profiling data model entered draft specification in 2024; GA is expected in 2025.
+
+When Profiling arrives under the OTel umbrella, it unlocks **Observability-Driven Development (ODD)** — using production-grade performance data to guide decisions during the development cycle, not just after incidents.
+
+---
+
+## VI. Where Things Stand in 2025
+
+### The Standardization Battle Is Over
+
+OpenTelemetry is the only observability standard with full cross-industry adoption. AWS, Google Cloud, Azure, Alibaba Cloud, and Tencent Cloud have all announced first-class OTel support. Datadog, New Relic, and Dynatrace have all shipped OTel-native ingestion paths.
+
+The competitive landscape has shifted: nobody fights over standards anymore. Vendors differentiate on **backend performance, UI experience, AI capabilities, and pricing models**.
+
+### AI: Co-Pilot, Not Autopilot
+
+In 2025, AI in observability is settling into a practical "co-pilot" role:
+
+- **Natural language queries** — describe what you want in plain language; the platform generates PromQL/LogQL/TraceQL automatically
+- **Anomaly detection** — ML-based alerting against historical baselines, reducing alert fatigue significantly
+- **Root cause reasoning** — LLMs contextualize alerts and surface probable causes, reducing mean time to diagnose (MTTD)
+- **Runbook generation** — alert responses documented automatically based on historical resolution patterns
+
+Fully autonomous remediation remains immature. The two key blockers: insufficient context understanding, and the near-impossibility of reliable risk-bounded automated action. Practical automation for low-risk operations (scale-out, pod restart) is likely 12–24 months away from mainstream adoption.
+
+### Cost Is the New Battleground
+
+Observability's value is no longer in question. Its *cost* is.
+
+A mid-sized tech company might spend $1-2M/year on observability infrastructure. Large enterprises can hit $10M+. The industry response:
+
+| Strategy | Mechanism |
+|----------|----------|
+| **Intelligent sampling** | Keep only traces that matter (errors, slow requests, new paths) |
+| **Tiered log storage** | Hot data on SSD; cold data in object storage (S3/OSS) |
+| **Metrics downsampling** | Aggregate old data into lower-resolution rollups |
+| **Self-hosted Grafana Stack** | Avoid per-GB/per-seat SaaS pricing for mature teams |
+
+---
+
+## VII. Looking Ahead
+
+### 1. Profiling Completes the Picture
+
+When OTel Profiling goes GA, the four signals will finally be unified under one standard. Code-level performance views become first-class citizens alongside traces, metrics, and logs — accessible in the same platform, correlated against the same request.
+
+**ODD (Observability-Driven Development)** — using production performance data to drive code decisions during development — becomes a realistic engineering practice.
+
+### 2. Observability Shifts Left
+
+Traditionally, observability engaged *after* deployment. The direction is clearly leftward:
+
+- **CI/CD integration**: automatically compare observability metrics against baseline on every deploy; fail the pipeline on regression
+- **Local dev observability**: lightweight traces and metrics accessible during local development cycles
+- **Automated DORA metric collection**: deployment frequency, change failure rate, mean time to restore — all derived from observability data, not manual tracking
+
+### 3. eBPF Rewires the Collection Layer
+
+eBPF runs custom programs safely at the Linux kernel layer, collecting observability data from any process — without touching application code. The implications:
+
+- **Zero-instrumentation tracing**: no OTel SDK required; eBPF intercepts system calls automatically
+- **L4/L7 network observability**: real-time traffic tracing without a service mesh sidecar
+- **Security observability**: process behavior monitoring, file access auditing — eBPF is becoming the kernel of cloud-native security tooling
+
+As Platform Engineering matures, eBPF collection becomes platform-team-owned infrastructure. Application developers get observability for free.
+
+### 4. The Long Game: Autonomous Operations
+
+The ultimate destination isn't "help humans understand" — it's **systems that manage themselves**. The path is becoming clearer:
+
+```
+Collect (OTel)
+    → Detect (ML anomaly detection)
+    → Diagnose (LLM-assisted root cause)
+    → Decide (rules + model inference)
+    → Act (GitOps / K8s Operator)
+    → Verify (back to observability data)
+```
+
+Each step has usable tools today. The hard part is **end-to-end trust and risk control** — no engineer wants to wake up to an incident only to discover the system already "fixed" it in a way that made things far worse.
+
+### 5. Expanding the Observable Universe
+
+Observability is extending beyond infrastructure and applications:
+
+- **Business observability** — correlate technical metrics directly to business KPIs (GMV, conversion rate, retention), making engineering health legible to non-engineers
+- **Security observability (SecObs)** — bring security events and anomalous access patterns into the unified observability stack for DevSecOps closure
+- **Sustainability observability** — track carbon footprint and energy consumption per workload, providing a data foundation for green computing initiatives
+
+---
+
+## Closing: What Observability Is Really About
+
+Observability isn't a tool. It isn't a specification. It isn't a vendor's product.
+
+It's an **engineering philosophy** — one that accepts that modern systems are too complex to fully anticipate, and responds by deliberately building the capacity to answer any question about system behavior, even questions you didn't know to ask.
+
+From Kálmán's 1960 control theory formula, to Google's 2010 Dapper paper, to OpenTelemetry's 2019 unification, to today's convergence of AI and eBPF — this field has been evolving for sixty years. But the era of broad engineering adoption? That's only about ten years old.
+
+For anyone building distributed systems today: observability is not a nice-to-have operational add-on. It is **infrastructure for understanding what you've built**.
+
+A system without observability is like an aircraft without instruments. It might fly. But you won't know how much longer it can.
+
+---
+
+*This is the first article in Agile Robin's Observability Series. Upcoming deep-dives: OpenTelemetry in Practice, eBPF Observability Primer, and Building the Complete Grafana Stack.*
+
+---
+
+### References
+
+1. Sigelman et al., *Dapper, a Large-Scale Distributed Systems Tracing Infrastructure*, Google, 2010
+2. OpenTelemetry Documentation — [opentelemetry.io](https://opentelemetry.io)
+3. CNCF Annual Report 2024
+4. Grafana Labs, *State of Observability 2024*
+5. Datadog, *State of DevOps 2024*
+6. [observability.cn](https://observability.cn) — Chinese observability community
+
