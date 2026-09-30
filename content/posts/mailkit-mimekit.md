@@ -1,1 +1,165 @@
-LS0tCnRpdGxlOiAi5L2/55SobWFpbGtpdCDlkoxtaW1la2l05p2l5Y+R6YCB6YKu5Lu2IgpkZXNjcmlwdGlvbjogIm1haWxraXTlkoxtaW1la2l0IOaYr+S7gOS5iCAgV2hhdCBpcyBNYWlsS2l0PyBNYWlsS2l0IGlzIGEgY3Jvc3MtcGxhdGZvcm0gbWFpbCBjbGllbnQgbGlicmFyeSBidWlsdCBvbiB0b3Agb2YgTWltZUtpdC4gV2hhdCBpcyBNaW1lS2l0PyBNaW1lS2l0IGlzIGEgQyMgbGlicmFyeSB3aGljaCBtYXkgYmUgdXNlZCBmb3IgdGhlIGNyZWF0aW9uIGFuZCBwYXJzaW5nIG9mIG1lc3NhZ2VzIHVzaW5nIHRoZSBNdWx0aXB1cnBvc2UgSW50ZXJuZXQgTWFpbCBFeC4uLiIKZGF0ZTogIjIwMTktMTAtMjQiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzQ4OTU1NDYvYmVhOGE2NzQtYTI0My00NWEiCnJlYWRpbmdUaW1lOiAyCnNsdWc6ICJtYWlsa2l0LW1pbWVraXQiCi0tLQojIyBbbWFpbGtpdF0oaHR0cHM6Ly9naXRodWIuY29tL2pzdGVkZmFzdC9NYWlsS2l0KeWSjFttaW1la2l0XShodHRwczovL2dpdGh1Yi5jb20vanN0ZWRmYXN0L01pbWVLaXQpIOaYr+S7gOS5iAoKPiAjIyBXaGF0IGlzIE1haWxLaXQ/Cgo+IE1haWxLaXQgaXMgYSBjcm9zcy1wbGF0Zm9ybSBtYWlsIGNsaWVudCBsaWJyYXJ5IGJ1aWx0IG9uIHRvcCBvZiBbTWltZUtpdF0oaHR0cHM6Ly9naXRodWIuY29tL2pzdGVkZmFzdC9NaW1lS2l0KS4KCj4gIyMgV2hhdCBpcyBNaW1lS2l0PwoKPiBNaW1lS2l0IGlzIGEgQyMgbGlicmFyeSB3aGljaCBtYXkgYmUgdXNlZCBmb3IgdGhlIGNyZWF0aW9uIGFuZCBwYXJzaW5nIG9mIG1lc3NhZ2VzIHVzaW5nIHRoZSBNdWx0aXB1cnBvc2UgSW50ZXJuZXQgTWFpbCBFeHRlbnNpb24gKE1JTUUpLCBhcyBkZWZpbmVkIGJ5IFtudW1lcm91cyBJRVRGIHNwZWNpZmljYXRpb25zXShodHRwczovL2dpdGh1Yi5jb20vanN0ZWRmYXN0L01pbWVLaXQvYmxvYi9tYXN0ZXIvUkZDcy5tZCkuCgojIyDmgI7kuYjnlKgK5YiG5Li65Y+R5L+h5ZKM5pS25L+h5Yqf6IO9CgojIyMg5Y+R5L+hCmBgYGNzaGFycAogCgl2YXIgbWVzc2FnZSA9IG5ldyBNaW1lTWVzc2FnZSAoKTsKCW1lc3NhZ2UuRnJvbS5BZGQgKG5ldyBNYWlsYm94QWRkcmVzcyAoIkpvZXkgVHJpYmJpYW5pIiwgImpvZXlAZnJpZW5kcy5jb20iKSk7CgltZXNzYWdlLlRvLkFkZCAobmV3IE1haWxib3hBZGRyZXNzICgiTXJzLiBDaGFuYW5kbGVyIEJvbmciLCAiY2hhbmRsZXJAZnJpZW5kcy5jb20iKSk7CgltZXNzYWdlLlN1YmplY3QgPSAiSG93IHlvdSBkb2luJz8iOwogICAgbWVzc2FnZS5Cb2R5ID0gbmV3IFRleHRQYXJ0ICgicGxhaW4iKSB7CgkJCQlUZXh0ID0gQCJIZXkgQ2hhbmRsZXIsCkkganVzdCB3YW50ZWQgdG8gbGV0IHlvdSBrbm93IHRoYXQKTW9uaWNhIGFuZCBJIHdlcmUgZ29pbmcgdG8gZ28gcGxheSBzb21lIHBhaW50YmFsbCwgeW91IGluPwotLSBKb2V5IgoJCQl9OwoKCXVzaW5nICh2YXIgY2xpZW50ID0gbmV3IFNtdHBDbGllbnQgKCkpIHsKCQkvLyBGb3IgZGVtby1wdXJwb3NlcywgCiAgICAgICAgLy9hY2NlcHQgYWxsIFNTTCBjZXJ0aWZpY2F0ZXMgKGluIGNhc2UgdGhlIHNlcnZlciBzdXBwb3J0cyBTVEFSVFRMUykKCQljbGllbnQuU2VydmVyQ2VydGlmaWNhdGVWYWxpZGF0aW9uQ2FsbGJhY2sgPSAocyxjLGgsZSkgPT4gdHJ1ZTsKCgkJY2xpZW50LkNvbm5lY3QgKCJzbXRwLmZyaWVuZHMuY29tIiwgNTg3LCBmYWxzZSk7CgoJCS8vIE5vdGU6IG9ubHkgbmVlZGVkIGlmIHRoZSBTTVRQIHNlcnZlciByZXF1aXJlcyBhdXRoZW50aWNhdGlvbgoJCWNsaWVudC5BdXRoZW50aWNhdGUgKCJqb2V5IiwgInBhc3N3b3JkIik7CgoJCWNsaWVudC5TZW5kIChtZXNzYWdlKTsKCQljbGllbnQuRGlzY29ubmVjdCAodHJ1ZSk7Cgl9CmBgYAoKIyMjIOaUtuS/oQpgYGBjc2hhcnAKdXNpbmcgKHZhciBjbGllbnQgPSBuZXcgUG9wM0NsaWVudCAoKSkgewoJLy8gRm9yIGRlbW8tcHVycG9zZXMsIAogICAgLy9hY2NlcHQgYWxsIFNTTCBjZXJ0aWZpY2F0ZXMgKGluIGNhc2UgdGhlIHNlcnZlciBzdXBwb3J0cyBTVEFSVFRMUykKCQljbGllbnQuU2VydmVyQ2VydGlmaWNhdGVWYWxpZGF0aW9uQ2FsbGJhY2sgPSAocyxjLGgsZSkgPT4gdHJ1ZTsKCgkJY2xpZW50LkNvbm5lY3QgKCJwb3AuZnJpZW5kcy5jb20iLCAxMTAsIGZhbHNlKTsKCgkJY2xpZW50LkF1dGhlbnRpY2F0ZSAoImpvZXkiLCAicGFzc3dvcmQiKTsKCgkJZm9yIChpbnQgaSA9IDA7IGkgPCBjbGllbnQuQ291bnQ7IGkrKykgewoJCQl2YXIgbWVzc2FnZSA9IGNsaWVudC5HZXRNZXNzYWdlIChpKTsKCQkJICAgQ29uc29sZS5Xcml0ZUxpbmUgKCJTdWJqZWN0OiB7MH0iLCBtZXNzYWdlLlN1YmplY3QpOwoJCQl9CiAgICAgICAgICAgY2xpZW50LkRpc2Nvbm5lY3QgKHRydWUpOwoJCQl9CmBgYAoKIyMg5bi46KeB6YKu5Lu25pyN5Yqh5o+Q5L6b5ZWG5Y+K56uv5Y+jCgrjgJBzaW5hLmNvbeOAkQpQT1Az5pyN5Yqh5Zmo5Zyw5Z2AOnBvcDMuc2luYS5jb20uY27vvIjnq6/lj6PvvJoxMTDvvIkKU01UUOacjeWKoeWZqOWcsOWdgDpzbXRwLnNpbmEuY29tLmNu77yI56uv5Y+j77yaMjXvvIkgCgogCgrjgJBzaW5hVklQ44CRCgpQT1Az5pyN5Yqh5ZmoOnBvcDMudmlwLnNpbmEuY29tIO+8iOerr+WPo++8mjExMO+8iQoKU01UUOacjeWKoeWZqDpzbXRwLnZpcC5zaW5hLmNvbSDvvIjnq6/lj6PvvJoyNe+8iQoKIAoK44CQc29odS5jb23jgJEKClBPUDPmnI3liqHlmajlnLDlnYA6cG9wMy5zb2h1LmNvbe+8iOerr+WPo++8mjExMO+8iQpTTVRQ5pyN5Yqh5Zmo5Zyw5Z2AOnNtdHAuc29odS5jb23vvIjnq6/lj6PvvJoyNe+8iQoKIAoK44CQMTI26YKu566x44CRCgpQT1Az5pyN5Yqh5Zmo5Zyw5Z2AOnBvcC4xMjYuY29t77yI56uv5Y+j77yaMTEw77yJCgpTTVRQ5pyN5Yqh5Zmo5Zyw5Z2AOnNtdHAuMTI2LmNvbe+8iOerr+WPo++8mjI177yJCgogCgrjgJAxMznpgq7nrrHjgJEKClBPUDPmnI3liqHlmajlnLDlnYDvvJpQT1AuMTM5LmNvbe+8iOerr+WPo++8mjExMO+8iQoKU01UUOacjeWKoeWZqOWcsOWdgO+8mlNNVFAuMTM5LmNvbSjnq6/lj6PvvJoyNSkKCgrjgJAxNjMuY29t44CRCgpQT1Az5pyN5Yqh5Zmo5Zyw5Z2AOnBvcC4xNjMuY29t77yI56uv5Y+j77yaMTEw77yJClNNVFDmnI3liqHlmajlnLDlnYA6c210cC4xNjMuY29t77yI56uv5Y+j77yaMjXvvIkKCiAKCuOAkFFR6YKu566x44CRCgpQT1Az5pyN5Yqh5Zmo5Zyw5Z2A77yacG9wLnFxLmNvbe+8iOerr+WPo++8mjExMO+8iQoKU01UUOacjeWKoeWZqOWcsOWdgO+8mnNtdHAucXEuY29t77yI56uv5Y+j77yaMjXvvIkKCiAKCuOAkFFR5LyB5Lia6YKu566x44CRCgpQT1Az5pyN5Yqh5Zmo5Zyw5Z2A77yacG9wLmV4bWFpbC5xcS5jb20g77yIU1NM5ZCv55SoIOerr+WPo++8mjk5Ne+8iQoKU01UUOacjeWKoeWZqOWcsOWdgO+8mnNtdHAuZXhtYWlsLnFxLmNvbe+8iFNTTOWQr+eUqCDnq6/lj6PvvJo1ODcvNDY177yJCgogCgrjgJB5YWhvby5jb23jgJEKClBPUDPmnI3liqHlmajlnLDlnYA6cG9wLm1haWwueWFob28uY29t77yI56uv5Y+j77yaOTk177yJClNNVFDmnI3liqHlmajlnLDlnYA6c210cC5tYWlsLnlhaG9vLmNvbe+8iOerr+WPo++8mjU4NykgCgogCgrjgJBIb3RNYWls44CRCgpQT1Az5pyN5Yqh5Zmo5Zyw5Z2A77yacG9wMy5saXZlLmNvbe+8iOerr+WPo++8mjk5Ne+8iQoKU01UUOacjeWKoeWZqOWcsOWdgO+8mnNtdHAubGl2ZS5jb23vvIjnq6/lj6PvvJo1ODfvvIkKCiAKCuOAkEdtYWls44CRClBPUDPmnI3liqHlmajlnLDlnYA6cG9wLmdtYWlsLmNvbe+8iFNTTOWQr+eUqOerr+WPo++8mjk5Ne+8iQpTTVRQ5pyN5Yqh5Zmo5Zyw5Z2AOnNtdHAuZ21haWwuY29t77yIU1NM5ZCv55SoIOerr+WPo++8mjU4N++8iQoKIAoK44CQMjYzLm5ldOOAkQoKUE9QM+acjeWKoeWZqOWcsOWdgDpwb3AzLjI2My5uZXTvvIjnq6/lj6PvvJoxMTDvvIkKU01UUOacjeWKoeWZqOWcsOWdgDpzbXRwLjI2My5uZXTvvIjnq6/lj6PvvJoyNe+8iQoKICAKCuOAkEZveG1haWzjgJEKClBPUDPmnI3liqHlmajlnLDlnYA6UE9QLmZveG1haWwuY29t77yI56uv5Y+j77yaMTEw77yJCgpTTVRQ5pyN5Yqh5Zmo5Zyw5Z2AOlNNVFAuZm94bWFpbC5jb23vvIjnq6/lj6PvvJoyNe+8iSAKCiAK
+---
+title: "使用mailkit 和mimekit来发送邮件"
+description: "mailkit和mimekit 是什么  What is MailKit? MailKit is a cross-platform mail client library built on top of MimeKit. What is MimeKit? MimeKit is a C# library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Ex..."
+date: "2019-10-24"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834895546/bea8a674-a243-45a"
+readingTime: 2
+slug: "mailkit-mimekit"
+---
+## [mailkit](https://github.com/jstedfast/MailKit)和[mimekit](https://github.com/jstedfast/MimeKit) 是什么
+
+> ## What is MailKit?
+
+> MailKit is a cross-platform mail client library built on top of [MimeKit](https://github.com/jstedfast/MimeKit).
+
+> ## What is MimeKit?
+
+> MimeKit is a C# library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Extension (MIME), as defined by [numerous IETF specifications](https://github.com/jstedfast/MimeKit/blob/master/RFCs.md).
+
+## 怎么用
+分为发信和收信功能
+
+### 发信
+```csharp
+ 
+	var message = new MimeMessage ();
+	message.From.Add (new MailboxAddress ("Joey Tribbiani", "joey@friends.com"));
+	message.To.Add (new MailboxAddress ("Mrs. Chanandler Bong", "chandler@friends.com"));
+	message.Subject = "How you doin'?";
+    message.Body = new TextPart ("plain") {
+				Text = @"Hey Chandler,
+I just wanted to let you know that
+Monica and I were going to go play some paintball, you in?
+-- Joey"
+			};
+
+	using (var client = new SmtpClient ()) {
+		// For demo-purposes, 
+        //accept all SSL certificates (in case the server supports STARTTLS)
+		client.ServerCertificateValidationCallback = (s,c,h,e) => true;
+
+		client.Connect ("smtp.friends.com", 587, false);
+
+		// Note: only needed if the SMTP server requires authentication
+		client.Authenticate ("joey", "password");
+
+		client.Send (message);
+		client.Disconnect (true);
+	}
+```
+
+### 收信
+```csharp
+using (var client = new Pop3Client ()) {
+	// For demo-purposes, 
+    //accept all SSL certificates (in case the server supports STARTTLS)
+		client.ServerCertificateValidationCallback = (s,c,h,e) => true;
+
+		client.Connect ("pop.friends.com", 110, false);
+
+		client.Authenticate ("joey", "password");
+
+		for (int i = 0; i < client.Count; i++) {
+			var message = client.GetMessage (i);
+			   Console.WriteLine ("Subject: {0}", message.Subject);
+			}
+           client.Disconnect (true);
+			}
+```
+
+## 常见邮件服务提供商及端口
+
+【sina.com】
+POP3服务器地址:pop3.sina.com.cn（端口：110）
+SMTP服务器地址:smtp.sina.com.cn（端口：25） 
+
+ 
+
+【sinaVIP】
+
+POP3服务器:pop3.vip.sina.com （端口：110）
+
+SMTP服务器:smtp.vip.sina.com （端口：25）
+
+ 
+
+【sohu.com】
+
+POP3服务器地址:pop3.sohu.com（端口：110）
+SMTP服务器地址:smtp.sohu.com（端口：25）
+
+ 
+
+【126邮箱】
+
+POP3服务器地址:pop.126.com（端口：110）
+
+SMTP服务器地址:smtp.126.com（端口：25）
+
+ 
+
+【139邮箱】
+
+POP3服务器地址：POP.139.com（端口：110）
+
+SMTP服务器地址：SMTP.139.com(端口：25)
+
+
+【163.com】
+
+POP3服务器地址:pop.163.com（端口：110）
+SMTP服务器地址:smtp.163.com（端口：25）
+
+ 
+
+【QQ邮箱】
+
+POP3服务器地址：pop.qq.com（端口：110）
+
+SMTP服务器地址：smtp.qq.com（端口：25）
+
+ 
+
+【QQ企业邮箱】
+
+POP3服务器地址：pop.exmail.qq.com （SSL启用 端口：995）
+
+SMTP服务器地址：smtp.exmail.qq.com（SSL启用 端口：587/465）
+
+ 
+
+【yahoo.com】
+
+POP3服务器地址:pop.mail.yahoo.com（端口：995）
+SMTP服务器地址:smtp.mail.yahoo.com（端口：587) 
+
+ 
+
+【HotMail】
+
+POP3服务器地址：pop3.live.com（端口：995）
+
+SMTP服务器地址：smtp.live.com（端口：587）
+
+ 
+
+【Gmail】
+POP3服务器地址:pop.gmail.com（SSL启用端口：995）
+SMTP服务器地址:smtp.gmail.com（SSL启用 端口：587）
+
+ 
+
+【263.net】
+
+POP3服务器地址:pop3.263.net（端口：110）
+SMTP服务器地址:smtp.263.net（端口：25）
+
+  
+
+【Foxmail】
+
+POP3服务器地址:POP.foxmail.com（端口：110）
+
+SMTP服务器地址:SMTP.foxmail.com（端口：25） 
+
+ 

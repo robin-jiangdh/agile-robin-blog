@@ -1,1 +1,364 @@
-LS0tCnRpdGxlOiAiTWlncmF0aW5nIFJ1bmRlY2sgZnJvbSBIMiB0byBQb3N0Z3JlU1FMOiBBIENvbXBsZXRlIEd1aWRlIgpkZXNjcmlwdGlvbjogIklmIHlvdSd2ZSBiZWVuIHJ1bm5pbmcgUnVuZGVjayB3aXRoIGl0cyBkZWZhdWx0IEgyIGVtYmVkZGVkIGRhdGFiYXNlLCB5b3UndmUgcHJvYmFibHkgYWxyZWFkeSBoaXQgdGhlIHdhbGw6IHNsb3cgcXVlcmllcyBhcyBqb2IgaGlzdG9yeSBncm93cywgbm8gcHJvcGVyIGNvbm5lY3TigKYiCmRhdGU6ICIyMDI2LTA0LTIxIgp0YWdzOiBbImRhdGFiYXNlIl0KcmVhZGluZ1RpbWU6IDgKc2x1ZzogIm1pZ3JhdGluZy1ydW5kZWNrLWZyb20taDItdG8tcG9zdGdyZXNxbC1hLWNvbXBsZXRlLWd1aWRlIgpjYXRlZ29yeTogIuehrOaguOa3seaMliIKLS0tCklmIHlvdSd2ZSBiZWVuIHJ1bm5pbmcgUnVuZGVjayB3aXRoIGl0cyBkZWZhdWx0IEgyIGVtYmVkZGVkIGRhdGFiYXNlLCB5b3UndmUgcHJvYmFibHkgYWxyZWFkeSBoaXQgdGhlIHdhbGw6IHNsb3cgcXVlcmllcyBhcyBqb2IgaGlzdG9yeSBncm93cywgbm8gcHJvcGVyIGNvbm5lY3Rpb24gcG9vbGluZywgYW5kIHRoZSBjb25zdGFudCBhbnhpZXR5IG9mIGEgZmlsZS1iYXNlZCBkYXRhYmFzZSBpbiBwcm9kdWN0aW9uLiBQb3N0Z3JlU1FMIGZpeGVzIGFsbCBvZiB0aGF0LgoKVGhpcyBndWlkZSB3YWxrcyB5b3UgdGhyb3VnaCB0d28gbWlncmF0aW9uIHBhdGhzIOKAlCBwaWNrIHRoZSBvbmUgdGhhdCBmaXRzIHlvdXIgc2l0dWF0aW9uLgoKKiAqICoKCiMjIFdoeSBNaWdyYXRlIEF3YXkgZnJvbSBIMj8KClJ1bmRlY2sgc2hpcHMgd2l0aCBIMiBmb3IgYSByZWFzb246IHplcm8tY29uZmlnLCB3b3JrcyBvdXQgb2YgdGhlIGJveC4gQnV0IEgyIGhhcyByZWFsIGxpbWl0YXRpb25zIGF0IHNjYWxlOgoKKiAgICoqTm8gY29uY3VycmVudCB3cml0ZXMqKiDigJQgSDIgc3RydWdnbGVzIHVuZGVyIHBhcmFsbGVsIGpvYiBleGVjdXRpb24KICAgIAoqICAgKipGaWxlIGNvcnJ1cHRpb24gcmlzayoqIOKAlCBhIGhhcmQgc2h1dGRvd24gY2FuIGNvcnJ1cHQgdGhlIGAubXYuZGJgIGZpbGUKICAgIAoqICAgKipObyBleHRlcm5hbCB0b29saW5nKiog4oCUIGNhbid0IHVzZSBwZ1xfZHVtcCwgcmVwbGljYXRpb24sIG9yIHlvdXIgZXhpc3RpbmcgREIgbW9uaXRvcmluZwogICAgCiogICAqKk1lbW9yeSBwcmVzc3VyZSoqIOKAlCBIMiBsb2FkcyBkYXRhIGludG8gdGhlIEpWTSBoZWFwCiAgICAKClBvc3RncmVTUUwgZ2l2ZXMgeW91IGNvbm5lY3Rpb24gcG9vbGluZywgcHJvcGVyIEFDSUQgZ3VhcmFudGVlcywgYHBnX2R1bXBgIGZvciBiYWNrdXBzLCBhbmQgdGhlIGFiaWxpdHkgdG8gcnVuIFN0YW5kYnkgcmVwbGljYXMuIEZvciBhbnkgdGVhbSBydW5uaW5nIG1vcmUgdGhhbiBhIGhhbmRmdWwgb2Ygam9icywgaXQncyB0aGUgcmlnaHQgY2FsbC4KCiogKiAqCgojIyBCZWZvcmUgWW91IFN0YXJ0OiBVbmRlcnN0YW5kIFdoYXQgTGl2ZXMgaW4gdGhlIERhdGFiYXNlCgpSdW5kZWNrIHN0b3JlcyB0aGUgZm9sbG93aW5nIGluIGl0cyBkYXRhYmFzZToKCnwgRGF0YSBUeXBlIHwgTWlncmF0aW9uIE5vdGVzIHwKfCAtLS0gfCAtLS0gfAp8IFByb2plY3QgZGVmaW5pdGlvbnMgfCBFeHBvcnRhYmxlIHZpYSBBUEkgYXJjaGl2ZSB8CnwgSm9iIGRlZmluaXRpb25zIHwgSW5jbHVkZWQgaW4gcHJvamVjdCBleHBvcnQgfAp8IEV4ZWN1dGlvbiBoaXN0b3J5ICYgbG9ncyB8IExvZyBmaWxlcyBzdGF5IG9uIGRpc2s7IG1ldGFkYXRhIGluIERCIHwKfCBVc2VycyAmIEFDTCB0b2tlbnMgfCBSZWNyZWF0ZSBtYW51YWxseSBvciB2aWEgY29uZmlnIHwKfCBTY2hlZHVsZWQgam9icyB8IFByZXNlcnZlZCBpbiBqb2IgZGVmaW5pdGlvbnMgfAoKRXhlY3V0aW9uIGxvZyAqY29udGVudCogbGl2ZXMgaW4gYC92YXIvbGliL3J1bmRlY2svbG9ncy9gLCBub3QgdGhlIGRhdGFiYXNlIOKAlCBzbyB5b3UgZG9uJ3QgbmVlZCB0byBtaWdyYXRlIHRoYXQuCgoqICogKgoKIyMgVHdvIE1pZ3JhdGlvbiBTdHJhdGVnaWVzCgojIyMgU3RyYXRlZ3kgQTogQ2xlYW4gU3RhcnQgKyBQcm9qZWN0IEltcG9ydCAoUmVjb21tZW5kZWQpCgpCZXN0IGZvcjogTW9zdCB0ZWFtcy4gWW91IGtlZXAgYWxsIHlvdXIgam9iIGRlZmluaXRpb25zIGFuZCBwcm9qZWN0IGNvbmZpZ3MuIFlvdSBsb3NlIGV4ZWN1dGlvbiBoaXN0b3J5IHJlY29yZHMgaW4gdGhlIERCIChidXQgbm90IHRoZSBhY3R1YWwgbG9nIGZpbGVzIG9uIGRpc2spLgoKKipFZmZvcnQ6KiogTG93IHwgKipSaXNrOioqIExvdyB8ICoqRG93bnRpbWU6KiogfjMwIG1pbnV0ZXMKCiMjIyBTdHJhdGVneSBCOiBGdWxsIEgyIOKGkiBQb3N0Z3JlU1FMIERhdGEgTWlncmF0aW9uCgpCZXN0IGZvcjogVGVhbXMgdGhhdCBuZWVkIHRvIHByZXNlcnZlIGV4ZWN1dGlvbiBoaXN0b3J5IHJlY29yZHMgaW4gdGhlIERCIGZvciBhdWRpdC9jb21wbGlhbmNlLgoKKipFZmZvcnQ6KiogSGlnaCB8ICoqUmlzazoqKiBNZWRpdW0gfCAqKkRvd250aW1lOioqIDHigJMzIGhvdXJzCgoqICogKgoKIyMgU3RyYXRlZ3kgQTogQ2xlYW4gU3RhcnQgKyBQcm9qZWN0IEltcG9ydAoKIyMjIFN0ZXAgMSDigJQgQmFjayBVcCBFdmVyeXRoaW5nCgpgYGBiYXNoCiMgU3RvcCBSdW5kZWNrIGZpcnN0CnN5c3RlbWN0bCBzdG9wIHJ1bmRlY2tkCgojIEJhY2sgdXAgY29uZmlnIGZpbGVzCmNwIC9ldGMvcnVuZGVjay9ydW5kZWNrLWNvbmZpZy5wcm9wZXJ0aWVzIC9iYWNrdXAvCmNwIC9ldGMvcnVuZGVjay9mcmFtZXdvcmsucHJvcGVydGllcyAvYmFja3VwLwoKIyBCYWNrIHVwIHRoZSBIMiBkYXRhYmFzZSBmaWxlcyAoanVzdCBpbiBjYXNlKQpjcCAtciAvdmFyL2xpYi9ydW5kZWNrL2RhdGEgL2JhY2t1cC9ydW5kZWNrLWRhdGEtaDIvCgojIEJhY2sgdXAgcHJvamVjdCBmaWxlcyBvbiBkaXNrCmNwIC1yIC92YXIvbGliL3J1bmRlY2svcHJvamVjdHMgL2JhY2t1cC9ydW5kZWNrLXByb2plY3RzLwpjcCAtciAvdmFyL2xpYi9ydW5kZWNrL2xvZ3MgL2JhY2t1cC9ydW5kZWNrLWxvZ3MvCmBgYAoKRXhwb3J0IGVhY2ggcHJvamVjdCB2aWEgdGhlIFJ1bmRlY2sgQVBJIChSdW5kZWNrIG11c3QgYmUgcnVubmluZyBmb3IgdGhpcyk6CgpgYGBiYXNoCiMgU3RhcnQgUnVuZGVjayB0ZW1wb3JhcmlseSB0byBleHBvcnQKc3lzdGVtY3RsIHN0YXJ0IHJ1bmRlY2tkCgojIEV4cG9ydCBhbGwgcHJvamVjdHMgdmlhIEFQSQpUT0tFTj0ieW91ci1hcGktdG9rZW4iClJVTkRFQ0tfVVJMPSJodHRwOi8vbG9jYWxob3N0OjQ0NDAiCgpmb3IgcHJvamVjdCBpbiAkKGN1cmwgLXMgLUggIlgtUnVuZGVjay1BdXRoLVRva2VuOiAkVE9LRU4iIFwKICAiJFJVTkRFQ0tfVVJML2FwaS80MS9wcm9qZWN0cyIgfCBqcSAtciAnLltdLm5hbWUnKTsgZG8KICBlY2hvICJFeHBvcnRpbmc6ICRwcm9qZWN0IgogIGN1cmwgLXMgLUggIlgtUnVuZGVjay1BdXRoLVRva2VuOiAkVE9LRU4iIFwKICAgICIkUlVOREVDS19VUkwvYXBpLzQxL3Byb2plY3QvJHByb2plY3QvZXhwb3J0IiBcCiAgICAtbyAiL2JhY2t1cC9wcm9qZWN0LSR7cHJvamVjdH0uemlwIgpkb25lCgojIFN0b3AgYWdhaW4gYmVmb3JlIERCIHN3aXRjaApzeXN0ZW1jdGwgc3RvcCBydW5kZWNrZApgYGAKCiogKiAqCgojIyMgU3RlcCAyIOKAlCBJbnN0YWxsIGFuZCBDb25maWd1cmUgUG9zdGdyZVNRTAoKYGBgYmFzaAojIFVidW50dS9EZWJpYW4KYXB0LWdldCBpbnN0YWxsIC15IHBvc3RncmVzcWwgcG9zdGdyZXNxbC1jb250cmliCgojIENlbnRPUy9SSEVMIDgrCmRuZiBpbnN0YWxsIC15IHBvc3RncmVzcWwtc2VydmVyIHBvc3RncmVzcWwtY29udHJpYgpwb3N0Z3Jlc3FsLXNldHVwIC0taW5pdGRiCnN5c3RlbWN0bCBlbmFibGUgLS1ub3cgcG9zdGdyZXNxbApgYGAKCkNyZWF0ZSB0aGUgUnVuZGVjayBkYXRhYmFzZSBhbmQgdXNlcjoKCmBgYGJhc2gKc3UgLSBwb3N0Z3Jlcwpwc3FsIDw8ICdFT0YnCkNSRUFURSBEQVRBQkFTRSBydW5kZWNrIEVOQ09ESU5HICdVVEY4JzsKQ1JFQVRFIFVTRVIgcnVuZGVja3VzZXIgV0lUSCBQQVNTV09SRCAneW91cl9zdHJvbmdfcGFzc3dvcmRfaGVyZSc7CkdSQU5UIEFMTCBQUklWSUxFR0VTIE9OIERBVEFCQVNFIHJ1bmRlY2sgVE8gcnVuZGVja3VzZXI7ClxjIHJ1bmRlY2sKR1JBTlQgQUxMIFBSSVZJTEVHRVMgT04gU0NIRU1BIHB1YmxpYyBUTyBydW5kZWNrdXNlcjsKRU9GCmBgYAoKKiAqICoKCiMjIyBTdGVwIDMg4oCUIENvbmZpZ3VyZSBwZ1xfaGJhLmNvbmYKCkVkaXQgYC9ldGMvcG9zdGdyZXNxbC88dmVyc2lvbj4vbWFpbi9wZ19oYmEuY29uZmAgKERlYmlhbi9VYnVudHUpIG9yIGAvdmFyL2xpYi9wZ3NxbC9kYXRhL3BnX2hiYS5jb25mYCAoUkhFTCk6CgpgYGBwbGFpbnRleHQKIyBBbGxvdyBydW5kZWNrdXNlciBmcm9tIGxvY2FsaG9zdApob3N0ICAgIHJ1bmRlY2sgICAgICAgICBydW5kZWNrdXNlciAgICAgMTI3LjAuMC4xLzMyICAgIHNjcmFtLXNoYS0yNTYKaG9zdCAgICBydW5kZWNrICAgICAgICAgcnVuZGVja3VzZXIgICAgIDo6MS8xMjggICAgICAgICBzY3JhbS1zaGEtMjU2CmBgYAoKUmVsb2FkIFBvc3RncmVTUUw6CgpgYGBiYXNoCnN5c3RlbWN0bCByZWxvYWQgcG9zdGdyZXNxbApgYGAKClZlcmlmeSBjb25uZWN0aXZpdHk6CgpgYGBiYXNoCnBzcWwgLVUgcnVuZGVja3VzZXIgLWggMTI3LjAuMC4xIC1kIHJ1bmRlY2sgLWMgIlNFTEVDVCB2ZXJzaW9uKCk7IgpgYGAKCiogKiAqCgojIyMgU3RlcCA0IOKAlCBVcGRhdGUgcnVuZGVjay1jb25maWcucHJvcGVydGllcwoKT3BlbiBgL2V0Yy9ydW5kZWNrL3J1bmRlY2stY29uZmlnLnByb3BlcnRpZXNgIGFuZCByZXBsYWNlIHRoZSBIMiBkYXRhc291cmNlIGJsb2NrOgoKYGBgcHJvcGVydGllcwojID09PSBSRU1PVkUgb3IgY29tbWVudCBvdXQgdGhlIEgyIGNvbmZpZyA9PT0KIyBkYXRhU291cmNlLnVybCA9IGpkYmM6aDI6ZmlsZTovdmFyL2xpYi9ydW5kZWNrL2RhdGEvcnVuZGVja2RiOy4uLgoKIyA9PT0gQUREIFBvc3RncmVTUUwgY29uZmlnID09PQpkYXRhU291cmNlLmRyaXZlckNsYXNzTmFtZSA9IG9yZy5wb3N0Z3Jlc3FsLkRyaXZlcgpkYXRhU291cmNlLnVybCA9IGpkYmM6cG9zdGdyZXNxbDovLzEyNy4wLjAuMTo1NDMyL3J1bmRlY2sKZGF0YVNvdXJjZS51c2VybmFtZSA9IHJ1bmRlY2t1c2VyCmRhdGFTb3VyY2UucGFzc3dvcmQgPSB5b3VyX3N0cm9uZ19wYXNzd29yZF9oZXJlCmRhdGFTb3VyY2UuZGlhbGVjdCA9IG9yZy5oaWJlcm5hdGUuZGlhbGVjdC5Qb3N0Z3JlU1FMRGlhbGVjdAoKIyBDb25uZWN0aW9uIHBvb2wgdHVuaW5nIChyZWNvbW1lbmRlZCkKZGF0YVNvdXJjZS5wcm9wZXJ0aWVzLm1heEFjdGl2ZSA9IDUwCmRhdGFTb3VyY2UucHJvcGVydGllcy5tYXhJZGxlID0gMjUKZGF0YVNvdXJjZS5wcm9wZXJ0aWVzLm1pbklkbGUgPSA1CmRhdGFTb3VyY2UucHJvcGVydGllcy5pbml0aWFsU2l6ZSA9IDUKZGF0YVNvdXJjZS5wcm9wZXJ0aWVzLnZhbGlkYXRpb25RdWVyeSA9IFNFTEVDVCAxCmRhdGFTb3VyY2UucHJvcGVydGllcy50ZXN0T25Cb3Jyb3cgPSB0cnVlCmBgYAoKPiAqKk5vdGU6KiogUnVuZGVjayA0LngrIGJ1bmRsZXMgdGhlIFBvc3RncmVTUUwgSkRCQyBkcml2ZXIg4oCUIG5vIG1hbnVhbCBkb3dubG9hZCBuZWVkZWQuIEZvciBvbGRlciB2ZXJzaW9ucywgZG93bmxvYWQgYHBvc3RncmVzcWwtPHZlcnNpb24+LmphcmAgYW5kIHBsYWNlIGl0IGluIGAvdmFyL2xpYi9ydW5kZWNrL2xpYi9gLgoKKiAqICoKCiMjIyBTdGVwIDUg4oCUIFN0YXJ0IFJ1bmRlY2sgYW5kIExldCBJdCBJbml0aWFsaXplCgpgYGBiYXNoCnN5c3RlbWN0bCBzdGFydCBydW5kZWNrZAoKIyBXYXRjaCB0aGUgbG9ncyBmb3Igc3VjY2Vzc2Z1bCBzY2hlbWEgY3JlYXRpb24KdGFpbCAtZiAvdmFyL2xvZy9ydW5kZWNrL3NlcnZpY2UubG9nCmBgYAoKTG9vayBmb3I6CgpgYGBwbGFpbnRleHQKSGliZXJuYXRlOiBjcmVhdGUgdGFibGUgcmR1c2VyIC4uLgpHcmFpbHMgYXBwbGljYXRpb24gcnVubmluZyBhdCBodHRwOi8vbG9jYWxob3N0OjQ0NDAvCmBgYAoKSWYgeW91IHNlZSBgQ29ubmVjdGlvbiByZWZ1c2VkYCBvciBgRkFUQUw6IHBhc3N3b3JkIGF1dGhlbnRpY2F0aW9uIGZhaWxlZGAsIGRvdWJsZS1jaGVjayBgcGdfaGJhLmNvbmZgIGFuZCB5b3VyIGNyZWRlbnRpYWxzLgoKKiAqICoKCiMjIyBTdGVwIDYg4oCUIEltcG9ydCBQcm9qZWN0cyBCYWNrCgpgYGBiYXNoClRPS0VOPSJ5b3VyLW5ldy1hcGktdG9rZW4iClJVTkRFQ0tfVVJMPSJodHRwOi8vbG9jYWxob3N0OjQ0NDAiCgpmb3IgemlwZmlsZSBpbiAvYmFja3VwL3Byb2plY3QtKi56aXA7IGRvCiAgcHJvamVjdD0kKGJhc2VuYW1lICIkemlwZmlsZSIgLnppcCB8IHNlZCAncy9wcm9qZWN0LS8vJykKICBlY2hvICJJbXBvcnRpbmc6ICRwcm9qZWN0IgoKICAjIENyZWF0ZSBwcm9qZWN0IGZpcnN0IGlmIGl0IGRvZXNuJ3QgZXhpc3QKICBjdXJsIC1zIC1YIFBPU1QgXAogICAgLUggIlgtUnVuZGVjay1BdXRoLVRva2VuOiAkVE9LRU4iIFwKICAgIC1IICJDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24iIFwKICAgIC1kICJ7XCJuYW1lXCI6XCIkcHJvamVjdFwifSIgXAogICAgIiRSVU5ERUNLX1VSTC9hcGkvNDEvcHJvamVjdHMiCgogICMgSW1wb3J0IGFyY2hpdmUKICBjdXJsIC1zIC1YIFBPU1QgXAogICAgLUggIlgtUnVuZGVjay1BdXRoLVRva2VuOiAkVE9LRU4iIFwKICAgIC1IICJDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3ppcCIgXAogICAgLS1kYXRhLWJpbmFyeSAiQCR6aXBmaWxlIiBcCiAgICAiJFJVTkRFQ0tfVVJML2FwaS80MS9wcm9qZWN0LyRwcm9qZWN0L2ltcG9ydD9pbXBvcnRFeGVjdXRpb25zPXRydWUiCmRvbmUKYGBgCgoqICogKgoKIyMgU3RyYXRlZ3kgQjogRnVsbCBEYXRhIE1pZ3JhdGlvbiBmcm9tIEgyCgo+IFVzZSB0aGlzIG9ubHkgaWYgeW91IG5lZWQgaGlzdG9yaWNhbCBleGVjdXRpb24gcmVjb3JkcyBwcmVzZXJ2ZWQgaW4gdGhlIGRhdGFiYXNlLgoKIyMjIFRoZSBDb3JlIENoYWxsZW5nZQoKSDIgYW5kIFBvc3RncmVTUUwgaGF2ZSBkaWZmZXJlbnQgU1FMIGRpYWxlY3RzLiBIMidzIGBTQ1JJUFQgVE9gIGNvbW1hbmQgZXhwb3J0cyB2YWxpZCBIMiBTUUwsIGJ1dCB0aGF0IFNRTCB3b24ndCBydW4gY2xlYW5seSBpbiBQb3N0Z3JlU1FMIHdpdGhvdXQgdHJhbnNmb3JtYXRpb24uCgojIyMgU3RlcCAxIOKAlCBFeHBvcnQgSDIgd2l0aCB0aGUgSDIgQ29uc29sZQoKSWRlbnRpZnkgdGhlIEgyIHZlcnNpb24gUnVuZGVjayBpcyB1c2luZzoKCmBgYGJhc2gKZmluZCAvdmFyL2xpYi9ydW5kZWNrIC1uYW1lICJoMi0qLmphciIgMj4vZGV2L251bGwKIyBvcgpscyAvdmFyL2xpYi9ydW5kZWNrL2Jvb3RzdHJhcC8KYGBgCgpSdW4gdGhlIEgyIFNjcmlwdCB0b29sIHdpdGggdGhlIG1hdGNoaW5nIHZlcnNpb246CgpgYGBiYXNoCnN5c3RlbWN0bCBzdG9wIHJ1bmRlY2tkCgpqYXZhIC1jcCAvcGF0aC90by9oMi08dmVyc2lvbj4uamFyIG9yZy5oMi50b29scy5TY3JpcHQgXAogIC11cmwgImpkYmM6aDI6L3Zhci9saWIvcnVuZGVjay9kYXRhL3J1bmRlY2tkYiIgXAogIC11c2VyIHNhIFwKICAtcGFzc3dvcmQgIiIgXAogIC1zY3JpcHQgL3RtcC9ydW5kZWNrX2gyX2V4cG9ydC5zcWwKYGBgCgojIyMgU3RlcCAyIOKAlCBUcmFuc2Zvcm0gdGhlIFNRTAoKYGBgYmFzaApjcCAvdG1wL3J1bmRlY2tfaDJfZXhwb3J0LnNxbCAvdG1wL3J1bmRlY2tfcGdfaW1wb3J0LnNxbAoKIyBSZW1vdmUgSDItc3BlY2lmaWMgc3RhdGVtZW50cwpzZWQgLWkgJy9eU0VUIC9kJyAvdG1wL3J1bmRlY2tfcGdfaW1wb3J0LnNxbApzZWQgLWkgJy9eQ1JFQVRFIFVTRVIgSUYgTk9UIEVYSVNUUy9kJyAvdG1wL3J1bmRlY2tfcGdfaW1wb3J0LnNxbApzZWQgLWkgJy9eQUxURVIgVEFCTEUuKkFERCBDT05TVFJBSU5ULipDSEVDSy9kJyAvdG1wL3J1bmRlY2tfcGdfaW1wb3J0LnNxbAoKIyBGaXggaWRlbnRpdHkgY29sdW1ucwpzZWQgLWkgJ3MvQklHSU5UIEdFTkVSQVRFRCBCWSBERUZBVUxUIEFTIElERU5USVRZKFNUQVJUIFdJVEggWzAtOV0qIElOQ1JFTUVOVCBCWSAxKS9CSUdTRVJJQUwvZycgXAogIC90bXAvcnVuZGVja19wZ19pbXBvcnQuc3FsCgojIEZpeCBib29sZWFuIGxpdGVyYWxzCnNlZCAtaSAicy9cYlRSVUVcYi90cnVlL2c7IHMvXGJGQUxTRVxiL2ZhbHNlL2ciIC90bXAvcnVuZGVja19wZ19pbXBvcnQuc3FsCmBgYAoKPiAqKlRpcDoqKiBIMiBleHBvcnRzIG1heSBpbmNsdWRlIHZlbmRvci1zcGVjaWZpYyBzeW50YXggdGhhdCB2YXJpZXMgYnkgdmVyc2lvbi4gQWx3YXlzIHRlc3QgaW1wb3J0cyBpbiBhIHN0YWdpbmcgZW52aXJvbm1lbnQgZmlyc3QgYW5kIGZpeCBlcnJvcnMgaXRlcmF0aXZlbHkuCgojIyMgU3RlcCAzIOKAlCBJbXBvcnQgdG8gUG9zdGdyZVNRTAoKYGBgYmFzaApwc3FsIC1VIHJ1bmRlY2t1c2VyIC1kIHJ1bmRlY2sgLWYgL3RtcC9ydW5kZWNrX3BnX2ltcG9ydC5zcWwgMj4mMSB8IHRlZSAvdG1wL2ltcG9ydF9sb2cudHh0CgojIENoZWNrIGZvciBlcnJvcnMKZ3JlcCAtaSAiZXJyb3JcfGZhdGFsIiAvdG1wL2ltcG9ydF9sb2cudHh0CmBgYAoKRml4IGFueSBlcnJvcnMsIHRoZW4gdXBkYXRlIGBydW5kZWNrLWNvbmZpZy5wcm9wZXJ0aWVzYCAoc2FtZSBhcyBTdHJhdGVneSBBLCBTdGVwIDQpIGFuZCByZXN0YXJ0LgoKKiAqICoKCiMjIFBvc3QtTWlncmF0aW9uIFZlcmlmaWNhdGlvbgoKUnVuIHRoaXMgY2hlY2tsaXN0IGFmdGVyIHN3aXRjaGluZyB0byBQb3N0Z3JlU1FMOgoKYGBgYmFzaAojIDEuIFNlcnZpY2Ugc3RhdHVzCnN5c3RlbWN0bCBzdGF0dXMgcnVuZGVja2QKCiMgMi4gRGF0YWJhc2UgdGFibGVzIGNyZWF0ZWQKcHNxbCAtVSBydW5kZWNrdXNlciAtZCBydW5kZWNrIC1jICJcZHQiIHwgd2MgLWwKIyBTaG91bGQgc2hvdyAzMCsgdGFibGVzCgojIDMuIENoZWNrIGZvciBjb25uZWN0aW9uIGVycm9ycyBpbiBsb2dzCmdyZXAgLWkgIkhpa2FyaVBvb2xcfENhbm5vdCBhY3F1aXJlIGNvbm5lY3Rpb25cfE9SQS1cfFBTUUxFeGNlcHRpb24iIFwKICAvdmFyL2xvZy9ydW5kZWNrL3NlcnZpY2UubG9nIHwgdGFpbCAtMjAKCiMgNC4gVGVzdCBhIGpvYiBleGVjdXRpb24gZW5kLXRvLWVuZAojIDUuIFZlcmlmeSBBQ0wgdG9rZW5zIHN0aWxsIHdvcmsKIyA2LiBDb25maXJtIHNjaGVkdWxlZCBqb2JzIGFyZSBmaXJpbmcKYGBgCgoqICogKgoKIyMgUGVyZm9ybWFuY2UgVHVuaW5nIFRpcHMKCk9uY2UgeW91J3JlIG9uIFBvc3RncmVTUUwsIGEgZmV3IHF1aWNrIHdpbnM6CgoqKkNvbm5lY3Rpb24gcG9vbGluZyoqIOKAlCBSdW5kZWNrIHVzZXMgSGlrYXJpQ1AgaW50ZXJuYWxseS4gVGhlIGRlZmF1bHRzIGFyZSBjb25zZXJ2YXRpdmU7IGJ1bXAgdGhlbSBmb3IgYnVzeSBpbnN0YW5jZXM6CgpgYGBwcm9wZXJ0aWVzCmRhdGFTb3VyY2UucHJvcGVydGllcy5tYXhpbXVtUG9vbFNpemUgPSA1MApkYXRhU291cmNlLnByb3BlcnRpZXMubWluaW11bUlkbGUgPSAxMApkYXRhU291cmNlLnByb3BlcnRpZXMuY29ubmVjdGlvblRpbWVvdXQgPSAzMDAwMApkYXRhU291cmNlLnByb3BlcnRpZXMuaWRsZVRpbWVvdXQgPSA2MDAwMDAKYGBgCgoqKlBvc3RncmVTUUwgYXV0b3ZhY3V1bSoqIOKAlCBFeGVjdXRpb24gaGlzdG9yeSB0YWJsZXMgZ3JvdyBmYXN0LiBNYWtlIHN1cmUgYXV0b3ZhY3V1bSBpcyBydW5uaW5nIGFuZCBgd29ya19tZW1gIGlzIHNldCBhcHByb3ByaWF0ZWx5IGluIGBwb3N0Z3Jlc3FsLmNvbmZgOgoKYGBgcGxhaW50ZXh0CndvcmtfbWVtID0gNjRNQgptYWludGVuYW5jZV93b3JrX21lbSA9IDI1Nk1CCmF1dG92YWN1dW0gPSBvbgpgYGAKCioqSW5kZXhlcyoqIOKAlCBJZiBleGVjdXRpb24gaGlzdG9yeSBxdWVyaWVzIGFyZSBzbG93LCBjaGVjayB0aGF0IHRoZSBgZXhlY3V0aW9uYCB0YWJsZSBpbmRleGVzIG9uIGBwcm9qZWN0YCwgYGRhdGVfc3RhcnRlZGAsIGFuZCBgc3RhdHVzYCBleGlzdC4KCiogKiAqCgojIyBDb21tb24gRXJyb3JzIGFuZCBGaXhlcwoKfCBFcnJvciB8IENhdXNlIHwgRml4IHwKfCAtLS0gfCAtLS0gfCAtLS0gfAp8IGBGQVRBTDogcGFzc3dvcmQgYXV0aGVudGljYXRpb24gZmFpbGVkYCB8IFdyb25nIHBhc3N3b3JkIG9yIHBnXF9oYmEgYXV0aCBtZXRob2QgfCBDaGVjayBjcmVkZW50aWFscyArIHBnXF9oYmEuY29uZiB8CnwgYENvbm5lY3Rpb24gcmVmdXNlZCAoMTI3LjAuMC4xOjU0MzIpYCB8IFBvc3RncmVTUUwgbm90IHJ1bm5pbmcgfCBgc3lzdGVtY3RsIHN0YXJ0IHBvc3RncmVzcWxgIHwKfCBgUGVybWlzc2lvbiBkZW5pZWQgZm9yIHNjaGVtYSBwdWJsaWNgIHwgUG9zdGdyZVNRTCAxNSsgY2hhbmdlZCBkZWZhdWx0cyB8IFJ1biBgR1JBTlQgQUxMIE9OIFNDSEVNQSBwdWJsaWMgVE8gcnVuZGVja3VzZXJgIHwKfCBgTm8gc3VpdGFibGUgZHJpdmVyIGZvdW5kYCB8IE1pc3NpbmcgSkRCQyBqYXIgKG9sZCBSdW5kZWNrKSB8IEFkZCBgcG9zdGdyZXNxbC5qYXJgIHRvIGAvdmFyL2xpYi9ydW5kZWNrL2xpYi9gIHwKfCBgVGFibGUgYWxyZWFkeSBleGlzdHNgIHwgUGFydGlhbCBpbml0IHJhbiBiZWZvcmUgfCBEcm9wIGFuZCByZWNyZWF0ZSB0aGUgZGF0YWJhc2UsIHJlc3RhcnQgY2xlYW4gfAp8IGBVbnN1cHBvcnRlZE9wZXJhdGlvbkV4Y2VwdGlvbjogZGlhbGVjdGAgfCBNaXNzaW5nIGRpYWxlY3QgY29uZmlnIHwgQWRkIGBkYXRhU291cmNlLmRpYWxlY3QgPSBvcmcuaGliZXJuYXRlLmRpYWxlY3QuUG9zdGdyZVNRTERpYWxlY3RgIHwKCiogKiAqCgojIyBXcmFwcGluZyBVcAoKTWlncmF0aW5nIFJ1bmRlY2sgdG8gUG9zdGdyZVNRTCBpcyBhIG9uZS10aW1lIGludmVzdG1lbnQgdGhhdCBwYXlzIG9mZiBpbW1lZGlhdGVseSBpbiBzdGFiaWxpdHksIHBlcmZvcm1hbmNlLCBhbmQgb3BlcmF0aW9uYWwgdmlzaWJpbGl0eS4gU3RyYXRlZ3kgQSAoY2xlYW4gc3RhcnQgKyBwcm9qZWN0IGltcG9ydCkgaXMgdGhlIHByYWdtYXRpYyBwYXRoIGZvciBtb3N0IHRlYW1zIGFuZCBjYW4gYmUgZG9uZSBpbiB1bmRlciBhbiBob3VyLgoKSWYgeW91J3JlIHJ1bm5pbmcgUnVuZGVjayBvbiBLdWJlcm5ldGVzIChLdWJlcm5ldGVzRXhlY3V0b3Igb3Igc2ltaWxhciksIHRoZSBzYW1lIGBydW5kZWNrLWNvbmZpZy5wcm9wZXJ0aWVzYCBhcHByb2FjaCBhcHBsaWVzIOKAlCBqdXN0IG1vdW50IHRoZSBjb25maWcgYXMgYSBTZWNyZXQgYW5kIHBvaW50IHRoZSBKREJDIFVSTCBhdCB5b3VyIFBvc3RncmVTUUwgc2VydmljZS4K
+---
+title: "Migrating Rundeck from H2 to PostgreSQL: A Complete Guide"
+description: "If you've been running Rundeck with its default H2 embedded database, you've probably already hit the wall: slow queries as job history grows, no proper connect…"
+date: "2026-04-21"
+tags: ["database"]
+readingTime: 8
+slug: "migrating-rundeck-from-h2-to-postgresql-a-complete-guide"
+category: "硬核深挖"
+---
+If you've been running Rundeck with its default H2 embedded database, you've probably already hit the wall: slow queries as job history grows, no proper connection pooling, and the constant anxiety of a file-based database in production. PostgreSQL fixes all of that.
+
+This guide walks you through two migration paths — pick the one that fits your situation.
+
+* * *
+
+## Why Migrate Away from H2?
+
+Rundeck ships with H2 for a reason: zero-config, works out of the box. But H2 has real limitations at scale:
+
+*   **No concurrent writes** — H2 struggles under parallel job execution
+    
+*   **File corruption risk** — a hard shutdown can corrupt the `.mv.db` file
+    
+*   **No external tooling** — can't use pg\_dump, replication, or your existing DB monitoring
+    
+*   **Memory pressure** — H2 loads data into the JVM heap
+    
+
+PostgreSQL gives you connection pooling, proper ACID guarantees, `pg_dump` for backups, and the ability to run Standby replicas. For any team running more than a handful of jobs, it's the right call.
+
+* * *
+
+## Before You Start: Understand What Lives in the Database
+
+Rundeck stores the following in its database:
+
+| Data Type | Migration Notes |
+| --- | --- |
+| Project definitions | Exportable via API archive |
+| Job definitions | Included in project export |
+| Execution history & logs | Log files stay on disk; metadata in DB |
+| Users & ACL tokens | Recreate manually or via config |
+| Scheduled jobs | Preserved in job definitions |
+
+Execution log *content* lives in `/var/lib/rundeck/logs/`, not the database — so you don't need to migrate that.
+
+* * *
+
+## Two Migration Strategies
+
+### Strategy A: Clean Start + Project Import (Recommended)
+
+Best for: Most teams. You keep all your job definitions and project configs. You lose execution history records in the DB (but not the actual log files on disk).
+
+**Effort:** Low | **Risk:** Low | **Downtime:** ~30 minutes
+
+### Strategy B: Full H2 → PostgreSQL Data Migration
+
+Best for: Teams that need to preserve execution history records in the DB for audit/compliance.
+
+**Effort:** High | **Risk:** Medium | **Downtime:** 1–3 hours
+
+* * *
+
+## Strategy A: Clean Start + Project Import
+
+### Step 1 — Back Up Everything
+
+```bash
+# Stop Rundeck first
+systemctl stop rundeckd
+
+# Back up config files
+cp /etc/rundeck/rundeck-config.properties /backup/
+cp /etc/rundeck/framework.properties /backup/
+
+# Back up the H2 database files (just in case)
+cp -r /var/lib/rundeck/data /backup/rundeck-data-h2/
+
+# Back up project files on disk
+cp -r /var/lib/rundeck/projects /backup/rundeck-projects/
+cp -r /var/lib/rundeck/logs /backup/rundeck-logs/
+```
+
+Export each project via the Rundeck API (Rundeck must be running for this):
+
+```bash
+# Start Rundeck temporarily to export
+systemctl start rundeckd
+
+# Export all projects via API
+TOKEN="your-api-token"
+RUNDECK_URL="http://localhost:4440"
+
+for project in $(curl -s -H "X-Rundeck-Auth-Token: $TOKEN" \
+  "$RUNDECK_URL/api/41/projects" | jq -r '.[].name'); do
+  echo "Exporting: $project"
+  curl -s -H "X-Rundeck-Auth-Token: $TOKEN" \
+    "$RUNDECK_URL/api/41/project/$project/export" \
+    -o "/backup/project-${project}.zip"
+done
+
+# Stop again before DB switch
+systemctl stop rundeckd
+```
+
+* * *
+
+### Step 2 — Install and Configure PostgreSQL
+
+```bash
+# Ubuntu/Debian
+apt-get install -y postgresql postgresql-contrib
+
+# CentOS/RHEL 8+
+dnf install -y postgresql-server postgresql-contrib
+postgresql-setup --initdb
+systemctl enable --now postgresql
+```
+
+Create the Rundeck database and user:
+
+```bash
+su - postgres
+psql << 'EOF'
+CREATE DATABASE rundeck ENCODING 'UTF8';
+CREATE USER rundeckuser WITH PASSWORD 'your_strong_password_here';
+GRANT ALL PRIVILEGES ON DATABASE rundeck TO rundeckuser;
+\c rundeck
+GRANT ALL PRIVILEGES ON SCHEMA public TO rundeckuser;
+EOF
+```
+
+* * *
+
+### Step 3 — Configure pg\_hba.conf
+
+Edit `/etc/postgresql/<version>/main/pg_hba.conf` (Debian/Ubuntu) or `/var/lib/pgsql/data/pg_hba.conf` (RHEL):
+
+```plaintext
+# Allow rundeckuser from localhost
+host    rundeck         rundeckuser     127.0.0.1/32    scram-sha-256
+host    rundeck         rundeckuser     ::1/128         scram-sha-256
+```
+
+Reload PostgreSQL:
+
+```bash
+systemctl reload postgresql
+```
+
+Verify connectivity:
+
+```bash
+psql -U rundeckuser -h 127.0.0.1 -d rundeck -c "SELECT version();"
+```
+
+* * *
+
+### Step 4 — Update rundeck-config.properties
+
+Open `/etc/rundeck/rundeck-config.properties` and replace the H2 datasource block:
+
+```properties
+# === REMOVE or comment out the H2 config ===
+# dataSource.url = jdbc:h2:file:/var/lib/rundeck/data/rundeckdb;...
+
+# === ADD PostgreSQL config ===
+dataSource.driverClassName = org.postgresql.Driver
+dataSource.url = jdbc:postgresql://127.0.0.1:5432/rundeck
+dataSource.username = rundeckuser
+dataSource.password = your_strong_password_here
+dataSource.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+# Connection pool tuning (recommended)
+dataSource.properties.maxActive = 50
+dataSource.properties.maxIdle = 25
+dataSource.properties.minIdle = 5
+dataSource.properties.initialSize = 5
+dataSource.properties.validationQuery = SELECT 1
+dataSource.properties.testOnBorrow = true
+```
+
+> **Note:** Rundeck 4.x+ bundles the PostgreSQL JDBC driver — no manual download needed. For older versions, download `postgresql-<version>.jar` and place it in `/var/lib/rundeck/lib/`.
+
+* * *
+
+### Step 5 — Start Rundeck and Let It Initialize
+
+```bash
+systemctl start rundeckd
+
+# Watch the logs for successful schema creation
+tail -f /var/log/rundeck/service.log
+```
+
+Look for:
+
+```plaintext
+Hibernate: create table rduser ...
+Grails application running at http://localhost:4440/
+```
+
+If you see `Connection refused` or `FATAL: password authentication failed`, double-check `pg_hba.conf` and your credentials.
+
+* * *
+
+### Step 6 — Import Projects Back
+
+```bash
+TOKEN="your-new-api-token"
+RUNDECK_URL="http://localhost:4440"
+
+for zipfile in /backup/project-*.zip; do
+  project=$(basename "$zipfile" .zip | sed 's/project-//')
+  echo "Importing: $project"
+
+  # Create project first if it doesn't exist
+  curl -s -X POST \
+    -H "X-Rundeck-Auth-Token: $TOKEN" \
+    -H "Content-Type: application/json" \
+    -d "{\"name\":\"$project\"}" \
+    "$RUNDECK_URL/api/41/projects"
+
+  # Import archive
+  curl -s -X POST \
+    -H "X-Rundeck-Auth-Token: $TOKEN" \
+    -H "Content-Type: application/zip" \
+    --data-binary "@$zipfile" \
+    "$RUNDECK_URL/api/41/project/$project/import?importExecutions=true"
+done
+```
+
+* * *
+
+## Strategy B: Full Data Migration from H2
+
+> Use this only if you need historical execution records preserved in the database.
+
+### The Core Challenge
+
+H2 and PostgreSQL have different SQL dialects. H2's `SCRIPT TO` command exports valid H2 SQL, but that SQL won't run cleanly in PostgreSQL without transformation.
+
+### Step 1 — Export H2 with the H2 Console
+
+Identify the H2 version Rundeck is using:
+
+```bash
+find /var/lib/rundeck -name "h2-*.jar" 2>/dev/null
+# or
+ls /var/lib/rundeck/bootstrap/
+```
+
+Run the H2 Script tool with the matching version:
+
+```bash
+systemctl stop rundeckd
+
+java -cp /path/to/h2-<version>.jar org.h2.tools.Script \
+  -url "jdbc:h2:/var/lib/rundeck/data/rundeckdb" \
+  -user sa \
+  -password "" \
+  -script /tmp/rundeck_h2_export.sql
+```
+
+### Step 2 — Transform the SQL
+
+```bash
+cp /tmp/rundeck_h2_export.sql /tmp/rundeck_pg_import.sql
+
+# Remove H2-specific statements
+sed -i '/^SET /d' /tmp/rundeck_pg_import.sql
+sed -i '/^CREATE USER IF NOT EXISTS/d' /tmp/rundeck_pg_import.sql
+sed -i '/^ALTER TABLE.*ADD CONSTRAINT.*CHECK/d' /tmp/rundeck_pg_import.sql
+
+# Fix identity columns
+sed -i 's/BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH [0-9]* INCREMENT BY 1)/BIGSERIAL/g' \
+  /tmp/rundeck_pg_import.sql
+
+# Fix boolean literals
+sed -i "s/\bTRUE\b/true/g; s/\bFALSE\b/false/g" /tmp/rundeck_pg_import.sql
+```
+
+> **Tip:** H2 exports may include vendor-specific syntax that varies by version. Always test imports in a staging environment first and fix errors iteratively.
+
+### Step 3 — Import to PostgreSQL
+
+```bash
+psql -U rundeckuser -d rundeck -f /tmp/rundeck_pg_import.sql 2>&1 | tee /tmp/import_log.txt
+
+# Check for errors
+grep -i "error\|fatal" /tmp/import_log.txt
+```
+
+Fix any errors, then update `rundeck-config.properties` (same as Strategy A, Step 4) and restart.
+
+* * *
+
+## Post-Migration Verification
+
+Run this checklist after switching to PostgreSQL:
+
+```bash
+# 1. Service status
+systemctl status rundeckd
+
+# 2. Database tables created
+psql -U rundeckuser -d rundeck -c "\dt" | wc -l
+# Should show 30+ tables
+
+# 3. Check for connection errors in logs
+grep -i "HikariPool\|Cannot acquire connection\|ORA-\|PSQLException" \
+  /var/log/rundeck/service.log | tail -20
+
+# 4. Test a job execution end-to-end
+# 5. Verify ACL tokens still work
+# 6. Confirm scheduled jobs are firing
+```
+
+* * *
+
+## Performance Tuning Tips
+
+Once you're on PostgreSQL, a few quick wins:
+
+**Connection pooling** — Rundeck uses HikariCP internally. The defaults are conservative; bump them for busy instances:
+
+```properties
+dataSource.properties.maximumPoolSize = 50
+dataSource.properties.minimumIdle = 10
+dataSource.properties.connectionTimeout = 30000
+dataSource.properties.idleTimeout = 600000
+```
+
+**PostgreSQL autovacuum** — Execution history tables grow fast. Make sure autovacuum is running and `work_mem` is set appropriately in `postgresql.conf`:
+
+```plaintext
+work_mem = 64MB
+maintenance_work_mem = 256MB
+autovacuum = on
+```
+
+**Indexes** — If execution history queries are slow, check that the `execution` table indexes on `project`, `date_started`, and `status` exist.
+
+* * *
+
+## Common Errors and Fixes
+
+| Error | Cause | Fix |
+| --- | --- | --- |
+| `FATAL: password authentication failed` | Wrong password or pg\_hba auth method | Check credentials + pg\_hba.conf |
+| `Connection refused (127.0.0.1:5432)` | PostgreSQL not running | `systemctl start postgresql` |
+| `Permission denied for schema public` | PostgreSQL 15+ changed defaults | Run `GRANT ALL ON SCHEMA public TO rundeckuser` |
+| `No suitable driver found` | Missing JDBC jar (old Rundeck) | Add `postgresql.jar` to `/var/lib/rundeck/lib/` |
+| `Table already exists` | Partial init ran before | Drop and recreate the database, restart clean |
+| `UnsupportedOperationException: dialect` | Missing dialect config | Add `dataSource.dialect = org.hibernate.dialect.PostgreSQLDialect` |
+
+* * *
+
+## Wrapping Up
+
+Migrating Rundeck to PostgreSQL is a one-time investment that pays off immediately in stability, performance, and operational visibility. Strategy A (clean start + project import) is the pragmatic path for most teams and can be done in under an hour.
+
+If you're running Rundeck on Kubernetes (KubernetesExecutor or similar), the same `rundeck-config.properties` approach applies — just mount the config as a Secret and point the JDBC URL at your PostgreSQL service.

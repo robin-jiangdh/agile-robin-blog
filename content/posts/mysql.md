@@ -1,1 +1,31 @@
-LS0tCnRpdGxlOiAiTXlTUUzntKLlvJXljp/nkIYiCmRlc2NyaXB0aW9uOiAi5Z+65pys5qaC5b+1IOe0ouW8leeahOWKn+iDveWwseaYr+WKoOmAn+afpeaJviBteXNxbOS4reeahHByaW1hcnkga2V577yMdW5pcXVl77yM6IGU5ZCI5ZSv5LiA5Lmf6YO95piv57Si5byV77yM6L+Z5Lqb57Si5byV6Zmk5LqG5Yqg6YCf5p+l5om+5Lul5aSW77yM6L+Y5pyJ57qm5p2f55qE5Yqf6IO9ICAg5bi455So57Si5byVIOaZrumAmue0ouW8lUlOREVY77ya5Yqg6YCf5p+l5om+IOWUr+S4gOe0ouW8le+8miDkuLvplK7ntKLlvJVQUklNQVJZIEtFWe+8muWKoOmAn+afpeaJvivnuqbmnZ/vvIjkuI3kuLrnqbrjgIHkuI3og73ph43lpI3vvIkg5ZSv5LiA57Si5byVVU5JUVVFOuWKoOmAn+afpeaJvivnuqbmnZ/vvIjkuI3og73ph43lpI3vvIkgICDogZTlkIjntKLlvJXvvJogUFJJTUFSWSBLRVkoaWQsbmFtZSk66IGU5ZCI5Li76ZSu57Si5byVIFVOSVFVRShpZCxuYW1lKTrogZTlkIjllK/kuIDntKLlvJUgSU5ERVgoaWQsbmFtZSk66IGU5ZCI5pmu6YCa57Si5byVICAgICDntKLlvJXnmoTkuKQuLi4iCmRhdGU6ICIyMDE2LTAxLTEzIgpjb3ZlcjogImh0dHBzOi8vY2RuLmhhc2hub2RlLmNvbS9yZXMvaGFzaG5vZGUvaW1hZ2UvdXBsb2FkL3YxNzAzODM0ODYwMDQ1LzE5M2JjNmQ0LTVmNDYtNDRlOS04YmFmLTU2YTY2M2UzYmFlMC5qcGVnIgpyZWFkaW5nVGltZTogMQpzbHVnOiAibXlzcWwiCi0tLQotIOWfuuacrOamguW/tQogIAktIOe0ouW8leeahOWKn+iDveWwseaYr+WKoOmAn+afpeaJvgogIAktIG15c3Fs5Lit55qEcHJpbWFyeSBrZXnvvIx1bmlxdWXvvIzogZTlkIjllK/kuIDkuZ/pg73mmK/ntKLlvJXvvIzov5nkupvntKLlvJXpmaTkuobliqDpgJ/mn6Xmib7ku6XlpJbvvIzov5jmnInnuqbmnZ/nmoTlip/og70KLSDluLjnlKjntKLlvJUKICAtIOaZrumAmue0ouW8lUlOREVY77ya5Yqg6YCf5p+l5om+CiAgLSDllK/kuIDntKLlvJXvvJoKICAgIC0g5Li76ZSu57Si5byVUFJJTUFSWSBLRVnvvJrliqDpgJ/mn6Xmib4r57qm5p2f77yI5LiN5Li656m644CB5LiN6IO96YeN5aSN77yJCiAgICAtIOWUr+S4gOe0ouW8lVVOSVFVRTrliqDpgJ/mn6Xmib4r57qm5p2f77yI5LiN6IO96YeN5aSN77yJCiAgLSDogZTlkIjntKLlvJXvvJoKICAgIC0gUFJJTUFSWSBLRVkoaWQsbmFtZSk66IGU5ZCI5Li76ZSu57Si5byVCiAgICAtIFVOSVFVRShpZCxuYW1lKTrogZTlkIjllK/kuIDntKLlvJUKICAgIC0gSU5ERVgoaWQsbmFtZSk66IGU5ZCI5pmu6YCa57Si5byVCi0g57Si5byV55qE5Lik5aSn57G75Z6LaGFzaOS4jmJ0cmVlCiAgICAgLSDmiJHku6zlj6/ku6XlnKjliJvlu7rkuIrov7DntKLlvJXnmoTml7blgJnvvIzkuLrlhbbmjIflrprntKLlvJXnsbvlnovvvIzliIbkuKTnsbvvvJogCiAgICAgICAgLSAgaGFzaOexu+Wei+eahOe0ouW8le+8muafpeivouWNleadoeW/q++8jOiMg+WbtOafpeivouaFogogICAgICAgIC0gIGJ0cmVl57G75Z6L55qE57Si5byV77yaYivmoJHvvIzlsYLmlbDotorlpJrvvIzmlbDmja7ph4/mjIfmlbDnuqflop7plb/vvIjmiJHku6zlsLHnlKjlroPvvIzlm6DkuLppbm5vZGLpu5jorqTmlK/mjIHlroPvvIkgCiAgICAgCiAgICAgLSDkuI3lkIznmoTlrZjlgqjlvJXmk47mlK/mjIHnmoTntKLlvJXnsbvlnovkuZ/kuI3kuIDmoLfvvJogCiAgICAgICAgLSAgSW5ub0RCIOaUr+aMgeS6i+WKoe+8jOaUr+aMgeihjOe6p+WIq+mUgeWumu+8jOaUr+aMgSBCLXRyZWXjgIFGdWxsLXRleHQg562J57Si5byV77yM5LiN5pSv5oyBIEhhc2gg57Si5byV77ybCiAgICAgICAgLSAgTXlJU0FNIOS4jeaUr+aMgeS6i+WKoe+8jOaUr+aMgeihqOe6p+WIq+mUgeWumu+8jOaUr+aMgSBCLXRyZWXjgIFGdWxsLXRleHQg562J57Si5byV77yM5LiN5pSv5oyBIEhhc2gg57Si5byV77ybCiAgICAgICAgLSAgTWVtb3J5IOS4jeaUr+aMgeS6i+WKoe+8jOaUr+aMgeihqOe6p+WIq+mUgeWumu+8jOaUr+aMgSBCLXRyZWXjgIFIYXNoIOetiee0ouW8le+8jOS4jeaUr+aMgSBGdWxsLXRleHQg57Si5byV77ybCiAgICAgICAgLSAgTkRCIOaUr+aMgeS6i+WKoe+8jOaUr+aMgeihjOe6p+WIq+mUgeWumu+8jOaUr+aMgSBIYXNoIOe0ouW8le+8jOS4jeaUr+aMgSBCLXRyZWXjgIFGdWxsLXRleHQg562J57Si5byV77ybCiAgICAgICAgLSAgQXJjaGl2ZSDkuI3mlK/mjIHkuovliqHvvIzmlK/mjIHooajnuqfliKvplIHlrprvvIzkuI3mlK/mjIEgQi10cmVl44CBSGFzaOOAgUZ1bGwtdGV4dCDnrYnntKLlvJXvvJsK
+---
+title: "MySQL索引原理"
+description: "基本概念 索引的功能就是加速查找 mysql中的primary key，unique，联合唯一也都是索引，这些索引除了加速查找以外，还有约束的功能   常用索引 普通索引INDEX：加速查找 唯一索引： 主键索引PRIMARY KEY：加速查找+约束（不为空、不能重复） 唯一索引UNIQUE:加速查找+约束（不能重复）   联合索引： PRIMARY KEY(id,name):联合主键索引 UNIQUE(id,name):联合唯一索引 INDEX(id,name):联合普通索引     索引的两..."
+date: "2016-01-13"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834860045/193bc6d4-5f46-44e9-8baf-56a663e3bae0.jpeg"
+readingTime: 1
+slug: "mysql"
+---
+- 基本概念
+  	- 索引的功能就是加速查找
+  	- mysql中的primary key，unique，联合唯一也都是索引，这些索引除了加速查找以外，还有约束的功能
+- 常用索引
+  - 普通索引INDEX：加速查找
+  - 唯一索引：
+    - 主键索引PRIMARY KEY：加速查找+约束（不为空、不能重复）
+    - 唯一索引UNIQUE:加速查找+约束（不能重复）
+  - 联合索引：
+    - PRIMARY KEY(id,name):联合主键索引
+    - UNIQUE(id,name):联合唯一索引
+    - INDEX(id,name):联合普通索引
+- 索引的两大类型hash与btree
+     - 我们可以在创建上述索引的时候，为其指定索引类型，分两类： 
+        -  hash类型的索引：查询单条快，范围查询慢
+        -  btree类型的索引：b+树，层数越多，数据量指数级增长（我们就用它，因为innodb默认支持它） 
+     
+     - 不同的存储引擎支持的索引类型也不一样： 
+        -  InnoDB 支持事务，支持行级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；
+        -  MyISAM 不支持事务，支持表级别锁定，支持 B-tree、Full-text 等索引，不支持 Hash 索引；
+        -  Memory 不支持事务，支持表级别锁定，支持 B-tree、Hash 等索引，不支持 Full-text 索引；
+        -  NDB 支持事务，支持行级别锁定，支持 Hash 索引，不支持 B-tree、Full-text 等索引；
+        -  Archive 不支持事务，支持表级别锁定，不支持 B-tree、Hash、Full-text 等索引；

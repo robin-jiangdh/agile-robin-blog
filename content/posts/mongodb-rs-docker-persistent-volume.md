@@ -1,1 +1,170 @@
-LS0tCnRpdGxlOiAiTW9uZ29EQiBSZXBsaWNhc2V0IHdpdGggUGVyc2lzdGVudCBWb2x1bWUgdXNpbmcgRG9ja2VyIENvbXBvc2UiCmRlc2NyaXB0aW9uOiAiSW4gdGhpcyBhcnRpY2xlIHdlIHdpbGwgc2VlIHRoZSBzdGVwcyByZXF1aXJlZCB0byBjcmVhdGUgYW5kIGNvbmZpZ3VyZSBNb25nb0RCIHJlcGxpY2FzZXQgY29udGFpbmVycyBvbiBwZXJzaXN0ZW50IHZvbHVtZXMgdXNpbmcgRG9ja2VyIENvbXBvc2UuIENvbXBvc2Ugd2FzIGRldmVsb3BlZCB0byBkZWZpbmUsIGNvbmZpZ3VyZSBhbmQgc3Bpbi11cCBtdWx0aS1jb250YWluZXIgZG9ja2VyIGFwcGxpY2F0aW9ucyB3aXRoIHNpbmdsZSBjby4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwMDczMzQvOTMyMWRhNWMtNDM5YS00Y2Y2LWFkYTUtZGYwYTcwNGY5Mzc4LmpwZWciCnJlYWRpbmdUaW1lOiAzCnNsdWc6ICJtb25nb2RiLXJzLWRvY2tlci1wZXJzaXN0ZW50LXZvbHVtZSIKLS0tCkluIHRoaXMgYXJ0aWNsZSB3ZSB3aWxsIHNlZSB0aGUgc3RlcHMgcmVxdWlyZWQgdG8gY3JlYXRlIGFuZCBjb25maWd1cmUgTW9uZ29EQiByZXBsaWNhc2V0IGNvbnRhaW5lcnMgb24gKipwZXJzaXN0ZW50IHZvbHVtZXMqKiB1c2luZyBbRG9ja2VyIENvbXBvc2VdKGh0dHBzOi8vZG9jcy5kb2NrZXIuY29tL2NvbXBvc2UvKS4gQ29tcG9zZSB3YXMgZGV2ZWxvcGVkIHRvIGRlZmluZSwgY29uZmlndXJlIGFuZCBzcGluLXVwIG11bHRpLWNvbnRhaW5lciBkb2NrZXIgYXBwbGljYXRpb25zIHdpdGggc2luZ2xlIGNvbW1hbmQsIGZ1cnRoZXIgcmVkdWNpbmcgLiBFeHRlbnNpdmUgdXNhZ2Ugb2YgRG9ja2VyIHdpdGggc2V2ZXJhbCBjb250YWluZXIgbWFuYWdlbWVudCBxdWlja2x5IGJlY29tZXMgY3VtYmVyc29tZSwgQ29tcG9zZSBvdmVyY29tZXMgdGhpcyBwcm9ibGVtIGFuZCBhbGxvd3MgdG8gZWFzaWx5IGhhbmRsZSBtdWx0aXBsZSBjb250YWluZXJzIGF0IG9uY2UgdXNpbmcgWUFNTCBjb25maWd1cmF0aW9uIGBkb2NrZXItY29tcG9zZS55bWxgCgo8IS0tdHJ1bmNhdGUtLT4KCiMjIERvY2tlciBDb21wb3NlIFN0ZXBzCgojIyMgU3RlcCAxOiBTeXN0ZW0gQ29uZmlndXJhdGlvbgoKVG8gcnVuIENvbXBvc2UsIG1ha2Ugc3VyZSB5b3UgaGF2ZSBpbnN0YWxsZWQgQ29tcG9zZSBvbiB5b3VyIGxvY2FsIHN5c3RlbSB3aGVyZSBEb2NrZXIgaXMgaW5zdGFsbGVkLiBUaGUgQ29tcG9zZSBzZXR1cCBhbmQgaW5zdGFsbGF0aW9uIGluc3RydWN0aW9ucyBjYW4gYmUgZm91bmQgaGVyZS4KCiMjIyBTdGVwIDI6IEVuc3VyZSBtb25nb19uZXQgbmV0d29yayBicmlkZ2UgaXMgYWxyZWFkeSBleGlzdGluZwoKYGBgc2hlbGwKJCBkb2NrZXIgbmV0d29yayBjcmVhdGUgbW9uZ29fbmV0CiQgZG9ja2VyIG5ldHdvcmsgaW5zcGVjdCBtb25nb19uZXQgICAgICAgICAgICAgICAgICAgICAgIApgYGAKIyMjIFN0ZXAgMzogTGV0cyBjb252ZXJ0IHRoZSBiZWxvdyBjb21tYW5kIGFzIHNlZW4gaW4gcHJldmlvdXMgYmxvZyBwb3N0IHRvIGRvY2tlci1jb21wb3NlLnltbC4gSWYgeW91IGFyZSBuZXcgdG8gRG9ja2VyIGFuZCBkcmFmdGluZyBjb21wb3NlIGZpbGVzIHRyeSB1c2luZyBjb21wb3Nlcml6ZSB0byBjb252ZXJ0IGRvY2tlciBydW4gY29tbWFuZHMgaW50byBjb21wb3NlIFlBTUwgb3V0cHV0CgpgYGBzaGVsbCAKJCBkb2NrZXIgcnVuIC1kIC1wIDIwMDAzOjI3MDE3IC0tbmFtZSBtb25nbzMgLS1uZXR3b3JrIG1vbmdvX25ldCBtb25nbzo0LjQuOS1yYzAgbW9uZ29kIC0tcmVwbFNldCByc19tb25nbwpgYGAKVGhlcmUgYXJlIGZldyBhZGRpdGlvbmFsIGF0dHJpYnV0ZXMgcGFzc2VkIGluIHRoZSBgZG9ja2VyLWNvbXBvc2UueW1sYC4gVGhlIGRpZmZlcmVuY2UgaW4gdGhlIG9wdGlvbnMgcGFzc2VkIGluIHRoZSBjb21tYW5kIGxpbmUgYWJvdmUgYW5kIGBkb2NrZXItY29tcG9zZS55bWxgIGlzIGFzIGJlbG93CgotIGltYWdlOiBjdXN0b20gaW1hZ2UgdXBsb2FkZWQgdG8gZG9ja2VyIGh1YiB3aXRoIGFkZGl0aW9uYWwgdXRpbGl0aWVzIGluc3RhbGxlZCBvbiB1YnVudHUgYnVpbGQKaG9zdG5hbWU6IGNvbnRhaW5lciBob3N0IG5hbWUKLSB2b2x1bWVzOiBtYXAgZGlyZWN0b3J5IG9uIHRoZSBob3N0IGZpbGUgc3lzdGVtIHRvIG1hbmFnZSBhbmQgc3RvcmUgY29udGFpbmVyIGRhdGEuIEluIHRoZSBiZWxvdyBZQU1MIGkgdXNlIHNlcGFyYXRlIGRpcmVjdG9yeSBmb3IgYWxsIDMgTW9uZ29EQiByZXBsaWNhc2V0LiBUaGlzIGhlbHBzIGluIGNyZWF0aW5nIHBlcnNpc3RlbnQgZGF0YSBzdG9yZSBmb3IgZG9ja2VyIGNvbnRhaW5lcnMgYW5kIGRvZXNu4oCZdCBibG9hdCB0aGUgY29udGFpbmVyIHJ1bnRpbWUgaW5zdGFuY2UuCi0gUGFzcyBtb25nb2QgY29uZmlndXJhdGlvbiBvcHRpb25zIHRocm91Z2ggZmlsZSBtb25nb2QuY29uZgoKQ3JlYXRlIHRoZSBiZWxvdyBZQU1MIGNvbXBvc2UgZmlsZSBpbiB5b3VyIGZhdm91cml0ZSBlZGl0b3IsIGkgaGF2ZSBiZWVuIHVzaW5nIFZpc3VhbCBTdHVkaW8gQ29kZS4gU2F2ZSB0aGUgZmlsZSBhcyBkb2NrZXItY29tcG9zZS55bWwKCgpgYGBzaGVsbAokIGNvZGUgLgoKYGBgIAoKYGBgeWFtbAojdmVyc2lvbjogIjMuMyIKc2VydmljZXM6CiAgbW9uZ29fMToKICAgIGltYWdlOiByb2Jpbi1qaWFuZ2RoL21vbmdvLWN1c3RvbTpsYXRlc3QKICAgIGhvc3RuYW1lOiBtb25nb18xCiAgICBjb250YWluZXJfbmFtZTogbW9uZ29fMQogICAgdm9sdW1lczoKICAgICAgLSAvVXNlcnMvcm9iaW4vbGVhcm5pbmcvZG9ja2VyL21vbmdvX3JlcGxzZXQvbW9uZ29fMS9tb25nb2QuY29uZjovZXRjL21vbmdvZC5jb25mCiAgICAgIC0gL1VzZXJzL3JvYmluL2xlYXJuaW5nL2RvY2tlci9tb25nb19yZXBsc2V0L21vbmdvXzEvaW5pdGRiLmQvOi9kb2NrZXItZW50cnlwb2ludC1pbml0ZGIuZC8KICAgICAgLSAvVXNlcnMvcm9iaW4vbGVhcm5pbmcvZG9ja2VyL21vbmdvX3JlcGxzZXQvbW9uZ29fMS9kYXRhL2RiLzovZGF0YS9kYi8KICAgICAgLSAvVXNlcnMvcm9iaW4vbGVhcm5pbmcvZG9ja2VyL21vbmdvX3JlcGxzZXQvbW9uZ29fMS9sb2cvOi92YXIvbG9nL21vbmdvZGIvCiAgICBwb3J0czoKICAgICAgLSAyMDAwMzoyNzAxNwogICAgY29tbWFuZDogWyItZiIsICIvZXRjL21vbmdvZC5jb25mIiwiLS1yZXBsU2V0IiwgInJzX21vbmdvIl0KICAgIG5ldHdvcmtfbW9kZTogbW9uZ29fbmV0CiAKICBtb25nb18yOgogICAgaW1hZ2U6IHJvYmluLWppYW5nZGgvbW9uZ28tY3VzdG9tOmxhdGVzdAogICAgaG9zdG5hbWU6IG1vbmdvXzIKICAgIGNvbnRhaW5lcl9uYW1lOiBtb25nb18yCiAgICB2b2x1bWVzOgogICAgICAtIC9Vc2Vycy9yb2Jpbi9sZWFybmluZy9kb2NrZXIvbW9uZ29fcmVwbHNldC9tb25nb18yL21vbmdvZC5jb25mOi9ldGMvbW9uZ29kLmNvbmYKICAgICAgLSAvVXNlcnMvcm9iaW4vbGVhcm5pbmcvZG9ja2VyL21vbmdvX3JlcGxzZXQvbW9uZ29fMi9pbml0ZGIuZC86L2RvY2tlci1lbnRyeXBvaW50LWluaXRkYi5kLwogICAgICAtIC9Vc2Vycy9yb2Jpbi9sZWFybmluZy9kb2NrZXIvbW9uZ29fcmVwbHNldC9tb25nb18yL2RhdGEvZGIvOi9kYXRhL2RiLwogICAgICAtIC9Vc2Vycy9yb2Jpbi9sZWFybmluZy9kb2NrZXIvbW9uZ29fcmVwbHNldC9tb25nb18yL2xvZy86L3Zhci9sb2cvbW9uZ29kYi8KICAgIHBvcnRzOgogICAgICAtIDIwMDA0OjI3MDE3CiAgICBjb21tYW5kOiBbIi1mIiwgIi9ldGMvbW9uZ29kLmNvbmYiLCItLXJlcGxTZXQiLCAicnNfbW9uZ28iXQogICAgbmV0d29ya19tb2RlOiBtb25nb19uZXQKIAogIG1vbmdvXzM6CiAgICBpbWFnZTogcm9iaW4tamlhbmdkaC9tb25nby1jdXN0b206bGF0ZXN0CiAgICBob3N0bmFtZTogbW9uZ29fMwogICAgY29udGFpbmVyX25hbWU6IG1vbmdvXzMKICAgIHZvbHVtZXM6CiAgICAgIC0gL1VzZXJzL3JvYmluL2xlYXJuaW5nL2RvY2tlci9tb25nb19yZXBsc2V0L21vbmdvXzMvbW9uZ29kLmNvbmY6L2V0Yy9tb25nb2QuY29uZgogICAgICAtIC9Vc2Vycy9yb2Jpbi9sZWFybmluZy9kb2NrZXIvbW9uZ29fcmVwbHNldC9tb25nb18zL2luaXRkYi5kLzovZG9ja2VyLWVudHJ5cG9pbnQtaW5pdGRiLmQvCiAgICAgIC0gL1VzZXJzL3JvYmluL2xlYXJuaW5nL2RvY2tlci9tb25nb19yZXBsc2V0L21vbmdvXzMvZGF0YS9kYi86L2RhdGEvZGIvCiAgICAgIC0gL1VzZXJzL3JvYmluL2xlYXJuaW5nL2RvY2tlci9tb25nb19yZXBsc2V0L21vbmdvXzMvbG9nLzovdmFyL2xvZy9tb25nb2RiLwogICAgcG9ydHM6CiAgICAgIC0gMjAwMDU6MjcwMTcKICAgIGNvbW1hbmQ6IFsiLWYiLCAiL2V0Yy9tb25nb2QuY29uZiIsIi0tcmVwbFNldCIsICJyc19tb25nbyJdCiAgICBuZXR3b3JrX21vZGU6IG1vbmdvX25ldAoKYGBgCgojIyMgU3RlcCA0OiBjcmVhdGUgbW9uZ29kLmNvbmYKCmBgYAokICBjb2RlIC4KCmBgYAoKYGBgWUFNTCAKIyBtb25nb2QuY29uZgogCiMgZm9yIGRvY3VtZW50YXRpb24gb2YgYWxsIG9wdGlvbnMsIHNlZToKIyAgIGh0dHA6Ly9kb2NzLm1vbmdvZGIub3JnL21hbnVhbC9yZWZlcmVuY2UvY29uZmlndXJhdGlvbi1vcHRpb25zLwogCiMgd2hlcmUgdG8gd3JpdGUgbG9nZ2luZyBkYXRhLgpzeXN0ZW1Mb2c6CiAgZGVzdGluYXRpb246IGZpbGUKICBsb2dBcHBlbmQ6IHRydWUKICBwYXRoOiAvdmFyL2xvZy9tb25nb2RiL21vbmdvZC5sb2cKIAojIFdoZXJlIGFuZCBob3cgdG8gc3RvcmUgZGF0YS4Kc3RvcmFnZToKICBkYlBhdGg6IC9kYXRhL2RiCiAgam91cm5hbDoKICAgIGVuYWJsZWQ6IHRydWUKICBlbmdpbmU6ICB3aXJlZFRpZ2VyCiAKIyBuZXR3b3JrIGludGVyZmFjZXMKbmV0OgogIHBvcnQ6IDI3MDE3CiAgYmluZElwOiAxMjcuMC4wLjEgIApgYGAKCiMjIyBTdGVwIDU6IFNwaW4tdXAgcmVwbGljYXNldCBjb250YWluZXJzCgpgYGBzaGVsbCAKJCBkb2NrZXIgY29tcG9zZSB1cCAtZApbK10gUnVubmluZyAzLzMKIOKgvyBDb250YWluZXIgbW9uZ29fMiAgQ3JlYXRlZCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgMC4ycwog4qC/IENvbnRhaW5lciBtb25nb18xICBDcmVhdGVkICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAuMnMKIOKgvyBDb250YWluZXIgbW9uZ29fMyAgQ3JlYXRlZApgYGAKCiMjIyBTdGVwIDY6IEluaXRpYXRlIHJlcGxpY2FzZXQKCmBgYHNoZWxsCiQgZG9ja2VyIGV4ZWMgLWl0IG1vbmdvXzEgYmFzaAoKcm9vdEBtb25nb18xOi8jIG1vbmdvCnJzX21vbmdvOlNFQ09OREFSWT4gcnMuaW5pdGlhdGUoCiAgIHsKICAgICAgX2lkOiDigJxyc19tb25nb+KAnSwKICAgICAgdmVyc2lvbjogMSwKICAgICAgbWVtYmVyczogWwogICAgICAgICB7IF9pZDogMCwgaG9zdCA6IOKAnG1vbmdvXzE6MjcwMTfigJ0gfSwKICAgICAgICAgeyBfaWQ6IDEsIGhvc3QgOiDigJxtb25nb18yOjI3MDE34oCdIH0sCiAgICAgICAgIHsgX2lkOiAyLCBob3N0IDog4oCcbW9uZ29fMzoyNzAxN+KAnSB9CiAgICAgIF0KICAgfQopCiAKcnNfbW9uZ286U0VDT05EQVJZPiBkYi5pc01hc3RlcigpIAp7CiAgICAidG9wb2xvZ3lWZXJzaW9uIiA6IHsKICAgICAgICAicHJvY2Vzc0lkIiA6IE9iamVjdElkKCI2MTQ2MTU3NDRkNTRjMDg5NjNlZjY3ZjYiKSwKICAgICAgICAiY291bnRlciIgOiBOdW1iZXJMb25nKDYpCiAgICB9LAogICAgImhvc3RzIiA6IFsKICAgICAgICAibW9uZ29fMToyNzAxNyIsCiAgICAgICAgIm1vbmdvXzI6MjcwMTciLAogICAgICAgICJtb25nb18zOjI3MDE3IgogICAgXSwKICAgICJzZXROYW1lIiA6ICJyc19tb25nbyIsCiAgICAic2V0VmVyc2lvbiIgOiAxLAogICAgImlzbWFzdGVyIiA6IHRydWUsCiAgICAic2Vjb25kYXJ5IiA6IGZhbHNlLAogICAgInByaW1hcnkiIDogIm1vbmdvXzI6MjcwMTciLAogICAgIm1lIiA6ICJtb25nb18yOjI3MDE3IiwKCmBgYAo=
+---
+title: "MongoDB Replicaset with Persistent Volume using Docker Compose"
+description: "In this article we will see the steps required to create and configure MongoDB replicaset containers on persistent volumes using Docker Compose. Compose was developed to define, configure and spin-up multi-container docker applications with single co..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835007334/9321da5c-439a-4cf6-ada5-df0a704f9378.jpeg"
+readingTime: 3
+slug: "mongodb-rs-docker-persistent-volume"
+---
+In this article we will see the steps required to create and configure MongoDB replicaset containers on **persistent volumes** using [Docker Compose](https://docs.docker.com/compose/). Compose was developed to define, configure and spin-up multi-container docker applications with single command, further reducing . Extensive usage of Docker with several container management quickly becomes cumbersome, Compose overcomes this problem and allows to easily handle multiple containers at once using YAML configuration `docker-compose.yml`
+
+<!--truncate-->
+
+## Docker Compose Steps
+
+### Step 1: System Configuration
+
+To run Compose, make sure you have installed Compose on your local system where Docker is installed. The Compose setup and installation instructions can be found here.
+
+### Step 2: Ensure mongo_net network bridge is already existing
+
+```shell
+$ docker network create mongo_net
+$ docker network inspect mongo_net                       
+```
+### Step 3: Lets convert the below command as seen in previous blog post to docker-compose.yml. If you are new to Docker and drafting compose files try using composerize to convert docker run commands into compose YAML output
+
+```shell 
+$ docker run -d -p 20003:27017 --name mongo3 --network mongo_net mongo:4.4.9-rc0 mongod --replSet rs_mongo
+```
+There are few additional attributes passed in the `docker-compose.yml`. The difference in the options passed in the command line above and `docker-compose.yml` is as below
+
+- image: custom image uploaded to docker hub with additional utilities installed on ubuntu build
+hostname: container host name
+- volumes: map directory on the host file system to manage and store container data. In the below YAML i use separate directory for all 3 MongoDB replicaset. This helps in creating persistent data store for docker containers and doesn’t bloat the container runtime instance.
+- Pass mongod configuration options through file mongod.conf
+
+Create the below YAML compose file in your favourite editor, i have been using Visual Studio Code. Save the file as docker-compose.yml
+
+
+```shell
+$ code .
+
+``` 
+
+```yaml
+#version: "3.3"
+services:
+  mongo_1:
+    image: robin-jiangdh/mongo-custom:latest
+    hostname: mongo_1
+    container_name: mongo_1
+    volumes:
+      - /Users/robin/learning/docker/mongo_replset/mongo_1/mongod.conf:/etc/mongod.conf
+      - /Users/robin/learning/docker/mongo_replset/mongo_1/initdb.d/:/docker-entrypoint-initdb.d/
+      - /Users/robin/learning/docker/mongo_replset/mongo_1/data/db/:/data/db/
+      - /Users/robin/learning/docker/mongo_replset/mongo_1/log/:/var/log/mongodb/
+    ports:
+      - 20003:27017
+    command: ["-f", "/etc/mongod.conf","--replSet", "rs_mongo"]
+    network_mode: mongo_net
+ 
+  mongo_2:
+    image: robin-jiangdh/mongo-custom:latest
+    hostname: mongo_2
+    container_name: mongo_2
+    volumes:
+      - /Users/robin/learning/docker/mongo_replset/mongo_2/mongod.conf:/etc/mongod.conf
+      - /Users/robin/learning/docker/mongo_replset/mongo_2/initdb.d/:/docker-entrypoint-initdb.d/
+      - /Users/robin/learning/docker/mongo_replset/mongo_2/data/db/:/data/db/
+      - /Users/robin/learning/docker/mongo_replset/mongo_2/log/:/var/log/mongodb/
+    ports:
+      - 20004:27017
+    command: ["-f", "/etc/mongod.conf","--replSet", "rs_mongo"]
+    network_mode: mongo_net
+ 
+  mongo_3:
+    image: robin-jiangdh/mongo-custom:latest
+    hostname: mongo_3
+    container_name: mongo_3
+    volumes:
+      - /Users/robin/learning/docker/mongo_replset/mongo_3/mongod.conf:/etc/mongod.conf
+      - /Users/robin/learning/docker/mongo_replset/mongo_3/initdb.d/:/docker-entrypoint-initdb.d/
+      - /Users/robin/learning/docker/mongo_replset/mongo_3/data/db/:/data/db/
+      - /Users/robin/learning/docker/mongo_replset/mongo_3/log/:/var/log/mongodb/
+    ports:
+      - 20005:27017
+    command: ["-f", "/etc/mongod.conf","--replSet", "rs_mongo"]
+    network_mode: mongo_net
+
+```
+
+### Step 4: create mongod.conf
+
+```
+$  code .
+
+```
+
+```YAML 
+# mongod.conf
+ 
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+ 
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+ 
+# Where and how to store data.
+storage:
+  dbPath: /data/db
+  journal:
+    enabled: true
+  engine:  wiredTiger
+ 
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1  
+```
+
+### Step 5: Spin-up replicaset containers
+
+```shell 
+$ docker compose up -d
+[+] Running 3/3
+ ⠿ Container mongo_2  Created                                                                                                                                   0.2s
+ ⠿ Container mongo_1  Created                                                                                                                                     0.2s
+ ⠿ Container mongo_3  Created
+```
+
+### Step 6: Initiate replicaset
+
+```shell
+$ docker exec -it mongo_1 bash
+
+root@mongo_1:/# mongo
+rs_mongo:SECONDARY> rs.initiate(
+   {
+      _id: “rs_mongo”,
+      version: 1,
+      members: [
+         { _id: 0, host : “mongo_1:27017” },
+         { _id: 1, host : “mongo_2:27017” },
+         { _id: 2, host : “mongo_3:27017” }
+      ]
+   }
+)
+ 
+rs_mongo:SECONDARY> db.isMaster() 
+{
+    "topologyVersion" : {
+        "processId" : ObjectId("614615744d54c08963ef67f6"),
+        "counter" : NumberLong(6)
+    },
+    "hosts" : [
+        "mongo_1:27017",
+        "mongo_2:27017",
+        "mongo_3:27017"
+    ],
+    "setName" : "rs_mongo",
+    "setVersion" : 1,
+    "ismaster" : true,
+    "secondary" : false,
+    "primary" : "mongo_2:27017",
+    "me" : "mongo_2:27017",
+
+```

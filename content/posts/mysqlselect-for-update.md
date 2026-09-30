@@ -1,1 +1,38 @@
-LS0tCnRpdGxlOiAiTXlTUUzkuK1zZWxlY3QgKiBmb3IgdXBkYXRl6ZSB6KGo55qE6IyD5Zu0IgpkZXNjcmlwdGlvbjogIueUseS6jklubm9EQumihOiuvuaYr1Jvdy1MZXZlbCBMb2Nr77yM5omA5Lul5Y+q5pyJ44CM5piO56Gu44CN55qE5oyH5a6a5Li76ZSu77yMTXlTUUzmiY3kvJrmiafooYxSb3cgbG9jayAo5Y+q6ZSB5L2P6KKr6YCJ5Y+W55qE6LWE5paZ5L6LKSDvvIzlkKbliJlNeVNRTOWwhuS8muaJp+ihjFRhYmxlIExvY2sgKOWwhuaVtOS4qui1hOaWmeihqOWNlee7memUgeS9jynjgIIg5Li+5Liq5L6L5a2QOiDlgYforr7mnInkuKrooajljZVwcm9kdWN0cyDvvIzph4zpnaLmnIlpZOi3n25hbWXkuozkuKrmoI/kvY3vvIxpZOaYr+S4u+mUruOAgiDkvosxOiAo5piO56Gu5oyH5a6a5Li76ZSu77yM5bm25LiU5pyJ5q2k56yU6LWE5paZ77yMcm93IGxvY2spIFNFTEVDVCAqIEZST00gcHJvZHVjdHMgV0hFUkUgaWQ9JzMnIEZPUiBVUERBVEU7IFNFTEVDVCAqIEZST00gcHJvZHVjLi4uIgpkYXRlOiAiMjAxNi0wMS0xMyIKY292ZXI6ICJodHRwczovL2Nkbi5oYXNobm9kZS5jb20vcmVzL2hhc2hub2RlL2ltYWdlL3VwbG9hZC92MTcwMzgzNDk1NDg4Ny9hNmE1N2U0Ny00YmYzLTQ5NWQtYWI0Ny03MmM1OTdiODlhMzkuanBlZyIKcmVhZGluZ1RpbWU6IDEKc2x1ZzogIm15c3Fsc2VsZWN0LWZvci11cGRhdGUiCi0tLQrnlLHkuo5Jbm5vRELpooTorr7mmK9Sb3ctTGV2ZWwgTG9ja++8jOaJgOS7peWPquacieOAjOaYjuehruOAjeeahOaMh+WumuS4u+mUru+8jE15U1FM5omN5Lya5omn6KGMUm93IGxvY2sgKOWPqumUgeS9j+iiq+mAieWPlueahOi1hOaWmeS+iykg77yM5ZCm5YiZTXlTUUzlsIbkvJrmiafooYxUYWJsZQoKTG9jayAo5bCG5pW05Liq6LWE5paZ6KGo5Y2V57uZ6ZSB5L2PKeOAgiDkuL7kuKrkvovlrZA6IOWBh+iuvuacieS4quihqOWNlXByb2R1Y3RzIO+8jOmHjOmdouaciWlk6LefbmFtZeS6jOS4quagj+S9je+8jGlk5piv5Li76ZSu44CCCgrkvosxOiAo5piO56Gu5oyH5a6a5Li76ZSu77yM5bm25LiU5pyJ5q2k56yU6LWE5paZ77yMcm93IGxvY2spCgpTRUxFQ1QgKiBGUk9NIHByb2R1Y3RzIFdIRVJFIGlkPSczJyBGT1IgVVBEQVRFOwoKU0VMRUNUICogRlJPTSBwcm9kdWN0cyBXSEVSRSBpZD0nMycgYW5kIHR5cGU9MSBGT1IgVVBEQVRFOwoK5L6LMjogKOaYjuehruaMh+WumuS4u+mUru+8jOiLpeafpeaXoOatpOeslOi1hOaWme+8jOaXoGxvY2spCgpTRUxFQ1QgKiBGUk9NIHByb2R1Y3RzIFdIRVJFIGlkPSctMScgRk9SIFVQREFURTsKCuS+izI6ICjml6DkuLvplK7vvIx0YWJsZSBsb2NrKQoKU0VMRUNUICogRlJPTSBwcm9kdWN0cyBXSEVSRSBuYW1lPSdNb3VzZScgRk9SIFVQREFURTsKCuS+izM6ICjkuLvplK7kuI3mmI7noa7vvIx0YWJsZSBsb2NrKQoKU0VMRUNUICogRlJPTSBwcm9kdWN0cyBXSEVSRSBpZDw+JzMnIEZPUiBVUERBVEU7Cgrkvos0OiAo5Li76ZSu5LiN5piO56Gu77yMdGFibGUgbG9jaykKClNFTEVDVCAqIEZST00gcHJvZHVjdHMgV0hFUkUgaWQgTElLRSAnMycgRk9SIFVQREFURTsK5rOoMTogKipGT1IgVVBEQVRF5LuF6YCC55So5LqOSW5ub0RC77yM5LiU5b+F6aG75Zyo5Lqk5piT5Yy65Z2XKEJFR0lOL0NPTU1JVCnkuK3miY3og73nlJ/mlYgqKuOAggoK5rOoMjogKiropoHmtYvor5XplIHlrprnmoTnirblhrXvvIzlj6/ku6XliKnnlKhNeVNRTOeahENvbW1hbmQgTW9kZSDvvIzlvIDkuKTkuKrkuKrop4bnqpfmnaXlgZrmtYvor5UqKuOAgiAKCuazqDPvvJpNeWlzYW0g5Y+q5pSv5oyB6KGo57qn6ZSB77yMSW5uZXJEQuaUr+aMgeihjOe6p+mUgSDmt7vliqDkuoYo6KGM57qn6ZSBL+ihqOe6p+mUgSnplIHnmoTmlbDmja7kuI3og73ooqvlhbblroPkuovliqHlho3plIHlrprvvIzkuZ/kuI3ooqvlhbblroPkuovliqHkv67mlLnkv67mlLnjgIHliKDpmaTvvIkg44CC5piv6KGo57qn6ZSB5pe277yM5LiN566h5piv5ZCm5p+l6K+i5Yiw6K6w5b2V77yM6YO95Lya6ZSB5a6a6KGo44CCCg==
+---
+title: "MySQL中select * for update锁表的范围"
+description: "由于InnoDB预设是Row-Level Lock，所以只有「明确」的指定主键，MySQL才会执行Row lock (只锁住被选取的资料例) ，否则MySQL将会执行Table Lock (将整个资料表单给锁住)。 举个例子: 假设有个表单products ，里面有id跟name二个栏位，id是主键。 例1: (明确指定主键，并且有此笔资料，row lock) SELECT * FROM products WHERE id='3' FOR UPDATE; SELECT * FROM produc..."
+date: "2016-01-13"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703834954887/a6a57e47-4bf3-495d-ab47-72c597b89a39.jpeg"
+readingTime: 1
+slug: "mysqlselect-for-update"
+---
+由于InnoDB预设是Row-Level Lock，所以只有「明确」的指定主键，MySQL才会执行Row lock (只锁住被选取的资料例) ，否则MySQL将会执行Table
+
+Lock (将整个资料表单给锁住)。 举个例子: 假设有个表单products ，里面有id跟name二个栏位，id是主键。
+
+例1: (明确指定主键，并且有此笔资料，row lock)
+
+SELECT * FROM products WHERE id='3' FOR UPDATE;
+
+SELECT * FROM products WHERE id='3' and type=1 FOR UPDATE;
+
+例2: (明确指定主键，若查无此笔资料，无lock)
+
+SELECT * FROM products WHERE id='-1' FOR UPDATE;
+
+例2: (无主键，table lock)
+
+SELECT * FROM products WHERE name='Mouse' FOR UPDATE;
+
+例3: (主键不明确，table lock)
+
+SELECT * FROM products WHERE id<>'3' FOR UPDATE;
+
+例4: (主键不明确，table lock)
+
+SELECT * FROM products WHERE id LIKE '3' FOR UPDATE;
+注1: **FOR UPDATE仅适用于InnoDB，且必须在交易区块(BEGIN/COMMIT)中才能生效**。
+
+注2: **要测试锁定的状况，可以利用MySQL的Command Mode ，开两个个视窗来做测试**。 
+
+注3：Myisam 只支持表级锁，InnerDB支持行级锁 添加了(行级锁/表级锁)锁的数据不能被其它事务再锁定，也不被其它事务修改修改、删除） 。是表级锁时，不管是否查询到记录，都会锁定表。

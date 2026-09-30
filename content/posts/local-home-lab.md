@@ -1,1 +1,153 @@
-LS0tCnRpdGxlOiAiTG9jYWwgSG9tZSBMYWIgRE5TIFNldHVwIHdpdGggRE5TTWFzcSBhbmQgTkdJTlgiCmRlc2NyaXB0aW9uOiAiQXMgSSBleHBsb3JlZCBhbmQgc2V0IHVwIGFuIGluY3JlYXNlZCBudW1iZXIgb2YgRk9TUyBzb2Z0d2FyZSB1c2luZyBjb250YWluZXJzKERvY2tlciBhbmQgTFhEKSBhbmQgdmlydHVhbCBtYWNoaW5lcyhNdWx0aXBhc3MpIGluIG15IGhvbWUgbGFiIGVudmlyb25tZW50LCBJIHJlYWxpemVkIHRoZSBkaWZmaWN1bHR5IGluIHJlbWVtYmVyaW5nIHRoZSBkaWZmZXJlbnQgcG9ydHMgdGhlIGFwcGxpY2F0aW9ucyBhbmQgY29udGFpbmVycyBhci4uLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwMjIxMDcvZTE1Mzg5NTEtNTg0MC00ZTBlLTliZmQtN2M0OGFhODJjM2VjLmpwZWciCnJlYWRpbmdUaW1lOiAzCnNsdWc6ICJsb2NhbC1ob21lLWxhYiIKLS0tCkFzIEkgZXhwbG9yZWQgYW5kIHNldCB1cCBhbiBpbmNyZWFzZWQgbnVtYmVyIG9mIEZPU1Mgc29mdHdhcmUgdXNpbmcgY29udGFpbmVycyhEb2NrZXIgYW5kIExYRCkgYW5kIHZpcnR1YWwgbWFjaGluZXMoTXVsdGlwYXNzKSBpbiBteSBob21lIGxhYiBlbnZpcm9ubWVudCwgSSByZWFsaXplZCB0aGUgZGlmZmljdWx0eSBpbiByZW1lbWJlcmluZyB0aGUgZGlmZmVyZW50IHBvcnRzIHRoZSBhcHBsaWNhdGlvbnMgYW5kIGNvbnRhaW5lcnMgYXJlIHJ1bm5pbmcuIFRoZSBzb2x1dGlvbiB0byBhZGRyZXNzIHRoaXMgcHJvYmxlbSB3YXMgdG8gaGF2ZSBhIERvbWFpbiBOYW1lIFN5c3RlbSBmb3IgdGhlIGxvY2FsIG5ldHdvcmssIHdoaWNoIHdvcmtzIHRvIHJlc29sdmUgbG9jYWwgYW5kIGV4dGVybmFsIGFkZHJlc3NlcyB3aXRoIGEgcmV2ZXJzZSBwcm94eSB0byByZWRpcmVjdCBjYWxscyBiYXNlZCBvbiBETlMgcmVzb2x1dGlvbi4KCjwhLS10cnVuY2F0ZS0tPgoKClRoZSBiZWxvdyBjb21tYW5kIGxpc3RzIHRoZSBEb2NrZXIgQ29udGFpbmVycyBhbmQgcG9ydHMgdGhlIGNvbnRhaW5lciBhcmUgcnVubmluZyBvbiwgdGhlIHJlcXVpcmVtZW50IGlzIHRvIGNyZWF0ZSBhIGRvbWFpbiBmb3IgYSBob21lIHNldHVwIHdpdGggZG9tYWluIGhvbWVsYWIubmV0IGFuZCBhY2Nlc3MgdGhlIGNvbnRhaW5lcml6ZWQgYXBwbGljYXRpb25zIHdpdGggYXBwc21pdGguaG9tZWxhYi5uZXQ7IHR5cGVzZW5zZS5ob21lbGFiLm5ldDsgZXhjYWxpZHJhdy5ob21lbGFiLm5ldAoKTGV04oCZcyBnZXQgdGhlIGxpc3Qgb2YgZG9ja2VyIGNvbnRhaW5lcnMgd2l0aCBwb3J0IG51bWJlcnMKCmBgYHNoZWxsCiMgZ2V0IGNvbnRhaW5lciBuYW1lcyBhbmQgcG9ydCBudW1iZXJzCiQgZG9ja2VyIGNvbnRhaW5lciBscyAtLWZvcm1hdCAidGFibGUge3suSUR9fVx0e3suTmFtZXN9fVx0e3suUG9ydHN9fSIgLWEKCgpDT05UQUlORVIgSUQgICBOQU1FUyAgICAgICAgICAgICAgICAgICAgICAgIFBPUlRTCmNiYjJhYzQwMjI3MCAgIGFwcHNtaXRoICAgICAgICAgICAgICAgICAgICAgMC4wLjAuMDo5MDAxLT45MDAxL3RjcCwgMC4wLjAuMDo3MC0+ODAvdGNwLCAwLjAuMC4wOjQ0NC0+NDQzL3RjcApjOTg3NTMyM2I5ODkgICB0eXBlc2Vuc2VfdHlwZXNlbnNlLTFfMSAgICAgIDAuMC4wLjA6ODEwOC0+ODEwOC90Y3AKYzQ1MzI4OGM4NDk2ICAgZXhjYWxpZHJhdyAgICAgICAgICAgICAgICAgICAwLjAuMC4wOjMwMDEtPjgwL3RjcAo1YmU1ZDMzZjFmNTAgICBrOHMtY29udHJvbC1wbGFuZSAgICAgICAgICAgIDEyNy4wLjAuMTozNDU4OS0+NjQ0My90Y3AKNDE0MGQyZmJmN2Q1ICAgbXlzcWxfbm9jb2RiXzEgICAgICAgICAgICAgICAwLjAuMC4wOjgwODItPjgwODAvdGNwCmU3MzEwNDYxYmVlOSAgIG15c3FsX3Jvb3RfZGJfMSAgICAgICAgICAgICAgMzMwNi90Y3AsIDMzMDYwL3RjcAo5YjU2YzMzZDQ1ZDUgICBtZWlsaXNlYXJjaF9tc18xICAgICAgICAgICAgIDAuMC4wLjA6NzcwMC0+NzcwMC90Y3AKOWFjNmEwZTE2YjBlICAgbW9uZ28yICAgICAgICAgICAgICAgICAgICAgICAwLjAuMC4wOjIwMDAyLT4yNzAxNy90Y3AKMmFhZjAxZDIyMzNmICAgbW9uZ28xICAgICAgICAgICAgICAgICAgICAgICAwLjAuMC4wOjIwMDAxLT4yNzAxNy90Y3AKODYwYjUyMWY5N2RjICAgbW9uZ28zICAgICAgICAgICAgICAgICAgICAgICAwLjAuMC4wOjIwMDAzLT4yNzAxNy90Y3AKZDhhZDFlYzNjYWI4ICAgcmV0aGlua2RiX3JldGhpbmtkYl8xICAgICAgICAwLjAuMC4wOjI4MDE1LT4yODAxNS90Y3AsIDAuMC4wLjA6MjkwMTUtPjI5MDE1L3RjcCwgMC4wLjAuMDo4MDgxLT44MDgwL3RjcApgYGAKClRoZSBjb250YWluZXJzIGFuZCBhcHBsaWNhdGlvbnMgcnVubmluZyBvbiB0aGUgbG9jYWwgaG9tZSBuZXR3b3JrIGFzIHNob3duIGFib3ZlIGRvIG5vdCBoYXZlIGEgcHVibGljIGRvbWFpbiBuYW1lLCB0aGUgb3B0aW9uIHdhcyB0byBsb29rIGZvciBzZXR0aW5nIHVwIGEgRE5TIHNlcnZlciB3aXRoIFtETlNNYXNxXShodHRwczovL3RoZWtlbGxleXMub3JnLnVrL2Ruc21hc3EvZG9jLmh0bWwpLCBhbmQgYSByZXZlcnNlIHByb3h5IHVzaW5nIFtOR0lOWF0oaHR0cHM6Ly93d3cubmdpbnguY29tLykuIFRoZSBjb250YWluZXJzIG1heSBub3QgYmUgdGhlIG9ubHkgdXNlIGNhc2Ugc2NlbmFyaW8gZm9yIGxvY2FsIEROUyBzZXJ2ZXJzIHdpdGggW0ROU01hc3FdKGh0dHBzOi8vdGhla2VsbGV5cy5vcmcudWsvZG5zbWFzcS9kb2MuaHRtbCksIHRoZXJlIGNvdWxkIGJlIG1hbnkgb3RoZXJzIGxpa2UgYWNjZXNzaW5nIGEgbG9jYWwgZmlsZSBzaGFyZSBhY3Jvc3MgZGV2aWNlczsgYWNjZXNzaW5nIGFwcGxpY2F0aW9ucyBmcm9tIGEgbW9iaWxlIGRldmljZSwgYW5kIHNoYXJpbmcgYSBwcmludGVyLgoKCltETlNNYXNxXShodHRwczovL3RoZWtlbGxleXMub3JnLnVrL2Ruc21hc3EvZG9jLmh0bWwpIC0gRG5zbWFzcSBwcm92aWRlcyBuZXR3b3JrIGluZnJhc3RydWN0dXJlIGZvciBzbWFsbCBuZXR3b3JrczogRE5TLCBESENQLCByb3V0ZXIgYWR2ZXJ0aXNlbWVudCwgYW5kIG5ldHdvcmsgYm9vdC4gSXQgaXMgZGVzaWduZWQgdG8gYmUgbGlnaHR3ZWlnaHQgYW5kIGhhcyBhIHNtYWxsIGZvb3RwcmludCwgc3VpdGFibGUgZm9yIHJlc291cmNlLWNvbnN0cmFpbmVkIHJvdXRlcnMgYW5kIGZpcmV3YWxscy4KCltOR0lOWF0oaHR0cHM6Ly93d3cubmdpbnguY29tLykgLSBSZXZlcnNlIFByb3h5IOKAkyBBIHJldmVyc2UgcHJveHkgcHJvdmlkZXMgYW4gYWRkaXRpb25hbCBsZXZlbCBvZiBhYnN0cmFjdGlvbiBhbmQgY29udHJvbCB0byBlbnN1cmUgdGhlIHNtb290aCBmbG93IG9mIG5ldHdvcmsgdHJhZmZpYyBiZXR3ZWVuIGNsaWVudHMgYW5kIHNlcnZlcnMuCgoqKkxldCB1cyBnZXQgc3RhcnRlZCB3aXRoIHRoZSBpbXBsZW1lbnRhdGlvbiBzdGVwcyBmb3IgRE5TTWFzcSBhbmQgTkdJTlguIFRoZSBiZWxvdyBzdGVwcyBhcmUgcGVyZm9ybWVkIG9uIFVidW50dSAyMC4wNCAoRGViaWFuLWJhc2VkIGRpc3RybykuKioKCkJlZm9yZSBzdGFydGluZyB0aGUgaW5zdGFsbGF0aW9uIG9mIEROU01hc3EsIAoKIyMjIFN0ZXAgMTogRGlzYWJsZSBzeXN0ZW1kLXJlc29sdmUgd2hpY2ggYmluZHMgdG8gcG9ydCA1MywgdGhlIGRlZmF1bHQgcG9ydCBmb3IgRE5TTWFzcQoKYGBgc2hlbGwKCiBzdWRvIHN5c3RlbWN0bCBzdG9wIHN5c3RlbWQtcmVzb2x2ZWQKIHN1ZG8gc3lzdGVtY3RsIGRpc2FibGUgc3lzdGVtZC1yZXNvbHZlZAoKYGBgCgojIyMgU3RlcCAyOiBJbnN0YWxsIEROU1V0aWxzLCBETlNNYXNxCgpgYGBzaGVsbApzdWRvIGFwdCB1cGRhdGUgJiYgc3VkbyBhcHQgaW5zdGFsbCBkbnNtYXNxICYmIHN1ZG8gYXB0IGluc3RhbGwgZG5zdXRpbHMKYGBgCgojIyMgU3RlcCAzOiBDcmVhdGUgdGhlIEROU01hc3EgY29uZmlndXJhdGlvbiBmaWxlCgpgYGBzaGVsbAokIGRuc21hc3FfY29uZj0ibm8tZGhjcC1pbnRlcmZhY2U9ZW5wMnMwZjAKYm9ndXMtcHJpdgpkb21haW49aG9tZWxhYi5uZXQKZXhwYW5kLWhvc3RzCmxvY2FsPS9ob21lbGFiLm5ldC8KZG9tYWluLW5lZWRlZApuby1yZXNvbHYKbm8tcG9sbApzZXJ2ZXI9OC44LjguOApzZXJ2ZXI9OC44LjQuNCIKCiQgc3VkbyBlY2hvIC1lICIkZG5zbWFzcV9jb25mIiA+IC9ldGMvZG5zbWFzcS5kL2hvbWUtbGFiLm5ldCAKCiQgc3VkbyBzeXN0ZW1jdGwgcmVzdGFydCBkbnNtYXNxCmBgYAoKCiMjIyBTdGVwIDQ6IEFkZCBjb250YWluZXIgRE5TIHJlY29yZHMgaW4gdGhlIGZpbGUuL2V0Yy9ob3N0cy4gVGhlIHJlY29yZHMgaW4gdGhlIGhvc3RzIGZpbGUgd2lsbCBiZSB1c2VkIGJ5IEROU01hc3EgZm9yIGNsaWVudCByZXNwb25zZXMKCmBgYHNoZWxsCiAgJCBzdWRvIG5hbm8gL2V0Yy9ob3N0cyAgCiAgIyBhZGQgdGhlIGJlbG93IHJlY29yZHMgdG8gdGhlIGhvc3RzIGZpbGUKICAjQ29udGFpbmVyIEROUyByZWNvcmRzCiAgIyBhcHBzbWl0aAogIDE5Mi4xNjguMjAuMTEzIGFwcHNtaXRoCiAgIyBleGNhbGlkcmF3CiAgMTkyLjE2OC4yMC4xMTMgZXhjYWxpZHJhdwogICMgdHlwZXNlbnNlCiAgMTkyLjE2OC4yMC4xMTMgdHlwZXNlbnNlCmBgYAoKIyMjIFN0ZXAgNTogUmVzdGFydCBETlNNYXNxIHNlcnZpY2UKCmBgYHNoZWxsCiQgc3VkbyBzeXN0ZW1jdGwgcmVzdGFydCBkbnNtYXNxLnNlcnZpY2UKYGBgCgojIyMgU3RlcCA2OiBJbnN0YWxsIE5HSU5YCgpgYGBzaGVsbAokIHN1ZG8gYXB0IHVwZGF0ZSAmJiBzdWRvIGFwdCBpbnN0YWxsIG5naW54CmBgYAoKCiMjIyBTdGVwIDY6IFRvIGVuYWJsZSByZXZlcnNlIHByb3h5IGZlYXR1cmUsIGNyZWF0ZSBhIG5ldyBOR0lOWCBjb25maWd1cmF0aW9uIGZpbGUgaW4gYHNpdGVzLWVuYWJsZWRgIGRpcmVjdG9yeQoKYGBgc2hlbGwKICQgc3VkbyBuYW5vIC9ldGMvbmdpbngvc2l0ZXMtZW5hYmxlZC9ob21lbGFiLmNvbmYKICBzZXJ2ZXIgewogICAgICAgICAgbGlzdGVuIDgwOwogICAgICAgICAgbGlzdGVuIFs6Ol06ODA7CiAgICAgICAgICBzZXJ2ZXJfbmFtZSB0eXBlc2Vuc2UuaG9tZWxhYi5uZXQ7CiAgICAgICAgICBsb2NhdGlvbiAvIHsKICAgICAgICAgICAgICAgICAgIHByb3h5X2JpbmQgMTkyLjE2OC4yMC4xMTM7CiAgICAgICAgICAgICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly9sb2NhbGhvc3Q6MzAwMDsKICAgICAgICAgIH0KICB9CiAgc2VydmVyIHsKICAgICAgICAgIGxpc3RlbiA4MDsKICAgICAgICAgIGxpc3RlbiBbOjpdOjgwOwogICAgICAgICAgc2VydmVyX25hbWUgYXBwc21pdGguaG9tZWxhYi5uZXQ7CiAgICAgICAgICBsb2NhdGlvbiAvIHsKICAgICAgICAgICAgICAgICAgcHJveHlfYmluZCAxOTIuMTY4LjIwLjExMzsKICAgICAgICAgICAgICAgICAgcHJveHlfcGFzcyBodHRwOi8vbG9jYWxob3N0OjcwOwogICAgICAgICAgfQoKICB9CiAgc2VydmVyIHsKICAgICAgICAgIGxpc3RlbiA4MDsKICAgICAgICAgIGxpc3RlbiBbOjpdOjgwOwogICAgICAgICAgc2VydmVyX25hbWUgZXhjYWxpZHJhdy5ob21lbGFiLm5ldDsKICAgICAgICAgIGxvY2F0aW9uIC8gewogICAgICAgICAgICAgICAgICBwcm94eV9iaW5kIDE5Mi4xNjguMjAuMTEzOwogICAgICAgICAgICAgICAgICBwcm94eV9wYXNzIGh0dHA6Ly9sb2NhbGhvc3Q6MzAwMTsKICAgICAgICAgIH0KCiAgfQpgYGAKClRoZSBgcHJveHlfcGFzc2AgYXJndW1lbnQgd2lsbCBmb3J3YXJkIGFsbCBpbmNvbWluZyBjbGllbnQgcmVxdWVzdHMgdG8gYXBwLmhvbWVsYWIubmV0IHRvIHRoZSByZXNwZWN0aXZlIGFwcC4gVGhlIElQIGFkZHJlc3MgYW5kIHBvcnQgbnVtYmVyIGNhbiBiZSBlYXNpbHkgY2hhbmdlZC4KIAojIyMgU3RlcCA3IHJlbG9hZCBOR0lOWCBmb3IgdGhlIGNvbmZpZ3VyYXRpb24gdG8gdGFrZSBpbnRvIGVmZmVjdApgYGBzaGVsbCAKJCBzdWRvIHN5c3RlbWN0bCByZWxvYWQgbmdpbngKYGBgCkFmdGVyIGEgc3VjY2Vzc2Z1bCBpbXBsZW1lbnRhdGlvbiwgd2Ugd2lsbCBiZSBhYmxlIHRvIGFjY2VzcyBjb250YWluZXIgYXBwbGljYXRpb25zIHVzaW5nIGRvbWFpbiBVUkxzIGFzIHNlZW4gaW4gdGhlIGJlbG93IHNjcmVlbnNob3Qgd2l0aCB0aHJlZSBwYW5lcyBmaXJzdCBwYW5lIGlzIGFwcHNtaXRoIDsgc2Vjb25kIHBhbmUgaXMgZXhjYWxpZHJhdyBhbmQgdGhpcmQgcGFuZSBpcyB0eXBlc2Vuc2UuCgohW2xvY2FsLWhvbWUtbGFiLXNuYXBzaG90XSgyMDIyLTA3LTE5LTIzLTA5LTU3LnBuZykK
+---
+title: "Local Home Lab DNS Setup with DNSMasq and NGINX"
+description: "As I explored and set up an increased number of FOSS software using containers(Docker and LXD) and virtual machines(Multipass) in my home lab environment, I realized the difficulty in remembering the different ports the applications and containers ar..."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835022107/e1538951-5840-4e0e-9bfd-7c48aa82c3ec.jpeg"
+readingTime: 3
+slug: "local-home-lab"
+---
+As I explored and set up an increased number of FOSS software using containers(Docker and LXD) and virtual machines(Multipass) in my home lab environment, I realized the difficulty in remembering the different ports the applications and containers are running. The solution to address this problem was to have a Domain Name System for the local network, which works to resolve local and external addresses with a reverse proxy to redirect calls based on DNS resolution.
+
+<!--truncate-->
+
+
+The below command lists the Docker Containers and ports the container are running on, the requirement is to create a domain for a home setup with domain homelab.net and access the containerized applications with appsmith.homelab.net; typesense.homelab.net; excalidraw.homelab.net
+
+Let’s get the list of docker containers with port numbers
+
+```shell
+# get container names and port numbers
+$ docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
+
+
+CONTAINER ID   NAMES                        PORTS
+cbb2ac402270   appsmith                     0.0.0.0:9001->9001/tcp, 0.0.0.0:70->80/tcp, 0.0.0.0:444->443/tcp
+c9875323b989   typesense_typesense-1_1      0.0.0.0:8108->8108/tcp
+c453288c8496   excalidraw                   0.0.0.0:3001->80/tcp
+5be5d33f1f50   k8s-control-plane            127.0.0.1:34589->6443/tcp
+4140d2fbf7d5   mysql_nocodb_1               0.0.0.0:8082->8080/tcp
+e7310461bee9   mysql_root_db_1              3306/tcp, 33060/tcp
+9b56c33d45d5   meilisearch_ms_1             0.0.0.0:7700->7700/tcp
+9ac6a0e16b0e   mongo2                       0.0.0.0:20002->27017/tcp
+2aaf01d2233f   mongo1                       0.0.0.0:20001->27017/tcp
+860b521f97dc   mongo3                       0.0.0.0:20003->27017/tcp
+d8ad1ec3cab8   rethinkdb_rethinkdb_1        0.0.0.0:28015->28015/tcp, 0.0.0.0:29015->29015/tcp, 0.0.0.0:8081->8080/tcp
+```
+
+The containers and applications running on the local home network as shown above do not have a public domain name, the option was to look for setting up a DNS server with [DNSMasq](https://thekelleys.org.uk/dnsmasq/doc.html), and a reverse proxy using [NGINX](https://www.nginx.com/). The containers may not be the only use case scenario for local DNS servers with [DNSMasq](https://thekelleys.org.uk/dnsmasq/doc.html), there could be many others like accessing a local file share across devices; accessing applications from a mobile device, and sharing a printer.
+
+
+[DNSMasq](https://thekelleys.org.uk/dnsmasq/doc.html) - Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement, and network boot. It is designed to be lightweight and has a small footprint, suitable for resource-constrained routers and firewalls.
+
+[NGINX](https://www.nginx.com/) - Reverse Proxy – A reverse proxy provides an additional level of abstraction and control to ensure the smooth flow of network traffic between clients and servers.
+
+**Let us get started with the implementation steps for DNSMasq and NGINX. The below steps are performed on Ubuntu 20.04 (Debian-based distro).**
+
+Before starting the installation of DNSMasq, 
+
+### Step 1: Disable systemd-resolve which binds to port 53, the default port for DNSMasq
+
+```shell
+
+ sudo systemctl stop systemd-resolved
+ sudo systemctl disable systemd-resolved
+
+```
+
+### Step 2: Install DNSUtils, DNSMasq
+
+```shell
+sudo apt update && sudo apt install dnsmasq && sudo apt install dnsutils
+```
+
+### Step 3: Create the DNSMasq configuration file
+
+```shell
+$ dnsmasq_conf="no-dhcp-interface=enp2s0f0
+bogus-priv
+domain=homelab.net
+expand-hosts
+local=/homelab.net/
+domain-needed
+no-resolv
+no-poll
+server=8.8.8.8
+server=8.8.4.4"
+
+$ sudo echo -e "$dnsmasq_conf" > /etc/dnsmasq.d/home-lab.net 
+
+$ sudo systemctl restart dnsmasq
+```
+
+
+### Step 4: Add container DNS records in the file./etc/hosts. The records in the hosts file will be used by DNSMasq for client responses
+
+```shell
+  $ sudo nano /etc/hosts  
+  # add the below records to the hosts file
+  #Container DNS records
+  # appsmith
+  192.168.20.113 appsmith
+  # excalidraw
+  192.168.20.113 excalidraw
+  # typesense
+  192.168.20.113 typesense
+```
+
+### Step 5: Restart DNSMasq service
+
+```shell
+$ sudo systemctl restart dnsmasq.service
+```
+
+### Step 6: Install NGINX
+
+```shell
+$ sudo apt update && sudo apt install nginx
+```
+
+
+### Step 6: To enable reverse proxy feature, create a new NGINX configuration file in `sites-enabled` directory
+
+```shell
+ $ sudo nano /etc/nginx/sites-enabled/homelab.conf
+  server {
+          listen 80;
+          listen [::]:80;
+          server_name typesense.homelab.net;
+          location / {
+                   proxy_bind 192.168.20.113;
+                   proxy_pass http://localhost:3000;
+          }
+  }
+  server {
+          listen 80;
+          listen [::]:80;
+          server_name appsmith.homelab.net;
+          location / {
+                  proxy_bind 192.168.20.113;
+                  proxy_pass http://localhost:70;
+          }
+
+  }
+  server {
+          listen 80;
+          listen [::]:80;
+          server_name excalidraw.homelab.net;
+          location / {
+                  proxy_bind 192.168.20.113;
+                  proxy_pass http://localhost:3001;
+          }
+
+  }
+```
+
+The `proxy_pass` argument will forward all incoming client requests to app.homelab.net to the respective app. The IP address and port number can be easily changed.
+ 
+### Step 7 reload NGINX for the configuration to take into effect
+```shell 
+$ sudo systemctl reload nginx
+```
+After a successful implementation, we will be able to access container applications using domain URLs as seen in the below screenshot with three panes first pane is appsmith ; second pane is excalidraw and third pane is typesense.
+
+![local-home-lab-snapshot](2022-07-19-23-09-57.png)

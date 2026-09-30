@@ -1,1 +1,255 @@
-LS0tCnRpdGxlOiAiVW5kZXJzdGFuZGluZyBNb25nb0RCIFJlcGxpY2FzZXRzIGFuZCBXcml0ZSBDb25jZXJuIC0gUGFydCAxIgpkZXNjcmlwdGlvbjogIlRoZSB3YXkgdG8gYWNoaWV2ZSBmYXVsdCB0b2xlcmFuY2UgaW4gTW9uZ29EQiBpcyB0aHJvdWdoIHRoZSB1c2Ugb2YgcmVwbGljYSBzZXRzLiIKZGF0ZTogIjIwMjMtMTItMjkiCmNvdmVyOiAiaHR0cHM6Ly9jZG4uaGFzaG5vZGUuY29tL3Jlcy9oYXNobm9kZS9pbWFnZS91cGxvYWQvdjE3MDM4MzUwNDE0MzQvZjUzZWIwZGEtMjU3MC00Yzg0LTllZWQtMzdkZWRjMWZkZWZiLmpwZWciCnJlYWRpbmdUaW1lOiA2CnNsdWc6ICJtb25nb2RiLXJlcGxpY2FzZXQtd3JpdGUtY29uY2Vybi1yZWFkLXByZWYiCi0tLQojIyBJbnRyb2R1Y2luZyBSZXBsaWNhc2V0cwoKVGhlIHdheSB0byBhY2hpZXZlIGZhdWx0IHRvbGVyYW5jZSBpbiBNb25nb0RCIGlzIHRocm91Z2ggdGhlIHVzZSBvZiBgcmVwbGljYSBzZXRzYC4gCgpgYGBtZXJtYWlkCnN0YXRlRGlhZ3JhbS12MgogICAgWypdIC0tPiBBcHBsaWNhdGlvbgogICAgZGlyZWN0aW9uIExSCiAgICBzdGF0ZSBBcHBsaWNhdGlvbgogICAgQXBwbGljYXRpb24gLS0+IHJlcGxpY2FzZXQgICAgICAKICAgc3RhdGUgcmVwbGljYXNldAogICAgewogICAgZGlyZWN0aW9uIFJMCiAgICBQcmltYXJ5OnByaW1hcnkKICAgIFNlY29uZGFyeTE6c2Vjb25kYXJ5IAogICAgU2Vjb25kYXJ5MjpzZWNvbmRhcnkKICAgIFNlY29uZGFyeTEtLT5QcmltYXJ5IDogRmV0Y2ggT3Bsb2cKICAgIFNlY29uZGFyeTItLT5QcmltYXJ5IDogRmV0Y2ggT3Bsb2cKICAgIAogICAgfQpgYGAKClR3byBvciBtb3JlIGBzZWNvbmRhcnlgIG5vZGVzIGFsb25nIHdpdGggYSBgcHJpbWFyeWAgbm9kZSBmb3JtcyBhIHJlcGxpY2Egc2V0LiBBcHBsaWNhdGlvbiBtYWtlcyBhbGwgdGhlIHJlYWQvd3JpdGUgY2FsbHMgdG8gdGhlIHByaW1hcnkgbm9kZSB3aGljaCBwcm9wYWdhdGUgYWxsIHRoZSB3cml0ZSByZXF1ZXN0cyBzeW5jaHJvbm91c2x5IG9yIGFzeW5jaHJvbm91c2x5IHRvIHRoZSBzZWNvbmRhcnkgbm9kZXMuIAoKVGhlIFNlY29uZGFyeSBub2RlcyBmZXRjaGVzIHRoZSBkYXRhIHZpYSBPcGxvZyBwdWxsIGZyb20gUHJpbWFyeSBvciBvdGhlciBub2Rlcy4gCgo8IS0tdHJ1bmNhdGUtLT4KClRoZSBQcmltYXJ5IG5vZGUgaXMgcmVzcG9uc2libGUgZm9yIGFsbCB0aGUgd3JpdGVzIGFuZCByZWFkcy4gVGhlIHNlY29uZGFyeSBub2RlcyBjYW4gYmUgdXRpbGl6ZWQgZm9yIHJlYWRzIHZpYSBbYHNldFNlY29uZGFyeU9rYF0oaHR0cHM6Ly9kb2NzLm1vbmdvZGIuY29tL21hbnVhbC9yZWZlcmVuY2UvbWV0aG9kL01vbmdvLnNldFNlY29uZGFyeU9rLykgb3IgW2ByZWFkUHJlZmVyZW5jZWBdKGh0dHBzOi8vZG9jcy5tb25nb2RiLmNvbS9tYW51YWwvcmVmZXJlbmNlL3JlYWQtcHJlZmVyZW5jZS8pLiAKCiMjIFVuZGVyc3RhbmRpbmcgT3Bsb2cKCldoZW4gdGhlIGFwcGxpY2F0aW9uIHBlcmZvcm1zIGEgd3JpdGUsIHRoZSBwcmltYXJ5IG5vZGUgYXBwbGllcyB0aGUgd3JpdGUgdG8gdGhlIGRhdGFiYXNlIGxpa2UgYSBzdGFuZGFsb25lLiAKClRoZSBkaWZmZXJlbmNlIGJldHdlZW4gUmVwbGljYXNldCB3cml0ZSBhbmQgc3RhbmRhbG9uZSB3cml0ZSBpcyB0aGF0IHJlcGxpY2Egc2V0IG5vZGVzIGhhdmUgYW4gYE9wT2JzZXJ2ZXJgIHRoYXQgaW5zZXJ0cyBhIGRvY3VtZW50IHRvIHRoZSAqKm9wbG9nKiogd2hlbmV2ZXIgYSB3cml0ZSB0byB0aGUgZGF0YWJhc2UgaGFwcGVucywgZGVzY3JpYmluZyB0aGUgd3JpdGUuIFRoZSAqKm9wbG9nKiogaXMgYSBjYXBwZWQgY29sbGVjdGlvbiBjYWxsZWQgYG9wbG9nLnJzYCBpbiB0aGUgYGxvY2FsYCBkYXRhYmFzZS4gCgpGb3IgZXZlcnkgb3BlcmF0aW9uIHBlcmZvcm1lZCBpbiBhIHdyaXRlLCB0aGUgcHJpbWFyeSBub2RlIGluc2VydHMgYSBkb2N1bWVudCBpbnRvIHRoZSBvcGxvZy4gVGhlIG9wbG9nIGlzIGEgY2FwcGVkIGNvbGxlY3Rpb24sIHdoaWNoIG1lYW5zIHRoYXQgaXQgaGFzIGEgbWF4aW11bSBzaXplLiBXaGVuIHRoZSBvcGxvZyByZWFjaGVzIGl0cyBtYXhpbXVtIHNpemUsIE1vbmdvREIgcmVtb3ZlcyB0aGUgb2xkZXN0IGVudHJpZXMgdG8gbWFrZSByb29tIGZvciBuZXcgZW50cmllcy4gCgpGb3IgYSB3cml0ZSB3aGljaCBwZXJmb3JtcyBjcmVhdGUgY29sbGVjdGlvbiBhbmQgaW5zZXJ0LCB0aGVyZSBhcmUgdHdvIG9wbG9nIGVudHJpZXMgY3JlYXRlZCBvbmUgZm9yIGBjcmVhdGVgIGNvbGxlY3Rpb24gYW5kIGFub3RoZXIgZm9yIGBpbnNlcnRgLgoKYGBgY3BwCi8vIG1vbmdvZF9tYWluLmNwcApzZXRVcE9ic2VydmVycyhzZXJ2aWNlKTsKYGBgCgpgYGBjcHAKCi8vb3Bfb2JzZXJ2ZXJfcmVnaXN0cnkuaAp2b2lkIG9uQ3JlYXRlQ29sbGVjdGlvbihPcGVyYXRpb25Db250ZXh0KiBjb25zdCBvcEN0eCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IENvbGxlY3Rpb25QdHImIGNvbGwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBOYW1lc3BhY2VTdHJpbmcmIGNvbGxlY3Rpb25OYW1lLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgQ29sbGVjdGlvbk9wdGlvbnMmIG9wdGlvbnMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBCU09OT2JqJiBpZEluZGV4LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgT3Bsb2dTbG90JiBjcmVhdGVPcFRpbWUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBib29sIGZyb21NaWdyYXRlKSBvdmVycmlkZSB7CiAgICAgICAgUmVzZXJ2ZWRUaW1lcyB0aW1lc3tvcEN0eH07CiAgICAgICAgZm9yIChhdXRvJiBvIDogX29ic2VydmVycykKICAgICAgICAgICAgby0+b25DcmVhdGVDb2xsZWN0aW9uKAogICAgICAgICAgICAgICAgb3BDdHgsIGNvbGwsIGNvbGxlY3Rpb25OYW1lLCBvcHRpb25zLCBpZEluZGV4LCBjcmVhdGVPcFRpbWUsIGZyb21NaWdyYXRlKTsKICAgIH0KCiB1c2luZyBPcE9ic2VydmVyOjpvbkluc2VydHM7CiAgICB2b2lkIG9uSW5zZXJ0cyhPcGVyYXRpb25Db250ZXh0KiBjb25zdCBvcEN0eCwKICAgICAgICAgICAgICAgICAgIGNvbnN0IE5hbWVzcGFjZVN0cmluZyYgbnNzLAogICAgICAgICAgICAgICAgICAgY29uc3QgVVVJRCYgdXVpZCwKICAgICAgICAgICAgICAgICAgIHN0ZDo6dmVjdG9yPEluc2VydFN0YXRlbWVudD46OmNvbnN0X2l0ZXJhdG9yIGJlZ2luLAogICAgICAgICAgICAgICAgICAgc3RkOjp2ZWN0b3I8SW5zZXJ0U3RhdGVtZW50Pjo6Y29uc3RfaXRlcmF0b3IgZW5kLAogICAgICAgICAgICAgICAgICAgYm9vbCBmcm9tTWlncmF0ZSkgb3ZlcnJpZGUgewogICAgICAgIFJlc2VydmVkVGltZXMgdGltZXN7b3BDdHh9OwogICAgICAgIGZvciAoYXV0byYgbyA6IF9vYnNlcnZlcnMpCiAgICAgICAgICAgIG8tPm9uSW5zZXJ0cyhvcEN0eCwgbnNzLCB1dWlkLCBiZWdpbiwgZW5kLCBmcm9tTWlncmF0ZSk7CiAgICB9CmBgYAoKIyMgVW5kZXJzdGFuZGluZyBXcml0ZSBDb25jZXJuCgpXcml0ZSBjb25jZXJuIGlzIGEgd2F5IHRvIGVuc3VyZSB0aGF0IHRoZSB3cml0ZSBvcGVyYXRpb25zIGFyZSBwcm9wYWdhdGVkIHRvIHRoZSBzZWNvbmRhcnkgbm9kZXMuCgojIyMgRGVmYXVsdCBXcml0ZSBDb25jZXJuCgpJZiBhIHdyaXRlIG9wZXJhdGlvbiBkb2VzIG5vdCBleHBsaWNpdGx5IHNwZWNpZnkgYSB3cml0ZSBjb25jZXJuLCB0aGUgc2VydmVyIHdpbGwgdXNlIGEgZGVmYXVsdAp3cml0ZSBjb25jZXJuLiAKClRoaXMgZGVmYXVsdCB3cml0ZSBjb25jZXJuIHdpbGwgYmUgZGVmaW5lZCBieSBlaXRoZXIgdGhlCgotICoqQ2x1c3Rlci1XaWRlIHdyaXRlIGNvbmNlcm4qKiwgZXhwbGljaXRseSBzZXQgYnkgdGhlIHVzZXIgCm9yCi0gKipJbXBsaWNpdCBEZWZhdWx0IHdyaXRlIGNvbmNlcm4qKiwgaW1wbGljaXRseSBzZXQgYnkgdGhlIHNlcnZlciBiYXNlZCBvbiByZXBsaWNhIHNldCBjb25maWd1cmF0aW9uLgoKIyMjIyBDbHVzdGVyLVdpZGUgV3JpdGUgQ29uY2VybgoKVGhlIGNsdXN0ZXItd2lkZSB3cml0ZSBjb25jZXJuIGlzIHNldCBieSB0aGUgdXNlciB1c2luZyB0aGUgW2BzZXREZWZhdWx0UldDb25jZXJuYF0oaHR0cHM6Ly9kb2NzLm1vbmdvZGIuY29tL21hbnVhbC9yZWZlcmVuY2UvY29tbWFuZC9zZXREZWZhdWx0UldDb25jZXJuLykgY29tbWFuZC4gU2V0dGluZyB0aGUgY2x1c3Rlci13aWRlIHdyaXRlIGNvbmNlcm4gd2lsbCBjYXVzZSB0aGUgaW1wbGljaXQgZGVmYXVsdCB3cml0ZSBjb25jZXJuIG5vdCB0byB0YWtlIGVmZmVjdC4KCk9uIGEgc2hhcmRlZCBjbHVzdGVyLCB0aGUgY2x1c3Rlci13aWRlIHdyaXRlIGNvbmNlcm4gaXMgc2V0IG9uIHRoZSBjb25maWcgc2VydmVyLiBPbiBhIHJlcGxpY2Egc2V0LCB0aGUgY2x1c3Rlci13aWRlIHdyaXRlIGNvbmNlcm4gaXMgc2V0IG9uIHRoZSBwcmltYXJ5IG5vZGUuIFRoZSBiZWxvdyBjb2RlIHNuaXBwZXRzIHNob3dzIGhvdyB0aGUgY2x1c3Rlci13aWRlIHdyaXRlIGNvbmNlcm4gaXMgc2V0IG9uIHRoZSBwcmltYXJ5IG5vZGUgYW5kIHN0b3JlZCBvbiB0aGUgY29uZmlnIG5vZGUuIAoKYGBgamF2YXNjcmlwdApkYi5hZG1pbkNvbW1hbmQoCiAgewogICAgc2V0RGVmYXVsdFJXQ29uY2VybiA6IDEsCiAgICBkZWZhdWx0UmVhZENvbmNlcm46IHsgPHJlYWQgY29uY2Vybj4gfSwKICAgIGRlZmF1bHRXcml0ZUNvbmNlcm46IHsgPHdyaXRlIGNvbmNlcm4+IH0sCiAgICB3cml0ZUNvbmNlcm46IHsgPHdyaXRlIGNvbmNlcm4+IH0sCiAgICBjb21tZW50OiA8YW55PgogIH0KKQpgYGAKCmBgYGNwcAovL2NsdXN0ZXJfcndjX2RlZmF1bHRzX2NvbW1hbmRzLmNwcCAKY2xhc3MgQ2x1c3RlclNldERlZmF1bHRSV0NvbmNlcm5Db21tYW5kIDogcHVibGljIEJhc2ljQ29tbWFuZCB7CnB1YmxpYzoKICAgIENsdXN0ZXJTZXREZWZhdWx0UldDb25jZXJuQ29tbWFuZCgpIDogQmFzaWNDb21tYW5kKCJzZXREZWZhdWx0UldDb25jZXJuIikge30KCiAgICBib29sIHJ1bihPcGVyYXRpb25Db250ZXh0KiBvcEN0eCwKICAgICAgICAgICAgIGNvbnN0IERhdGFiYXNlTmFtZSYsCiAgICAgICAgICAgICBjb25zdCBCU09OT2JqJiBjbWRPYmosCiAgICAgICAgICAgICBCU09OT2JqQnVpbGRlciYgcmVzdWx0KSBvdmVycmlkZSB7CiAgICAgICAgYXV0byBjb25maWdTaGFyZCA9IEdyaWQ6OmdldChvcEN0eCktPnNoYXJkUmVnaXN0cnkoKS0+Z2V0Q29uZmlnU2hhcmQoKTsKICAgICAgICBhdXRvIGNtZFJlc3BvbnNlID0gdWFzc2VydFN0YXR1c09LKGNvbmZpZ1NoYXJkLT5ydW5Db21tYW5kV2l0aEZpeGVkUmV0cnlBdHRlbXB0cygKICAgICAgICAgICAgb3BDdHgsCiAgICAgICAgICAgIFJlYWRQcmVmZXJlbmNlU2V0dGluZyhSZWFkUHJlZmVyZW5jZTo6UHJpbWFyeU9ubHkpLAogICAgICAgICAgICBOYW1lc3BhY2VTdHJpbmc6OmtBZG1pbkRiLnRvU3RyaW5nKCksCiAgICAgICAgICAgIENvbW1hbmRIZWxwZXJzOjphcHBlbmRNYWpvcml0eVdyaXRlQ29uY2VybigKICAgICAgICAgICAgICAgIENvbW1hbmRIZWxwZXJzOjpmaWx0ZXJDb21tYW5kUmVxdWVzdEZvclBhc3N0aHJvdWdoKGNtZE9iaiksCiAgICAgICAgICAgICAgICBvcEN0eC0+Z2V0V3JpdGVDb25jZXJuKCkpLAogICAgICAgICAgICBTaGFyZDo6UmV0cnlQb2xpY3k6OmtOb3RJZGVtcG90ZW50KSk7CgogICAgICAgIHVhc3NlcnRTdGF0dXNPSyhjbWRSZXNwb25zZS5jb21tYW5kU3RhdHVzKTsKICAgICAgICB1YXNzZXJ0U3RhdHVzT0soY21kUmVzcG9uc2Uud3JpdGVDb25jZXJuU3RhdHVzKTsKCiAgICAgICAgLy8gUXVpY2tseSBwaWNrIHVwIHRoZSBuZXcgZGVmYXVsdHMgYnkgc2V0dGluZyB0aGVtIGluIHRoZSBjYWNoZS4KICAgICAgICBhdXRvIG5ld0RlZmF1bHRzID0gUldDb25jZXJuRGVmYXVsdDo6cGFyc2UoSURMUGFyc2VyQ29udGV4dCgiQ2x1c3RlclNldERlZmF1bHRSV0NvbmNlcm4iKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY21kUmVzcG9uc2UucmVzcG9uc2UpOwogICAgICAgIGlmIChhdXRvIG9wdFdDID0gbmV3RGVmYXVsdHMuZ2V0RGVmYXVsdFdyaXRlQ29uY2VybigpKSB7CiAgICAgICAgICAgIGlmIChvcHRXQy0+aGFzQ3VzdG9tV3JpdGVNb2RlKCkpIHsKICAgICAgICAgICAgICAgIExPR1YyX1dBUk5JTkcoCiAgICAgICAgICAgICAgICAgICAgNjA4MTcwMCwKICAgICAgICAgICAgICAgICAgICAiQSBjdXN0b20gd3JpdGUgY29uY2VybiBpcyBiZWluZyBzZXQgYXMgdGhlIGRlZmF1bHQgd3JpdGUgY29uY2VybiBpbiBhIHNoYXJkZWQgIgogICAgICAgICAgICAgICAgICAgICJjbHVzdGVyLiBUaGlzIHNldCBpcyB1bmNoZWNrZWQsIGJ1dCBpZiB0aGUgY3VzdG9tIHdyaXRlIGNvbmNlcm4gZG9lcyBub3QgIgogICAgICAgICAgICAgICAgICAgICJleGlzdCBvbiBhbGwgc2hhcmRzIGluIHRoZSBjbHVzdGVyLCBlcnJvcnMgd2lsbCBvY2N1ciB1cG9uIHdyaXRlcyIsCiAgICAgICAgICAgICAgICAgICAgImN1c3RvbVdyaXRlQ29uY2VybiJfYXR0ciA9IHN0ZHg6OmdldDxzdGQ6OnN0cmluZz4ob3B0V0MtPncpKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBSZWFkV3JpdGVDb25jZXJuRGVmYXVsdHM6OmdldChvcEN0eCkuc2V0RGVmYXVsdChvcEN0eCwgc3RkOjptb3ZlKG5ld0RlZmF1bHRzKSk7CgogICAgICAgIENvbW1hbmRIZWxwZXJzOjpmaWx0ZXJDb21tYW5kUmVwbHlGb3JQYXNzdGhyb3VnaChjbWRSZXNwb25zZS5yZXNwb25zZSwgJnJlc3VsdCk7CiAgICAgICAgcmV0dXJuIHRydWU7CiAgICB9CmBgYAoKIyMjIyBJbXBsaWNpdCBkZWZhdWx0IHdyaXRlIGNvbmNlcm4KClRoZSBpbXBsaWNpdCBkZWZhdWx0IHdyaXRlIGNvbmNlcm4gaXMgY2FsY3VsYXRlZCBhbmQgc2V0IG9uIHN0YXJ0dXAgYnkgdGhlIHNlcnZlciBiYXNlZCBvbiB0aGUgcmVwbGljYSBzZXQgY29uZmlndXJhdGlvbi4gVGhlIHNlcnZlciB3aWxsIHNldCB0aGUgaW1wbGljaXQgZGVmYXVsdCB3cml0ZSBjb25jZXJuIHRvIHRoZSBmb2xsb3dpbmc6CgotIElmIHRoZSByZXBsaWNhIHNldCBoYXMgYSBzaW5nbGUgbm9kZSwgdGhlIGltcGxpY2l0IGRlZmF1bHQgd3JpdGUgY29uY2VybiBpcyBgeyB3OiAxIH1gCi0gRm9yIG1vc3Qgb2YgdGhlIGNhc2VzIHRoZSBpbXBsaWNpdCBkZWZhdWx0IHdyaXRlIGNvbmNlcm4gaXMgYHsgdzogIm1ham9yaXR5IiB9YAoKIyMjIyMgUFNBIAoKYGltcGxpY2l0RGVmYXVsdFdyaXRlQ29uY2VybiA9IGlmICgoI2FyYml0ZXJzID4gMCkgQU5EICgjbm9uLWFyYml0ZXJzIDw9IG1ham9yaXR5KCN2b3Rpbmcgbm9kZXMpKSB0aGVuIHt3OjF9IGVsc2Uge3c6bWFqb3JpdHl9YAoKSW1wbGljaXQgZGVmYXVsdCB0byBhIHZhbHVlIHRoYXQgdGhlIHNldCBjYW4gc2F0aXNmeSBpbiB0aGUgZXZlbnQgb2Ygb25lIGRhdGEtYmVhcmluZyBub2RlCmdvaW5nIGRvd24uIFRoYXQgaXMsIHRoZSBudW1iZXIgb2YgZGF0YS1iZWFyaW5nIG5vZGVzIG11c3QgYmUgc3RyaWN0bHkgZ3JlYXRlciB0aGFuIHRoZSBtYWpvcml0eQpvZiB2b3Rpbmcgbm9kZXMgZm9yIHRoZSBzZXQgdG8gc2V0IGB7dzogIm1ham9yaXR5In1gLgoKRm9yIGV4YW1wbGUsIGlmIHdlIGhhdmUgYSBQU0EgcmVwbGljYSBzZXQsIGFuZCB0aGUgc2Vjb25kYXJ5IGdvZXMgZG93biwgdGhlIHByaW1hcnkgY2Fubm90CnN1Y2Nlc3NmdWxseSBhY2tub3dsZWRnZSBhIG1ham9yaXR5IHdyaXRlIGFzIHRoZSBtYWpvcml0eSBmb3IgdGhlIHNldCBpcyB0d28gbm9kZXMuIEhvd2V2ZXIsIHRoZQpwcmltYXJ5IHdpbGwgcmVtYWluIHByaW1hcnkgd2l0aCB0aGUgYXJiaXRlcidzIHZvdGUuIEluIHRoaXMgY2FzZSwgdGhlIERXQ0Ygd2lsbCBoYXZlIHByZWVtcHRpdmVseQpzZXQgdGhlIElEV0MgdG8gYHt3OiAxfWAgc28gdGhlIHVzZXIgY2FuIHN0aWxsIHBlcmZvcm0gd3JpdGVzIHRvIHRoZSByZXBsaWNhIHNldC4KCiMjIyMjIFNoYXJkZWQgQ2x1c3RlciAKCkZvciBhIHNoYXJkZWQgY2x1c3RlciwgdGhlIGltcGxpY2l0IGRlZmF1bHQgd3JpdGUgY29uY2VybiBpcyBzZXQgdG8gYHsgdzogIm1ham9yaXR5IiB9YCBpZiB0aGUKY2x1c3RlciBoYXMgYSBtYWpvcml0eSBvZiB2b3Rpbmcgbm9kZXMuIE90aGVyd2lzZSwgdGhlIGltcGxpY2l0IGRlZmF1bHQgd3JpdGUgY29uY2VybiBpcyBzZXQgdG8KYHsgdzogMSB9YC4KCiMjIFVuZGVyc3RhbmRpbmcgU2Vjb25kYXJ5IE5vZGVzIE9wZXJhdGlvbnMgCgpUaGUgc2Vjb25kYXJ5IG5vZGVzIHdpbGwgY2hvb3NlIHRoZSBub2RlIHdpdGggdGhlIGhpZ2hlc3QgYGxhc3RBcHBsaWVkYCB0aW1lc3RhbXAgYXMgdGhlKiogc3luYyBzb3VyY2UqKi4gVGhlIHNlY29uZGFyeSBub2RlcyB3aWxsIHRoZW4gKipwdWxsKiogdGhlIG9wbG9nIGVudHJpZXMgZnJvbSB0aGUgc3luYyBzb3VyY2UgYW5kIGFwcGx5IHRoZW0gdG8gaXRzIG93biBvcGxvZy4KClRoZSBTZWNvbmRhcnkgd2lsbCBhbHNvIGtlZXAgaXRzICoqc3luYyBzb3VyY2UqKiB1cHRvZGF0ZSB3aXRoIGl0cyBwcm9ncmVzcywgdGhpcyBoZWxwcyBwcmltYXJ5IHNhdGlzZnkgdGhlIHJlYWQgY29uY2Vybi4gCgpIZXJlIGFyZSB0aGUgaGlnaCBsZXZlbCBzdGVwcyBwZXJmb3JtZWQgdG8gc2VsZWN0IGFuZCBwcm9iZSB0aGUgc3luYyBzb3VyY2UKCjEuIGBUb3BvbG9neUNvb3JkaW5hdG9yYCBjaGVja3MgaWYgdXNlciByZXF1ZXN0ZWQgYSBzcGVjaWZpYyBzeW5jIHNvdXJjZSB1c2luZyBgcmVwbFNldFN5bmNGcm9tYCBjb21tYW5kLiBJZiBzbywgaXQgd2lsbCB1c2UgdGhhdCBzeW5jIHNvdXJjZS4gT3RoZXJ3aXNlLCBpdCB3aWxsIHVzZSB0aGUgc3luYyBzb3VyY2UgZnJvbSB0aGUgbGFzdCBzdWNjZXNzZnVsIGVsZWN0aW9uLgoyLiBDaGVjayBpZiAqKmNoYWluaW5nKiogaXMgZGlzYWJsZWQuIElmIHNvLCB0aGUgc2Vjb25kYXJ5IHdpbGwgYWx3YXlzIHVzZSBwcmltYXJ5IGFzIGl0cyBzeW5jIHNvdXJjZSAKCmBgYGNwcAogaWYgKGNoYWluaW5nUHJlZmVyZW5jZSA9PSBDaGFpbmluZ1ByZWZlcmVuY2U6OmtVc2VDb25maWd1cmF0aW9uICYmCiAgICAgICAgIV9yc0NvbmZpZy5pc0NoYWluaW5nQWxsb3dlZCgpKSB7CiAgICAgICAgaWYgKF9jdXJyZW50UHJpbWFyeUluZGV4ID09IC0xKSB7CiAgICAgICAgICAgIExPRygxKSA8PCAiQ2Fubm90IHNlbGVjdCBhIHN5bmMgc291cmNlIGJlY2F1c2UgY2hhaW5pbmcgaXMiCiAgICAgICAgICAgICAgICAgICAgICAiIG5vdCBhbGxvd2VkIGFuZCBwcmltYXJ5IGlzIHVua25vd24vZG93biI7CiAgICAgICAgICAgIF9zeW5jU291cmNlID0gSG9zdEFuZFBvcnQoKTsKICAgICAgICAgICAgcmV0dXJuIF9zeW5jU291cmNlOwogICAgICAgIH0gZWxzZSBpZiAoX21lbWJlcklzQmxhY2tsaXN0ZWQoKl9jdXJyZW50UHJpbWFyeU1lbWJlcigpLCBub3cpKSB7CiAgICAgICAgICAgIExPRygxKSA8PCAiQ2Fubm90IHNlbGVjdCBhIHN5bmMgc291cmNlIGJlY2F1c2UgY2hhaW5pbmcgaXMgbm90IGFsbG93ZWQgYW5kIHByaW1hcnkgIgogICAgICAgICAgICAgICAgICAgICAgIm1lbWJlciBpcyBibGFja2xpc3RlZDogIgogICAgICAgICAgICAgICAgICAgPDwgX2N1cnJlbnRQcmltYXJ5TWVtYmVyKCktPmdldEhvc3RBbmRQb3J0KCk7CiAgICAgICAgICAgIF9zeW5jU291cmNlID0gSG9zdEFuZFBvcnQoKTsKICAgICAgICAgICAgcmV0dXJuIF9zeW5jU291cmNlOwoKYGBgCgozLiBGZXRjaCBsYXRlc3Qgb3BUaW1lLiBEbyBub3Qgc3luYyBmcm9tIGEgbm9kZSB3aGVyZSBuZXdlc3Qgb3Bsb2cgaXMgbW9yZSB0aGFuIGBtYXhTeW5jU291cmNlTGFnU2Vjc2AKCmBgYGNwcAogICAgaWYgKF9jdXJyZW50UHJpbWFyeUluZGV4ICE9IC0xKSB7CiAgICAgICAgT3BUaW1lIHByaW1hcnlPcFRpbWUgPSBfbWVtYmVyRGF0YS5hdChfY3VycmVudFByaW1hcnlJbmRleCkuZ2V0SGVhcnRiZWF0QXBwbGllZE9wVGltZSgpOwoKICAgICAgICAvLyBDaGVjayBpZiBwcmltYXJ5T3BUaW1lIGlzIHN0aWxsIGNsb3NlIHRvIDAgYmVjYXVzZSB3ZSBoYXZlbid0IHJlY2VpdmVkCiAgICAgICAgLy8gb3VyIGZpcnN0IGhlYXJ0YmVhdCBmcm9tIGEgbmV3IHByaW1hcnkgeWV0LgogICAgICAgIHVuc2lnbmVkIGludCBtYXhMYWcgPQogICAgICAgICAgICBzdGF0aWNfY2FzdDx1bnNpZ25lZCBpbnQ+KGR1cmF0aW9uQ291bnQ8U2Vjb25kcz4oX29wdGlvbnMubWF4U3luY1NvdXJjZUxhZ1NlY3MpKTsKICAgICAgICBpZiAocHJpbWFyeU9wVGltZS5nZXRTZWNzKCkgPj0gbWF4TGFnKSB7CiAgICAgICAgICAgIG9sZGVzdFN5bmNPcFRpbWUgPQogICAgICAgICAgICAgICAgT3BUaW1lKFRpbWVzdGFtcChwcmltYXJ5T3BUaW1lLmdldFNlY3MoKSAtIG1heExhZywgMCksIHByaW1hcnlPcFRpbWUuZ2V0VGVybSgpKTsKICAgICAgICB9CiAgICB9CmBgYAo0LiBMb29wIHRocm91Z2ggYWxsIHRoZSBub2RlcyBhbmQgZmluZCB0aGUgY2xvc2VzdCBub2RlIHdoaWNoIHNhdGlzZmllcyB0aGUgY29uZGl0aW9uIAoKYGBgY3BwCkhvc3RBbmRQb3J0IFRvcG9sb2d5Q29vcmRpbmF0b3I6OmNob29zZU5ld1N5bmNTb3VyY2UoRGF0ZV90IG5vdywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBPcFRpbWUmIGxhc3RPcFRpbWVGZXRjaGVkLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIENoYWluaW5nUHJlZmVyZW5jZSBjaGFpbmluZ1ByZWZlcmVuY2UpIHsKCi4uLgouLi4KLi4uCmBgYAoKIyMjIE9wbG9nIEZldGNoaW5nIAoKVGhlIHNlY29uZGFyeSBub2RlIHdpbGwgZmV0Y2ggdGhlIG9wbG9nIGVudHJpZXMgZnJvbSB0aGUgc3luYyBzb3VyY2UgdG8ga2VlcCBpdHMgZGF0YSBzeW5jcm9uaXplZC4gVGhlIGVudGlyZSBpbXBsZW1lbnRhdGlvbiBvZiB0aGUgb3Bsb2cgZmV0Y2hpbmcgaXMgaW4gdGhlIGBPcGxvZ0ZldGNoZXJgIGNsYXNzIHdoaWNoIHJ1bnMgaW4gYSBzZXBhcmF0ZSB0aHJlYWQgYW5kIGNvbW11bmljYXRlcyB2aWEgYSBkZWRpY2F0ZWQgY2xpZW50IGNvbm5lY3Rpb24uCgpgYGBjcHAKCnZvaWQgT3Bsb2dGZXRjaGVyOjpzZXRDb25uZWN0aW9uKHN0ZDo6dW5pcXVlX3B0cjxEQkNsaWVudENvbm5lY3Rpb24+JiYgX2Nvbm5lY3RlZENsaWVudCkgewogICAgLy8gQ2FuIG9ubHkgY2FsbCB0aGlzIG9uY2UsIGJlZm9yZSBzdGFydHVwLgogICAgaW52YXJpYW50KCFfY29ubik7CiAgICBfY29ubiA9IHN0ZDo6bW92ZShfY29ubmVjdGVkQ2xpZW50KTsKfQoKYGBgCgoK
+---
+title: "Understanding MongoDB Replicasets and Write Concern - Part 1"
+description: "The way to achieve fault tolerance in MongoDB is through the use of replica sets."
+date: "2023-12-29"
+cover: "https://cdn.hashnode.com/res/hashnode/image/upload/v1703835041434/f53eb0da-2570-4c84-9eed-37dedc1fdefb.jpeg"
+readingTime: 6
+slug: "mongodb-replicaset-write-concern-read-pref"
+---
+## Introducing Replicasets
+
+The way to achieve fault tolerance in MongoDB is through the use of `replica sets`. 
+
+```mermaid
+stateDiagram-v2
+    [*] --> Application
+    direction LR
+    state Application
+    Application --> replicaset      
+   state replicaset
+    {
+    direction RL
+    Primary:primary
+    Secondary1:secondary 
+    Secondary2:secondary
+    Secondary1-->Primary : Fetch Oplog
+    Secondary2-->Primary : Fetch Oplog
+    
+    }
+```
+
+Two or more `secondary` nodes along with a `primary` node forms a replica set. Application makes all the read/write calls to the primary node which propagate all the write requests synchronously or asynchronously to the secondary nodes. 
+
+The Secondary nodes fetches the data via Oplog pull from Primary or other nodes. 
+
+<!--truncate-->
+
+The Primary node is responsible for all the writes and reads. The secondary nodes can be utilized for reads via [`setSecondaryOk`](https://docs.mongodb.com/manual/reference/method/Mongo.setSecondaryOk/) or [`readPreference`](https://docs.mongodb.com/manual/reference/read-preference/). 
+
+## Understanding Oplog
+
+When the application performs a write, the primary node applies the write to the database like a standalone. 
+
+The difference between Replicaset write and standalone write is that replica set nodes have an `OpObserver` that inserts a document to the **oplog** whenever a write to the database happens, describing the write. The **oplog** is a capped collection called `oplog.rs` in the `local` database. 
+
+For every operation performed in a write, the primary node inserts a document into the oplog. The oplog is a capped collection, which means that it has a maximum size. When the oplog reaches its maximum size, MongoDB removes the oldest entries to make room for new entries. 
+
+For a write which performs create collection and insert, there are two oplog entries created one for `create` collection and another for `insert`.
+
+```cpp
+// mongod_main.cpp
+setUpObservers(service);
+```
+
+```cpp
+
+//op_observer_registry.h
+void onCreateCollection(OperationContext* const opCtx,
+                            const CollectionPtr& coll,
+                            const NamespaceString& collectionName,
+                            const CollectionOptions& options,
+                            const BSONObj& idIndex,
+                            const OplogSlot& createOpTime,
+                            bool fromMigrate) override {
+        ReservedTimes times{opCtx};
+        for (auto& o : _observers)
+            o->onCreateCollection(
+                opCtx, coll, collectionName, options, idIndex, createOpTime, fromMigrate);
+    }
+
+ using OpObserver::onInserts;
+    void onInserts(OperationContext* const opCtx,
+                   const NamespaceString& nss,
+                   const UUID& uuid,
+                   std::vector<InsertStatement>::const_iterator begin,
+                   std::vector<InsertStatement>::const_iterator end,
+                   bool fromMigrate) override {
+        ReservedTimes times{opCtx};
+        for (auto& o : _observers)
+            o->onInserts(opCtx, nss, uuid, begin, end, fromMigrate);
+    }
+```
+
+## Understanding Write Concern
+
+Write concern is a way to ensure that the write operations are propagated to the secondary nodes.
+
+### Default Write Concern
+
+If a write operation does not explicitly specify a write concern, the server will use a default
+write concern. 
+
+This default write concern will be defined by either the
+
+- **Cluster-Wide write concern**, explicitly set by the user 
+or
+- **Implicit Default write concern**, implicitly set by the server based on replica set configuration.
+
+#### Cluster-Wide Write Concern
+
+The cluster-wide write concern is set by the user using the [`setDefaultRWConcern`](https://docs.mongodb.com/manual/reference/command/setDefaultRWConcern/) command. Setting the cluster-wide write concern will cause the implicit default write concern not to take effect.
+
+On a sharded cluster, the cluster-wide write concern is set on the config server. On a replica set, the cluster-wide write concern is set on the primary node. The below code snippets shows how the cluster-wide write concern is set on the primary node and stored on the config node. 
+
+```javascript
+db.adminCommand(
+  {
+    setDefaultRWConcern : 1,
+    defaultReadConcern: { <read concern> },
+    defaultWriteConcern: { <write concern> },
+    writeConcern: { <write concern> },
+    comment: <any>
+  }
+)
+```
+
+```cpp
+//cluster_rwc_defaults_commands.cpp 
+class ClusterSetDefaultRWConcernCommand : public BasicCommand {
+public:
+    ClusterSetDefaultRWConcernCommand() : BasicCommand("setDefaultRWConcern") {}
+
+    bool run(OperationContext* opCtx,
+             const DatabaseName&,
+             const BSONObj& cmdObj,
+             BSONObjBuilder& result) override {
+        auto configShard = Grid::get(opCtx)->shardRegistry()->getConfigShard();
+        auto cmdResponse = uassertStatusOK(configShard->runCommandWithFixedRetryAttempts(
+            opCtx,
+            ReadPreferenceSetting(ReadPreference::PrimaryOnly),
+            NamespaceString::kAdminDb.toString(),
+            CommandHelpers::appendMajorityWriteConcern(
+                CommandHelpers::filterCommandRequestForPassthrough(cmdObj),
+                opCtx->getWriteConcern()),
+            Shard::RetryPolicy::kNotIdempotent));
+
+        uassertStatusOK(cmdResponse.commandStatus);
+        uassertStatusOK(cmdResponse.writeConcernStatus);
+
+        // Quickly pick up the new defaults by setting them in the cache.
+        auto newDefaults = RWConcernDefault::parse(IDLParserContext("ClusterSetDefaultRWConcern"),
+                                                   cmdResponse.response);
+        if (auto optWC = newDefaults.getDefaultWriteConcern()) {
+            if (optWC->hasCustomWriteMode()) {
+                LOGV2_WARNING(
+                    6081700,
+                    "A custom write concern is being set as the default write concern in a sharded "
+                    "cluster. This set is unchecked, but if the custom write concern does not "
+                    "exist on all shards in the cluster, errors will occur upon writes",
+                    "customWriteConcern"_attr = stdx::get<std::string>(optWC->w));
+            }
+        }
+        ReadWriteConcernDefaults::get(opCtx).setDefault(opCtx, std::move(newDefaults));
+
+        CommandHelpers::filterCommandReplyForPassthrough(cmdResponse.response, &result);
+        return true;
+    }
+```
+
+#### Implicit default write concern
+
+The implicit default write concern is calculated and set on startup by the server based on the replica set configuration. The server will set the implicit default write concern to the following:
+
+- If the replica set has a single node, the implicit default write concern is `{ w: 1 }`
+- For most of the cases the implicit default write concern is `{ w: "majority" }`
+
+##### PSA 
+
+`implicitDefaultWriteConcern = if ((#arbiters > 0) AND (#non-arbiters <= majority(#voting nodes)) then {w:1} else {w:majority}`
+
+Implicit default to a value that the set can satisfy in the event of one data-bearing node
+going down. That is, the number of data-bearing nodes must be strictly greater than the majority
+of voting nodes for the set to set `{w: "majority"}`.
+
+For example, if we have a PSA replica set, and the secondary goes down, the primary cannot
+successfully acknowledge a majority write as the majority for the set is two nodes. However, the
+primary will remain primary with the arbiter's vote. In this case, the DWCF will have preemptively
+set the IDWC to `{w: 1}` so the user can still perform writes to the replica set.
+
+##### Sharded Cluster 
+
+For a sharded cluster, the implicit default write concern is set to `{ w: "majority" }` if the
+cluster has a majority of voting nodes. Otherwise, the implicit default write concern is set to
+`{ w: 1 }`.
+
+## Understanding Secondary Nodes Operations 
+
+The secondary nodes will choose the node with the highest `lastApplied` timestamp as the** sync source**. The secondary nodes will then **pull** the oplog entries from the sync source and apply them to its own oplog.
+
+The Secondary will also keep its **sync source** uptodate with its progress, this helps primary satisfy the read concern. 
+
+Here are the high level steps performed to select and probe the sync source
+
+1. `TopologyCoordinator` checks if user requested a specific sync source using `replSetSyncFrom` command. If so, it will use that sync source. Otherwise, it will use the sync source from the last successful election.
+2. Check if **chaining** is disabled. If so, the secondary will always use primary as its sync source 
+
+```cpp
+ if (chainingPreference == ChainingPreference::kUseConfiguration &&
+        !_rsConfig.isChainingAllowed()) {
+        if (_currentPrimaryIndex == -1) {
+            LOG(1) << "Cannot select a sync source because chaining is"
+                      " not allowed and primary is unknown/down";
+            _syncSource = HostAndPort();
+            return _syncSource;
+        } else if (_memberIsBlacklisted(*_currentPrimaryMember(), now)) {
+            LOG(1) << "Cannot select a sync source because chaining is not allowed and primary "
+                      "member is blacklisted: "
+                   << _currentPrimaryMember()->getHostAndPort();
+            _syncSource = HostAndPort();
+            return _syncSource;
+
+```
+
+3. Fetch latest opTime. Do not sync from a node where newest oplog is more than `maxSyncSourceLagSecs`
+
+```cpp
+    if (_currentPrimaryIndex != -1) {
+        OpTime primaryOpTime = _memberData.at(_currentPrimaryIndex).getHeartbeatAppliedOpTime();
+
+        // Check if primaryOpTime is still close to 0 because we haven't received
+        // our first heartbeat from a new primary yet.
+        unsigned int maxLag =
+            static_cast<unsigned int>(durationCount<Seconds>(_options.maxSyncSourceLagSecs));
+        if (primaryOpTime.getSecs() >= maxLag) {
+            oldestSyncOpTime =
+                OpTime(Timestamp(primaryOpTime.getSecs() - maxLag, 0), primaryOpTime.getTerm());
+        }
+    }
+```
+4. Loop through all the nodes and find the closest node which satisfies the condition 
+
+```cpp
+HostAndPort TopologyCoordinator::chooseNewSyncSource(Date_t now,
+                                                     const OpTime& lastOpTimeFetched,
+                                                     ChainingPreference chainingPreference) {
+
+...
+...
+...
+```
+
+### Oplog Fetching 
+
+The secondary node will fetch the oplog entries from the sync source to keep its data syncronized. The entire implementation of the oplog fetching is in the `OplogFetcher` class which runs in a separate thread and communicates via a dedicated client connection.
+
+```cpp
+
+void OplogFetcher::setConnection(std::unique_ptr<DBClientConnection>&& _connectedClient) {
+    // Can only call this once, before startup.
+    invariant(!_conn);
+    _conn = std::move(_connectedClient);
+}
+
+```
+
+
