@@ -6,10 +6,8 @@ export default function About() {
   return (
     <div className="container-narrow">
       <div className="page-head">
-        <h1>
-          <span className="prompt">$</span> 关于
-        </h1>
-        <p>whoami 的完整输出。</p>
+        <h1>关于</h1>
+        <p>关于这个博客，和写博客的人。</p>
       </div>
       <div className="md-body">
         <h2>目前专注的</h2>

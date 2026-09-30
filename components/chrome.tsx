@@ -1,3 +1,5 @@
+import { ThemeToggle } from "@/components/theme-toggle";
+
 export function Logo({ size = 30 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
@@ -27,9 +29,7 @@ export function Header({ active }: { active?: string }) {
       <div className="inner">
         <a className="brand" href="/">
           <Logo />
-          <span className="name">
-            <span className="prompt">~/</span>agile-robin
-          </span>
+          <span>Agile Robin</span>
         </a>
         <nav className="nav">
           {links.map((l) => (
@@ -38,6 +38,7 @@ export function Header({ active }: { active?: string }) {
             </a>
           ))}
           <a href="/rss.xml">RSS</a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
@@ -48,9 +49,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="inner">
-        <span className="sig">
-          <span className="prompt">$</span> echo "Agile Robin · 写给爱折腾的工程师"
-        </span>
+        <span className="sig">Agile Robin · 写给爱折腾的工程师</span>
         <div className="links">
           <a href="/archive">归档</a>
           <a href="/about">关于</a>

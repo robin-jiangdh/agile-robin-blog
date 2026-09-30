@@ -15,9 +15,7 @@ export default function Archive() {
   return (
     <div className="container-narrow">
       <div className="page-head">
-        <h1>
-          <span className="prompt">$</span> 归档
-        </h1>
+        <h1>归档</h1>
         <p>共 {posts.length} 篇，按年份排列。</p>
       </div>
       {[...byYear.entries()].map(([year, items]) => (
