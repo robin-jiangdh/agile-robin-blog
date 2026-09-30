@@ -1,0 +1,324 @@
+---
+title: "Grafana Loki 版本变更与存储系统升级完全指南（2.x → 3.x）"
+date: '2026-04-24'
+tags: []
+categories: ["硬核深挖"]
+draft: false
+summary: "前言 Grafana Loki 作为云原生日志聚合的事实标准，在过去几年经历了从 2.0 到 3.5 的巨大演进。其中，存储系统的重构是最核心的变化——从 BoltDB 本地存储到 TSDB Single Store，从大索引文件到 Bloom Filter 加速查询。 本文系统梳理 Loki 各主要版本的变更要点，着重分析存储系统的演进脉络，并提供阿里云 OSS 作为存储后端的完整配置指南。  一、Loki 版本发布概览     版本发布日期生命周期状态关键里程碑    2.02021-03E..."
+authors:
+  - default
+---
+
+## 前言
+
+Grafana Loki 作为云原生日志聚合的事实标准，在过去几年经历了从 2.0 到 3.5 的巨大演进。其中，**存储系统的重构**是最核心的变化——从 BoltDB 本地存储到 TSDB Single Store，从大索引文件到 Bloom Filter 加速查询。
+
+本文系统梳理 Loki 各主要版本的变更要点，**着重分析存储系统的演进脉络**，并提供阿里云 OSS 作为存储后端的完整配置指南。
+
+---
+
+## 一、Loki 版本发布概览
+
+| 版本 | 发布日期 | 生命周期状态 | 关键里程碑 |
+|------|----------|-------------|-----------|
+| **2.0** | 2021-03 | EOL | 引入 Helm Chart、Ingester 分片 |
+| **2.8** | 2023-07 | EOL | **TSDB 索引正式推荐** |
+| **2.9** | 2023-09 | EOL | TSDB 成熟、Bloom Compactor（实验） |
+| **3.0** | 2024-04 | 维护中 | **默认 v13 Schema + TSDB**，弃用旧存储 |
+| **3.1** | 2024-07 | 维护中 | 性能优化、Bug 修复 |
+| **3.2** | 2024-09 | 维护中 | OTLP 改进、查询增强 |
+| **3.3** | 2024-11 | 维护中 | **Bloom Filter V3 Block**，结构化元数据索引 |
+| **3.4** | 2025-02 | 维护中 | **标准化对象存储**、Thanos 支持、Sizing 指南 |
+| **3.5** | 2025-04 | 最新 | 区域感知 Ingestor、性能改进 |
+
+Loki 采用**月度小版本 + 季度大版本**的发布策略，每个大版本约 3-4 个月的活跃维护期。
+
+---
+
+## 二、存储系统演进深度分析
+
+### 存储架构总览
+
+Loki 的存储分为两个核心部分：
+
+- **Index（索引）**：存储标签（Label），支持快速查询过滤
+- **Chunks（日志块）**：存储实际日志内容，压缩后存储到对象存储
+- **Schema Config**：决定不同时间段的存储方式和索引格式
+
+### 索引存储的四个阶段
+
+#### 阶段一：单体索引（Loki 1.x，已完全移除）
+
+| 存储后端 | 说明 | 移除时间 |
+|---------|------|---------|
+| **BoltDB（本地）** | 单机本地存储，不支持多副本 | 2.x 中弃用，3.0 移除 |
+| **Cassandra** | 分布式索引，运维复杂 | 3.0 弃用，计划 4.0 移除 |
+| **DynamoDB** | AWS 原生存储，成本高 | 3.0 弃用，计划 4.0 移除 |
+| **BigTable** | GCP 原生存储 | 3.0 弃用 |
+
+#### 阶段二：BoltDB-Shipper（Loki 1.5 - 2.7）
+
+BoltDB-Shipper 将索引文件从本地同步到对象存储，解决了单点问题，但索引文件大、查询需下载整个文件、扩展性仍然有限。
+
+#### 阶段三：TSDB 索引（Loki 2.8+，推荐）
+
+这是 Loki 存储架构的**根本性变革**，借鉴 Prometheus TSDB：
+
+- 索引和 Chunks 统一存储到对象存储（**Single Store**）
+- 按时间分片生成 Block，支持高效的 Head Compaction
+- 原生支持 **Bloom Filter** 加速查询
+- 支持结构化元数据（**Structured Metadata**）
+
+#### 阶段四：Single Store TSDB + Bloom Filter V3（Loki 3.3+）
+
+- **Block Schema V3**：重新设计 Block 结构，集成 Structured Metadata 的 Bloom 索引
+- **Bloom Compactor**：独立的 Bloom Filter 压缩组件
+- **动态查询分片**：根据数据分布自动分片查询
+
+### Schema 版本演进
+
+| Schema | 引入版本 | 索引类型 | 说明 |
+|--------|---------|---------|------|
+| v1-v10 | 1.x | 旧式索引 | BoltDB/Cassandra 等 |
+| v11 | 2.0+ | BoltDB-Shipper | 改进分片 |
+| v12 | 2.8 | TSDB | TSDB 索引首次可用 |
+| **v13** | 3.0 | TSDB | **3.0 默认**，支持 Structured Metadata |
+
+### 各版本存储重点变更
+
+#### Loki 3.0（2024-04）—— 重大里程碑
+
+这是 Loki 最重要的版本之一：
+
+- 默认 Schema 切换为 **v13**
+- 弃用所有旧存储后端（BoltDB、Cassandra、DynamoDB、BigTable）
+- **Structured Metadata 默认启用**
+- TSDB Single Store：索引和 Chunks 统一存储
+
+升级到 3.0 的 schema_config 示例：
+
+```yaml
+schema_config:
+  configs:
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_index_
+        period: 24h
+```
+
+#### Loki 3.3（2024-11）—— Bloom Filter 重大升级
+
+- 引入 **Block Schema V3**
+- Bloom Filter 索引结构化元数据
+- 查询延迟显著降低（大标签集场景）
+
+#### Loki 3.4（2025-02）—— 标准化与易用性
+
+- **标准化对象存储配置**（统一 S3/GCS/Azure/OSS 接口）
+- **Thanos 远程存储支持**
+- **Sizing 指南**：官方首次提供详细的容量规划指南
+
+Sizing 参考：
+
+| 日志量/天 | 推荐架构 | 最小资源 |
+|---------|---------|---------|
+| < 20GB | Monolithic | 2C4G |
+| 20-200GB | Simple Scalable | 4C8G x 2 |
+| > 200GB | Microservice | 独立部署各组件 |
+
+#### Loki 3.5（2025-04）—— 最新版本
+
+- **区域感知 Ingestor**（Zone-Aware Ingester）
+- Helm Chart 改进（1x.pico size 支持）
+- 改进 Bloom Compactor
+
+### 存储后端弃用时间线
+
+```text
+2.8      2.9       3.0        3.3       3.5       4.0(?)
+TSDB推荐  TSDB默认  旧存储弃用  Bloom V3  区域感知   旧存储移除
+
+         BoltDB   已弃用（3.0）
+         Cassandra 已弃用（3.0），计划 4.0 移除
+         DynamoDB  已弃用（3.0），计划 4.0 移除
+```
+
+---
+
+## 三、阿里云 OSS 存储配置实战
+
+Loki 原生使用 S3 SDK，阿里云 OSS 完全兼容 S3 API，这是**最稳定且官方推荐**的方式。
+
+### 完整 YAML 配置
+
+```yaml
+# loki-config.yaml — 阿里云 OSS 存储配置（S3 兼容模式）
+# 适用于 Loki 3.x
+
+schema_config:
+  configs:
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_index_
+        period: 24h
+
+storage_config:
+  aws:
+    s3: s3_storage
+    s3forcepathstyle: true      # OSS 必须启用 path-style
+
+  s3_storage:
+    # OSS Endpoint（K8s Pod 通过 VPC 内网访问）
+    endpoint: https://oss-cn-beijing-internal.aliyuncs.com
+    region: cn-beijing
+
+    bucketNames:
+      chunks: loki-chunks       # 日志块存储桶
+      ruler: loki-ruler         # 告警规则存储桶
+      admin: loki-admin         # 管理数据存储桶
+
+    # 访问凭证（生产环境建议用 RAM Role）
+    access_key_id: ${OSS_ACCESS_KEY_ID}
+    secret_access_key: ${OSS_SECRET_ACCESS_KEY}
+
+    # 连接参数
+    insecure: false
+    http_config:
+      idle_conn_timeout: 90s
+      response_header_timeout: 0s
+      insecure_skip_verify: false
+
+    # 重试策略
+    max_retries: 5
+    backoff_config:
+      min_period: 100ms
+      max_period: 5s
+      max_retries: 10
+
+  tsdb_shipper:
+    active_index_directory: /loki/tsdb-index
+    cache_location: /loki/tsdb-cache
+
+compactor:
+  working_directory: /loki/compactor
+  compaction_interval: 10m
+  retention_enabled: true
+  delete_request_store: s3
+
+limits_config:
+  retention_period: 30d
+  retention_stream:
+    - selector: '{namespace="prod"}'
+      priority: 1
+      period: 90d
+    - selector: '{namespace="dev"}'
+      priority: 2
+      period: 7d
+```
+
+### OSS Endpoint 参考
+
+| 区域 | 外网 Endpoint | 内网 Endpoint |
+|------|-------------|-------------|
+| 华北 2（北京） | oss-cn-beijing.aliyuncs.com | oss-cn-beijing-internal.aliyuncs.com |
+| 华东 1（杭州） | oss-cn-hangzhou.aliyuncs.com | oss-cn-hangzhou-internal.aliyuncs.com |
+| 华东 2（上海） | oss-cn-shanghai.aliyuncs.com | oss-cn-shanghai-internal.aliyuncs.com |
+| 华南 1（深圳） | oss-cn-shenzhen.aliyuncs.com | oss-cn-shenzhen-internal.aliyuncs.com |
+
+### 生产环境最佳实践
+
+**凭证管理**：推荐使用 K8s RAM Role（阿里云 ack-pod-identity-webhook），而非硬编码 AccessKey。
+
+```yaml
+# Pod annotation 方式自动注入
+# pod-identity.alibabacloud.com/inject: "true"
+# pod-identity.alibabacloud.com/role-arn: acs:ram::xxx:role/loki-oss-role
+```
+
+**OSS Bucket 策略**：Loki 需要以下权限：`oss:PutObject`、`oss:GetObject`、`oss:DeleteObject`、`oss:ListBucket`，分别对应 chunks、ruler、admin 三个 Bucket。
+
+---
+
+## 四、升级路线图建议
+
+### 从 2.9 升级到 3.x
+
+```text
+2.9.x (TSDB + v12)
+  |
+  +-- Step 1: 升级到 2.9.x 最新补丁，确保 TSDB 稳定
+  |
+  +-- Step 2: 添加 v13 Schema period_config
+  |
+  +-- Step 3: 升级到 3.0.x，验证弃用警告
+  |
+  +-- Step 4: 逐步到 3.4+，使用标准化存储配置
+  |
+  +-- Step 5: 考虑 3.5（区域感知 Ingestor）
+```
+
+### 从 BoltDB-Shipper 迁移到 TSDB
+
+```yaml
+# 迁移过渡期配置：双 Schema 并存
+schema_config:
+  configs:
+    # 旧数据保持 BoltDB-Shipper
+    - from: "2020-01-01"
+      store: boltdb-shipper
+      object_store: s3
+      schema: v12
+      index:
+        prefix: loki_boltdb_
+        period: 24h
+    # 新数据切换到 TSDB
+    - from: "2024-01-01"
+      store: tsdb
+      object_store: s3
+      schema: v13
+      index:
+        prefix: loki_tsdb_
+        period: 24h
+```
+
+### 推荐目标版本
+
+| 场景 | 推荐版本 | 理由 |
+|------|---------|------|
+| **新部署** | **3.5.x** | 最新稳定版，包含所有优化 |
+| **生产升级** | **3.4.x** | 标准化存储 + Sizing 指南成熟 |
+| **仍用 BoltDB** | **尽快迁至 TSDB** | 旧后端即将在 4.0 移除 |
+
+---
+
+## 五、存储选型对比
+
+| 维度 | BoltDB-Shipper | TSDB (Single Store) |
+|------|---------------|---------------------|
+| **索引存储** | 对象存储（大文件） | TSDB Block（小文件、按时间分片） |
+| **查询性能** | 需下载整个索引文件 | 按需加载 Block，支持 Bloom 加速 |
+| **运维复杂度** | 低 | 中（需配置 Compactor） |
+| **扩展性** | 一般 | 优秀 |
+| **Bloom Filter** | 不支持 | 原生支持（3.0+） |
+| **结构化元数据** | 不支持 | 支持（3.0+） |
+| **社区状态** | 弃用 | 活跃开发 |
+| **阿里云 OSS** | 支持 | 支持（推荐） |
+
+---
+
+## 总结
+
+Loki 的存储系统已经完成了从「能用」到「好用」的跨越。TSDB Single Store 的引入统一了索引和数据的存储路径，Bloom Filter 大幅降低了查询延迟，标准化存储配置也让多云部署变得更加容易。
+
+对于新部署，直接使用 **Loki 3.5 + TSDB + OSS** 是最佳选择。对于现有集群，建议尽快规划从 BoltDB-Shipper 到 TSDB 的迁移——旧后端将在 4.0 版本中被正式移除。
+
+---
+
+*参考资料：[Grafana Loki 官方文档](https://grafana.com/docs/loki/latest/) | [Loki Release Notes](https://grafana.com/docs/loki/latest/release-notes/) | [Loki 存储配置](https://grafana.com/docs/loki/latest/configure/storage/) | [Loki End-of-Life](https://endoflife.date/grafana-loki)*
+
