@@ -1,1 +1,93 @@
-aW1wb3J0IGZzIGZyb20gIm5vZGU6ZnMiOwppbXBvcnQgcGF0aCBmcm9tICJub2RlOnBhdGgiOwppbXBvcnQgbWF0dGVyIGZyb20gImdyYXktbWF0dGVyIjsKCmV4cG9ydCBpbnRlcmZhY2UgUG9zdE1ldGEgewogIHNsdWc6IHN0cmluZzsKICB0aXRsZTogc3RyaW5nOwogIGRlc2NyaXB0aW9uPzogc3RyaW5nOwogIGRhdGU6IHN0cmluZzsgLy8gWVlZWS1NTS1ERAogIHVwZGF0ZWQ/OiBzdHJpbmc7CiAgdGFncz86IHN0cmluZ1tdOwogIGNhdGVnb3J5Pzogc3RyaW5nOwogIHNlcmllcz86IHN0cmluZzsKICBzZXJpZXNTbHVnPzogc3RyaW5nOwogIGNvdmVyPzogc3RyaW5nOwogIHJlYWRpbmdUaW1lPzogbnVtYmVyOwp9Cgpjb25zdCBQT1NUU19ESVIgPSBwYXRoLmpvaW4ocHJvY2Vzcy5jd2QoKSwgImNvbnRlbnQiLCAicG9zdHMiKTsKCmV4cG9ydCBmdW5jdGlvbiBnZXRBbGxTbHVncygpOiBzdHJpbmdbXSB7CiAgcmV0dXJuIGZzCiAgICAucmVhZGRpclN5bmMoUE9TVFNfRElSKQogICAgLmZpbHRlcigoZikgPT4gZi5lbmRzV2l0aCgiLm1kIikpCiAgICAubWFwKChmKSA9PiBmLnJlcGxhY2UoL1wubWQkLywgIiIpKTsKfQoKZnVuY3Rpb24gcmVhZE1ldGEoc2x1Zzogc3RyaW5nKTogUG9zdE1ldGEgewogIGNvbnN0IHJhdyA9IGZzLnJlYWRGaWxlU3luYyhwYXRoLmpvaW4oUE9TVFNfRElSLCBgJHtzbHVnfS5tZGApLCAidXRmLTgiKTsKICBjb25zdCB7IGRhdGEgfSA9IG1hdHRlcihyYXcpOwogIHJldHVybiB7CiAgICBzbHVnLAogICAgdGl0bGU6IFN0cmluZyhkYXRhLnRpdGxlIHx8IHNsdWcpLAogICAgZGVzY3JpcHRpb246IGRhdGEuZGVzY3JpcHRpb24gPyBTdHJpbmcoZGF0YS5kZXNjcmlwdGlvbikgOiB1bmRlZmluZWQsCiAgICBkYXRlOiBTdHJpbmcoZGF0YS5kYXRlIHx8ICIxOTcwLTAxLTAxIiksCiAgICB1cGRhdGVkOiBkYXRhLnVwZGF0ZWQgPyBTdHJpbmcoZGF0YS51cGRhdGVkKSA6IHVuZGVmaW5lZCwKICAgIHRhZ3M6IEFycmF5LmlzQXJyYXkoZGF0YS50YWdzKSA/IGRhdGEudGFncy5tYXAoU3RyaW5nKSA6IHVuZGVmaW5lZCwKICAgIGNhdGVnb3J5OiBkYXRhLmNhdGVnb3J5ID8gU3RyaW5nKGRhdGEuY2F0ZWdvcnkpIDogdW5kZWZpbmVkLAogICAgc2VyaWVzOiBkYXRhLnNlcmllcyA/IFN0cmluZyhkYXRhLnNlcmllcykgOiB1bmRlZmluZWQsCiAgICBzZXJpZXNTbHVnOiBkYXRhLnNlcmllc1NsdWcgPyBTdHJpbmcoZGF0YS5zZXJpZXNTbHVnKSA6IHVuZGVmaW5lZCwKICAgIGNvdmVyOiBkYXRhLmNvdmVyID8gU3RyaW5nKGRhdGEuY292ZXIpIDogdW5kZWZpbmVkLAogICAgcmVhZGluZ1RpbWU6IGRhdGEucmVhZGluZ1RpbWUgPyBOdW1iZXIoZGF0YS5yZWFkaW5nVGltZSkgOiB1bmRlZmluZWQsCiAgfTsKfQoKbGV0IGNhY2hlOiBQb3N0TWV0YVtdIHwgbnVsbCA9IG51bGw7CgpleHBvcnQgZnVuY3Rpb24gZ2V0QWxsUG9zdHMoKTogUG9zdE1ldGFbXSB7CiAgaWYgKCFjYWNoZSkgewogICAgY2FjaGUgPSBnZXRBbGxTbHVncygpLm1hcChyZWFkTWV0YSk7CiAgICBjYWNoZS5zb3J0KChhLCBiKSA9PiAoYS5kYXRlIDwgYi5kYXRlID8gMSA6IC0xKSk7CiAgfQogIHJldHVybiBjYWNoZTsKfQoKZXhwb3J0IGZ1bmN0aW9uIGdldFBvc3Qoc2x1Zzogc3RyaW5nKTogeyBtZXRhOiBQb3N0TWV0YTsgY29udGVudDogc3RyaW5nIH0gewogIGNvbnN0IHJhdyA9IGZzLnJlYWRGaWxlU3luYyhwYXRoLmpvaW4oUE9TVFNfRElSLCBgJHtzbHVnfS5tZGApLCAidXRmLTgiKTsKICBjb25zdCB7IGRhdGEsIGNvbnRlbnQgfSA9IG1hdHRlcihyYXcpOwogIGNvbnN0IG1ldGE6IFBvc3RNZXRhID0gewogICAgc2x1ZywKICAgIHRpdGxlOiBTdHJpbmcoZGF0YS50aXRsZSB8fCBzbHVnKSwKICAgIGRlc2NyaXB0aW9uOiBkYXRhLmRlc2NyaXB0aW9uID8gU3RyaW5nKGRhdGEuZGVzY3JpcHRpb24pIDogdW5kZWZpbmVkLAogICAgZGF0ZTogU3RyaW5nKGRhdGEuZGF0ZSB8fCAiMTk3MC0wMS0wMSIpLAogICAgdXBkYXRlZDogZGF0YS51cGRhdGVkID8gU3RyaW5nKGRhdGEudXBkYXRlZCkgOiB1bmRlZmluZWQsCiAgICB0YWdzOiBBcnJheS5pc0FycmF5KGRhdGEudGFncykgPyBkYXRhLnRhZ3MubWFwKFN0cmluZykgOiB1bmRlZmluZWQsCiAgICBjYXRlZ29yeTogZGF0YS5jYXRlZ29yeSA/IFN0cmluZyhkYXRhLmNhdGVnb3J5KSA6IHVuZGVmaW5lZCwKICAgIHNlcmllczogZGF0YS5zZXJpZXMgPyBTdHJpbmcoZGF0YS5zZXJpZXMpIDogdW5kZWZpbmVkLAogICAgc2VyaWVzU2x1ZzogZGF0YS5zZXJpZXNTbHVnID8gU3RyaW5nKGRhdGEuc2VyaWVzU2x1ZykgOiB1bmRlZmluZWQsCiAgICBjb3ZlcjogZGF0YS5jb3ZlciA/IFN0cmluZyhkYXRhLmNvdmVyKSA6IHVuZGVmaW5lZCwKICAgIHJlYWRpbmdUaW1lOiBkYXRhLnJlYWRpbmdUaW1lID8gTnVtYmVyKGRhdGEucmVhZGluZ1RpbWUpIDogdW5kZWZpbmVkLAogIH07CiAgcmV0dXJuIHsgbWV0YSwgY29udGVudCB9Owp9CgpleHBvcnQgZnVuY3Rpb24gZ2V0QWRqYWNlbnQoc2x1Zzogc3RyaW5nKTogeyBwcmV2OiBQb3N0TWV0YSB8IG51bGw7IG5leHQ6IFBvc3RNZXRhIHwgbnVsbCB9IHsKICBjb25zdCBwb3N0cyA9IGdldEFsbFBvc3RzKCk7CiAgY29uc3QgaSA9IHBvc3RzLmZpbmRJbmRleCgocCkgPT4gcC5zbHVnID09PSBzbHVnKTsKICByZXR1cm4gewogICAgLy8gcHJldiA9IG5ld2VyIHBvc3QsIG5leHQgPSBvbGRlciBwb3N0IChsaXN0IGlzIGRlc2MpCiAgICBwcmV2OiBpID4gMCA/IHBvc3RzW2kgLSAxXSA6IG51bGwsCiAgICBuZXh0OiBpID49IDAgJiYgaSA8IHBvc3RzLmxlbmd0aCAtIDEgPyBwb3N0c1tpICsgMV0gOiBudWxsLAogIH07Cn0KCmV4cG9ydCBmdW5jdGlvbiBnZXRBbGxUYWdzKCk6IHsgbmFtZTogc3RyaW5nOyBjb3VudDogbnVtYmVyIH1bXSB7CiAgY29uc3QgbSA9IG5ldyBNYXA8c3RyaW5nLCBudW1iZXI+KCk7CiAgZm9yIChjb25zdCBwIG9mIGdldEFsbFBvc3RzKCkpIHsKICAgIGZvciAoY29uc3QgdCBvZiBwLnRhZ3MgfHwgW10pIG0uc2V0KHQsIChtLmdldCh0KSB8fCAwKSArIDEpOwogIH0KICByZXR1cm4gWy4uLm0uZW50cmllcygpXQogICAgLm1hcCgoW25hbWUsIGNvdW50XSkgPT4gKHsgbmFtZSwgY291bnQgfSkpCiAgICAuc29ydCgoYSwgYikgPT4gYi5jb3VudCAtIGEuY291bnQpOwp9Cg==
+import fs from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
+
+export interface PostMeta {
+  slug: string;
+  title: string;
+  description?: string;
+  date: string; // YYYY-MM-DD
+  updated?: string;
+  tags?: string[];
+  category?: string;
+  series?: string;
+  seriesSlug?: string;
+  cover?: string;
+  readingTime?: number;
+}
+
+const POSTS_DIR = path.join(process.cwd(), "content", "posts");
+
+export function getAllSlugs(): string[] {
+  return fs
+    .readdirSync(POSTS_DIR)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => f.replace(/\.md$/, ""));
+}
+
+function readMeta(slug: string): PostMeta {
+  const raw = fs.readFileSync(path.join(POSTS_DIR, `${slug}.md`), "utf-8");
+  const { data } = matter(raw);
+  return {
+    slug,
+    title: String(data.title || slug),
+    description: data.description ? String(data.description) : undefined,
+    date: String(data.date || "1970-01-01"),
+    updated: data.updated ? String(data.updated) : undefined,
+    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
+    category: data.category ? String(data.category) : undefined,
+    series: data.series ? String(data.series) : undefined,
+    seriesSlug: data.seriesSlug ? String(data.seriesSlug) : undefined,
+    cover: data.cover ? String(data.cover) : undefined,
+    readingTime: data.readingTime ? Number(data.readingTime) : undefined,
+  };
+}
+
+let cache: PostMeta[] | null = null;
+
+export function getAllPosts(): PostMeta[] {
+  if (!cache) {
+    cache = getAllSlugs().map(readMeta);
+    cache.sort((a, b) => (a.date < b.date ? 1 : -1));
+  }
+  return cache;
+}
+
+export function getPost(slug: string): { meta: PostMeta; content: string } {
+  const raw = fs.readFileSync(path.join(POSTS_DIR, `${slug}.md`), "utf-8");
+  const { data, content } = matter(raw);
+  const meta: PostMeta = {
+    slug,
+    title: String(data.title || slug),
+    description: data.description ? String(data.description) : undefined,
+    date: String(data.date || "1970-01-01"),
+    updated: data.updated ? String(data.updated) : undefined,
+    tags: Array.isArray(data.tags) ? data.tags.map(String) : undefined,
+    category: data.category ? String(data.category) : undefined,
+    series: data.series ? String(data.series) : undefined,
+    seriesSlug: data.seriesSlug ? String(data.seriesSlug) : undefined,
+    cover: data.cover ? String(data.cover) : undefined,
+    readingTime: data.readingTime ? Number(data.readingTime) : undefined,
+  };
+  return { meta, content };
+}
+
+export function getAdjacent(slug: string): { prev: PostMeta | null; next: PostMeta | null } {
+  const posts = getAllPosts();
+  const i = posts.findIndex((p) => p.slug === slug);
+  return {
+    // prev = newer post, next = older post (list is desc)
+    prev: i > 0 ? posts[i - 1] : null,
+    next: i >= 0 && i < posts.length - 1 ? posts[i + 1] : null,
+  };
+}
+
+export function getAllTags(): { name: string; count: number }[] {
+  const m = new Map<string, number>();
+  for (const p of getAllPosts()) {
+    for (const t of p.tags || []) m.set(t, (m.get(t) || 0) + 1);
+  }
+  return [...m.entries()]
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}

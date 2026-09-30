@@ -1,1 +1,37 @@
-ZnVuY3Rpb24gcmVzb2x2ZVVybCgpIHsKICBpZiAocHJvY2Vzcy5lbnYuTkVYVF9QVUJMSUNfU0lURV9VUkwpIHJldHVybiBwcm9jZXNzLmVudi5ORVhUX1BVQkxJQ19TSVRFX1VSTDsKICAvLyBWZXJjZWwgYnVpbGQtdGltZSBkZXBsb3ltZW50IFVSTCAocHJldmlldyArIHByb2R1Y3Rpb24pLCBubyBwcm90b2NvbAogIGlmIChwcm9jZXNzLmVudi5WRVJDRUxfVVJMKSByZXR1cm4gYGh0dHBzOi8vJHtwcm9jZXNzLmVudi5WRVJDRUxfVVJMfWA7CiAgcmV0dXJuICJodHRwczovL2Jsb2cucm9iaW5qaWFuZy5jb20iOwp9CgpleHBvcnQgY29uc3Qgc2l0ZSA9IHsKICB0aXRsZTogIkFnaWxlIFJvYmluIiwKICB0YWdsaW5lOiAiQUkgwrcg6L2v5Lu25bel56iLIMK3IERldk9wcyDCtyDlj6/op4LmtYvmgKciLAogIGRlc2NyaXB0aW9uOgogICAgIlJvYmluIOeahOaKgOacr+WNmuWuou+8mkFJ44CB6L2v5Lu25bel56iL44CBRGV2T3BzIOS4juWPr+ingua1i+aAp+OAguavj+WRqOWFreOAiuW8gOa6kOWRqOaKpeOAi++8jOavj+WRqOS4ieOAiuehrOaguOa3seaMluOAi++8jOaciOacq+OAiuW3peWFt+eUn+aAgeebmOeCueOAi+OAgiIsCiAgYXV0aG9yOiAiUm9iaW4gSmlhbmciLAogIHVybDogcmVzb2x2ZVVybCgpLAogIGdpdGh1YjogImh0dHBzOi8vZ2l0aHViLmNvbSIsCn07CgpleHBvcnQgY29uc3QgQ0FURUdPUklFUyA9IFsKICB7CiAgICBzbHVnOiAid2Vla2x5IiwKICAgIG5hbWU6ICLlvIDmupDlkajmiqUiLAogICAgbWF0Y2g6ICLlvIDmupDlkajmiqUiLAogICAgZGVzYzogIuavj+WRqOWFreabtOaWsO+8mkdpdEh1YiDlvIDmupDpobnnm67liqjmgIHvvIzkuIDlj6Xor53lrprkvY0gKyBzdGFyIOWinumHj+OAgiIsCiAgfSwKICB7CiAgICBzbHVnOiAiZGVlcGRpdmUiLAogICAgbmFtZTogIuehrOaguOa3seaMliIsCiAgICBtYXRjaDogIuehrOaguOa3seaMliIsCiAgICBkZXNjOiAi5q+P5ZGo5LiJ5pu05paw77yaRGF0YU9wc+OAgeWPr+ingua1i+aAp+OAgURldk9wcyDigJTigJQg5oqK5Y6f55CG6K6y6YCP77yM5oqK5a6e5oiY6K6y57uG44CCIiwKICB9LAogIHsKICAgIHNsdWc6ICJ0b29scyIsCiAgICBuYW1lOiAi5bel5YW355uY54K5IiwKICAgIG1hdGNoOiAi5bel5YW355uY54K5IiwKICAgIGRlc2M6ICLmnIjmnKvmm7TmlrDvvJrlt6XlhbfnlJ/mgIHmqKror4TvvIznu5nkurrnvqTnlLvlg4/vvIzkuI3nu5nllK/kuIDnrZTmoYjjgIIiLAogIH0sCl0gYXMgY29uc3Q7Cg==
+function resolveUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  // Vercel build-time deployment URL (preview + production), no protocol
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "https://blog.robinjiang.com";
+}
+
+export const site = {
+  title: "Agile Robin",
+  tagline: "AI · 软件工程 · DevOps · 可观测性",
+  description:
+    "Robin 的技术博客：AI、软件工程、DevOps 与可观测性。每周六《开源周报》，每周三《硬核深挖》，月末《工具生态盘点》。",
+  author: "Robin Jiang",
+  url: resolveUrl(),
+  github: "https://github.com",
+};
+
+export const CATEGORIES = [
+  {
+    slug: "weekly",
+    name: "开源周报",
+    match: "开源周报",
+    desc: "每周六更新：GitHub 开源项目动态，一句话定位 + star 增量。",
+  },
+  {
+    slug: "deepdive",
+    name: "硬核深挖",
+    match: "硬核深挖",
+    desc: "每周三更新：DataOps、可观测性、DevOps —— 把原理讲透，把实战讲细。",
+  },
+  {
+    slug: "tools",
+    name: "工具盘点",
+    match: "工具盘点",
+    desc: "月末更新：工具生态横评，给人群画像，不给唯一答案。",
+  },
+] as const;
