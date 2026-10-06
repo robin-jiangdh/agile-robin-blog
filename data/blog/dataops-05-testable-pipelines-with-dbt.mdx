@@ -1,0 +1,313 @@
+---
+title: "DataOps 第五集：用 dbt 构建可测试的数据管道"
+date: '2026-10-06'
+tags: ["DataOps", "dbt", "数据工程"]
+categories: ["硬核深挖"]
+draft: false
+summary: "DataOps 第一季收官：从一句'谁敢改这个存储过程'开始，聊聊 dbt 如何把数据管道变成可版本控制、可测试的软件工程——三层测试体系、Slim CI 与质量门禁，一次讲透。"
+authors:
+  - default
+---
+
+## 前言
+
+上一家公司，我们有一段 6000 多行的存储过程，名字叫 `usp_日报全量_V11_FINAL_真最终.sql`。名字里藏着多少血泪，懂的都懂。
+
+最夸张的一次：财务口径要加一个"剔除内部调拨"的逻辑。我盯着那 6000 行看了两天，每改一个 JOIN 都心惊胆战——改对了没人知道，改错了凌晨三点全公司都知道。最后负责人拍了个"最小风险"方案：**不改旧的，再复制一份新的**，两个跑着，谁对用谁。
+
+这就是大多数数据管道的真实状态：**SQL 越来越多，越来越没人敢改。** 软件工程在 2010 年代用 git + CI 解决了"没人敢改代码"的问题；数据工程的解法，叫 dbt。这篇文章是 DataOps 第一季的收官篇——我们把 dbt 从"模型即代码"讲到"三层测试体系"，再到 CI 和质量门禁，讲透"可测试的数据管道"到底长什么样。
+
+## 一、dbt 为什么是数据管道的"版本控制时刻"
+
+先回答一个灵魂问题：数据团队不缺 SQL，为什么需要 dbt？
+
+因为裸 SQL 有三个致命缺陷：
+
+1. **依赖关系写在人的脑子里。** 表 A 依赖表 B 再依赖表 C——这个信息只存在于老员工的记忆里。离职一个人，血缘断一截。
+2. **没有统一的构建方式。** 每个人用自己的姿势跑 SQL：有人在 Navicat 里全选执行，有人复制到 Airflow，有人定了个 cron。出了问题，谁也复现不了。
+3. **不可测试。** 对 SQL 写单元测试？听起来像个笑话。于是"测试"退化成了"肉眼对数"。
+
+dbt 把这三件事一次解决：
+
+- **模型即代码**：每个转换写成一个 `.sql` 文件（model），放在 `models/` 目录下，git 管理。删了哪个文件、改了哪一行，`git blame` 说话。
+- **Jinja 模板**：`ref('stg_orders')` 替代硬编码表名。编译时 dbt 把它替换成真实表名，**同时自动画出依赖 DAG**——依赖关系不再是口口相传，而是代码即文档。
+- **manifest.json**：每次运行生成，记录了全部模型、测试、依赖关系。这份元数据是 CI 做"只构建改动部分"（Slim CI）的地基，后面会讲。
+
+顺带一提版本现状：据公开资料，截至 2026 年 10 月，dbt 2.x 已经正式发布（2.0.0 在 2026 年 9 月 14 日发布，当前最新是 2.0.5）。v2 基于 Fusion 引擎重写，适配器走 Rust + ADBC，连 DuckDB 都内置了，`dbt --version` 的牌子也从 dbt-core 改成了 dbt / dbt-oss。本文的语法以 v1.8+ 的通用写法为准，在 v2 上同样适用。
+
+## 二、实战：一个可测试的 dbt 项目骨架
+
+光讲概念容易飘，我们直接看一个能跑的项目长什么样。标准布局：
+
+```
+jaffle_shop/
+├── dbt_project.yml      # 项目配置：名、版本、profile、物化策略
+├── models/
+│   ├── staging/
+│   │   ├── stg_orders.sql
+│   │   └── staging.yml     # sources 声明 + schema 文档
+│   └── marts/
+│       ├── fct_orders.sql
+│       └── marts.yml       # data_tests 定义
+├── tests/                  # singular tests：单文件断言 SQL
+├── macros/                 # 自定义 generic test 的 Jinja 宏
+├── packages.yml            # 第三方包：dbt_utils、dbt_expectations
+└── profiles.yml            # 连接配置（不进 git）
+```
+
+先看 `dbt_project.yml`，字段都是 dbt 的老熟人，没有花活：
+
+```yaml
+name: 'jaffle_shop'
+version: '1.0.0'
+
+profile: 'jaffle_shop'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  jaffle_shop:
+    staging:
+      +materialized: view        # staging 层：轻量 view，随查随算
+    marts:
+      +materialized: table       # marts 层：物理表，给 BI 用
+```
+
+再看一个 staging 模型。注意 `source()` 和 `ref()`——它们是 dbt 依赖图的两条腿：
+
+```sql
+-- models/staging/stg_orders.sql
+select
+    id as order_id,
+    user_id as customer_id,
+    order_date,
+    status,
+    amount_cents / 100.0 as amount
+from {{ source('raw', 'orders') }}
+where order_date is not null
+```
+
+```yaml
+# models/staging/staging.yml
+version: 2
+
+sources:
+  - name: raw
+    database: analytics
+    schema: raw
+    tables:
+      - name: orders
+        description: "上游订单系统的原始表，每日 T+1 同步"
+
+models:
+  - name: stg_orders
+    description: "清洗后的订单明细，一行一单"
+```
+
+marts 层的模型用 `ref()` 引用上游，dbt 自动算出执行顺序，你永远不用手写调度顺序：
+
+```sql
+-- models/marts/fct_orders.sql
+{{ config(materialized='table') }}
+
+select
+    o.order_id,
+    o.customer_id,
+    c.customer_name,
+    o.order_date,
+    o.status,
+    o.amount
+from {{ ref('stg_orders') }} as o
+left join {{ ref('dim_customers') }} as c
+    on o.customer_id = c.customer_id
+```
+
+骨架搭完，最关键的一步来了：**给数据写测试。**
+
+## 三、测试体系第一层：Generic Tests（通用测试）
+
+Generic test 是 dbt 内置的、可复用的断言，声明在 YAML 里。四个元老：`unique`（唯一）、`not_null`（非空）、`accepted_values`（枚举值）、`relationships`（外键引用完整性）。
+
+一个容易踩的坑：**dbt 1.8 起，YAML 里的 key 从 `tests:` 改名成了 `data_tests:`**（旧 key 为了兼容还能用，但新项目请用新名字）。另外在 v2 里，需要传参的测试必须把参数包在 `arguments:` 下面，否则会报校验错误。写法如下：
+
+```yaml
+# models/marts/marts.yml
+version: 2
+
+models:
+  - name: fct_orders
+    description: "订单事实表，供财务与 BI 使用"
+    columns:
+      - name: order_id
+        description: "订单主键"
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'delivered', 'cancelled']
+      - name: customer_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id
+```
+
+跑起来就是一句 `dbt test`。原理朴素到感人：**每个测试本质上是一条"应该返回 0 行"的 SQL**——返回了行，那些行就是坏数据。这句话值得背下来，后面两层都建立在它之上。
+
+你还可以控制测试的"脾气"：`severity: warn` 让它只告警不阻断，适合还在治理中的软约束；`+store_failures: true`（写在 `dbt_project.yml` 的 `data_tests:` 配置块里）会把失败的行存进数仓，方便事后排查。
+
+## 四、测试体系第二层：Singular Tests（单例测试）
+
+Generic test 只管"结构卫生"：非空、唯一、枚举。但业务规则呢？"退款单的金额必须为负"、"活跃客户必须有至少一笔已结算订单"——这种跨表、多步的业务断言，YAML 表达不了。
+
+Singular test 就是为它准备的：**`tests/` 目录下一个 SQL 文件就是一个测试**，规则还是那句——返回 0 行即通过：
+
+```sql
+-- tests/assert_refund_amount_negative.sql
+-- 业务规则：退款单金额必须为负，否则财务对账会炸
+select
+    order_id,
+    amount
+from {{ ref('fct_orders') }}
+where status = 'refunded'
+  and amount >= 0
+```
+
+跨表断言也一样自然，因为 `ref()` 在任何模型和测试里都可用：
+
+```sql
+-- tests/assert_active_customers_have_payments.sql
+-- 活跃客户必须至少有一笔已结算订单
+with active_customers as (
+    select customer_id
+    from {{ ref('dim_customers') }}
+    where account_status = 'active'
+),
+payments as (
+    select distinct customer_id
+    from {{ ref('fct_payments') }}
+    where payment_status = 'settled'
+)
+select c.customer_id
+from active_customers c
+left join payments p on c.customer_id = p.customer_id
+where p.customer_id is null
+```
+
+记住一个经验法则：**想知道"数据存不存在、格式对不对"，用 generic test；想知道"数字在业务上讲不讲得通"，写 singular test。** 前者是结构护栏，后者是业务契约。
+
+## 五、测试体系第三层：自定义 Generic Test（可复用的断言）
+
+当同一个业务断言要在十几个模型上复用时，singular test 的复制粘贴就开始发臭了。这时候把断言写成 Jinja 宏，变成"自定义 generic test"：
+
+```sql
+-- macros/test_expression_is_true.sql
+{% test expression_is_true(model, expression) %}
+select *
+from {{ model }}
+where not ({{ expression }})
+{% endtest %}
+```
+
+然后在 YAML 里像内置测试一样调用：
+
+```yaml
+models:
+  - name: fct_orders
+    columns:
+      - name: amount
+        data_tests:
+          - expression_is_true:
+              arguments:
+                expression: "amount != 0"   # 订单金额不允许为 0
+```
+
+社区已经替你写好了大量轮子，不必重复造：`dbt_utils` 包里有 `expression_is_true`、`recency`（新鲜度检查）等常用测试；`dbt_expectations` 包（灵感来自 Great Expectations）提供了 50 多个表达力更强的断言，比如数值区间、正则匹配、类型检查：
+
+```yaml
+# packages.yml
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.2.0
+  - package: calogica/dbt_expectations
+    version: 0.10.3
+```
+
+```yaml
+# 用 dbt_expectations 写更丰富的断言
+columns:
+  - name: amount
+    data_tests:
+      - dbt_expectations.expect_column_values_to_be_between:
+          arguments:
+            min_value: 0
+            max_value: 1000000
+```
+
+三层测试各就各位：generic 管结构，singular 管业务，自定义 generic 管复用。任何一层挂了，`dbt build` 的退出码非零——**这正是 CI 能把它当门禁用的原因。**
+
+## 六、CI 中的 dbt：Slim CI
+
+测试写完了，下一个问题：每次 PR 都全量跑一遍 300 个模型？仓库账单会教你做人。
+
+dbt 的答案是 **Slim CI**：只构建"改了的模型 + 它的下游"。核心机制是 `manifest.json`——上次生产运行的元数据快照。CI 里三步走：
+
+```bash
+# 1. 拉取上次生产运行的 manifest
+aws s3 cp s3://dbt-artifacts/prod/manifest.json ./prod_artifacts/
+
+# 2. 只构建变更及下游，未变更的上游 defer 到生产表
+dbt build \
+  --select state:modified+ \
+  --state ./prod_artifacts \
+  --defer \
+  --target ci
+```
+
+拆解一下这行命令：
+
+- `state:modified+`：对比当前代码和生产 manifest，只选改动过的节点，`+` 再带上它们的全部下游。
+- `--defer`：没改动的上游模型不重建，直接引用生产环境的表——既省了算力，又保证了 JOIN 的数据是真实的。
+- `--target ci`：构建产物写进隔离的 CI schema，**生产数据纹丝不动**。
+
+在 GitHub Actions 里就是一个标准的 PR workflow：checkout → 装 dbt → 拉 manifest → `dbt deps` → `dbt build --select state:modified+ --defer` → 退出码非零则 PR 合并按钮变红。dbt Cloud 用户更省事：CI Job 里把"Defer to a previous run state"指向上一个生产 Job，剩下的都是自动的。
+
+这套机制有个漂亮的副作用：**测试和构建是同一条命令**（`dbt build` = run + test）。数据测试不再是"跑完数再顺手看一眼"，而是合并代码的前置条件——和软件工程的 CI 门禁一模一样。
+
+## 七、与 Great Expectations / 质量门禁的衔接
+
+有读者会问：dbt 的测试够了吗，还要 Great Expectations 干嘛？
+
+分工不同。dbt 的测试是**管道内的断言**：跑在转换过程中，挂了就阻断构建。Great Expectations（GE）是**管道外的质量门禁**：它在数据已经落地后，对结果集做更重的统计学验证——分布漂移、分位数、跨批次对比，还能生成漂亮的 Data Docs 报告给业务方看。
+
+一个务实的分层：
+
+| 层次 | 工具 | 职责 | 失败后果 |
+|---|---|---|---|
+| 转换中断言 | dbt data tests | 结构卫生、业务契约 | 阻断构建，PR 合并不通过 |
+| 落地后验证 | Great Expectations | 分布、漂移、跨批次一致性 | 告警 + 质量看板标红，可配阻断 |
+| 持续监控 | 数据可观测性 | 新鲜度、量级、血缘 | 告警，触发排查 |
+
+想两边都用也不冲突：`dbt_expectations` 包就是把 GE 风格的断言搬进了 dbt 的测试体系；而完整的 GE suite 可以作为 dbt `build` 之后的独立 stage 跑，结果写进质量门禁看板。DataOps 第一季的第二集我们专门讲过 GE 实战，这里就不再展开。
+
+## 结语：第一季收官
+
+回到开篇那段 6000 行的存储过程。它的病根从来不是"SQL 写得烂"，而是**没有工程化纪律**：没版本控制，没人敢重构；没测试，没人敢改；没 CI，烂数据一路绿灯进生产。
+
+dbt 给数据管道补上了软件工程用了十年的那套东西：
+
+- **版本控制**：模型即代码，git 管理，`ref()` 自动生成依赖 DAG
+- **自动化测试**：三层体系——generic 管结构、singular 管业务、自定义 generic 管复用
+- **CI 门禁**：Slim CI 只构建变更，`dbt build` 退出码决定 PR 能不能合
+- **质量门禁**：dbt 管道内断言 + Great Expectations 落地后验证，分层设防
+
+第一季我们从"数据管道要像软件一样交付"出发，走过了 Great Expectations 质量门禁、数据可观测性、CI/CD 与回滚，最后落在这篇——**可测试，是前面一切的前提**。没有测试的管道自动化，只是让错误发生得更快。
+
+第二季，我们把镜头从"管道内部"拉出来，聊聊数据契约、语义层和 AI 时代的数据工程。下周三见。
