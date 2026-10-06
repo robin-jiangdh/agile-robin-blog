@@ -1,0 +1,208 @@
+---
+title: "DataOps 第四集：数据管道的 CI/CD 与回滚策略"
+date: '2026-10-06'
+tags: ["DataOps", "Airflow", "CI/CD"]
+categories: ["硬核深挖"]
+draft: false
+summary: "数据管道最大的风险不是写错 SQL，而是没有纪律地发布它。从一次周五下午的手动上线事故开始，看 Airflow/Dagster 的部署流水线与回滚策略。"
+authors:
+  - default
+---
+
+## 前言：那个周五下午
+
+周五下午五点半，数据工程师老王在 Airflow Web UI 里改了一个 DAG 的 SQL，点了保存。半小时后，离线数仓的订单表被灌进去了两千万条重复数据。回滚？数据已经写进去了，DAG 回退到上一版只是让它不再继续灌，烂数据还得写脚本一条一条清。周末两天，整个团队都在做数据修复。
+
+软件工程早就解决了这个问题：CI 自动测试、灰度发布、一键回滚。数据管道的问题不在于没有这些手段，而在于**它比软件难做**——软件发布失败，你回滚一个容器就行；数据发布失败，你得把已经写进数据库的几千万条数据也一起"回滚"。
+
+这集我们聊 DataOps 里最硬的那一块：数据管道的 CI/CD 与回滚策略。
+
+## 一、先把概念掰直：数据管道 CI/CD 和软件 CI/CD 的三个区别
+
+如果把软件的 CI/CD 直接搬到数据管道上，你会立刻踩三个坑：
+
+**1. 数据不可变，代码可回滚。** 软件回滚 = 换回旧版本镜像；数据回滚 = 要处理已经产生的数据。DAG 回退版本很简单，但回退版本后，那些已经被新版本管道产出的数据怎么办？要不要删？能不能重跑？这是数据管道独有的麻烦。
+
+**2. 回填（backfill）是个一等公民。** 普通软件没有"补跑"这个概念——你不会让昨天没跑的 API 请求今天重跑一遍。数据管道却天天需要：上游延迟、任务失败、逻辑修完补算，`airflow dags backfill` 是家常便饭。发布策略必须考虑：新版本上线后，旧数据要不要用新逻辑重跑？重跑多少天？
+
+**3. 状态无处不在。** 软件无状态化搞了十年，数据管道却天生有状态：Airflow 的 metadata DB、任务的游标、dbt 的 incremental 模型的水位线。发布一个新版本，不能只看代码版本，还得看**数据处在什么状态**。
+
+记住这三个区别，后面的所有策略都好理解了。
+
+## 二、Airflow 部署流水线实战
+
+先说结论：把 DAG 当 Python 包看，部署流水线分三层：**版本管理 → 自动化测试 → 灰度上线**。
+
+### DAG 版本管理：git 是唯一真理
+
+Airflow 3.x（当前据公开资料已到 3.3.2，2026 年 9 月发布）最大的变化是架构服务化：任务通过 Task Execution API 与元数据交互，DAG 的编写统一走 `airflow.sdk`。但不管 2.x 还是 3.x，有一条铁律没变：
+
+- `dags/` 目录、插件、requirements、连接配置的模板化定义，全部进 git
+- **生产环境永远不手动改 DAG**——老王周五下午那场事故，根因不是 SQL 写错了，是绕过了版本控制
+- DAG 的 `dag_id` 稳定不变，用 git tag / Docker image tag 标识部署版本
+
+部署姿势就两种：镜像里 bake DAG（推荐，版本与运行时绑定），或者用 git-sync 卷挂载。前者在回滚时直接切镜像版本即可，后者要做好 dag 文件与代码版本的一一对应。
+
+### 测试：拦住烂 DAG 的第一道门
+
+每次 PR 自动跑三层测试，成本由低到高：
+
+```python
+# tests/test_dag_integrity.py
+"""CI 里跑的第一道门：所有 DAG 都能被正常加载。"""
+from airflow.models import DagBag
+
+
+def test_no_import_errors():
+    dagbag = DagBag(dag_folder="dags", include_examples=False)
+    assert len(dagbag.import_errors) == 0, dagbag.import_errors
+
+
+def test_dag_structure():
+    dagbag = DagBag(dag_folder="dags", include_examples=False)
+    dag = dagbag.get_dag("orders_daily")
+
+    # 依赖关系是核心契约：删了谁的依赖，测试直接变红
+    assert set(dag.task_ids) == {"extract", "transform", "load"}
+    assert dag.get_task("extract").downstream_task_ids == {"transform"}
+    assert dag.get_task("transform").downstream_task_ids == {"load"}
+```
+
+第二层是业务逻辑测试：把 task 里真正的清洗、计算逻辑抽成纯函数，不依赖 Airflow 也能跑。第三层是 `airflow tasks test orders_daily extract 2026-10-06`——本地单任务试运行，真刀真枪地跑一次。
+
+这套串进 GitHub Actions 长这样：
+
+```yaml
+# .github/workflows/airflow-ci.yaml
+name: Airflow CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-mock
+      - name: DAG import & structure tests
+        run: pytest -q tests/
+```
+
+PR 合并后，流水线构建 Docker 镜像、打 tag、推到仓库，这一步就是 CD 的起点。
+
+### 灰度上线：别一下全切
+
+数据管道的灰度有三个档位，从保守到激进：
+
+1. **先暂停旧 DAG 的新 run**：Airflow 里把旧 DAG 的 schedule 先关掉，部署新版本，手动触发一次新 DAG 的 dry-run run，确认数据正常再开 schedule。
+2. **双写灰度**：新旧两个 DAG 同时跑（旧的写 `orders` 表，新的写 `orders_v2` 表），对比几天数据一致后再切换下游依赖。这是生产环境最稳妥的姿势。
+3. **按分区灰度**：对分区表，先让新版本跑最新分区，历史分区保持旧逻辑，逐步扩大。
+
+记住一点：**灰度发布防的是逻辑错误，回滚防的是数据污染**。两者缺一不可。
+
+## 三、Dagster 的部署模型：对比着看更清楚
+
+如果说 Airflow 的部署单元是 DAG 文件，Dagster 的部署单元就是**代码位置（code location）**——一整个 Python 项目打包成一个镜像，包含所有 asset、job、schedule、sensor。资产（asset）是 Dagster 的一等公民，部署时连同数据血缘一起版本化。
+
+Dagster（据公开资料核心包已到 1.13.x，2026 年 9 月的版本）的部署模型有几个特点值得 Airflow 用户眼馋：
+
+- **代码和数据版本天然绑定**：每次部署的镜像 tag，同时也是这一批 asset 逻辑的版本。查一条数据的血缘，能直接看到是哪次部署产出的。
+- **`dagster definitions validate`**：部署前一条命令验证所有 Definitions 能不能加载，相当于把 Airflow 的 DagBag 测试做成了官方一等功能。
+- **Dagster+ 的 fast deploys**：官方托管版支持快速部署，根据目标环境自动构建 Docker 镜像（Serverless on K8s 场景下构建的是镜像而非 PEX），省掉了自己搭镜像流水线的活儿。
+- **声明式的 data version**：`DataVersion` / `DataVersionsByPartition` 让每个 asset 的每个分区都有版本号，回滚和重跑时知道"这个分区是谁算的、用的哪版代码"。
+
+生产拓扑上，Dagster 是经典的三分：webserver（无状态，可多副本）+ daemon（单例，调度器）+ 执行器（per-run 的 K8s Job 或 Celery worker）。对比 Airflow 的 scheduler + worker，思想相通，但 Dagster 的 daemon 明确是单例这一点，是部署时最容易踩的坑：起两个 daemon 就等于调度器双活，任务跑两遍。
+
+## 四、回滚策略：数据管道真正的试金石
+
+来了，这集的核心。数据回滚分三层，每层解决不同的问题：
+
+### 第一层：代码回滚（最快，也最不够）
+
+把 DAG / 镜像切回上一版。这步必须做到"一键"：git revert + 重新部署，或者直接 `helm rollback airflow`。但记住，它只阻止了继续出错，**已经写进去的脏数据一个都不会自己消失**。
+
+### 第二层：数据回滚（按输出分级）
+
+数据回滚的姿势取决于你的写入模式，这是设计阶段就要定好的：
+
+- **全量覆盖写（truncate + load）**：回滚 = 用上一版逻辑重跑一次。上游源数据还在，成本只是一次计算。
+- **增量/追加写（append）**：这是最疼的。脏数据混在历史数据里，必须靠主键去重或删除指定分区/时间范围再重跑。设计增量表时，给每行加上"数据版本号"或"批次号"列，回滚时按批次号删除，效率差一个数量级。
+- **快照表（SCD Type 2）**：回滚 = 把快照指针切回某个时间点，逻辑最简单，代价是存储。
+
+一条实战经验：**增量表永远保留重跑能力**。哪怕你现在只跑全量，也给表留好"按天分区、按批次删除"的口子。老王那次事故最后就是靠"按批次号删除当天数据 + 用旧版 DAG 重跑"收尾的。
+
+### 第三层：回填（backfill）的正确姿势
+
+回填是数据管道的专属操作，做错比不做好。几个铁律：
+
+```bash
+# 先看再跑：--dry-run 或先手动触发单个日期
+airflow dags backfill orders_daily \
+  --start-date 2026-10-01 \
+  --end-date 2026-10-05 \
+  --rerun-failed-tasks
+```
+
+1. **先小范围验证**：回填前用手动触发跑通最近一天，确认逻辑和结果都对，再铺开批量回填。
+2. **限定失败重试范围**：`--rerun-failed-tasks` 只重跑失败的任务，别把成功的也重算一遍——在按小时调度的管道里，这一个 flag 能省掉几千次多余计算。
+3. **回填和线上调度抢资源**：大批量回填会占满 worker 池。给回填单独的 pool，或者在夜间低峰跑，别让回填把当天的正常调度挤挂了。
+4. **Airflow 3.x 的 backfill 是 API 化了的**：据公开资料，3.3 对 backfill API 做了安全加固（ID 不再跨 DAG 泄露、未授权返回 404）。能用 API 的地方就用 API，别再写脚本拼 CLI 参数了。
+
+## 五、失败恢复与幂等设计
+
+回滚是事后救火，**幂等是事前防火**。一个幂等设计的任务，失败了重跑多少次结果都一样，这才是数据管道最便宜的"回滚策略"。
+
+实战里的幂等三板斧：
+
+```python
+from airflow.sdk import task
+
+@task(retries=3)
+def load_orders(ds: str) -> None:
+    """按分区先删后写：重跑多少次都一样。"""
+    # 1. 删除该分区已有数据（幂等的关键）
+    warehouse.execute(
+        "DELETE FROM orders_daily WHERE dt = %s", (ds,)
+    )
+    # 2. 重新写入该分区
+    warehouse.execute(
+        """
+        INSERT INTO orders_daily
+        SELECT *, %s AS dt
+        FROM orders_staging
+        WHERE dt = %s
+        """,
+        (ds, ds),
+    )
+```
+
+1. **写入侧幂等**：增量表用"先删分区再写"（delete-then-insert），或用 upsert 语义（`INSERT ... ON CONFLICT DO UPDATE`）。纯 append 写入是幂等的天敌。
+2. **读取侧幂等**：游标类任务（如拉取 API 增量数据）要把游标持久化。Airflow 3.3 新增的 Task and Asset State Store（任务/资产状态存储）就是为这个来的：任务可以跨重试、跨重跑记住游标，崩溃重连也不丢进度。
+3. **重试策略可插拔**：据公开资料，Airflow 3.3 支持了 pluggable retry policies。别再用全局统一的"重试 3 次、间隔 5 分钟"了：调外部 API 用指数退避，读数仓用固定短间隔，幂等性差的任务干脆重试 0 次、直接告警人工介入。
+
+最后一个容易被忽略的：**失败恢复演练**。和线上服务的 chaos 工程一样，定期在 staging 环境模拟：worker 挂了、数仓连接断了、磁盘满了。你的 on-call 手册里应该写着每种场景的恢复步骤，而不是等到凌晨三点现想。
+
+## 结语
+
+回顾一下这集的清单：
+
+- 数据 CI/CD 和软件 CI/CD 的三个区别：**数据不可变、回填是一等公民、状态无处不在**
+- Airflow 实战三件套：**git 管版本、pytest 拦 PR、灰度分三档**
+- Dagster 的启示：**部署单元是代码位置、asset 自带数据版本**
+- 回滚分三层：**代码回滚 → 数据回滚（按写入模式）→ backfill 铁律**
+- 最便宜的回滚叫**幂等**：delete-then-insert、持久化游标、重试策略分级
+
+老王那次事故之后，团队做了三件事：dags 目录进 git、PR 必须过 DAG 测试、增量表全部加上批次号。三个月后又遇到一次类似的问题，回滚只花了二十分钟。
+
+数据管道的 CI/CD，最终拼的不是工具，是纪律。工具 Airflow 和 Dagster 都给了，剩下的就是别在周五下午五点半，手动去改生产环境的 DAG。
+
+下周三见，我们聊聊**用 dbt 构建可测试的数据管道**——版本控制加自动化测试，让数据管道真正"像软件一样"交付。
