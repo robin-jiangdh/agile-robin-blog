@@ -1,0 +1,186 @@
+---
+title: "DataOps 第二集：数据质量门禁——Great Expectations 实战"
+date: '2026-10-06'
+tags: ["DataOps", "Great Expectations", "数据工程"]
+categories: ["硬核深挖"]
+draft: false
+summary: "一张满减券的结算金额变成负数，系统倒贴钱发了三小时补贴——没人报错，因为数据不会自己尖叫。这一集把 Great Expectations 接进管道，用 Expectation Suite 加 Checkpoint 做质量门禁，把上下游的数据约定写成可执行的测试。"
+authors:
+  - default
+---
+
+## 前言：那三小时的"倒贴"补贴
+
+周三上午十点，财务在群里贴了一张截图：昨晚大促的满减券结算明细里，出现了一批**金额为负**的订单——系统非但没收钱，还倒贴了用户一笔"补贴"。从凌晨一点到四点，整整三个小时，没人发现。
+
+根因查出来让人血压上升：上游订单服务为了支持"退款单"，把 `settle_amount` 字段放开了负值；下游结算 ETL 照单全收，直接把负数当成了应发金额。管道没报错、任务全绿、报表准时产出——只是钱发错了。
+
+开篇我们讲过"静默的错误"：上游改字段名，ETL 默默写 NULL。这一集的事故是它的孪生兄弟：**上游改了字段的"含义"，下游浑然不觉。** 数据和代码最大的区别就在这里——代码错了会抛异常、会挂掉；数据错了，它一声不吭，照常流进报表、模型和钱包。
+
+DataOps 的答案是：**给数据装上门禁。** 数据进仓库之前，先过一道可执行的检查；检查不过，门就关上。这道门禁，就叫 Great Expectations。
+
+## 一、数据质量问题的本质：约定丢失
+
+先把问题想清楚。数据事故千奇百怪，但病根通常只有一个：**上下游之间的约定，只存在于文档、口头和"想当然"里，没有可执行的表达。**
+
+- 上游说"这个字段非空"，但没有任何东西在它为空时拦下来
+- 下游假设"金额不会为负"，但这个假设只活在某个人的脑子里
+- 有人改了枚举值，通知了群，没通知管道
+
+传统做法是"人肉巡检"：每天早上有人看一眼报表，凭感觉发现不对。这本质上是把正确性外包给了人的责任心——而责任心是最不可靠的 SLA。
+
+软件工程早就解决了同类问题：接口契约用测试表达，CI 不过就合并不了代码。Great Expectations 就是把这一套搬到数据世界：**把"数据应该长什么样"写成代码，让机器替你守夜。**
+
+顺带说一句版本的事，免得你踩坑：GX 在 2024 年 8 月发布了 1.0，API 大变（后面实战部分全部用 1.x 写法）；0.18.x 已于 2025 年 10 月 1 日停止维护。网上大量教程还是 0.x 的 `Validator`、`BatchRequest` 写法，直接抄会跑不起来。认准 `gx.get_context` + `context.data_sources` 这套新 API。本文基于 GX 1.x（截至 2026 年 10 月已迭代到 1.23，据公开资料），Python 要求 3.10 以上。
+
+## 二、Great Expectations 的核心概念
+
+GX 的域模型可以一句话概括：**Data Context → Data Source → Data Asset → Batch Definition → Batch**，配上 **Expectation → Expectation Suite → Validation Definition → Checkpoint** 这条验证链。听着唬人，其实每个概念都对应一个直觉：
+
+- **Expectation（期望）**：一条断言。"`order_id` 不为空""`amount` 在 0 到 100000 之间""`status` 只能是 paid/refunded/cancelled 之一"。GX 内置了 300 多个，开箱即用，也支持自定义。
+- **Expectation Suite（期望套件）**：一组 Expectation 的集合。你可以把它理解成**一张表的"数据契约"**——这张表长什么样、什么能出现、什么绝不能出现，全写在这里。Suite 进 git 版本控制，改动可 review、可回滚。
+- **Batch Definition / Batch**：Suite 是"规则"，Batch 是"这次要检查的数据"。Batch Definition 把"哪张表、哪个分区"和 Suite 绑在一起。
+- **Validation Definition**：Suite + Batch Definition 的绑定——"用这套规则，验这批数据"。
+- **Checkpoint（检查点）**：真正可运行的单元。它包含一个或多个 Validation Definition，外加跑完之后的 **Actions**：更新文档、发告警、写指标。`checkpoint.run()` 返回成功或失败——这就是你的质量门禁。
+- **Data Docs**：每次验证自动生成的 HTML 报告，谁跑的、哪条挂了、挂掉的值长什么样，一目了然。事故复盘时，这是最有说服力的证据。
+
+用软件工程的语言翻译一下：Expectation 是单元测试的 assert，Suite 是测试文件，Checkpoint 是 CI 里的 test job，Data Docs 是测试报告。思想完全相通，只是被测对象从代码变成了数据。
+
+## 三、实战：从 0 写一个质量门禁
+
+光讲概念不解渴，直接动手。下面是一个完整可运行的脚本：造一份掺了脏数据的订单表，写 Suite，跑 Checkpoint，看门禁怎么拦下它。
+
+```bash
+pip install "great_expectations>=1.23" pandas
+```
+
+```python
+import pandas as pd
+import great_expectations as gx
+
+# 1. 造一份"订单"数据：故意掺三处脏
+df = pd.DataFrame(
+    {
+        "order_id": ["A001", "A002", "A003", "A002", None],  # 重复 + 空值
+        "amount": [120.5, -9.9, 300.0, 45.0, 88.0],          # 负数！
+        "status": ["paid", "paid", "refunded", "paid", "paid"],
+    }
+)
+
+# 2. Context：ephemeral 模式，不落文件，适合脚本和 CI
+context = gx.get_context(mode="ephemeral")
+
+# 3. 数据源 -> 数据资产 -> 批次定义
+data_source = context.data_sources.add_pandas("orders_source")
+asset = data_source.add_dataframe_asset(name="orders")
+batch_definition = asset.add_batch_definition_whole_dataframe("daily_batch")
+
+# 4. Suite：这张表的"契约"，每一条都是血泪换来的
+suite = context.suites.add(gx.ExpectationSuite(name="orders_contract"))
+suite.add_expectation(
+    gx.expectations.ExpectTableRowCountToBeBetween(min_value=1)
+)
+suite.add_expectation(
+    gx.expectations.ExpectColumnValuesToBeUnique(column="order_id")
+)
+suite.add_expectation(
+    gx.expectations.ExpectColumnValuesToNotBeNull(column="order_id")
+)
+suite.add_expectation(
+    gx.expectations.ExpectColumnValuesToBeBetween(column="amount", min_value=0)
+)
+suite.add_expectation(
+    gx.expectations.ExpectColumnValuesToBeInSet(
+        column="status", value_set=["paid", "refunded", "cancelled"]
+    )
+)
+
+# 5. Validation Definition：规则 + 数据绑一起
+validation_definition = context.validation_definitions.add(
+    gx.ValidationDefinition(
+        name="orders_daily_validation",
+        data=batch_definition,
+        suite=suite,
+    )
+)
+
+# 6. Checkpoint：可运行的门禁，跑完自动更新 Data Docs
+checkpoint = context.checkpoints.add(
+    gx.Checkpoint(
+        name="orders_daily_checkpoint",
+        validation_definitions=[validation_definition],
+        actions=[gx.checkpoint.UpdateDataDocsAction(name="update_data_docs")],
+    )
+)
+
+result = checkpoint.run(batch_parameters={"dataframe": df})
+print("门禁通过:", result.success)
+if not result.success:
+    print(result.describe())  # 哪条挂了、挂了多少行，一目了然
+    raise SystemExit(1)
+```
+
+跑起来，门禁会被三处脏数据拦下：`order_id` 重复（A002 出现两次）、`order_id` 为空、`amount` 出现负数。`result.describe()` 会告诉你每条 Expectation 的通过情况和坏掉的行数。
+
+注意几个实战细节：
+
+- **`mode="ephemeral"`**：不写本地项目文件，Suite 和 Checkpoint 都在内存里，CI 跑完即焚，干净。要持久化、要 Data Docs 留档、要团队协作，就用 `mode="file"` 指向一个 GX 项目目录。
+- **数据源不只 pandas**：`context.data_sources` 下面有 `add_postgres`、`add_snowflake`、`add_spark` 等等，对应的 asset 是 `add_table_asset(name=..., table_name=...)`，批次定义是 `add_batch_definition_whole_table(...)`。一套 Suite 写法，换数据源基本不用改。
+- **先 warning，再 fail**：新表第一次上门禁，建议先把严格的 Expectation 设成只告警不阻断，跑一周看误报率，再收紧成硬门禁。否则第一天就可能因为"历史脏数据"把正常管道全拦停——门禁的第一要务是别误杀。
+
+## 四、Contract Testing：把约定写进上下游之间
+
+门禁拦得住自己管道里的脏数据，但开篇那种事故的根子在**上游**。这就引出了 contract testing（契约测试）：**把上下游之间的数据约定，写成双方共同遵守的可执行测试。**
+
+做法分两层：
+
+**第一层：下游定义契约，上游负责不破坏。** 结算团队把 `orders_contract` 这个 Suite 交给订单团队："只要你们产出的数据能通过这套 Suite，随便你们怎么重构；过不了，发布就卡住。"上游的 CI 在每次变更后跑一遍下游的 Checkpoint——字段改名、枚举新增、负值放开，都会在合并代码前暴露，而不是凌晨三点暴露。
+
+**第二层：契约进版本控制，当成 API 文档用。** Suite 文件本身就是最好的数据文档：新同学想知道 `status` 有哪些取值，看 Suite 比看 wiki 靠谱，因为 Suite 是**会被执行的真相**，wiki 是可能过期的传说。Data Docs 则自动把每次验证结果变成可浏览的网页，相当于给数据契约配了个"健康看板"。
+
+这里要区分 GX 和 Pydantic、pandera 这类库：后者是**行级/内存级**的校验，适合在应用代码里"进来一条验一条"；GX 是**管道级**的门禁，面向的是"整批数据进仓库前验一次"，自带文档、历史记录和告警动作。两者不冲突——应用层用 Pydantic 拦非法输入，管道层用 GX 守批量质量，各司其职。
+
+## 五、把门禁接进 CI/CD
+
+门禁只有进了流水线才有牙齿。两种最常见的接法：
+
+**接法一：Airflow 里当关卡。** 在 DAG 里加一个 `PythonOperator` 跑 checkpoint，`result.success` 为 False 就抛异常。Airflow 的依赖机制会保证：门禁不过，下游的聚合、报表、模型训练任务一个都不会启动。脏数据被物理隔离在门外，而不是流进去再等人发现。
+
+```python
+def run_quality_gate(**context):
+    import great_expectations as gx
+
+    gx_context = gx.get_context(mode="file", project_root_dir="/opt/gx")
+    checkpoint = gx_context.checkpoints.get("orders_daily_checkpoint")
+    result = checkpoint.run()
+    if not result.success:
+        raise ValueError(f"质量门禁未通过:\n{result.describe()}")
+```
+
+**接法二：GitHub Actions 里验契约。** 上游仓库的 PR 流水线里加一步：拉取下游的 Suite，对本次变更产出的样本数据跑 checkpoint。Schema 变更想合进主分支？先过契约这一关。
+
+```yaml
+# .github/workflows/data-contract.yml
+name: data-contract
+on: [pull_request]
+jobs:
+  contract-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "great_expectations>=1.23" pandas
+      - run: python contracts/run_checkpoints.py  # 跑所有下游 Suite
+```
+
+再配上 Checkpoint 的 Actions：失败时发 Slack 告警、成功时更新 Data Docs。一套组合拳下来，数据质量就从"靠人盯"变成了"靠流水线守"——这正是开篇说的 DataOps：把 DevOps 的工程化纪律，系统地应用到数据管道上。
+
+## 结语
+
+回到开篇那三小时的"倒贴"补贴。如果当时有一道门禁，`ExpectColumnValuesToBeBetween(column="settle_amount", min_value=0)` 这一行，就会在第一批负数出现时关上大门，顺手发一条告警。事故的发现时间会从"三小时后财务看截图"变成"三秒后 Slack 收到通知"。
+
+Great Expectations 不是银弹——它拦不住业务逻辑本身的错误，也定义不了"什么是对的"。但它解决了一个更底层的问题：**把"数据应该长什么样"从人的脑子搬进代码，让约定可执行、让破坏可感知、让事故可复盘。**
+
+下一集，我们聊数据的"体检报告"：数据可观测性——新鲜度、数据量、分布漂移，异常自动告警，而不是等老板发现。下周三见。
