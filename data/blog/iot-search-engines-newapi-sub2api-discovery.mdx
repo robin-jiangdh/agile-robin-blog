@@ -1,0 +1,257 @@
+---
+title: '用 FOFA/Shodan 找全网 new-api：中转站资源探索实战'
+date: '2026-10-08'
+tags: ['AI', 'Cloudflare', '安全']
+summary: '把 8 家网络空间搜索引擎的 API 接进 Cloudflare Worker，用预置指纹语句找全网 new-api/sub2api 实例，再一键探活去重。'
+authors: ['default']
+draft: false
+---
+
+## 背景与动机
+
+先设想三个很真实的场景：
+
+1. 你在公网搭了一个 new-api 中转站（也许是公开公益站，也许是只想自己用的私有实例），突然想知道：**它在全网的眼里长什么样？** 被搜索引擎收录了吗？banner 里有没有暴露不该暴露的信息？
+2. 你在帮团队做资产盘点，老板问：「我们的 API 中转服务有没有被意外暴露到公网？」你需要一个**防御性清单**，而不是靠运气。
+3. 你想找免费的中转资源（公益站、公开实例），不想一个个在论坛帖子里翻链接。
+
+这三个场景背后是同一个技术动作：**用网络空间搜索引擎做指纹检索**。FOFA、Shodan、Quake 这些引擎每天都在扫描全网的 IPv4，把每个 IP 的 HTTP 响应头、HTML title、证书、favicon 等 banner 存下来。你要做的只是写好检索语句——对目标站点而言，你没有发过一个包；你查的只是已经公开的数据。
+
+本文介绍一条完整链路：指纹怎么定 → 8 家引擎的 API 各怎么调 → 用一个单文件 Cloudflare Worker（relay-scout）把搜索、探活、去重自动化，最后聊聊合规边界。研究数据主要来自 2026-10-07 的公开资料核实，部分免费额度数字来自社区说法，文中会逐项标注。
+
+## 指纹：怎么认出 new-api 与 sub2api
+
+搜索引擎能认出一个站，前提是这个站有稳定、可被动采集的指纹。对两款中转系统，指纹各有两层：HTML title（最方便、但站长可以改）和未鉴权接口（更稳定、改不掉）。
+
+### new-api
+
+QuantumNous/new-api（前身 Calcium-Ion/new-api），Go（Gin/GORM）+ React SPA，AGPL-3.0，GitHub 上近 5 万 stars（2026-10 上旬实测约 4.9 万，据公开资料）。它是 songquanpeng/one-api 的 fork，如今是最主流的 OpenAI 格式中转系统。
+
+它的三层指纹：
+
+```html
+<title>New API</title>
+```
+
+这是源码 `web/index.html` 里写死的默认标题（已对照仓库源码核实），也是最直接的检索入口。配套的检索语句在各引擎里长这样：
+
+```
+FOFA:    title="New API"
+Shodan:  http.title:"New API"
+ZoomEye: title:"New API"
+Netlas:  http.title:"New API"
+Censys:  services.http.response.html_title: "New API"
+```
+
+想再收紧一点，可以加端口或正文限定（默认容器端口 3000）：
+
+```
+FOFA: title="New API" && port="3000"
+FOFA: body="Unified AI API gateway"
+```
+
+第二层指纹是未鉴权的健康接口，这是改标题也改不掉的东西：
+
+```bash
+# 未鉴权，直接返回版本信息
+curl -s https://<host>/api/status
+```
+
+```bash
+# OpenAI 兼容的模型列表（也是未鉴权可读的）
+curl -s https://<host>/v1/models
+```
+
+其他可用的 OpenAI 兼容路由包括 `/v1/chat/completions` 和 `/v1/embeddings`，登录页在 `/login`，控制台 SPA 在 `/`。注意一点：很多站长会把 title 改掉做「隐身」，所以 title 检索是**召回手段**，`/api/status` 探活才是**确认手段**。
+
+### sub2api
+
+Wei-Shaw/sub2api，Go（Gin+Ent）+ Vue 3，PostgreSQL + Redis，LGPL-3.0，约 4.3 万 stars（据公开资料）。它把各家 AI 产品的订阅（OAuth / API key）转成统一的 API 配额，支持拼车分摊成本。
+
+默认标题：
+
+```html
+<title>Sub2API - AI API Gateway</title>
+```
+
+首页副标题是 `Subscription to API Conversion Platform`，路由有 `/login`、`/admin`、`/dashboard`。但 sub2api 最有价值的指纹不是标题，而是这个未鉴权接口：
+
+```bash
+curl -s https://<host>/api/v1/settings/public
+```
+
+```json
+{"site_name":"Sub2API","site_subtitle":"Subscription to API Conversion Platform"}
+```
+
+站点名 `site_name` 是管理员可自定义的——改了标题的站，用 `title="Sub2API"` 就找不到了；但这个接口的**返回结构**是代码写死的，几乎没人会去改它。所以对 sub2api，最高置信度的被动指纹就是 `/api/v1/settings/public` 的 JSON 形状。这是实践里最容易被忽略的一点：**找实例靠搜索引擎，确认实例靠探活接口**。
+
+## 8 家搜索引擎与 API 调用方式
+
+我最终接入了 8 家引擎：FOFA、Shodan、360 Quake、奇安信 Hunter、ZoomEye、Netlas、LeakIX、CriminalIP。选择标准很实际：都有纯 HTTPS 的搜索 API，用 API key 就能调，不需要浏览器登录、不需要过验证码——瓶颈是配额，不是传输。
+
+下面给出每家精确的 endpoint 和鉴权形式（均已对照公开文档核实）：
+
+```bash
+# FOFA —— email + key 放在 query 参数，检索语句要 base64
+curl "https://fofa.info/api/v1/search/all?email=USER@EXAMPLE.COM&key=YOUR_KEY&qbase64=$(echo -n 'title="New API"' | base64)&fields=ip,port,title,protocol"
+```
+
+```bash
+# Shodan —— key 放在 query 参数
+curl "https://api.shodan.io/shodan/host/search?key=YOUR_KEY&query=http.title%3A%22New%20API%22"
+```
+
+```bash
+# 360 Quake —— POST JSON，鉴权走 X-QuakeToken 请求头
+curl -X POST https://quake.360.net/api/v3/search/quake_service \
+  -H "X-QuakeToken: $QUAKE_TOKEN" -H "Content-Type: application/json" \
+  -d '{"query":"title:\"New API\"","start":0,"size":10}'
+```
+
+```bash
+# 奇安信 Hunter —— api-key 参数，检索语句 base64（urlsafe）
+curl "https://hunter.qianxin.com/openApi/search?api-key=$HUNTER_KEY&search=$(echo -n 'title="New API"' | base64)&page=1&page_size=20"
+```
+
+```bash
+# Netlas —— X-API-Key 请求头
+curl 'https://app.netlas.io/api/responses/?q=http.title%3A%22New%20API%22&source_type=include&start=0&fields=*' \
+  -H 'accept: application/json' -H "X-API-Key: $NETLAS_KEY"
+```
+
+```bash
+# LeakIX —— api-key 请求头，注意全局约 1 req/s 限速（官方文档）
+curl 'https://leakix.net/search?scope=service&q=%2Bplugin%3AHttpPlugin' \
+  -H 'accept: application/json' -H "api-key: $LEAKIX_KEY"
+```
+
+```bash
+# CriminalIP —— x-api-key 请求头，走 banner 搜索
+curl "https://api.criminalip.io/v1/banner/search?query=title%3A%20%22New%20API%22" \
+  -H "x-api-key: $CRIMINALIP_KEY"
+```
+
+```bash
+# ZoomEye（国际站）—— profile 页拿 API key
+curl "https://api.zoomeye.hk/host/search?query=title%3A%22New%20API%22" \
+  -H "API-KEY: $ZOOMEYE_KEY"
+```
+
+关于免费额度，先说结论：**别指望免费额度做大规模扫描，免费额度只够验证链路**。各家情况（社区说法，部署前请以各自账号页为准）：
+
+| 引擎 | 免费额度 | 备注 |
+|---|---|---|
+| FOFA | 网页约 20 次/天；API 需会员 key 或 F币 | 国内自建站指纹最全，`app=` 规则库是行内标准 |
+| Shodan | 免费账号搜索 0 credits（会 403），但 `/host/count` 和 DNS API 可用 | 全球覆盖最广；$49 一次性会员约 100 credits/月 |
+| 360 Quake | 每日免费点数（具体数字未核实，以账号页为准） | 国内覆盖好 |
+| 奇安信 Hunter | 每日免费点数（社区说法约 500/天） | 独有 ICP 备案字段，适合国内资产映射 |
+| ZoomEye | 约 50 次/天 | 注意区分国际站 `api.zoomeye.hk` 与国内站 |
+| Netlas | 50 次/天 | 免费最友好的一家 |
+| LeakIX | 免费 key 可用 | 全局限速约 1 req/s，批量慢，超了会回 429 |
+| CriminalIP | 免费套餐按月限速 | 配额出问题时返回 HTTP 200 + 错误 status 字段，要解析 body |
+
+国内覆盖选 FOFA / Quake / Hunter，全球覆盖选 Shodan / Netlas / CriminalIP，leak 导向的查 LeakIX——多引擎的意义在于**互相补盲**，没有任何一家能看到全网。
+
+## relay-scout：Cloudflare Worker 聚合实现
+
+8 家引擎逐个手调 curl 显然不现实，于是我写了 relay-scout：一个**单文件、无构建步骤**的 Cloudflare Worker（`src/index.js` 即全部逻辑，含中文搜索 UI）。
+
+架构很直白，一张图能说清：
+
+```
+Worker 定时任务(cron) ──→ 各引擎搜索 API（key 存在 wrangler secrets）
+        │
+        ▼
+   结果归一化（统一成 ip / port / title / 引擎来源）
+        │
+        ▼
+   探活：GET /api/status（new-api）/ GET /api/v1/settings/public（sub2api）
+        │
+        ▼
+   去重（ip:port 维度）──→ 写入 KV
+        │
+        ▼
+   中文搜索 UI 直接查 KV / 缓存
+```
+
+每个引擎是一个 adapter，核心就是「拼请求、取字段」：
+
+```javascript
+// FOFA adapter（示意）
+async function searchFofa(dork, env) {
+  const qbase64 = btoa(unescape(encodeURIComponent(dork)));
+  const url = `https://fofa.info/api/v1/search/all` +
+    `?email=${env.FOFA_EMAIL}&key=${env.FOFA_KEY}` +
+    `&qbase64=${qbase64}&fields=ip,port,title,protocol&size=100`;
+  const r = await fetch(url);
+  const j = await r.json();
+  if (j.error) throw new Error(`FOFA: ${j.errmsg}`);
+  return (j.results || []).map(x => ({
+    ip: x[0], port: x[1], title: x[2],
+    engine: 'fofa', kind: guessKind(x[2]),
+  }));
+}
+```
+
+探活是整个链路里最关键的一步，也是和「只搜不验」的玩法拉开差距的地方：
+
+```javascript
+// 逐条或一键探活：只读两个公开未鉴权接口
+async function probe(target) {
+  const base = `http://${target.ip}:${target.port}`;
+  // new-api
+  const s = await fetch(`${base}/api/status`).then(r => r.json()).catch(() => null);
+  if (s && /new-?api/i.test(JSON.stringify(s))) return { alive: true, kind: 'new-api', version: s.version };
+  // sub2api：看 JSON 结构而不是标题
+  const p = await fetch(`${base}/api/v1/settings/public`).then(r => r.json()).catch(() => null);
+  if (p && typeof p.site_name === 'string') return { alive: true, kind: 'sub2api', site: p.site_name };
+  return { alive: false };
+}
+```
+
+几个工程上的坑，提前记下来能省一下午：
+
+- **CriminalIP 的错误藏在 body 里**：配额或权限出问题时它照样返回 HTTP 200，真正的错误在 JSON 的 `status` 字段里，不解析 body 会以为一切正常。
+- **Quake 的错误码是信封式的**：成功是 `code == 0`，`u3007` 是点数不足、`u3005` 是被限速，要分别处理。
+- **FOFA 只走官方 API，别爬网页**：它的网页端有积极的反爬，抓页面会触发 IP 临时封禁（错误码 -3000 "IP访问异常"）。API 是官方默许的服务端调用路径。
+- **密钥全部走 wrangler secrets**：`wrangler secret put FOFA_KEY` 这类命令逐个设置，不进代码、不进仓库。UI 只展示已配置密钥的引擎，没配的就是灰的。
+
+部署就是标准流程：
+
+```bash
+cd discovery-worker
+wrangler login
+wrangler secret put FOFA_EMAIL
+wrangler secret put FOFA_KEY
+wrangler secret put SHODAN_KEY
+# ... 按需设置其余引擎
+wrangler deploy
+```
+
+定时扫描是可选的：建一个 KV namespace，把 `wrangler.toml` 里注释掉的 `[triggers]` 和 `[[kv_namespaces]]` 打开再 deploy，每天自动跑一轮预置语句，结果快照进 KV，UI 直接读。
+
+顺带一提：调研时我特意找过——**目前没有开源工具专门做「new-api / sub2api 的搜索引擎自动化发现」**。最接近的是通用多引擎客户端（uncover、fofax 这类），以及生态周边的 newapi-checkin（多站自动签到）和 s2a-dashboard（sub2api 监控看板）。所以这块目前还是手工作业 + 通用工具的组合，relay-scout 算是把这条专用链路补上了。
+
+## 合规与边界
+
+这部分必须单独写，因为「找全网实例」这个动作听起来就很黑客。把边界说清楚：
+
+- **查搜索引擎 ≠ 扫描目标**。引擎的数据是它们自己全网扫描攒下的 banner，你的查询只打到引擎的 API，不向任何目标发包。这是被动情报，合法且常规——安全团队每天都这么盘点自己的暴露面。
+- **探活是你自己的主动探测**。点「探活」按钮时，请求是你发向目标站点的。只读那两个公开未鉴权接口（`/api/status`、`/api/v1/settings/public`），不碰登录、不碰鉴权接口是底线。
+- **发现的实例很多是别人的私有部署**。不要尝试登录、不要爆破、不要利用控制台——在绝大多数司法管辖区，这就是未授权访问。new-api 的 README 自己都提醒公开运营者注意合规（备案、内容安全、实名、日志留存）。
+- **正当用途就三类**：防御性盘点（确认自己的实例有没有意外暴露）、发现公开分享的免费中转资源、学术测量。
+
+一句话：看得见的都是公开数据，动手之前先问「这是我的吗」。
+
+## 下一步
+
+链路已经跑通，剩下的全是账号侧的体力活，我这边已经列好清单：
+
+1. 去 8 家引擎官网注册账号、拿 API key（FOFA、Shodan、360 Quake、奇安信 Hunter、ZoomEye、Netlas、LeakIX、CriminalIP）。
+2. `wrangler secret put` 把 key 逐个塞进 Worker secrets。
+3. `wrangler deploy` 上线，打开中文 UI 先手查一轮，再决定开不开每日定时扫描。
+
+这三步需要登录各家官网拿 key，得 Robin 亲自来——key 这种东西不过别人的手。等 key 就位，剩下的就是跑起来、看结果、调配额。
+
+**一句话总结：搜索引擎负责「看见」，探活接口负责「确认」，Worker 负责把两者变成每天自动跑的例行公事——而你唯一要做的，是先想清楚自己在找谁的实例。**
