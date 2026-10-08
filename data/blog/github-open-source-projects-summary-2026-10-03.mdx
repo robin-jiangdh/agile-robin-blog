@@ -1,0 +1,64 @@
+---
+title: 'GitHub 开源项目仓库汇总（2026-10-03 更新）'
+date: '2026-10-08'
+tags: ['GitHub', '开源周报']
+summary: '从本周 79 个抓取素材里精选 14 个硬核项目：Agent 技能框架、跨会话记忆、无向量 RAG、GPU 内核 DSL 等，一句话定位加星数快照，赛道全覆盖。'
+authors: ['default']
+draft: false
+---
+
+# GitHub 开源项目仓库汇总（2026-10-03 更新）
+
+数据来源：博客素材采集流水线，2026-10-07 抓取 GitHub Trending / GitHub Search 共 79 个素材，本期精选 14 个 ｜ 每周六更新 ｜ 本期精选 14 个
+
+本周 GitHub 的风向非常清晰：Agent 生态正在从"能跑起来"进入"跑得好、记得住、看得见"的深水区。技能框架（skills）成为最拥挤的赛道，记忆与持久化方案百花齐放，可观测性工具开始补 Agent 时代的课。下面按赛道逐个点评，星数均为抓取时的快照值，供参考排序。
+
+## 📊 本周更新亮点
+
+### 🤖 AI Coding
+
+AI Coding 的竞争已经从"谁的模型更强"转向"谁的工作流更工程化"。Anthropic 官方工具继续领跑，而第三方技能框架用方法论和工程规范吃掉了大量注意力——这说明大家不再满足于让 Agent 瞎写代码，而是要把最佳实践沉淀成可复用的 skill。
+
+- **claude-code** —— Anthropic 官方出品的终端 Agent 编程工具，驻守命令行理解整个代码库，执行重复任务、解释复杂逻辑，是 AI Coding 赛道的事实标准。｜ [GitHub](https://github.com/anthropics/claude-code) ｜ 149218 ⭐（抓取时）
+- **superpowers** —— 一套真正能落地的 Agent 技能框架加软件开发方法论，把"怎么写好软件"的经验装进 skill，让任何 coding agent 按同一套章法干活。｜ [GitHub](https://github.com/obra/superpowers) ｜ 293956 ⭐（抓取时）
+- **agent-skills** —— Addy Osmani 整理的生产级工程技能集合，面向 AI coding agent 的实战技能库，拿来即用，不用自己从零攒 prompt。｜ [GitHub](https://github.com/addyosmani/agent-skills) ｜ 100830 ⭐（抓取时）
+
+### 🧠 记忆与持久化
+
+Agent 最大的短板不是智商，是记性。会话一关、上下文一压缩，之前的决策和教训全丢了。本周这个赛道热度爆棚：从会话级持久化、到会学习的记忆系统、再到无向量的推理式 RAG，路线分化已经很明显，值得长期跟踪。
+
+- **claude-mem** —— 给每个 Agent 的跨会话持久上下文：记录会话中的全部行为，用 AI 压缩后，在未来会话中把相关上下文注回，解决"每次从零开始"的顽疾。｜ [GitHub](https://github.com/thedotmack/claude-mem) ｜ 95565 ⭐（抓取时）
+- **hindsight** —— 会学习的 Agent 记忆系统，不只是存档，而是从历史行为里提炼经验，让 Agent 越用越聪明。｜ [GitHub](https://github.com/vectorize-io/hindsight) ｜ 42897 ⭐（抓取时）
+- **PageIndex** —— 无向量、基于推理的 RAG 文档索引方案，不走传统 embedding + 向量检索的老路，用推理能力直接做文档索引，RAG 架构的一次另类尝试。｜ [GitHub](https://github.com/vectifyai/pageindex) ｜ 37408 ⭐（抓取时）
+
+### 🛠️ Agent 与编排
+
+Agent 要干实事，离不开三样东西：看世界的能力（浏览器 / 互联网接入）、理解代码库的能力（持久化的代码地图）、以及多智能体协作的组织方式。本周这三块都有代表作，补的是 Agent 基础设施的拼图。
+
+- **Agent-Reach** —— 给你的 AI agent 一双看遍全网的眼睛：一个 CLI 读遍 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书，零 API 费用，信息搜集型 Agent 的利器。｜ [GitHub](https://github.com/panniantong/agent-reach) ｜ 88593 ⭐（抓取时）
+- **moli** —— 为 AI agent 而生的无头浏览器，Rust 编写，主打轻量、快速、高兼容，Agent 需要稳定操作网页时的基础设施选项。｜ [GitHub](https://github.com/lexmount/moli) ｜ 7399 ⭐（抓取时）
+- **aoci-code** —— 持久化、Git 版本化的代码库与数据库 schema 全图，coding agent 动手前先读它；本地优先的 MCP server + Go CLI，带治理的仓库知识底座。｜ [GitHub](https://github.com/aoci-spec/aoci-code) ｜ 1070 ⭐（抓取时）
+
+### 📦 MLOps & Infra
+
+大模型 infra 这周回归硬核：GPU 内核怎么写得又快又干净，依然是顶级团队在卷的内功。DeepSeek 开源的 GEMM 库和 TileLang 这种内核 DSL，目标都是让高性能算子开发不再是少数人的黑魔法。
+
+- **DeepGEMM** —— DeepSeek 开源的 GPU BLAS 内核库，干净又高效，搞大模型推理优化绕不开的底层兵器。｜ [GitHub](https://github.com/deepseek-ai/deepgemm) ｜ 8684 ⭐（抓取时）
+- **tilelang** —— 面向高性能 GPU / CPU / 加速器内核开发的领域专用语言，把写 kernel 这件事从手写 CUDA 的苦力活变成更结构化的工程。｜ [GitHub](https://github.com/tile-ai/tilelang) ｜ 8094 ⭐（抓取时）
+
+### 🔍 SRE 与可观测性
+
+Agent 写代码、Agent 修故障，SRE 的工作流正在被重写。一边是 Anthropic 官方出的 on-call 起手包，把事故历史变成可执行的 triage playbook；另一边是给 coding agent 本身做的可观测性——Agent 花了多少 token、干了什么，得看得见才管得住。
+
+- **oncall-kit** —— Anthropic 官方的 Claude 辅助 on-call 起手包：从事故历史里挖掘 triage playbook，经人工确认的关卡逐步落地，在 Slack 里只读运行，人类负责真正动手。｜ [GitHub](https://github.com/anthropics/oncall-kit) ｜ 195 ⭐（抓取时）
+- **agenttrail** —— 本地优先的 AI coding agent 可观测性：项目结构与活动地图可视化，任务与角色贡献还能 3D 呈现，Agent 在干什么一目了然。｜ [GitHub](https://github.com/sodiumsun/agenttrail) ｜ 716 ⭐（抓取时）
+
+### 🐍 Python 工具生态
+
+文档格式转换是每个数据 pipeline 里最 boring 又最绕不开的一环。anydoc 用 Rust 做内核、配 Python 绑定，一把梭解决 Word / PDF / EPUB 转干净 Markdown，DataOps 和 RAG 数据准备都能直接用上。
+
+- **anydoc** —— 把 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、PDF 转成干净 Markdown 的转换器，Rust 内核 + Node.js / Python 绑定，文档预处理 pipeline 的趁手工具。｜ [GitHub](https://github.com/firecrawl/anydoc) ｜ 22269 ⭐（抓取时）
+
+---
+
+*往期汇总见博客「开源周报」标签。你在追哪个赛道？是 skills 框架、Agent 记忆，还是 SRE 可观测性？留言告诉我，下期优先整理。*
