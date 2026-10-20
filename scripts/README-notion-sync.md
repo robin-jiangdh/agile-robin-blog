@@ -5,6 +5,9 @@
 
 ## 一次性配置（仓库所有者）
 
+0. **先启用工作流**：GitHub MCP 应用没有 workflows 权限，`.github/workflows/` 写不进去。
+   在仓库网页端打开 `scripts/notion-sync.workflow.yml`，复制全文，新建文件
+   `.github/workflows/notion-sync.yml` 粘贴提交（或用 git 客户端推）。
 1. Notion 里打开 https://www.notion.so/my-integrations ，新建 Internal Integration，
    关联本工作区。
 2. 打开「博客文章」数据库 → 右上角 `...` → 连接（Connections）→ 把该 Integration 加进去。
