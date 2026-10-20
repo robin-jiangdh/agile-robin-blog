@@ -1,0 +1,171 @@
+---
+title: '从《Agentic Design Patterns》到 Sierra 的按结果付费：AI Agent 正在进入落地加速期'
+date: '2026-10-20'
+tags: ['AI', 'Agent']
+summary: 'Google 的《Agentic Design Patterns》把 Agent 工程装进了 21 个模式的工具箱，而 Sierra 的按结果付费模式把"谁来为失败的 Agent 买单"这个商业问题回答了：技术方法和商业模式同时成熟，是 AI Agent 落地加速的信号。'
+authors: ['default']
+draft: false
+---
+
+最近一段时间我在集中学习 AI Agent 的技术和产品，手边翻的是一本书——《Agentic Design Patterns》，顺手也研究了一家公司——做 to B Agent 的 Sierra，它搞的"按结果付费"（outcome-based pricing）让我印象很深。两件事放在一起看，我有个判断：AI Agent 可能真的要进入落地加速期了。今天把学习笔记整理成文章，技术细节都已核实，不确定的地方会如实标注。
+
+## 一、这本书到底是什么来头
+
+先纠正一个常见的误读：**《Agentic Design Patterns》并不是 Google 官方出品的图书**。它的全名是《Agentic Design Patterns: A Hands-On Guide to Building Intelligent Systems》，作者是 Antonio Gullí，Google Office of CTO 的 Senior Director，出版方是 Springer Nature，2025 年 10 月出版。据公开资料，作者把全部版税捐给了 Save the Children，这一点在 Amazon 的书页上有明确说明。
+
+为什么这本书值得看？它干了一件事：**把 Agent 工程从"调提示词的艺术"变成了有名字的设计模式**。就像当年《设计模式》之于面向对象编程，Gullí 把散落在各家论文、开源项目和生产实践里的 Agent 套路，整理成了 21 个模式：
+
+- **基础模式**：Prompt Chaining（提示链）、Routing（路由）、Parallelization（并行化）
+- **核心能力**：Tool Use（工具调用）、Planning（规划）、Reflection（反思）、Memory（记忆管理）、Goal Setting（目标设定）
+- **协作与纠错**：Multi-Agent Collaboration（多 Agent 协作）、Self-Correction（自我纠正）、Exception Handling（异常处理）
+- **生产模式**：Human-in-the-Loop（人机协同）、Guardrails（护栏）、Resource-Aware Optimization（资源感知优化）、RAG 模式等
+
+每个模式都配了可运行的代码，示例横跨 LangChain、LangGraph、CrewAI 和 Google 自己的 Agent Development Kit（ADK）——同一个模式用三种框架各写一遍，而不是锁死在某一家的抽象上。这个"框架无关"的立场是它最实在的价值：框架三个月一换，模式能活好几年。
+
+我个人最受用的是三个模式，逐一拆开讲讲。
+
+### 1. Routing：先分诊，再治疗
+
+一个生产级 Agent 最常见的死法，是让同一个大模型既做意图识别、又做检索、又做生成，最后输出一锅粥。Routing 模式的核心思想是：**先有一个轻量的分诊器，把任务路由到专门的处理路径**，每个路径用最合适的模型和工具。
+
+```python
+from enum import Enum
+
+class Route(Enum):
+    REFUND = "refund"       # 退款：走确定性流程 + 订单系统工具
+    FAQ = "faq"             # 常见问题：走 RAG + 小模型
+    COMPLEX = "complex"     # 复杂咨询：走大模型 + 人工兜底
+
+def route(user_msg: str) -> Route:
+    # 轻量分类器：小模型 / 规则 / embedding 相似度都行
+    intent = classify_intent(user_msg)
+    if intent in ("refund_request", "order_cancel"):
+        return Route.REFUND
+    if intent_confidence(intent) > 0.9 and is_faq(intent):
+        return Route.FAQ
+    return Route.COMPLEX
+
+def handle(user_msg: str) -> str:
+    match route(user_msg):
+        case Route.REFUND:
+            return refund_workflow(user_msg)   # 确定性流程，可审计
+        case Route.FAQ:
+            return rag_answer(user_msg)        # 便宜、快
+        case Route.COMPLEX:
+            return escalate_with_context(user_msg)  # 贵但稳，兜底人工
+```
+
+这个模式的工程意义很直接：**成本和质量不再是一根绳上的两端**。简单问题用小模型，复杂问题才上大模型；确定性流程的部分根本不经过 LLM。这是对抗 Agent 成本失控的第一道防线。
+
+### 2. Reflection + Self-Correction：给 Agent 装上"回头看"
+
+单靠一次生成，Agent 的可靠性上不去。Reflection 模式是让 Agent 在输出前先自我审视，Self-Correction 则是把"生成 → 检查 → 修正"做成循环：
+
+```python
+def reflective_answer(task: str, max_rounds: int = 3) -> str:
+    draft = generate(task)
+    for round in range(max_rounds):
+        critique = critic(task, draft)   # 独立的检查视角：事实、格式、约束
+        if critique.is_ok:
+            return draft
+        draft = revise(task, draft, critique.feedback)
+    return escalate(task, draft)  # 修不好就认，交给人
+```
+
+注意这个模式里的关键设计：**生成器和检查器要用不同的视角**（不同的 prompt、不同的模型，甚至不同的工具集），否则就是自己给自己打满分。书里反复强调的一点我很认同：Agent 的可靠性不是来自更聪明的单次推理，而是来自**结构化的纠错回路**。
+
+### 3. Tool Use + Guardrails：能力越大，护栏越要硬
+
+Tool Use 大家都熟，ReAct 范式写烂了。但书里把 Tool Use 和 Guardrails 绑在一起讲，这个视角很生产化：**工具调用是 Agent 产生真实世界副作用的唯一通道，所以工具层就是安全边界**。
+
+```python
+TOOLS = {
+    "query_order": query_order,      # 只读：放行
+    "issue_refund": issue_refund,   # 写操作：需要审批 + 金额上限
+}
+
+POLICY = {
+    "issue_refund": {"max_amount": 500, "require_approval": True},
+}
+
+def safe_tool_call(name: str, args: dict, ctx) -> dict:
+    policy = POLICY.get(name, {})
+    if policy.get("require_approval") and not ctx.approved:
+        return {"error": "needs_human_approval"}
+    if "max_amount" in policy and args.get("amount", 0) > policy["max_amount"]:
+        return {"error": "amount_exceeds_policy"}
+    return TOOLS[name](**args)
+```
+
+护栏不在 prompt 里，而在**工具执行的代码路径上**——prompt 会被绕过，代码不会。这是区分 demo 和生产系统的分水岭。
+
+这本书的局限也很明显：它告诉你什么是 Routing Agent，但没告诉你怎么在生产 SLO 下跑 40 个 Agent（有评论者一针见血地指出了这点）。模式是词汇表，不是架构图。但即便如此，有了统一的词汇，团队讨论 Agent 系统时终于不用再靠"就是那个，你懂的"来沟通了。
+
+## 二、Sierra：把账单和结果绑在一起
+
+技术方法论有了，商业模式呢？这就是 Sierra 有意思的地方。
+
+先核实基本事实。Sierra 成立于 2023 年，联合创始人是 **Bret Taylor**（前 Salesforce 联席 CEO，也是 OpenAI 的董事长）和 **Clay Bavor**（前 Google 高管）。公司做的是 to B 的客服对话 Agent，公开的客户包括 Sonos、ADT、WeightWatchers、Casper、SoFi 等。2026 年 5 月，Sierra 完成了 9.5 亿美元的 E 轮融资，估值 158 亿美元，由 Tiger Global 和 GV（Google Ventures）领投——据公开报道，其年化收入（ARR）在 2025 年底达到约 1 亿美元量级。
+
+Sierra 真正让我在意的是它的定价模式：**outcome-based pricing，按结果付费**。
+
+Bret Taylor 本人是这么描述的："If the AI agent resolves the case, no human intervention, there's a pre-negotiated rate for that. If we do have to escalate to a person, that's free."（如果 AI Agent 独立解决了这个 case，就按事先谈好的价格收费；如果需要转人工，那就免费。）
+
+拆开看，这个模式有三层含义：
+
+1. **计费单位是"被解决的一次交互"**，而不是 seat（坐席数）、不是 token、不是 API 调用次数。据第三方估算，单价大约在每次解决 1.5 美元左右（Sierra 官方不公开具体价格，按合同谈判）。
+2. **失败不收费**：Agent 没搞定、转人工了，这次不收钱。供应商和客户第一次在"解决问题"这个目标上完全对齐。
+3. **有边界**：据公开资料，纯路由、迎宾式的交互可能按对话量计费；对 HR 这类成本中心部门，Bret Taylor 自己也承认订阅制有时更合适——定价会按采购场景调整，不是教条。
+
+这里要诚实地说一句："首创按结果付费"这个说法需要打个折扣。Intercom 的 Fin 同样采用按解决计费（per-resolution pricing），按结果收费的思想在客服软件行业早有雏形。Sierra 的特殊之处不在于发明了这个概念，而在于**它是把 outcome-based pricing 做到旗舰模式、论证得最彻底、并且用 158 亿美元估值证明了市场买账的一家**。
+
+用代码把它的计费逻辑写出来，你会发现它本质上是一个**可验证的"完成"定义**：
+
+```python
+def bill(interaction) -> float:
+    if interaction.resolved_by_agent and not interaction.human_touched:
+        return CONTRACT.resolution_rate   # 事先谈好的单价
+    if interaction.escalated_to_human:
+        return 0.0                        # 转人工：免费
+    return 0.0
+```
+
+这个函数能成立的前提，是"解决"这件事**可定义、可观测、无争议**——客服场景恰好满足：客户的问题解决了、没有转人工，就是完成。这也是为什么 Sierra 从客服切入：它找到了 Agent 经济里最干净的一个"完成"定义。
+
+## 三、为什么"按结果付费"可能是落地的催化剂
+
+现在把两件事连起来看。我的判断是：**技术方法论和商业模式在同一年成熟，这不是巧合，而是 Agent 落地的前置条件同时被补齐了**。
+
+### 1. 它回答了 CIO 最难回答的问题：ROI 怎么算
+
+过去两年，企业买 Agent 最大的障碍不是技术不行，而是**财务模型算不清**。按 seat 收费：Agent 干得越多，企业为"效率提升"付的钱反而越多，逻辑拧巴。按 token/API 收费：账单和业务价值之间隔着一层翻译，CFO 看不懂。
+
+按结果付费把翻译层删掉了：一次解决 = 一个可计价的业务成果。ROI 的公式第一次变得像水电费一样直白——**用了多少"解决"，付多少钱**。有分析指出，这正是 Sierra 企业客户 adoption 超预期的直接原因：CFO 的算账第一次不需要假设。
+
+### 2. 它把"失败成本"从客户转移到了供应商
+
+这是最关键的一点，也是 Agent 和传统 SaaS 的本质区别。传统软件：功能不好用，客户骂两句但钱照付。Agent：**失败是有真实计算成本的**（token 烧掉了、时间浪费了），而且失败率天然不为零。
+
+在按 token 计费的模式下，这个失败成本是客户在承担：Agent 跑了一个小时没解决问题，账单照收。Cognition 的 Devin 就是显例——按 Agent Compute Units（算力时间）计费，跑一小时没修好 bug，ACU 照扣。这不是黑心，这是"租一个不知疲倦的工程师"的诚实定价，但它把**结果风险留给了买方**。
+
+Sierra 的模式把风险翻转了：没解决就不收费，供应商自己承担失败的计算成本。这会倒逼供应商做三件事——提高解决率（否则亏本）、精确定义"解决"（否则扯皮）、在解决不了时尽快转人工（否则烧钱）。**定价机制变成了质量机制**，这是任何技术评测都做不到的约束。
+
+### 3. 它划出了 Agent 商业化的"可收费边界"
+
+不是所有 Agent 工作都能按结果收费。Sierra 的模式能成立，依赖一个前提：**任务的"完成"必须是可验证的**。客服、退款处理、预约确认——这些有明确"done"定义的任务，适合 outcome-based；开放式的研究、创意工作，"完成"本身就有争议，硬套按结果付费只会制造纠纷。
+
+这个边界感恰恰是落地加速的信号：**行业开始知道什么卖得动、什么卖不动了**。2023-2024 年是"Agent 什么都能干"的叙事期，2025-2026 年进入"Agent 在什么任务上能稳定交付、能清晰计价"的分选期。《Agentic Design Patterns》这类书的出现，说明工程侧在沉淀可复用的解法；Sierra 的定价模式跑通，说明商业侧找到了可复制的收费公式。两边同时从"讲故事"转向"算细账"，就是加速期的样子。
+
+## 结论：加速期的三个 checklist
+
+基于这段时间的学习，我给"AI Agent 落地加速期"列了三个可观察的指标，算是给自己的 checklist，也分享出来：
+
+1. **工程词汇统一**：团队里讨论 Agent 系统时，用的是模式的名字（Routing、Reflection、Guardrails），而不是"那个 prompt 再调一下"。书可以买，词汇表是免费的——Gullí 的完整预印本 PDF 据公开资料在社区有镜像流传，可以先读再决定买不买纸质版。
+2. **失败成本有人买单**：选供应商时先问计费模式——失败的那次，账单上写多少钱？如果答案是"照收"，那供应商就没有动力把解决率做上去。
+3. **从"完成"定义出发选场景**：先写下"什么叫搞定"，写不出来、写出来有争议的场景，先别上 Agent，或者先上"人机协同"模式，别直接上全自动。
+
+技术书解决"怎么做"，定价模式解决"为什么值得做"。当两个问题同时有了像样的答案，落地就不再是"明年"的事了。
+
+---
+
+*参考资料均为公开信息：书籍信息来自 Amazon 书页与公开书评；Sierra 融资与定价信息来自 CNBC、TechCrunch 等公开报道及 Bret Taylor 公开表述，具体合同价格以官方报价为准。*
