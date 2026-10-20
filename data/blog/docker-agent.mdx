@@ -1,0 +1,161 @@
+---
+title: 'docker-agent：当 Agent 也能被 docker run——看懂 Docker 的开源 Agent 引擎'
+date: '2026-10-20'
+tags: ['AI', 'Agent']
+summary: 'Docker 官方开源的 docker-agent 把 AI Agent 做成了 YAML 声明、OCI 分发的"容器式"制品：一个 agent.yaml 定义一支 Agent 小队，docker agent run 拉起来就跑。它是 Gordon 底下的引擎，也是容器厂商切入 Agent 赛道最顺理成章的一步。'
+authors: ['default']
+draft: false
+---
+
+## 背景：Agent 框架打得正热，容器厂商亲自下场
+
+2026 年的 Agent 赛道有种熟悉的味道：十年前容器编排大战（Docker Swarm / Kubernetes / Mesos），今天轮到了 Agent 框架——LangGraph、LlamaIndex 的工作流、OpenHands 的编码智能体、各家 CLI（Claude Code、Codex、Gemini CLI），每个都在回答同一个问题：**怎么让模型可靠地干活**。
+
+就在这个当口，Docker 官方开源了自己的答案：[docker/docker-agent](https://github.com/docker/docker-agent)，一个自称 "AI Agent Builder and Runtime" 的项目。它在 Hacker News 上拿到 ▲163 的热度（2026-10-08 抓取），仓库创建于 2025-09-01，目前约 4,400 star、500+ fork、Apache-2.0 协议。数字不算惊人，但有意思的是它的**发版速度**：2026 年 5 月随 Docker Desktop 4.74 打包的还是 v1.57.0，到了 10 月已经跑到 v1.149.0 附近——四个多月发了一百多个版本。这种节奏说明两件事：项目还很年轻，接口还在快速演进；Docker Engineering 是真的在往里砸人力。
+
+这篇文章把三个问题一次讲透：它到底是什么、为什么偏偏是 Docker 来做、以及它的天花板和短板在哪里。关键事实都来自公开资料核实，拿不准的地方我会注明。
+
+## 一、它到底是什么：给 Agent 用的 Dockerfile 时刻
+
+一句话概括：**docker-agent 是一个 `docker` CLI 插件，让你用声明式 YAML 定义 AI Agent，用和容器一模一样的语法运行和分发它们。**
+
+它的口号是 "Build, run, and share AI agents with a declarative YAML config, rich tool ecosystem, and multi-agent orchestration"——构建、运行、分享 AI Agent，靠声明式 YAML、丰富的工具生态和多智能体编排。
+
+上手长这样。先写一个 `agent.yaml`（以下是我按官方文档示例改写的运维巡检场景）：
+
+```yaml
+agents:
+  root:
+    model: anthropic/claude-sonnet-4-5
+    description: 负责巡检的协调者
+    instruction: |
+      你是生产环境的巡检协调者。
+      收到巡检请求时，把容器状态检查和日志分析分别委派给
+      子 Agent，汇总后给出结论和修复建议。
+    toolsets:
+      - type: mcp
+        ref: docker:duckduckgo
+  container-doctor:
+    model: openai/gpt-5-mini
+    description: 专看容器状态的子 Agent
+    instruction: |
+      你只负责检查容器运行状态：是否存活、重启次数、
+      资源占用是否异常。只报告事实，不做修复建议。
+  log-analyst:
+    model: openai/gpt-5-mini
+    description: 专看日志的子 Agent
+    instruction: |
+      你只负责分析最近一小时的错误日志，
+      按服务归类并标注首次出现时间。
+```
+
+然后运行：
+
+```bash
+# 本地直接跑
+docker agent run agent.yaml
+
+# 交互式生成一个新 Agent
+docker agent new
+
+# 从任意 OCI registry 拉一个别人打包好的 Agent
+docker agent run myorg/agent:tag
+```
+
+看到 `docker agent run myorg/agent:tag` 这一行，容器工程师应该会心一笑——这几乎就是 `docker run` 的语法糖。它把 Agent 定义打包成 OCI 制品，push 到任意 registry，别人 pull 下来就能跑。安装方式也很"Docker"：Docker Desktop 4.63 及以上版本预装了这个插件，此外支持 Homebrew（`brew install docker-agent`）和 GitHub Releases 二进制。
+
+核心能力清单，来自官方 README：
+
+- **多智能体架构**：创建专业分工的 Agent 小队，任务自动委派（上面 YAML 里 `root` + 两个子 Agent 就是这个意思）；
+- **MCP 原生工具生态**：内置工具之外，任何 MCP server（本地、远程、或 Docker 容器化分发）都能接进来；
+- **模型无关**：OpenAI、Anthropic、Gemini、AWS Bedrock、Mistral、xAI，以及 Docker 自家的 Model Runner（本地推理）；
+- **内置推理工具**：think、todo、memory 三件套，相当于给 Agent 配了"草稿纸、待办清单和笔记本"；
+- **RAG**：可插拔检索，支持 BM25、embedding、混合检索和 rerank；
+- **打包分享**：push/pull 走 OCI registry。
+
+注意一个细节：它强调 "no code required"（无需写代码）。定位不是 LangGraph 那种给开发者编排复杂工作流的框架，而是**声明式、低门槛的 Agent 定义与运行层**——写 YAML 就能得到一支能干活的 Agent 小队。
+
+## 二、为什么偏偏是容器厂商来做：Docker 的阳谋
+
+Docker 做 Agent 引擎，第一眼看是跨界，细想是阳谋。容器生态过去十年解决的几个硬问题，Agent 生态今天一个不少全撞上了：
+
+**1. 分发问题。** 模型权重有 Hugging Face，容器镜像有 Docker Hub/OCI registry，Agent 有什么？今天的 Agent 定义散落在各家框架的 DSL、prompt 模板、Python 代码里，没有统一的分发格式。docker-agent 直接把答案抄作业：**Agent 定义本身就是 OCI 制品**。`docker agent run myorg/agent:tag` 这行命令的野心，是让 Agent 的分发体验追平 `docker pull`。Docker 手里现成的 registry 基础设施、签名、SBOM、provenance 整套供应链工具链，都能复用。这是 LangGraph 们没有的护城河。
+
+**2. 工具分发问题。** MCP 解决了"Agent 怎么调用工具"的协议问题，但"工具本身怎么分发"还是个坑。Docker 的答案是把 MCP server 也容器化：YAML 里 `ref: docker:duckduckgo` 这种引用，背后就是 Docker 在推的 MCP catalog——工具以容器镜像的形式分发、版本化、隔离运行。Agent 和工具用同一套打包格式，这是只有容器厂商能讲圆的故事。
+
+**3. 运行时与沙箱问题。** Agent 要执行代码、跑 shell、读写文件，就需要隔离。谁最懂隔离？容器厂商。Docker Desktop 预装插件、Model Runner 提供本地模型推理（数据不出内网）、未来 Agent 的每一步 tool call 都可以落在有 seccomp/cgroup 约束的容器里——"Agent 沙箱"对 Docker 来说是主场作战。
+
+**4. 开发者心智。** `docker agent run` 的命令语法、YAML 声明式配置、registry 分发，容器工程师零学习成本。这和当年 `docker-compose.yml` 吃掉一票编排工具的逻辑一模一样：不一定是技术上最强的，但一定是**最顺手的**。
+
+所以 docker-agent 不是 Docker 心血来潮的副业，而是把过去十年的三件套（打包、分发、运行时）平移到 Agent 时代。它的竞争对手表面上是各类 Agent 框架，实际上它在下一盘更大的棋：**成为 Agent 的"镜像格式"**。
+
+## 三、它和 Gordon 是什么关系：引擎与产品
+
+很多人的第一个疑问：Docker 不是已经有个 AI 助手 Gordon 了吗？docker-agent 和 Gordon 是什么关系？
+
+先说 Gordon 是什么。据 Docker 官方资料，Gordon 是 Docker 的官方 AI 助手产品，2026 年 5 月随 Docker Desktop 4.74 正式 GA（之前叫 "Ask Gordon" / "Docker AI"），形态包括：Desktop 右侧常驻边栏、CLI（`docker ai` 命令）、Docker Hub 和 docs.docker.com 上的内嵌助手。它的定位很垂直：**懂你容器环境的助手**——分析你的容器、镜像、卷状态，诊断问题，提议操作并在你批准后执行。
+
+而 docker-agent 是**通用的、开源的 Agent 构建与运行时**：不绑定容器场景，任何任务都能定义 Agent。
+
+两者的关系，最有力的证据来自 Docker Desktop 的官方发布说明，其中明确提到修复过 "docker ai CLI 命令没有正确 shell out 到 Docker Agent" 的 bug。也就是说，Gordon 的 CLI 路径在底层会调用到 docker-agent。这揭示了一个清晰的分层：
+
+- **docker-agent = 开源引擎**：YAML 解析、多智能体调度、MCP 工具调用、模型抽象、RAG，通用的 Agent 运行时；
+- **Gordon = 产品化封装**：在引擎之上，针对"容器工作流"这个垂直场景做了预置的 Agent 定义、Desktop UI、权限审批流和使用量计费（Gordon 有免费档和 Plus 档）。
+
+这个分层很聪明：引擎开源赚生态和口碑（Apache-2.0，欢迎 fork 和魔改），产品层（Gordon）赚商业化。类似当年 Docker 开源 containerd、自己卖 Docker Desktop 的打法。对开发者来说，理解这层关系有个实际好处：**你在 Gordon 里用到的 Agent 能力，理论上都能用 docker-agent 的 YAML 自己复刻和定制**——引擎是开放的。
+
+顺带一提项目的小历史：据公开资料，这个项目最早叫 `cagent`（独立二进制 `cagent run`），后来才并入 Docker CLI 插件体系改名 docker-agent，随 Desktop 4.63+ 预装。从独立工具到官方 CLI 一等公民，这个改名本身就是 Docker 下注的信号。
+
+## 四、技术上怎么玩：三个值得细看的设计点
+
+### 1. 多智能体不是噱头，是它的默认形态
+
+很多框架把"多智能体"当高级功能，docker-agent 把它做成了默认形态：YAML 顶层的 `agents:` 就是一张小队名单，`root` 负责协调，子 Agent 各管一摊，任务自动委派。这种设计对运维/SRE 场景很对味——巡检、故障诊断、发布检查天然就是"分头看、集中汇总"的流程。第一节的 YAML 示例就是照这个思路写的：协调者不动手，只负责分派和汇总；脏活累活（看容器状态、翻日志）交给便宜的小模型子 Agent。这也引出一个省钱技巧：**root 用强模型做判断，子 Agent 用 mini 级模型做执行**，成本结构比"一个大模型干到底"健康得多。
+
+### 2. MCP 引用语法是点睛之笔
+
+`ref: docker:duckduckgo` 这种写法值得玩味。它把工具依赖声明得像 Docker 镜像引用一样：`组织/工具名`，背后可以带版本。这意味着**工具也有了包管理器的体验**：Agent 作者声明依赖，运行时自动拉取对应版本的 MCP server 容器。对比传统做法（pip install 一堆 SDK、手写 tool 定义），声明式依赖 + 容器化分发，版本冲突和"在我机器上能跑"的问题少了一个数量级。当然，前提是 Docker 的 MCP catalog 生态能做起来——目前这是它最大的不确定性。
+
+### 3. 本地模型是一条暗线
+
+支持 Docker Model Runner 不是顺手为之。企业级 Agent 落地最大的阻力之一是数据合规：生产日志、代码库不能出内网。Model Runner 让模型在本地跑（据公开资料，Desktop 内置支持，还支持 Apple Silicon 的 Metal 加速/vLLM），配合容器沙箱，整条链路可以做到**数据不出机器**。这条线如果走通，docker-agent 在金融、政务这些强合规场景会有独特优势——这是纯云端 Agent 框架很难切入的。
+
+上手验证也很简单，装好插件、设好 key 就能跑：
+
+```bash
+# 设至少一个模型 API key（或用 Model Runner 跑本地模型）
+export OPENAI_API_KEY="sk-..."
+
+# 跑默认 Agent，进交互式 TUI
+docker agent run
+```
+
+官方还提供了完整的文档站（安装、模型配置、Agent/MCP/多智能体/RAG 各有专页）和 `examples/` 目录，`docker agent new` 可以交互式脚手架一个新 Agent，学习曲线比 LangGraph 平缓得多。
+
+## 五、局限与展望：先泼三盆冷水，再谈期待
+
+观点先行：**docker-agent 是个好引擎，但离"生产级 Agent 平台"还有三道坎。**
+
+**冷水一：发版太快 = 接口不稳定。** 四个月一百多个版本，README 里列的能力（RAG 的 rerank、多智能体委派语义）很可能下个月就变了。现在用它做生产依赖，要有"追着升级"的心理准备。它的 CHANGELOG 值得定期扫一眼再升级。
+
+**冷水二：声明式的上限。** YAML 声明式适合"结构固定"的 Agent 小队，但真实世界的复杂工作流（条件分支、人工审批、长时运行的状态机）很快就会碰到 YAML 的表达力天花板。LangGraph 这类代码优先的框架在复杂编排上仍然更灵活。docker-agent 的聪明之处在于**不跟它们正面打**——它定位是"零代码定义 + OCI 分发"，和框架们更多是互补而非替代。但这也意味着：别指望一个 `agent.yaml` 解决所有问题。
+
+**冷水三：生态决定生死。** `docker:xxx` 的 MCP catalog 现在能打的工具还不够多。一个 Agent 引擎的价值，一半在引擎，一半在"开箱即用的工具市场"。Docker 需要把当年建设 Docker Hub 的运营能力复制到 MCP catalog 上——这比写代码难。另外，安全是悬顶之剑：Agent 读镜像 LABEL 都能被 prompt 注入（2025 年底披露的 DockerDash 攻击就是针对 Gordon 的供应链注入，Docker 在 Desktop 4.50 修过一轮），引擎层面的 tool call 审计、权限审批必须跟上。
+
+**展望则有三条线值得跟踪：**
+
+1. **OCI 成为 Agent 的事实分发格式**——如果 `docker agent push/pull` 的体验真的做顺了，Agent 共享可能第一次拥有像 Docker Hub 那样的中心市场；
+2. **Gordon 反哺引擎**——Gordon 在真实容器工作流里沉淀的 Agent 定义、评估集，会回流到开源引擎，这是闭源竞品没有的"数据飞轮"；
+3. **边缘与本地**——Model Runner + 容器沙箱的组合，让"离线可用的 Agent 小队"成为可能，对强合规行业是降维打击。
+
+## 结论：容器厂商的 Agent 阳谋，值得每个做平台的工程师关注
+
+总结一下 docker-agent 的三句话定位：**它是 Docker 官方开源的 Agent 构建与运行时（Apache-2.0，约 4.4k star）；它用 YAML 定义 Agent 小队、用 OCI registry 分发、用 MCP 接工具、用 `docker agent run` 启动；它是 Gordon 底下的开源引擎，也是 Docker 把"打包-分发-运行时"三件套平移到 Agent 时代的载体。**
+
+我的判断是：短期内它不会替代你手里的 LangGraph 或 Claude Code，但它指出了一个大方向——**Agent 正在经历"容器化时刻"**：需要统一的打包格式、可复用的分发渠道、隔离的运行时，而这些恰好是容器厂商最擅长的。如果你是做内部平台、SRE 工具链的工程师，现在就可以 `brew install docker-agent` 写个巡检小队玩玩；成本很低，但能让你提前理解"Agent 即制品"这套范式。
+
+毕竟十年前，问"为什么偏偏是 Docker 来做容器"的人，后来都学会了写 Dockerfile。今天的 `agent.yaml`，也许就是当年的 Dockerfile 时刻。
+
+---
+
+*关键事实来源：[docker/docker-agent GitHub 仓库](https://github.com/docker/docker-agent)（README、仓库元数据）、[Docker Desktop 官方发布说明](https://docs.docker.com/desktop/release-notes/)、[Docker 官方 Gordon 介绍页](https://www.docker.com/blog/meet-gordon-dockers-ai-agent-for-your-entire-container-workflow/)、[Gordon 官方文档](https://docs.docker.com/ai/gordon/)。仓库 star 数、版本号为 2026-10-12 抓取时的公开数据，后续会有变化。*
