@@ -1,0 +1,120 @@
+---
+title: 'GitHub 开源项目仓库汇总（2026-10-10 更新）'
+date: '2026-10-20'
+tags: ['GitHub', '开源周报']
+summary: '本期新增 34 个项目：Agent 技能与 harness 生态大爆发占据半壁江山，记忆系统、单卡推理、Iceberg 实时分析各有硬货，星数均为抓取快照。'
+authors: ['default']
+draft: false
+---
+
+# GitHub 开源项目仓库汇总（2026-10-10 更新）
+
+数据来源：IMA 知识库 GitHub 相关内容整理 ｜ 每周六更新 ｜ 本期新增 **34** 个项目
+
+本周关键词：**Agent 技能生态大爆发**。34 个新项目里超过一半和 AI coding agent 直接相关——skills、harness、记忆系统全面开花，说明 Agent 生态正在从"能跑起来"进入"跑得好、记得住、可复用"的深水区。数据 infra 侧则是"单卡跑大模型"和"Iceberg 实时分析"两条线，硬核程度不减。下面按赛道逐个点评，星数均为抓取时的快照值，供参考排序。读完如果觉得某个赛道值得单开一篇深挖，留言告诉我。
+
+## 📊 本周更新亮点
+
+### 🤖 Agent 技能与 Harness 生态（本期最大看点）
+
+技能（skills）已经成为 Agent 生态最拥挤的赛道。本期的头号玩家 affaan-m/ecc 以 27 万+ star 坐上 GitHub 星数榜首——一个"agent harness 性能优化系统"能冲到这个量级，本身就说明了问题：大家不再满足于让 Agent 瞎写代码，而是要把最佳实践沉淀成可复用的 skill。Addy Osmani 出品的生产级技能库、Cloudflare 官方的安全审计 skill，也印证了"技能工程化"正在成为主流。
+
+- **affaan-m/ecc** — agent harness 性能优化系统：71 agents + 302 skills，Claude Code / Codex / Cursor / Copilot 通吃 ｜ 276K ⭐
+- **anthropics/claude-code** — 终端里的 agentic coding 标杆，Anthropic 官方 ｜ 150K ⭐
+- **addyosmani/agent-skills** — 生产级 AI 编程技能库（Addy Osmani 出品） ｜ 104K ⭐
+- **thedotmack/claude-mem** — 跨会话持久记忆，每个 agent 都该装 ｜ 99K ⭐
+- **ayghri/i-have-adhd** — 治 coding agent 话痨的"ADHD 友好输出"技能 ｜ 56K ⭐
+- **cathrynlavery/diagram-design** — 给 Claude Code / Codex / Copilot 用的编辑级图表设计技能 ｜ 48K ⭐
+- **morluto/rea** — 用 agent 逆向一切：从 App 行为到原生二进制 ｜ 47K ⭐
+- **Ryze-AI-Adgent/open-seo-mcp-skills** — 免费 SEO MCP 服务器 + 开源 SEO / GEO 技能 ｜ 4.7K ⭐
+- **michael-denyer/pstack-claude** — 各家 coding agent 通用的 pstack 式堆栈查看技能 ｜ 1.7K ⭐
+- **kerpopule/hermes-jev-skills** — 模型路由 / 记忆 / 压缩 / 技能选择的技能包 ｜ 1K ⭐
+- **cloudflare/security-audit-skill** — Cloudflare 出品的安全审计技能 ｜ 27.1K ⭐
+
+### 🧠 记忆与上下文工程
+
+Agent 失忆是老问题，本期记忆赛道虽然只收录了一个，但思路很正：用 Git 版本化的方式给 agent 建代码库全景图，让它不再迷路。结合上面 thedotmack/claude-mem 的跨会话持久记忆看，"记忆"正在从向量检索的单一手段，走向分层、多模态的工程体系。
+
+- **aoci-spec/aoci-code** — Git 版本化的代码库 + 数据库 schema 全景图，agent 不再迷路 ｜ 1.4K ⭐
+
+### 🖥️ 终端与开发环境
+
+终端也在被 Agent 重做：Ghostty 内核的新终端、藏在 Mac 刘海里盯 coding 进度的小伙伴、单机 Docker 原生的弹性 CI runner——共同点是"为人机协作的工作流而设计"，而不是给纯人类用的老终端换皮。
+
+- **manaflow-ai/cmux** — Ghostty 内核的 macOS 开源终端，垂直标签 + AI 编程通知 ｜ 28K ⭐
+- **louis-cfm/coucou** — 藏在 Mac 刘海里的小伙伴，盯着你的 AI coding 进度 ｜ 4.5K ⭐
+- **rhobuild/runpool** — 单机 Docker 原生弹性 CI runner 控制面，不用 K8s ｜ 337 ⭐
+
+### 🕷️ Agent 浏览器与自动化
+
+Agent 要能自己上网干活，浏览器就得先 agent 化：Rust 写的无头浏览器、过反爬的 Playwright MCP、自托管处理 GitLab MR 的 harness。三者拼起来，就是"agent 自己搞定线上杂活"的拼图。
+
+- **lexmount/moli** — 为 AI agent 打造的无头浏览器，Rust 编写又轻又快 ｜ 15K ⭐
+- **feder-cr/invisible_playwright_mcp** — 过反爬虫 / 验证码的 Playwright MCP，agent 也能丝滑浏览 ｜ 2.7K ⭐
+- **vrajpal-jhala/langgraph-harness** — 自托管 AI agent，自动处理 GitLab MR ｜ 20 ⭐
+
+### 🎬 创意与多媒体
+
+Agentic 视频生产系统带着 12 条产线来了，CAD 建模和游戏 mod 也被 agent 攻陷。创意工具的共同趋势：把专业软件的操作封装成 agent 可调用的能力，门槛从"学会软件"降到"说清需求"。
+
+- **calesthio/openmontage** — 首个开源 agentic 视频生产系统，12 条产线 ｜ 66K ⭐
+- **earthtojake/text-to-cad** — 给 agent 的 CAD 超能力 ｜ 19K ⭐
+- **rehan-remade/universal-modder** — 让 Claude 给任意 PC 游戏做 mod ｜ 6K ⭐
+
+### 🗄️ 数据与推理 infra
+
+本期 infra 线两条主线都很硬：一是"单卡跑大模型"——24G 显存跑 DeepSeek-V4.1-Flash、PyTorch 算子扔远端 GPU；二是实时分析——Iceberg / Delta 上的实时查询直接叫板 ClickHouse。DeepSeek 官方的 FP8 GEMM 库也在列，推理优化依然是显学。
+
+- **deepseek-ai/deepgemm** — DeepSeek 官方 FP8 GEMM 库 ｜ 8.9K ⭐
+- **pivotlake/pivot** — Iceberg / Delta 上的实时分析，benchmark 叫板 ClickHouse ｜ 39 ⭐
+- **0xSero/dsv41-flash-offload** — 单张 24G 3090 跑 DeepSeek-V4.1-Flash（EXL3 offload） ｜ 135 ⭐
+- **sybil-solutions/dsv41-flash-offload** — 同上，另一实现 ｜ 135 ⭐
+- **sybil-solutions/glm-flash-lite** — 同上，GLM-5.3-Flash 版（原名 glm53-flash-offload，已改名） ｜ 259 ⭐
+- **ymcrcat/rgpu** — 笔记本留 Python，PyTorch 算子扔远端 GPU 跑 ｜ 63 ⭐
+
+### 🏢 大厂动态
+
+大厂也在下场做 agent 基础设施：Cloudflare 把 agent 工作区搬到 Workers 上，Docker 做了官方 agent 尝试（本周 HN 热度 163 的 docker/docker-agent 正是此项目），Google 则把日文输入法往设备端移植。大厂的动作说明 agent 运行时正在成为新的平台层。
+
+- **cloudflare/cloudflare-os** — 跑在 Cloudflare Workers 上的 agent 工作区 ｜ 11K ⭐
+- **docker/docker-agent** — Docker 官方的 agent 尝试 ｜ 4.3K ⭐
+- **google/mozc-devices** — Mozc 日文输入法的设备端移植 ｜ 2.9K ⭐
+
+### 📚 学习与速查
+
+生产级 Agentic RAG 实战课程值得想落地 RAG 的同学看看；Windows 速查表这种"小而美"的仓库，star 不高但用得上就是赚到。
+
+- **jamwithai/production-agentic-rag-course** — 生产级 Agentic RAG 实战课程 ｜ 9.7K ⭐
+- **s4ntrx/my-windows-cheat-sheet** — Windows 速查表 ｜ 126 ⭐
+
+### 🔍 可观测
+
+Agent 时代的可观测性工具开始补课：本地优先的 trace 工作台，支持 Claude Code / Codex / OTLP。Agent 的行为比传统服务难观测得多，这个赛道才刚开始。
+
+- **fankchen/tracecrate** — 本地优先的 AI agent trace 工作台（Claude Code / Codex / OTLP） ｜ 308 ⭐
+
+### 🏢 完整 AI agency
+
+"一键拥有一整支 AI 团队"——15.9 万 star 说明市场对"开箱即用的 agent 团队"有多饥渴。前端 / 运营 / 社区智能体打包交付，是把 agent 从工具变成"数字员工"的尝试。
+
+- **msitarzewski/agency-agents** — "一键拥有一整支 AI 团队"：前端 / 运营 / 社区智能体开箱即用 ｜ 159K ⭐
+
+## 🔍 本期深读：三个值得展开的信号
+
+**信号一：ecc 登顶 GitHub 星数第一意味着什么。** affaan-m/ecc 以 27 万+ star 超过 React 成为 GitHub 第一仓库，这在两年前是不可想象的——一个"优化 Claude Code 体验"的工具套件，热度超过了前端框架本身。合理解读是：开发者群体的注意力已经从"写代码的框架"转向"让 AI 写好代码的框架"。skill 在这里扮演的角色，很像当年 npm 包之于 JavaScript：把零散的最佳实践变成可分发、可组合、可版本化的单元。谁先定义 skill 的标准和分发渠道，谁就可能吃掉下一波开发者工具红利。
+
+**信号二：大厂开始争夺 agent 运行时。** Cloudflare 把 agent 工作区搬到 Workers 上、Docker 做官方 agent 尝试，这两件事放在一起看很说明问题：agent 需要的不是又一个聊天框，而是一个"能跑代码、能调工具、能持久化"的运行时。大厂的思路都是把自家已有的运行时（Workers、容器）向 agent 场景延伸。对独立开发者来说，选边站的时候到了——你的 agent 跑在哪里，决定了你被哪个生态锁定。
+
+**信号三：可观测性是下一块拼图。** 本期只有 fankchen/tracecrate 一个可观测项目，308 star，毫不起眼。但对照历史看：微服务爆发后是 Prometheus / Grafana，K8s 爆发后是 OpenTelemetry——每一波运行时变革都会带出一波可观测性工具。Agent 的行为比微服务难观测一个数量级（非确定性、长链路、高 token 成本），现在入场做 agent 可观测，正是好时机。
+
+## 结论：三条主线
+
+1. **技能工程化**：skills 正在成为 Agent 生态的"包管理器"，方法论沉淀比模型本身更稀缺。
+2. **记忆与可观测补课**：agent 跑起来之后，"记得住"和"看得见"是接下来两年的主战场。
+3. **推理平民化**：单卡跑大模型、远端算子卸载，个人开发者也能玩转大参数模型。
+
+下期预告：继续跟踪 skills 生态的标准之争，以及 agent 可观测性赛道的新玩家。如果你正在用上面提到的某个项目，欢迎留言说说实际体验——尤其是那些 star 虚高、落地打折的"网红仓库"，帮大家排排雷。
+
+---
+
+*往期汇总见博客「开源周报」标签。你在追哪个赛道？留言告诉我，下期优先整理。*
