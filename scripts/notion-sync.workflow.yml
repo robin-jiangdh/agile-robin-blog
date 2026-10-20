@@ -1,0 +1,46 @@
+name: Sync Notion to Blog
+
+# Notion 「博客文章」数据库里 状态=已发布 的页面 -> 每小时同步成 data/blog/<slug>.mdx
+# commit 后由现有部署（Vercel，后续可切 Cloudflare Pages）自动构建发布。
+# 需要仓库 Secret：NOTION_TOKEN（Notion Internal Integration 的 token）。
+# 没配 Secret 时脚本会跳过并以成功退出，不刷失败邮件。
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: d54bd2be-1270-4a5b-a156-8308693fb0a7
+        run: node scripts/sync-notion.mjs
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/blog public/static/images/notion
+          if git diff --cached --quiet; then
+            echo "No content changes."
+          else
+            git commit -m "notion-sync: 同步 Notion 已发布文章"
+            git push
+          fi
